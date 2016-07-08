@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-fuel-pressure.html",
+"name": "AnalogGauge-Spek-FuelPressure",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/FuelPressure&",
+"icon": "widgets/AnalogGauge/Spek/FuelPressure/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

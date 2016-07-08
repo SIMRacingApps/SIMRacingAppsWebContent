@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-oil-temp.html",
+"name": "BarGauge-OilTemp",
+"description": "",
+"url": "apps/WidgetLoader?widget=BarGauge/OilTemp&",
+"icon": "widgets/BarGauge/OilTemp/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

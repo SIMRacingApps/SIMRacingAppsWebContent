@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Widgets</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text21.html">Back</a> <a href="text23.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Widgets</h1>
+<ul>
+<li>Widgets are small, pre built gadgets to be used by Apps.</li>
+<li>To use a Widget in your App, you must add the path to the Widget in your dependencies list inside your default.js file.</li>
+<ul>
+<li>require(SIMRacingAppsRequireConfig,</li>
+<h2>    ['angular ', 'SIMRacingApps','css!default',</h2>
+<h2>      'widgets/CarNumber/CarNumber' ],</h2>
+</ul>
+<li>Then add one or more elements to the DOM in your default.html file using the Widget’s name as the tag. Because HTML is not case sensitive, Angular requires you change from CamelCase to hyphens and you have to always prepend “sra-” to all Widget names as well.</li>
+<ul>
+<li>sraCarNumber in JavaScript becomes &lt;sra-car-number&gt;&lt;/sra-car-number&gt; in the HTML file.</li>
+</ul>
+<li>Widgets can also standalone and work as an App by itself. I have provided an App called WidgetLoader that takes “widget=WidgetName” as a parameter and runs it.</li>
+<li>For a complete list of Widgets, look in the “SRA_DIR\webapps\SIMRacingApps\widgets” folder or <a href="http://localhost/SIMRacingApps/widgets"><u><font color="#0563C1">http://localhost/SIMRacingApps/widgets</u></font></a> .</li>
+<h2><i><font color="#FF0000"></i></font></h2>
+</ul>
+</body>
+</html>

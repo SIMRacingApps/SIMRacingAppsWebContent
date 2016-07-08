@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/CrewChief.html",
+"name": "CrewChief;CrewChief-PITCONTROLLER",
+"description": "View Only. No Pit Commands;Will Send Pit Commands to the SIM",
+"url": "apps/CrewChief?",
+"icon": "apps/CrewChief/icon.png;apps/CrewChief/icon.png",
+"width": 800,
+"height": 480,
+"args": "PitCommandsSIMController=false;PitCommandsSIMController=true"
+}

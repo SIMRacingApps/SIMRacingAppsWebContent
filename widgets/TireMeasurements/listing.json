@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-tire-measurements.html",
+"name": "TireMeasurements-LF;TireMeasurements-LR;TireMeasurements-RF;TireMeasurements-RR",
+"description": "Left Front;Left Rear;Right Front;Right Rear",
+"url": "apps/WidgetLoader?widget=TireMeasurements&",
+"icon": "widgets/TireMeasurements/icon.png",
+"width": 800,
+"height": 380,
+"args": "TIRE=LF;TIRE=LR;TIRE=RF;TIRE=RR"
+}

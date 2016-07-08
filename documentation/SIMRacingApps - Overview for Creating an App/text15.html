@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>The &quot;default.js&quot; file</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text14.html">Back</a> <a href="text16.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>The &quot;default.js&quot; file</h1>
+<ul>
+<li>&quot;require.js&quot; is used to load the JavaScript files on demand. In the &lt;head&gt; section, when this script is loaded, the &quot;data-main&quot; attribute defines which JavaScript file to load first. By default, that file is named &quot;default.js&quot; and resides in you App’s folder, the same as your &quot;default.html&quot; file. This file should contain the following.</li>
+<ul>
+<li>The &quot;require()&quot; declaration, which lists the dependencies of your app. This will include &quot;angular&quot;, &quot;SIMRacingApps&quot;, and your default.css file as a minimum. It should also list all widgets your app uses.</li>
+<li>The &quot;controller&quot; for your app is used to initialize variables you are using in your default.html file and also to load the translation files.</li>
+<li>A call bootstrap the application as follows, (element,width,height,font-size). These must match the values from the listing.json file.</li>
+<h2>           SIMRacingApps.start(angular.element(document.body),800,480,16);</h2>
+</ul>
+</ul>
+</body>
+</html>

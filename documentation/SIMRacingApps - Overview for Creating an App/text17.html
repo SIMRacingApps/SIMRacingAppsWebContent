@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Filters</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text16.html">Back</a> <a href="text18.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Filters</h1>
+<ul>
+<li>Filters are an Angular feature that allows you to transform values by passing them through one or more transformations. Filters are placed in the &quot;data-ng-bind&quot; variable with pipe symbols between them (Unix Style).</li>
+<ul>
+<li>data-ng-bind=&quot;(data.Car.LEADER.Lap.Completed.Value | number:0)&quot;</li>
+</ul>
+<li>The statement above uses the Angular Filter called &quot;number&quot;. It takes one argument for the number of decimal places. It returns the number formatted according to the locale's required format, see Localization page. It's safer to place parentheses around these pipelines.</li>
+<li>SIMRacingApps provides additional filters as follows. There are more details in the JavaScript Documentation which can be accessed from the main menu.</li>
+<ul>
+<li>sraNumber - Same as &quot;number&quot;, but allows an entire Data object to be passed so the UOM can be appended.</li>
+<li>sraDuration - Formats a double in seconds to the D:HH:MM:SS.MMM format. Accepts a Data object as well.</li>
+<li>sraLPad, sraRPad - Pads the value either on left or the right.</li>
+<li>sraHex - Formats value as in hexadecimal.</li>
+<li>sraRGB – Formats the value suitable for assigning to a style attribute, like color;</li>
+<li>sraCeil, sraFloor, sraRound – Are simply wrappers for the same JavaScript functions.</li>
+<li>sraDebug - A pass-through filter with a debugger break point set.</li>
+</ul>
+</ul>
+</body>
+</html>

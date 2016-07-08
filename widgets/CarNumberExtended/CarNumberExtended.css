@@ -1,0 +1,19 @@
+.SIMRacingApps-Widget-CarNumberExtended {
+    width:         100%;
+    /* background-color: #333333; */
+}
+
+.SIMRacingApps-Widget-CarNumberExtended-number {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.SIMRacingApps-Widget-CarNumberExtended-name {
+    width: 100%;
+    font-size: 400%;
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+}

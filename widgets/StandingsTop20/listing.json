@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-standings-top-20.html",
+"name": "StandingsTop20",
+"description": "Top 20 Positions, Pit Time, Run Length, Lap Times",
+"url": "apps/WidgetLoader?widget=StandingsTop20&",
+"icon": "widgets/StandingsTop20/icon.png",
+"width": 800,
+"height": 525,
+"args": ""
+}

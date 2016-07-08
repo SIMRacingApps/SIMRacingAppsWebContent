@@ -1,0 +1,268 @@
+
+.SIMRacingApps-Widget-FuelTank {
+    width:              100%;
+    height:             100%;
+    font-size:          150%;
+}
+.SIMRacingApps-Widget-FuelTank-walls {
+    width:              100%;
+    height:             100%;
+    background-color:   yellow;
+    border-radius:      8% 8% / 5% 5%;
+    position:           absolute;
+    top:                0%;
+    left:               0%;
+}
+.SIMRacingApps-Widget-FuelTank-tank-false {
+    width:              98%;
+    height:             99%;
+    background-color:   gray;
+    border-radius:      8% 8% / 5% 5%;
+    position:           absolute;
+    top:                .5%;
+    left:               1%;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-FuelTank-tank-true {
+    width:              98%;
+    height:             99%;
+    background-color:   green;
+    border-radius:      8% 8% / 5% 5%;
+    position:           absolute;
+    top:                .5%;
+    left:               1%;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-FuelTank-fueltitle {
+    position:           absolute;
+    top:                2%;
+    width:              100%;
+    font-size:          150%;
+    font-weight:        bold;
+    text-align:         center;
+    z-index:            1000;
+}
+.SIMRacingApps-Widget-FuelTank-level {
+    position:           absolute;
+    width:              100%;
+    height:             100%;
+    bottom:             0%;
+    left:               0%;
+    border-radius:      0px 0px 8% 8% / 0px 0px 5% 5%;
+    background:         linear-gradient(to top,blue,cyan);
+    z-index:            10;
+}
+.SIMRacingApps-Widget-FuelTank-text {
+    position:           absolute;
+    width:              100%;
+    bottom:             0%;
+    text-align:         center;
+    font-weight:        bold;
+    color:              white;
+    z-index:            99;
+}
+.SIMRacingApps-Widget-FuelTank-lapsleft {
+    position:           absolute;
+    width:              100%;
+    bottom:             21%;
+    text-align:         center;
+    font-weight:        bold;
+    white-space:        nowrap;
+    color:              white;
+    z-index:            99;
+}
+.SIMRacingApps-Widget-FuelTank-altLapsleft {
+    position:           absolute;
+    width:              100%;
+    bottom:             14%;
+    text-align:         center;
+    font-weight:        bold;
+    white-space:        nowrap;
+    color:              white;
+    z-index:            99;
+}
+.SIMRacingApps-Widget-FuelTank-lapsMaximum {
+    position:           absolute;
+    width:              100%;
+    bottom:             7%;
+    text-align:         center;
+    font-weight:        bold;
+    white-space:        nowrap;
+    color:              white;
+    z-index:            99;
+}
+.SIMRacingApps-Widget-FuelTank-leveladd {
+    position:           absolute;
+    width:              100%;
+    height:             0%;
+    bottom:             0%;
+    background-color:   red;
+    z-index:            12;
+    overflow:           visible;
+}
+.SIMRacingApps-Widget-FuelTank-leveladd-inner {
+    position:           absolute;
+    top:                10%;
+    left:               3%;
+    width:              94%;
+    height:             90%;
+    background-color:   red;
+    border-radius:      8% 8% 0px 0px / 35% 35% 0px 0px;
+    z-index:            12;
+    overflow:           visible;
+}
+.SIMRacingApps-Widget-FuelTank-leveladd-text {
+    position:           absolute;
+    width:              100%;
+    height:             auto;
+    bottom:             0%;
+    left:               0%;
+    text-align:         center;
+    font-weight:        bold;
+    white-space:        nowrap;
+    color:              white;
+    overflow:           visible;
+    z-index:            99;
+}
+.SIMRacingApps-Widget-FuelTank-levelneeded {
+    position:           absolute;
+    width:              92%;
+    left:               4%;
+    bottom:             0%;
+    background:         url('/SIMRacingApps/widgets/FuelTank/checkered.png');
+    opacity:            .6;
+    overflow:           visible;
+    z-index:            14;
+}
+.SIMRacingApps-Widget-FuelTank-levelneeded-text {
+    position:           absolute;
+    width:              100%;
+    height:             auto;
+    bottom:             0%;
+    left:               0%;
+    text-align:         center;
+    font-weight:        bold;
+    white-space:        nowrap;
+    color:              white;
+    overflow:           visible;
+    z-index:            99;
+}
+
+.SIMRacingApps-Widget-FuelTank-image {
+    width:              100%;
+    height:             100%;
+    position:           absolute;
+    background-image:   url('/SIMRacingApps/widgets/FuelTank/sunoco_can.png');
+    background-size:    80%;
+    background-repeat:  no-repeat;
+    background-position: center;
+    opacity:            .2;
+    top:                0%;
+    left:               0%;
+    z-index:            98;
+}
+
+.SIMRacingApps-Widget-FuelTank-showadd-N {
+    display:            none;
+}
+.SIMRacingApps-Widget-FuelTank-showaddtext-N {
+    display:            none;
+}
+
+.SIMRacingApps-Widget-FuelTank-leveladd-autofuel {
+    background-color:   darkred;
+}
+
+.SIMRacingApps-Widget-FuelTank-statstable {
+    position:           absolute;
+    top:                12%;
+    left:               10%;
+	width:              80%;
+    table-layout:       fixed;
+    border-collapse:    collapse;
+    background-color:   rgba(0,0,0,1);    
+    z-index:            1000;
+}
+
+.SIMRacingApps-Widget-FuelTank-statstable td {
+    border-color:       rgba(255,255,255,.5);
+    border-width:       thin;
+    border-style:       outset;
+    padding-top:        .9%;
+    padding-bottom:     .9%;
+    padding-left:       .5%;
+    padding-right:      .5%;
+    font-weight:        bold;
+    white-space:        nowrap;
+    overflow:           hidden;
+}
+
+.SIMRacingApps-Widget-FuelTank-header {
+    text-align:         center;
+    font-size:          65%;
+}
+
+.SIMRacingApps-Widget-FuelTank-label {
+    text-align:         right;
+    font-size:          100%;
+}
+
+.SIMRacingApps-Widget-FuelTank-number {
+    text-align:         right;
+    font-size:          100%;
+}
+
+.SIMRacingApps-Widget-FuelTank-uom {
+    text-align:         left;
+    font-size:          45%;
+}
+
+.SIMRacingApps-Widget-FuelTank-enoughToFinish {
+}
+
+.SIMRacingApps-Widget-FuelTank-enoughAddedToFinish {
+    background-color:   rgba(127,255,0,.9); /*chartreuse*/
+    color:              black !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-notEnoughToFinish {
+    background-color:   rgba(255,0,0,.9); /*red*/
+}
+
+.SIMRacingApps-Widget-FuelTank-enoughToFinish-adding {
+    background-color:   rgba(127,255,0,.9); /*chartreuse*/
+    color:              black !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-enoughAddedToFinish-adding {
+    background-color:   rgba(255,255,0,.9); /*yellow*/
+    color:              black !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-notEnoughToFinish-adding {
+    color:              white;
+    background-color:   rgba(255,0,0,.9); /*red*/
+}
+
+.SIMRacingApps-Widget-FuelTank-spacer {
+    line-height:        100%;
+    font-size:          100%;
+    background-color:   rgba(0,0,0,.8);
+}
+
+.SIMRacingApps-Widget-FuelTank-equals {
+    line-height:        100%;
+    font-size:          5%;
+    background-color:   rgba(0,0,0,1);
+}
+
+.SIMRacingApps-Widget-FuelTank-fuel {
+	position:           absolute;
+	bottom:             2%;
+	width:              100%;
+    font-size:          150%;
+    font-weight:        bold;
+    text-align:         center;
+    z-index:            1000;
+}
+

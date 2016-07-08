@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>MSPEC Shift Light</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text16.html">Back</a> <a href="text18.html">Continue</a> <a href="text21.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>How to enable the MPSEC Shift Light</h1>
+<ul>
+<li>MPSEC Shift Light is a hardware product that you can buy from here, <a href="http://shiftlight.com.au/">http://shiftlight.com.au</a>. I am not an employee of this company and have no ability to support it from a setup or hardware standpoint.</li>
+<li>But, once it is setup and verified it works using MPSEC's own software, SIMRacingApps can be configured to control the light. But you must not be running both at the same time.</li>
+<li>Use the following options in the settings.txt file to enable the light(s). It can control up to 4 lights. Each light must be assigned to a different COMM port number. Use MPSEC's software to determine the COMM port for each light.</li>
+<ul>
+<li>-mspec-rpm = {commPortNumber}</li>
+<li>-mspec-greenflag = {commPortNumber}</li>
+<li>-mspec-blueflag = {commPortNumber}</li>
+<li>-mspec-yellowflag = {commPortNumber}</li>
+<li>-mspec-eflag = {commPortNumber}</li>
+</ul>
+<li>On the previous slide, follow the instructions to edit the settings.txt file and add these options to it. Then restart the server.</li>
+<li>You should not be running their software and the SIMRacingAppsServer...exe at the same time because both will be trying to control the same light. If not working, check the server window for log messages that may give you more information on the problem.</li>
+<li>To make it confusing, I cannot tell the actual color of the light in the software. So, you could use the -mspec-rpm option to turn on a yellow light by using the comm port number that the yellow light is assigned to.</li>
+<li>If the light is not using the correct RPM, report to me the Track, Car, Gear, and Engine Power Map and what the correct RPM should be. You can override the RPMs by adding entries to the settings.txt file. See the next slide.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-team-speak-talking.html",
+"name": "TeamSpeakTalking",
+"description": "TeamSpeak's Client Query Plugin Must Be Enabled",
+"url": "apps/WidgetLoader?widget=TeamSpeakTalking&",
+"icon": "widgets/TeamSpeakTalking/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}

@@ -1,0 +1,30 @@
+.SIMRacingApps-Widget-WindGauge {
+}
+
+.SIMRacingApps-Widget-WindGauge-ring {
+    stroke:           lightblue;
+    stroke-width:     50px;
+    fill:             rgba(0,0,0,.5);
+}
+
+.SIMRacingApps-Widget-WindGauge-direction {
+    font-weight:      bold;
+    fill:             white;
+    stroke:           black;
+    stroke-width:     3px;
+}
+
+.SIMRacingApps-Widget-WindGauge-speed {
+    fill:             white;
+    font-weight:      bold;
+}
+.SIMRacingApps-Widget-WindGauge-speed-uom {
+    fill:             white;
+    font-weight:      bold;
+}
+.SIMRacingApps-Widget-WindGauge-arrow {
+	stroke:           black;
+	stroke-width:     2px;
+    fill:             red;
+    opacity:          .8;
+}

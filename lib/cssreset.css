@@ -1,0 +1,44 @@
+/*From YUI resets*/
+body, div, dl, dt, dd, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin:             0;
+    padding:            0;
+}
+
+fieldset, img {
+    border:             0 none;
+}
+
+address, caption, cite, code, dfn, th, var {
+    font-style:         normal;
+    font-weight:        normal;
+}
+
+caption, th {
+    text-align:         left;
+}
+
+q:before, q:after {
+    content:            "";
+}
+
+abbr, acronym {
+    border:             0;
+}
+
+/* now my defaults */
+table {
+    border-spacing:     0;
+    line-height:        100%;
+}
+
+body {
+/*     font-size:          12pt; */
+    font-family:        'Arial';
+    background-color:   dimgray;
+    color:              white;
+}
+
+/* things I found */
+input {
+	font-size:          100%;  /* get's it to inherit the body font-size */
+}

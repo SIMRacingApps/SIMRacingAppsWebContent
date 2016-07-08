@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Data Paths to Subscribe To</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text6.html">Back</a> <a href="text8.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Data Paths to Subscribe To</h1>
+<ul>
+<li>There are only a few top level paths to retrieve the data. These paths represent an API that all implemented SIMs will conform to. Therefore, your App will work with any SIM that is implemented. </li>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Connector.html"><u><font color="#0563C1">/(method)/(args)</u></font></a> - Retrieve data for connection.</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Session.html"><u><font color="#0563C1">/Session/(method)/(args)</u></font></a> – Retrieve data for the current session</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Car.html"><u><font color="#0563C1">/Session/Car/(car)/(method)/(args)</u></font></a> or <a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Car.html"><u><font color="#0563C1">/Car/(car)/(method)/(args)</u></font></a> – Retrieve data about a specific car</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Track.html"><u><font color="#0563C1">/Session/Track/(method)/(args)</u></font></a> or <a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Track.html"><u><font color="#0563C1">/Track/(method)/(args)</u></font></a> – Retrieve data for the current track</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/TeamSpeak.html"><u><font color="#0563C1">/TeamSpeak/(method)/(args)</u></font></a> – Retrieve data for TeamSpeak</li>
+</ul>
+<li>If you find the API doesn’t have what you need, you can retrieve data directly from the SIM by prefixing the path with the SIM’s name followed by the path to the data in the SIM. Please be aware that doing this makes your App SIM specific. Consider asking to have the API enhanced to include the data you need. Please note that SIM specific paths will be case sensitive, while the API is not.</li>
+<ul>
+<li>/iRacing/WeekendInfo/TrackDisplayName</li>
+</ul>
+<li>As stated before, these paths should be put in the “data-sra-args-data” attribute of any “sra” directive. But, sometimes you just need get or set a value only once. To do that, use the Angular $http service and prefix these paths with the following URL.</li>
+<ul>
+<li>http://localhost/SIMRacingApps/Data/…</li>
+<ul>
+<li>Example: http://localhost/SIMRacingApps/Data/iRacing/WeekendInfo/TrackDisplayName</li>
+</ul>
+</ul>
+</ul>
+</body>
+</html>

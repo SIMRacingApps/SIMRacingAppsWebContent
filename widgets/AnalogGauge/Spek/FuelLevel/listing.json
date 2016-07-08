@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-fuel-level.html",
+"name": "AnalogGauge-Spek-FuelLevel",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/FuelLevel&",
+"icon": "widgets/AnalogGauge/Spek/FuelLevel/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

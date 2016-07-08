@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-car-image.html",
+"name": "CarImage",
+"description": "The image of your car from the SIM",
+"url": "apps/WidgetLoader?widget=CarImage&",
+"icon": "widgets/CarImage/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}

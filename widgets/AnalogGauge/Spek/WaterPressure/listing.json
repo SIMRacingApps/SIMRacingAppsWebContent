@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-water-pressure.html",
+"name": "AnalogGauge-Spek-WaterPressure",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/WaterPressure&",
+"icon": "widgets/AnalogGauge/Spek/WaterPressure/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

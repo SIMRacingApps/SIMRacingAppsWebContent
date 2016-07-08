@@ -1,0 +1,95 @@
+@import "/SIMRacingApps/widgets/DataTable/DataTable.css";
+
+.SIMRacingApps-App-RaceAdministrator {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-RaceAdministrator-header {
+    font-size: 150%;
+    text-align: center;
+    color: gold;
+}
+
+.SIMRacingApps-App-RaceAdministrator-commands {
+    width: 100%;
+    height: 100%;
+}
+
+.SIMRacingApps-App-RaceAdministrator-commands-all {
+    border-collapse: collapse;
+}
+
+.SIMRacingApps-App-RaceAdministrator-commands-all tbody {
+    background: dimgray;
+}
+
+.SIMRacingApps-App-RaceAdministrator-commands-driver {
+    border-collapse: collapse;
+    margin-top: 5%;
+}
+.SIMRacingApps-App-RaceAdministrator-commands-driver tbody {
+    background: dimgray;
+}
+
+.SIMRacingApps-App-RaceAdministrator-commands-sent {
+    border-collapse: collapse;
+    margin-top: 5%;
+}
+.SIMRacingApps-App-RaceAdministrator-commands-sent tbody {
+    background: dimgray;
+}
+
+.SIMRacingApps-App-RaceAdministrator-senttext {
+    text-align: center;
+    border-color: green;
+    border-width: thin;
+    border-style: outset;
+    font-size: 60%;
+    color: chartreuse;
+}
+.SIMRacingApps-App-RaceAdministrator-senttext tbody {
+    background: dimgray;
+}
+
+.SIMRacingApps-App-RaceAdministrator-button {
+    text-align: center;
+    border-color: black;
+    border-width: medium;
+    border-style: outset;
+}
+
+.SIMRacingApps-App-RaceAdministrator-cars {
+    width: 100%;
+    font-size: 90%;
+}
+
+.SIMRacingApps-App-RaceAdministrator-carstable {
+    border-collapse: collapse;
+}
+
+.SIMRacingApps-App-RaceAdministrator-car {
+    width: 100%;
+    font-size: 20%;
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+
+.SIMRacingApps-App-RaceAdministrator-car .SIMRacingApps-Widget-CarNumberExtended {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 90%;
+}
+
+
+.SIMRacingApps-App-RaceAdministrator-driver-active-Y {
+    background-color: green;
+}
+
+.SIMRacingApps-App-RaceAdministrator-clickedstate-clicked {
+    background-color: rgba(255,0,0,.3) !important;
+}

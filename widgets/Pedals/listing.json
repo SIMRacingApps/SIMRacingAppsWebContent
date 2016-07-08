@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-pedals.html",
+"name": "Pedals",
+"description": "Clutch / Brake / Throttle",
+"url": "apps/WidgetLoader?widget=Pedals&",
+"icon": "widgets/Pedals/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

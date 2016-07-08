@@ -1,0 +1,10 @@
+{
+"name":        "Template",
+"description": "Template",
+"doc":         "JavaScriptDoc/sra-template.html",
+"url":         "apps/WidgetLoader?widget=Template&",
+"icon":        "widgets/Template/icon.png",
+"width":       800,
+"height":      480,
+"args":        ""
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>SIMRacingApps Quick Start Guide</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(0)">SIMRacingApps</a></p><p>Quick Start Guide</p>
+<p>Updated: May 5, 2016</p>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(1)">What does it cost? Who is this for?</a></p><ul>
+<li>The cost is free. By making it free, if hope to get participation from other developers to really make SIM racing better for everyone. Source code to the JavaScript/HTML clients is included. But for now, I do not plan release the source code to the server until my Generic API becomes more mature.</li>
+<li>This is for anyone wanting to get more information from their SIM to help them make better decisions and possibly even go faster. There are some Apps and Widgets that simply mimic functionality already provided by the SIM. But, those were only created as a baseline to be improved on. There are several Apps and Widgets to choose from.</li>
+<li>Only the server has to be running on the same computer as the SIM and I have found it doesn’t affect the SIM’s performance. The server can handle connections from many clients. I routinely run 7 clients.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(2)">Hardware Requirements</a></p><ul>
+<li>500MB of available Memory on Server/SIM computer.</li>
+<li>500 MB Free Disk Space Server/SIM computer.</li>
+<li>Java Run-time 1.8 or better installed.</li>
+<li>All clients run in a Modern Browser supporting HTML5 available on many different devices. I have tested on the latest versions of Chrome, Firefox, IE10 or above, iOS Safari.</li>
+<ul>
+<li>Note: The device must be connected to the same network as the Server/SIM computer either via WiFi or a direct connection.</li>
+<li>Also, low end devices may not have the power to run some of the Widgets due to the lag. Loading some Apps may be slow as well. Having said that, you may find that some Apps will work within these limitations just fine.</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(3)">Starting the Server</a></p><ul>
+<li>Download the SIMRacingAppsServer....exe, if you have not already, from the <a href="http://SIMRacingApps.com/">http://SIMRacingApps.com</a> website and save it in a place where you can find it later. I suggest saving it to your desktop or your documents folder. This should be done on the same computer where the SIM will be running.</li>
+<li>There is no installation required. All you need to do is double click on the SIMRacingAppsServer....exe you downloaded or the shortcut to it (if you created one). This will open a window where you can see the output from the server. In the title bar of this window, the HTTP address of the server will be displayed. You will use this address in the browser to connect to the server. This window can be minimized, but you should not close it while the SIM is running.</li>
+<ul>
+<li>Note: If it opens your browser to the Java Download page, it means you don't have the correct version of Java installed. Install Java and run the server again.</li>
+<li>I recommended you turn off automatic installation of updates for Java in the Control Panel, Java -&gt; Update tab. You don't want it updating while you are racing. It has caused black screens when it updates while racing. Change it to notify you before downloading and change the time it checks to when you are not likely to be racing. Also, on the Java -&gt; Security tab, you can disable Java in the browser if you don't need it for any other website. I do recommend you stay up to date, just do it manually.</li>
+</ul>
+<li>To enable TeamSpeak integration, you must enable the Client Query Plug-in in the TeamSpeak options of the TeamSpeak client. Then SIMRacingApps will auto append your car number to your alias automatically and pop up who's talking on some of the apps.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(4)">Launching SIMRacingApps Clients</a></p><ul>
+<li>You will need to know the IP address of the computer running the server. This can be found in the title bar of the SIMRacingApps Server Window.</li>
+<ul>
+<li>For example (this is mine): @ <a href="http://192.168.1.61/">http://192.168.1.61</a> or http://192.168.1.61:port</li>
+<li>Please be aware that this address may change over time, maybe from day to day, based on the settings in your router’s DNS lease times. If you do not want it to change, search the web for information on how to make your computer use a static IP address that is not within the Dynamic DNS range of your router and not used by any other devices on your network.</li>
+<li>Please “Allow” the server to run when you see the Java Security pop-up window. You may have to re-confirm this every time Java is updated.</li>
+</ul>
+<li>If your IP address does not change, then SIMRacingApps Apps and Widgets can be bookmarked. Once you launch it for the first time from the main page, simply save it as a favorite. Later you may want to add optional arguments to the URL to change its’ behavior. To add an argument add a question mark(?) to the end of the URL, then the key value pairs separated by an ampersand(&amp;).</li>
+<ul>
+<li>http://{IP:port}/SIMRacingApps/WidgetLoader?widget=TrackMap&amp;TEXTTYPE=initials</li>
+</ul>
+<li>One final note, hopefully the server is running on a computer behind your router/firewall and therefore not accessible from the outside world. There are ways around this by setting up your router to allow it, but do this at your own risk. There is no security in the server from anyone connecting to it and seeing what your doing and sending pit commands to the SIM or modifying your settings.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(5)">Browsers</a></p><ul>
+<li>All major browsers are supported as long as they conform to the HTML5 specification. I routinely use Google Chrome while developing. Then I try to check that each App or Widget works in the other browsers.</li>
+<ul>
+<li>Google Chrome Latest version, on all devices</li>
+<li>IE10 or Greater including EDGE</li>
+<li>FireFox Latest version</li>
+<li>Safari on iOS. I do not have a MAC, so it may work.</li>
+<li>Android stock browser may not support the SVG tag used by some widgets, use Chrome instead.</li>
+</ul>
+<li>Full Screen mode varies on the different browsers as well as switching between tabs. When running an App or Widget from the Main Page, it will either open a new browser window or browser tab, depending on how you have your browser configured. You can run multiple Apps and/or Widgets at the same time. You can also add the App or Widget to your home screen on iOS and Andriod to get a full screen experience. On Chrome for Windows, you can create shortcuts as well. See the “<a href="#Creating a Chrome Shortcut">#Creating a Chrome Shortcut</a>” page below for details.</li>
+<li>All Apps and Widgets should re-size themselves to the size of your browser's view-port. They should also re-size and reposition themselves if the device is rotated as well. I found that most browsers on phones and tablets will auto hide their header and footer if the page needs to scroll. If not, adding them to the home screen should help. </li>
+<li>The other thing to note, when using phones and tablets, is to turn off the auto lock or other battery saving features and plug them it so the device's display will stay on. How to do this varies from device to device. On Android, if you don't have the option in Settings → Display → Sleep for “None”, then you can use an App called “Stay Alive”.  You can also put the Android in developer mode, then there is a no sleep option in the developer settings.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(6)">Main Page</a></p><ul>
+<li>Clicking the icon will attempt to open in a new window. This is based on what your browser will allow. Sometimes, it opens in a new tab instead. On iOS and Android, after launching the App or Widget, add them to your home screen for a full screen experience and quicker access.</li>
+<li>You can open multiple apps and/or widgets at the same time. Switching between them is based on how your browser opens them and how the browser is written to navigate to them.</li>
+<li>Clicking the name will open a help window describing what this App does.</li>
+</ul>
+<ul>
+<li>Upon a successful install and connecting to the server from your browser, you should see the following main page where you can launch any of the available Apps and Widgets.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(7)">Apps / Widgets</a></p><ul>
+<li>SIMRacingApps is broken down into 2 categories, Apps and Widgets.</li>
+<li>Apps are really just a collection of Widgets configured specifically for the App.</li>
+<li>Widgets are small subsets of functionality that are self contained by their own right. Some of the Widgets could just as well have been an App, but I decided to create them as Widgets so they can be used in an App with other Widgets at the same time.</li>
+<li>Widgets can also be made up of other Widgets, for example the Car Controls Widget uses the Pedals, Steering Wheel and Gear widgets.</li>
+<li>For details about each App or Widget, from the main screen, click on the image on the left. To run them, click the text.</li>
+<li>If you are interested in building your own App or Widget, see the links to the documentation for doing so in the documentation section on the main menu.</li>
+<li>On the following pages is a sampling of some of the most significant Apps/Widgets available. There are more on the main menu and even more if you look in the Java Script documentation.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(8)">CrewChief</a></p><ul>
+<li>Options</li>
+<ul>
+<li>PITCOMMANDSSIMCONTROLLER=false,true (default false)</li>
+<li>LAPSTOAVERAGE=0 worst lap, 1-x (default 0)</li>
+<li>ALTLAPSTOAVERAGE=0 worst lap, 1-x (default 2)</li>
+</ul>
+</ul>
+<ul>
+<li>The CrewChief App is used to make all your pit stop decisions. In the screen shot, the “red” items indicate what will be changed on the next pit stop. </li>
+<li>Using a mouse or touch screen, you can click on the red or green items to change them. This screen shot is shown in fixed setup mode with the controller option set to true. But, in an open race, you can also change the tire pressures from the App.</li>
+<li>If the SIM supports it, SIMRacingApps will send the commands to the SIM to make the changes. If not, it will show you what you have changed in the SIM if the SIM sends it out.</li>
+<li>To add a full tank of fuel, click or touch on the blue area of the fuel tank. Once the fuel has burned off, you can click above the blue to add to the point you clicked or touched.</li>
+<li>The number laps you can go on the remaining  fuel is displayed. Not shown here is a gray area that visually shows how much fuel is needed to finish the race. If the area is within the blue, you are good to the finish.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(9)">Dash-StockCars-DigitalOverlay</a></p><ul>
+<li>This Dash is a combination of the Analog Gauges most Stock Cars have, blended with just the right amount of digital information you need.</li>
+<li>Since I have 3 monitors, I bought a 7” monitor that sits behind my wheel to run this on. Now I can zoom in my field of view in the SIM where I can't even see the SIM's gauges.</li>
+<li>The Tach uses your speed to change colors when near Pit Road Speed, not the RPMs like in real-cars. Yellow approaching, Green at speed, Red over limit.</li>
+<li>All other Gauges turn Yellow when in the Warning Zone, and Blink Red when in the Critical Zone.</li>
+<li>DriverInfo Widgets show information for the drivers ahead, behind and talking.</li>
+<li>As you are approaching your Pit, a pop-up will show your speed and a count down timer.</li>
+</ul>
+<ul>
+<li>Options</li>
+<ul>
+<li>LAPSTOAVERAGE=0 worst lap, 1-x (default 0)</li>
+<li>ALTLAPSTOAVERAGE=0 worst lap, 1-x (default 2)</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(10)">Dash-BarGauges-DigitalOverlay</a></p><ul>
+<li>This Dash is a combination of the Gauges most cars have, blended with just the right amount of digital information you need.</li>
+<li>Since I have 3 monitors, I bought a 7” monitor that sits behind my wheel to run this on. Now I can zoom in my field of view in the SIM where I can't even see the SIM's gauges.</li>
+<li>The Tach uses your speed to change colors when near Pit Road Speed, not the RPMs like in real-cars. Yellow approaching, Green at speed, Red over limit.</li>
+<li>All other Gauges turn Yellow when in the Warning Zone, and Blink Red when in the Critical Zone.</li>
+<li>DriverInfo Widgets show information for the drivers ahead, behind and talking.</li>
+<li>As you are approaching your Pit, a pop-up will show your speed and a count down timer.</li>
+</ul>
+<ul>
+<li>Options</li>
+<ul>
+<li>LAPSTOAVERAGE=0 worst lap, 1-x (default 0)</li>
+<li>ALTLAPSTOAVERAGE=0 worst lap, 1-x (default 2)</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(11)">TrackMap</a></p><ul>
+<li>The TrackMap is a Widget that shows where every car is on the track.</li>
+<li>The colors are </li>
+<ul>
+<li>White – same lap as you</li>
+<li>Red – more than ½ lap ahead you</li>
+<li>Blue – more than ½ lap behind you</li>
+<li>Yellow – You or Reference Car</li>
+<li>Green – Leader</li>
+<li>Orange – Pace Car or Talking</li>
+</ul>
+<li>Click on any car to make it the reference car and the colors will change relative to it.</li>
+</ul>
+<ul>
+<li>Options</li>
+<ul>
+<li>REFERENCE=ME</li>
+<li>TEXTTYPE=id, <u>number</u>, initials, percentage</li>
+<li>MAPLAYER=sat,map,osm,mapquest</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(12)">PitRoad</a></p><ul>
+<li>The PitRoad Widget shows your speed relative to the Pit Road Speed Limit.</li>
+<li>As you approach pit road speed, it turns yellow as shown, then green when very near pit road speed.</li>
+<li>If you go over it turns red and starts blinking at 15 mph over.</li>
+<li>At the bottom, this is a count down timer that tells you how long it will take to get to your pit stall at your current speed. Start turning into you pit near -5.0.</li>
+</ul>
+<ul>
+<li>Options</li>
+<ul>
+<li>PITCOUNTDOWN=-10, time to start displaying</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(13)">StandingsTop20, StandingsTop35</a></p><ul>
+<li>Two Standings Widgets that shows the positions of all the cars. Colors are the same as the TrackMap.</li>
+<li>SOF – Strength of Field</li>
+<li>RUN – laps since pitting</li>
+<li>PIT – Time for last Pit</li>
+<li>BEHIND – Time behind the leader.</li>
+<li>Blk – Not shown, how many times they have blinked out.</li>
+</ul>
+<ul>
+<li>Note: I get a common question about incidents. iRacing does not export this value until the end of the race to prevent you from knowing you can disqualify someone. Therefore, incidents are not shown on this widget.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(14)">Race Administrator</a></p><ul>
+<li>This App is for Race Administrators to make it easy to send the admin commands you usually have to type with a click or touch. </li>
+<li>Session Commands are sent immediately.</li>
+<li>Driver Commands are sent as you click/touch the car numbers. Click/touch a Driver Command and it will stay selected until you change it. The exception to this rule is the “Remove” command will not stay selected for more than one car because it cannot be reversed.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(15)">Spectator / Broadcaster</a></p><ul>
+<li>If you are just spectating, spotting or broadcasting a race, this App gives you all the information you need about the race.</li>
+<li>To see information for a particular car, just select it from the grid on the bottom right. You can even select follow the leader or set it back to you.</li>
+<li>Colors are based on the currently selected reference car.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(16)">Running the Server with Options</a></p><ul>
+<li>There are 2 ways to pass options to the server. The easiest way is to start the server, connect to the main menu and click the “Gear” icon, change the value(s), then save it. This saves it to a file called settings.txt.</li>
+<li>The other way is to pass the options to the server on the command line. Options on the command line, override the values in the settings.txt file.</li>
+<li>Some of the available options for the server are:</li>
+<ul>
+<li>-SIM = {SIMName}  #the name of the SIM to start for. Defaults to iRacing.</li>
+<li>-Port = {portNumber}  #defaults to 80.</li>
+<li>-level = {logLevel} #where logLevel is SEVERE,WARNING,INFO,FINE,FINER,FINEST. Defaults to INFO.</li>
+<li>-Log = {filename} # creates a log file using the -level option in the -userpath directory.</li>
+<li>-mspec-xxxx {commPortNumber}, see next slide for details.</li>
+</ul>
+<li>To pass options to Java or to force it to use a specific version of Java that you have installed, in the Target field of the a shortcut change it to something similar to this:</li>
+<ul>
+<li>“{pathToJava}\bin\java.exe” -Xms256m -Xmx256m -jar “{pathTo}\SIMRacingAppsServer....exe”</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(17)">How to enable the MPSEC Shift Light</a></p><ul>
+<li>MPSEC Shift Light is a hardware product that you can buy from here, <a href="http://shiftlight.com.au/">http://shiftlight.com.au</a>. I am not an employee of this company and have no ability to support it from a setup or hardware standpoint.</li>
+<li>But, once it is setup and verified it works using MPSEC's own software, SIMRacingApps can be configured to control the light. But you must not be running both at the same time.</li>
+<li>Use the following options in the settings.txt file to enable the light(s). It can control up to 4 lights. Each light must be assigned to a different COMM port number. Use MPSEC's software to determine the COMM port for each light.</li>
+<ul>
+<li>-mspec-rpm = {commPortNumber}</li>
+<li>-mspec-greenflag = {commPortNumber}</li>
+<li>-mspec-blueflag = {commPortNumber}</li>
+<li>-mspec-yellowflag = {commPortNumber}</li>
+<li>-mspec-eflag = {commPortNumber}</li>
+</ul>
+<li>On the previous slide, follow the instructions to edit the settings.txt file and add these options to it. Then restart the server.</li>
+<li>You should not be running their software and the SIMRacingAppsServer...exe at the same time because both will be trying to control the same light. If not working, check the server window for log messages that may give you more information on the problem.</li>
+<li>To make it confusing, I cannot tell the actual color of the light in the software. So, you could use the -mspec-rpm option to turn on a yellow light by using the comm port number that the yellow light is assigned to.</li>
+<li>If the light is not using the correct RPM, report to me the Track, Car, Gear, and Engine Power Map and what the correct RPM should be. You can override the RPMs by adding entries to the settings.txt file. See the next slide.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(18)">Overriding Shift Light RPM Values</a></p><ul>
+<li>You can override by track, car, gear and engine power.</li>
+<p>        Track, Gear and Power are optional.</p>
+<p>        The format is as follows:</p>
+<p>            -[{track}-]{car}-ShiftLightStart[-{gear}][-{power}] = RPM</p>
+<p>            -[{track}-]{car}-ShiftLightShift[-{gear}][-{power}]  = RPM</p>
+<p>            -[{track}-]{car}-ShiftLightBlink[-{gear}][-{power}] = RPM</p>
+<li>You must specify all 3 values (start,shift,blink) or they will be ignored.</li>
+<ul>
+<li>Start is where the first light in a row of lights should come on.</li>
+<li>Shift is where the last light will come on and should also be your shift point.</li>
+<li>Blink is after Shift and it's where the light will blink.</li>
+</ul>
+<li>{track} and {car} are the values the SIM returns. Spaces are converted to underscores. You should be able to find these values in the server output window. Here is an example I used for testing with some bogus values:</li>
+<p>            -stockcars_chevyss-ShiftLightStart = 6000</p>
+<p>            -stockcars_chevyss-ShiftLightShift = 7000</p>
+<p>            -stockcars_chevyss-ShiftLightBlink = 8000</p>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(19)">Other Clients</a></p><ul>
+<li>Any client that acts like a browser should also work. Follow these links to find out more.</li>
+<li>Overwolf (<a href="http://github.com/SIMRacingApps/SIMRacingAppsOverwolf">http://github.com/SIMRacingApps/SIMRacingAppsOverwolf</a>)</li>
+<ul>
+<li>Use when you want to overlay the Apps within the SIM only.</li>
+</ul>
+<li>Electron (<a href="http://github.com/SIMRacingApps/SIMRacingAppsElectron">http://github.com/SIMRacingApps/SIMRacingAppsElectron</a>)</li>
+<ul>
+<li>Use when you have more monitors than the SIM uses that you want to display Apps on.</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(20)">Creating a Chrome Shortcut</a></p><ul>
+<li>Open the App or Widget from the main menu that you want to create a shortcut for.</li>
+<li>Right Click on the title bar and select &quot;Show as Tab&quot;.</li>
+<li>Click Chrome's Menu button (3 horizontal bars) and go to &quot;More Tools -&gt; Add to taskbar&quot;.</li>
+<li>Select the &quot;Open as Window&quot; check box, name it, and click &quot;Add&quot;.</li>
+<li>Click on Chrome's “Apps” button.</li>
+<li>Now you can run the App or Widget from the chrome://apps page.</li>
+<li>If you don't want to open Chrome to run an App, then Right Click on the icon to create a shortcut.</li>
+<li>Shortcuts can be put on the Desktop, Start Menu, or Task Bar for you to run later.</li>
+<li>Shortcuts can also be called from a .bat file and started all at once, including the server. </li>
+<ul>
+<li>Here's the syntax:</li>
+<p>                  start SIMRacingAppsServer….exe</p>
+<p>                  @rem give the server 10 seconds to get started</p>
+<p>                  @ping localhost -n 10 -w 1000 &gt;<u>nul</u></p>
+<p>                  start Name1.lnk</p>
+<p>                  start Name2.lnk</p>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(21)">Credits / Biography</a></p><ul>
+<li>Many, many thanks to my Wife. She has been so understanding with my “minor” obsession with SIM Racing and this software development effort.</li>
+<li>I also need to thank my Beta testers.</li>
+<li>I started with iRacing in 2010 after a friend recommended it to me. I was a user of NASCAR 2003 and was saddened when they went under. </li>
+<li>I’ve been developing software for over 25 years now and I still thoroughly enjoy it. But, I have to admit, I would rather be SIM racing :). It has been a delicate balance of time as I also have a real job.</li>
+<li>My background is mostly in Unix using C, C++ and Java on the server side. Recently in the corporate world, Oracle PL/SQL on the server side as well. I have had a few projects that required some client side (UI) development, but not many. This endeavor started as an effort to increase my client side skills. I originally wrote a version in Perl for Windows, but this lacked the performance I was looking for and it wasn't server based. Next I decided to write it in Java, with intention of doing the clients in Java as well. Then it hit me, why not create a HTTP server where you can use JavaScript and HTML5 to build the Apps. So, here we are. Hope you enjoy using it as much as I have enjoyed creating it.</li>
+</ul>
+</div>
+</body>
+</html>

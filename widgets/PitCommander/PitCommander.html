@@ -1,0 +1,148 @@
+<div class                               = "SIMRacingApps-Widget-PitCommander"
+     data-ng-style                       = "{ height: height+'px' }">
+     <div class                          = "SIMRacingApps-Widget-PitCommander-car">
+        <div class                       = "SIMRacingApps-Widget-PitCommander-nose">
+            <div class                   = "SIMRacingApps-Widget-PitCommander-tape"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-different-'  + data.Car.REFERENCE.Gauge.Tape.ChangeFlag.Value"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.Tape.ValueNext.State == 'OFF' 
+                                                       || data.Car.REFERENCE.Gauge.Tape.ValueNext.State == 'NOTAVAILABLE'
+                                                          ? 'none' : 'inherit' }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.TAPE
+                                         + '</span> '
+                                         + (data.Car.REFERENCE.Gauge.Tape.ValueNext | sraNumber:0)"
+            ></div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-frontwing"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-different-'  + data.Car.REFERENCE.Gauge.FrontWing.ChangeFlag.Value"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FrontWing.ValueNext.State == 'OFF' 
+                                                       || data.Car.REFERENCE.Gauge.FrontWing.ValueNext.State == 'NOTAVAILABLE'
+                                                          ? 'none' : 'inherit' }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.FRONTWING
+                                         + '</span> '
+                                         + (data.Car.REFERENCE.Gauge.FrontWing.ValueNext | sraNumber:2)"
+            ></div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-frontflap"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-different-'  + data.Car.REFERENCE.Gauge.FrontFlap.ChangeFlag.Value"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FrontFlap.ValueNext.State == 'OFF' 
+                                                       || data.Car.REFERENCE.Gauge.FrontFlap.ValueNext.State == 'NOTAVAILABLE'
+                                                          ? 'none' : 'inherit' }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.FRONTFLAP
+                                         + '</span> '
+                                         + (data.Car.REFERENCE.Gauge.FrontFlap.ValueNext | sraNumber:0)"
+            ></div>
+        </div>
+        <div class                       = "SIMRacingApps-Widget-PitCommander-body">
+            <sra-car-image class         = "SIMRacingApps-Widget-PitCommander-carimg"></sra-car-image> 
+            <sra-tire class              = "SIMRacingApps-Widget-PitCommander-tire SIMRacingApps-Widget-PitCommander-tire-RF" data-sra-args-value="RF" data-sra-args-controller="{{controller}}"></sra-tire>
+            <sra-tire class              = "SIMRacingApps-Widget-PitCommander-tire SIMRacingApps-Widget-PitCommander-tire-RR" data-sra-args-value="RR" data-sra-args-controller="{{controller}}"></sra-tire>
+            <sra-tire class              = "SIMRacingApps-Widget-PitCommander-tire SIMRacingApps-Widget-PitCommander-tire-LF" data-sra-args-value="LF" data-sra-args-controller="{{controller}}"></sra-tire>
+            <sra-tire class              = "SIMRacingApps-Widget-PitCommander-tire SIMRacingApps-Widget-PitCommander-tire-LR" data-sra-args-value="LR" data-sra-args-controller="{{controller}}"></sra-tire>
+            <sra-tire-measurements class = "SIMRacingApps-Widget-PitCommander-tiremeasurements SIMRacingApps-Widget-PitCommander-tiremeasurements-RF" data-sra-args-value="RF" data-sra-args-controller="{{controller}}"></sra-tire-measurements>
+            <sra-tire-measurements class = "SIMRacingApps-Widget-PitCommander-tiremeasurements SIMRacingApps-Widget-PitCommander-tiremeasurements-RR" data-sra-args-value="RR" data-sra-args-controller="{{controller}}"></sra-tire-measurements>
+            <sra-tire-measurements class = "SIMRacingApps-Widget-PitCommander-tiremeasurements SIMRacingApps-Widget-PitCommander-tiremeasurements-LF" data-sra-args-value="LF" data-sra-args-controller="{{controller}}"></sra-tire-measurements>
+            <sra-tire-measurements class = "SIMRacingApps-Widget-PitCommander-tiremeasurements SIMRacingApps-Widget-PitCommander-tiremeasurements-LR" data-sra-args-value="LR" data-sra-args-controller="{{controller}}"></sra-tire-measurements>
+            <sra-fuel-tank class         = "SIMRacingApps-Widget-PitCommander-fueltank"></sra-fuel-tank>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-repairs"
+                 data-ng-style           = "{ visibility: data.Car.REFERENCE.RepairTime.Value <= 0 && data.Car.REFERENCE.RepairTimeOptional.Value <= 0 ? 'hidden' : 'inherit' }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.REPAIRS
+                                         + '</span><br />'
+                                         + (data.Car.REFERENCE.RepairTime | sraDuration:0:false:true)
+                                         + '('+(data.Car.REFERENCE.RepairTimeOptional | sraDuration:0)+')'"
+            ></div>
+            <sra-flags class             = "SIMRacingApps-Widget-PitCommander-flags"></sra-flags>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-windshield"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+windshield+'-'+controller"
+                 data-xng-class           = "'SIMRacingApps-Widget-PitCommander-windshield-'+data.Car.REFERENCE.Gauge.WindshieldTearoff.ChangeFlag.Value"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.WINDSHIELD
+                                         + '</span> '
+                                         + (data.Car.REFERENCE.Gauge.WindshieldTearoff.ChangeFlag.Value ? translations.Y : translations.N)"
+            ></div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-fastrepairs"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+fastrepairs+'-'+controller"
+                 data-xng-class           = "'SIMRacingApps-Widget-PitCommander-fastrepairs-'+data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.FASTREPAIRS
+                                         + '</span> '
+                                         + (data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value ? translations.Y : translations.N)"
+            ></div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-brakebias"
+                 data-ng-style           = "{ visibility: data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext.State == 'OFF'
+                                                       || data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext.State == 'NOTAVAILABLE'
+                                                          ? 'hidden' : 'inherit'
+                                            }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.BRAKEBIASADJ
+                                         + '</span><br />'
+                                         + (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext | sraNumber:3)"
+            ></div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+lefts+'-'+controller"
+                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "translations.LEFTS">
+            </div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts-gas"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+leftsgas+'-'+controller"
+                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "translations.LEFTSGAS">
+            </div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-button-rights"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rights+'-'+controller"
+                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "translations.RIGHTS">
+            </div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-button-rights-gas"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rightsgas+'-'+controller"
+                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "translations.RIGHTSGAS">
+            </div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-button-tires4"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4+'-'+controller"
+                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "translations.TIRES4">
+            </div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-button-tires4-gas"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4gas+'-'+controller"
+                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "translations.TIRES4GAS">
+            </div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-incidents"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Incidents.State != 'OFF' ? 'inherit' : 'none' }"
+                 data-ng-bind-html       = "data.Car.REFERENCE.IncidentsTeam.State != 'OFF'
+                                         ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+                                         :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+                                           "
+            ></div>
+        </div>
+        <div class                       = "SIMRacingApps-Widget-PitCommander-tail">
+            <div class                   = "SIMRacingApps-Widget-PitCommander-wedge"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ValueNext.State == 'OFF'
+                                                       || data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ValueNext.State == 'NOTAVAILABLE'
+                                                          ? 'none' : 'inherit' }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.WEDGEADJ
+                                         + '</span> '
+                                         + '<span class=&quot;SIMRacingApps-Widget-PitCommander-different-' + data.Car.REFERENCE.Gauge.LRWedgeAdjustment.ChangeFlag.Value + '&quot;>'
+                                         + (data.Car.REFERENCE.Gauge.LRWedgeAdjustment.ValueNext | sraNumber:3)
+                                         + '</span> '
+                                         + ' / ' 
+                                         + '<span class=&quot;SIMRacingApps-Widget-PitCommander-different-' + data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ChangeFlag.Value + '&quot;>'
+                                         + (data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ValueNext | sraNumber:3)
+                                         + '</span> '"
+            ></div>
+            <div class                   = "SIMRacingApps-Widget-PitCommander-rearwing"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-different-'  + data.Car.REFERENCE.Gauge.RearWing.ChangeFlag.Value"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.RearWing.ValueNext.State == 'OFF'
+                                                       || data.Car.REFERENCE.Gauge.RearWing.ValueNext.State == 'NOTAVAILABLE'
+                                                          ? 'none' : 'inherit' }"
+                 data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                         + translations.REARWING
+                                         + '</span> '
+                                         + (data.Car.REFERENCE.Gauge.RearWing.ValueNext | sraNumber:2)"
+            ></div>
+        </div>
+     </div>
+</div>

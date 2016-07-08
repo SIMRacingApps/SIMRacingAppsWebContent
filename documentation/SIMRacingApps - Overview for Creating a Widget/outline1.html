@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 1</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(0)">SIMRacingApps Widgets</a></p><p>Specifications for Developing a HTML Widget</p>
+<p>Updated: May 5, 2016</p>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(1)">The Widget</a></p><ul>
+<li>Similar to an App, a Widget lives in its' own folder and is self contained. It may use other Widgets as well as its' own private ones. It contains the following files.</li>
+<ul>
+<li>{WidgetName}.html</li>
+<li>{WidgetName}.js</li>
+<li>{WidgetName}.css</li>
+<li>Listing.json (Optional. Enables on Main Menu.)</li>
+<li>icon.png (Optional)</li>
+<li>All other files based on your widget's needs.</li>
+</ul>
+<li>Each Widget can be run as a standalone App via the WidgetLoader App by creating the listing.json file and providing an icon.png file for the menu.</li>
+<li>Like Apps, other supporting files, such as, images, should be placed in the Widgets's folder. Do not reference a resource, like an image, from another widget to keep them independent of the other Widgets at the expense of duplication so patches and updates can be applied to your Widget without affecting other Widgets.</li>
+<li>To kick start a new Widget, using a tool like 7-Zip, open the SIMRacingAppsServer...exe file and extract the contents of the “widgets/Template” folder to “%USERPROFILE%\SIMRacingApps\widgets\MyNewWidget” folder (USERPROFILE is the folder you see when viewing the folder with your log-in name in Windows Explorer). Go into this new folder and for each file and change the word Template to the name of your new Widget (for example “MyNewWidget”). Open each file and globally replace “Template” with “MyNewWidget”.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(2)">{WidgetName}.html</a></p><ul>
+<li>The {WidgetName}.html file is a snippet of HTML that makes up the content of a widget. When a user uses your Widget, this will replace the HTML contents of the tag that they used to reference it.</li>
+<li>The Template.html contains the following to get you started.</li>
+<ul>
+<li>&lt;div class                      = <i>&quot;SIMRacingApps-Widget-Template&quot;</i></li>
+<p>     data-ng-style               = <i>&quot;{ height: height+'px' }&quot;</i></p>
+<p>     data-ng-bind-html      = <i>&quot;translations.KEY + ': '+data.Car.REFERENCE.Description.ValueFormatted&quot;</i></p>
+<p>    &gt;&lt;/div&gt;</p>
+</ul>
+<li>The outer element, most of the time a DIV, must be decorated with a class using the Widget’s name. Please adhere to the naming convention that each Widget has a unique class name by prefixing it with “SIMRacingApps-Widget-”. This allows users to put styles in the useroverrides.css for specific widgets.</li>
+<li>The “data-ng-style” attribute is an Angular Directive where the height of your Widget will be calculated based on the “width” the user assigns to the instance of your widget in their App. This keeps the aspect ratio from changing. See the {WidgetName}.js file for more info.</li>
+<li>The “data-ng-bind-html” is just an example of how you can get data from the SIM to update your HTML. Feel free to browse other Widget’s HTML file to see the many possibilities.</li>
+<li>Do not use the “id” attribute in a Widget, because a Widget can be added to the same page multiple times and this would cause a conflict. Ids must be unique on a page. Use the “class” attribute to identify elements and style them. With Angular, you rarely, if ever, need to do DOM manipulation beyond what Angular does for you.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(3)">{WidgetName}.js</a></p><ul>
+<li>The {WidgetName}.js file contains the definition of an Angular Directive using RequireJS to define it.</li>
+<li>It starts with RequireJS’s dependency list, and this is where you put your CSS file and any other Widget’s you may have embedded in the HTML file.</li>
+<li>Then there are several variables that define the Widget’s Name, the HTML file to include, the height and width, and the default interval. I found that using 800x480 is good ratio that works well on most displays in portrait mode.</li>
+<li>In the Template.js, there is several lines of code that is for creating an Angular Directive. Never remove this code unless instructed to do so.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(4)">{WidgetName}.js controller Function</a></p><ul>
+<li>The “controller” section of this file acts like a constructor and gets called when the Directive is initializing. At this point in time, it has not been added to the DOM yet.</li>
+<li>Use this section initialize any variables and define any functions for your Widget. Always define these on $scope, because Angular creates a $scope for each instance of your Widget.</li>
+<li>Also in this section is where you will load any translation files for your Widget. If you don’t have any, just comment out the code to load them so the browser won’t try and load them.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(5)">{WidgetName}.js link Function</a></p><ul>
+<li>The “link” section of this file also acts like a constructor and gets called after Angular has placed your HTML into the DOM. It passes to you the $scope for this instance of the Widget, the $element is was placed in, and the $attrs that the user assigned to this element.</li>
+<li>In the Template.js, there is code to retrieve the “value” attribute. You may not need a value, but it is there if you want your user to pass in something that allows this instance of the Widget do something with it. Follow the same convention to define as many “arguments” values as you need.</li>
+<ul>
+<li>Angular allows the attributes to be added to the DOM element in many ways, but it always converts them to CamelCase when assigning them to the $attrs object. I have used the following naming convention for all my Widgets, “data-sra-args-{argument-name}”, to help avoid conflicts with other attributes. For example “data-sra-args-car-number”, will get assigned to the $attrs attribute as “$attr.sraArgsCarNumber”.</li>
+</ul>
+<li>The $attr.sraArgsData attribute can be appended to, to subscribe to SIM values from the server. Just separate these values with a semi-colon. These values are updated on the $scope.data object replacing slashes with periods. (For example: “Car/REFERENCE/Description” would be referenced as “$scope.data.Car.REFERENCE.Description.ValueFormatted”.</li>
+<li>If you need to intercept any updates from the SIM before the DOM is notified, you use the Angular $watch method. There is an example commented out in the Template.js file. When the watch result changes, the function assigned gets called and is passed the new value and old values. It is not recommended that you directly update the DOM in this function. Instead, use Angular to bind attributes, styles, etc. to $scope values and then just update the $scope and Angular will update the DOM for you.</li>
+<li>The “sraResize” event is watched for using Angular’s $on method. The function it calls, updates the height on you element for you. You can intercept it by providing your own function, then calling the original from your code.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(6)">{WidgetName}.css</a></p><ul>
+<li>Each Widget should and does have its’ own CSS file.</li>
+<li>The Widgets main class should have the following mandatory attributes.</li>
+<ul>
+<li>width: 100%;</li>
+<li>height: 100%;</li>
+<li>font-size: 100%;</li>
+</ul>
+<li>If you don’t want the contents of your Widget overflowing its’ boundaries, then also add.</li>
+<ul>
+<li>overflow: hidden;</li>
+</ul>
+<li>The Widget should be built so that it is readable when resizing it to the smallest window you think your user would want. All Widgets I’ve built are designed to be scaled up or down, depending on the usage. To facilitate this, all CSS sizing should be done with percentages that a relative to each other. </li>
+<ul>
+<li>The default App size is 800x480px with a font-size of 16px. Since your widget should be the same size, a user can adjust both the width’s and height’s by the same percentage to maintain a good aspect ratio.</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(7)">Localization / Translations</a></p><ul>
+<li>Widgets use the same rules as an App when Localizing numbers and translating text. See the documentation for creating an App.</li>
+<li>Widgets have their own “nls” folder and translation files that are loaded in the Directive’s controller function.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(8)">default.html</a></p><ul>
+<li>The default.html file is a simple file that has a redirect tag in the &lt;head&gt; to load WidgetLoader App and pass in this widget’s name in place of the word Template.</li>
+<p>&lt;!DOCTYPE HTML&gt;</p>
+<p>&lt;html&gt;</p>
+<p>&lt;head&gt;</p>
+<p>    &lt;meta HTTP-EQUIV=<i>&quot;REFRESH&quot; content=&quot;0; url=/SIMRacingApps/apps/WidgetLoader?widget=Template&quot;&gt;</i></p>
+<p>&lt;/head&gt;</p>
+<p>&lt;/html&gt;</p>
+<li>This allows users to load the widget using the following URL.</li>
+<ul>
+<li>http://localhost/SIMRacingApps/widgets/{widgetName}</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(9)">icon.png</a></p><ul>
+<li>The icon.png file is a preview of your Widget. It is used by the main page. </li>
+<li>If the icon.png file is missing, it will not appear on the main page.</li>
+<li>Please blur out any user identifiable names that SIMRacingApps doesn’t have documented permission to use it. We don’t want to offend anyone.</li>
+</ul>
+</div>
+</body>
+</html>

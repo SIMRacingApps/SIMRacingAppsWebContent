@@ -1,0 +1,16 @@
+{
+    "LAPTIMING":      "Lap Timing",
+    "LAP":            "Lap",
+    "LAPRUN":         "Lap/Run",
+    "TOGO":           "To Go",
+    "OF":             "of",
+    "POS":            "Pos/Class",
+    "AHEAD":          "Ahead",
+    "BEHIND":         "Behind",
+    "TIME":           "Time",
+    "REMAINING":      "Remaining",
+    "ELAPSED":        "Elapsed",
+    "CURR":           "Curr",
+    "LAST":           "Last",
+    "BEST":           "Best"
+}

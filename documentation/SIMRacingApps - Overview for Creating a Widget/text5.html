@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>{WidgetName}.js link Function</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text4.html">Back</a> <a href="text6.html">Continue</a> <a href="text9.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>{WidgetName}.js link Function</h1>
+<ul>
+<li>The “link” section of this file also acts like a constructor and gets called after Angular has placed your HTML into the DOM. It passes to you the $scope for this instance of the Widget, the $element is was placed in, and the $attrs that the user assigned to this element.</li>
+<li>In the Template.js, there is code to retrieve the “value” attribute. You may not need a value, but it is there if you want your user to pass in something that allows this instance of the Widget do something with it. Follow the same convention to define as many “arguments” values as you need.</li>
+<ul>
+<li>Angular allows the attributes to be added to the DOM element in many ways, but it always converts them to CamelCase when assigning them to the $attrs object. I have used the following naming convention for all my Widgets, “data-sra-args-{argument-name}”, to help avoid conflicts with other attributes. For example “data-sra-args-car-number”, will get assigned to the $attrs attribute as “$attr.sraArgsCarNumber”.</li>
+</ul>
+<li>The $attr.sraArgsData attribute can be appended to, to subscribe to SIM values from the server. Just separate these values with a semi-colon. These values are updated on the $scope.data object replacing slashes with periods. (For example: “Car/REFERENCE/Description” would be referenced as “$scope.data.Car.REFERENCE.Description.ValueFormatted”.</li>
+<li>If you need to intercept any updates from the SIM before the DOM is notified, you use the Angular $watch method. There is an example commented out in the Template.js file. When the watch result changes, the function assigned gets called and is passed the new value and old values. It is not recommended that you directly update the DOM in this function. Instead, use Angular to bind attributes, styles, etc. to $scope values and then just update the $scope and Angular will update the DOM for you.</li>
+<li>The “sraResize” event is watched for using Angular’s $on method. The function it calls, updates the height on you element for you. You can intercept it by providing your own function, then calling the original from your code.</li>
+</ul>
+</body>
+</html>

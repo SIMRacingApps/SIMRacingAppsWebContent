@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-steering-wheel.html",
+"name": "SteeringWheel",
+"description": "",
+"url": "apps/WidgetLoader?widget=SteeringWheel&",
+"icon": "widgets/SteeringWheel/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

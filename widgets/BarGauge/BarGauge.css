@@ -1,0 +1,105 @@
+.SIMRacingApps-Widget-BarGauge {
+    width:         100%;
+    height:        100%;
+}
+
+.SIMRacingApps-Widget-BarGauge-border-gasket {
+    stroke: none;
+    fill:   black;
+}
+
+.SIMRacingApps-Widget-BarGauge-border-outer {
+    stroke: none;
+    fill:   rgb(100,100,100);
+}
+
+.SIMRacingApps-Widget-BarGauge-border-inner {
+    stroke: none;
+    fill:   rgb(60,60,60);
+}
+
+.SIMRacingApps-Widget-BarGauge-barbackground {
+    stroke: none;
+    fill:   gray;
+    fill-opacity: .4;
+}
+
+.SIMRacingApps-Widget-BarGauge-bar {
+    stroke: none;
+    fill:   gray;
+}
+
+.SIMRacingApps-Widget-BarGauge-major {
+    stroke-width: 9;
+    stroke-opacity: .8;
+}
+
+.SIMRacingApps-Widget-BarGauge-minor {
+    stroke-width: 3;
+    stroke-opacity: .8;
+}
+
+.SIMRacingApps-Widget-BarGauge-label {
+}
+
+.SIMRacingApps-Widget-BarGauge-value {
+	stroke: black;
+	stroke-width: 1;
+	fill: chartreuse;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-BarGauge-uom {
+    fill: white;
+    color: white;
+    font-family: "Arial";
+    font-weight: normal;
+}
+
+.SIMRacingApps-Widget-BarGauge-state-APPROACHINGLIMIT {
+    fill:   yellow;
+    stroke: yellow;
+}
+.SIMRacingApps-Widget-BarGauge-state-CRITICAL {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-BarGauge-state-LIMIT {
+    fill:   chartreuse;
+    stroke: chartreuse;
+}
+.SIMRacingApps-Widget-BarGauge-state-SHIFTLIGHTS {
+    fill:   royalblue;
+    stroke: royalblue;
+}
+.SIMRacingApps-Widget-BarGauge-state-NORMAL {
+    fill:   royalblue;
+    stroke: royalblue;
+}
+.SIMRacingApps-Widget-BarGauge-state-OFF {
+    fill:   dimgray;
+    stroke: dimgray;
+}
+.SIMRacingApps-Widget-BarGauge-state-OVERLIMIT {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-BarGauge-state-SHIFT {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-BarGauge-state-SHIFTBLINK {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-BarGauge-state-WARNING {
+    fill:   yellow;
+    stroke: yellow;
+}
+.SIMRacingApps-Widget-BarGauge-state-WAYOVERLIMIT {
+    fill:   royalblue;
+    stroke: royalblue;
+}
+
+

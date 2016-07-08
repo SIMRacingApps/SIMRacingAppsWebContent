@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Slide 1</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(0)">SIMRacingApps</a></p><p>Specifications for Developing a HTML App</p>
+<p>Updated: May 5, 2016</p>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(1)">The App</a></p><ul>
+<li>Apps are found in the “apps” folder.</li>
+<li>You can launch an App 2 ways. One, from the main page or by specifying the URL to the app's default.html file. An App will appear automatically on the main page if an listing.json file exists.</li>
+<li>Each App's folder contains at least 4 files as follows.</li>
+<ul>
+<li>default.html </li>
+<li>default.js</li>
+<li>default.css</li>
+<li>listing.json (Optional. Used to show in the menu)</li>
+<li>icon.png (Optional)</li>
+<li>Any other resource the app needs, including it's own private widgets.</li>
+</ul>
+<li>Other files, such as, images, should be placed in the App's folder. Try to keep them independent of other apps at the expense of duplication so patches and updates can be applied to your App without affecting other Apps.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(2)">Basic Data Flow</a></p><p><font color="#FFFFFF">HTML5</font></p>
+<p><font color="#FFFFFF">DOM</font></p>
+<p><font color="#FFFFFF">Elements</font></p>
+<p><font color="#FFFFFF">Bound</font></p>
+<p><font color="#FFFFFF">To</font></p>
+<p><font color="#FFFFFF">Angular</font></p>
+<p><font color="#FFFFFF">$scope</font></p>
+<p><font color="#FFFFFF">objects</font></p>
+<p><font color="#FFFFFF">Angular</font></p>
+<p><font color="#FFFFFF">$scope</font></p>
+<p><font color="#FFFFFF">.data</font></p>
+<p><font color="#FFFFFF">JavaScript</font></p>
+<p><font color="#FFFFFF">Dispatcher</font></p>
+<p><font color="#FFFFFF">HTTP</font></p>
+<p><font color="#FFFFFF">Request</font></p>
+<p><font color="#FFFFFF"> </font></p>
+<p><font color="#FFFFFF">Servlet</font></p>
+<p><font color="#FFFFFF"> </font></p>
+<p><font color="#FFFFFF">SIM</font></p>
+<p><font color="#FFFFFF">Connector</font></p>
+<p><font color="#FFFFFF"> </font></p>
+<p><font color="#FFFFFF"> </font></p>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(3)">The Data Object</a></p><ul>
+<li>The Data Object is used to pass values to and from the server.</li>
+<ul>
+<li>Value - The unformatted value.</li>
+<li>Type - UNKNOWN,INTEGER,DOUBLE,LONG,FLOAT,STRING</li>
+<li>UOM - The Unit of Measure, untranslated.</li>
+<li>UOMAbbr - The Unit of Measure, translated.</li>
+<li>UOMDescr - The Unit of Measure long name, translated and pluralized.</li>
+<li>Format(1) - A format string that conforms to the <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax"><u><font color="#0563C1">java.util.formatter</u></font></a> rules. Value, UOMAbbr, UOMDescr are passed as arguments 1,2,3.</li>
+<li>ValueFormatted - The Value formatted according to the Format rules.</li>
+<li>Name - The name of the data, the path you subscribed to.</li>
+</ul>
+<li>(1) - formatting should be done with Angular and SIMRacingApps Filters.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(4)">The POST Reqest</a></p><ul>
+<li>When the SIMRacingApps.js bootstraps the application, Angular’s controller and link methods are called on all directives, but the order us not known. In the link method the data listed in the attribute “data-sra-args-data” is subscribed to from the server using a Data object via a $http call.</li>
+<li>&quot;data-sra-args-data&quot; is a semi-colon separated list of paths to data you want to subscribe to. An example looks like &quot;/Car/LEADER/Lap/Completed&quot; or &quot;/Car/LEADER/Lap/Completed;/Car/LEADER/Lap/CompletedPercent&quot;.</li>
+<li>SIMRacingApps.js establishes a &quot;sessionid&quot; that the server uses to cache the request. The session id will be used to poll the server for changes to the data subscribed to.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(5)">The Dispatcher</a></p><ul>
+<li>After the POST request is sent, SIMRacingApps.js establishes a connection.</li>
+<li>The &quot;sessionid&quot; is sent to the server to request any updates to the data subscribed to in the POST request.</li>
+<li>The dispatcher can be configured to poll for changes or to have changes pushed by the server to the browser automatically. The default is to poll for new data. The interval for either of these approaches can be defined by the user and defaults to 100 milliseconds. Values as low as 1ms is possible, but it really depends on the needs of the client and the ability of the SIM to produce data and the browser to render the data that fast.</li>
+<li>Once new data is received, it is parsed and assigned to the $scope.data object that is bound to the DOM element that originally subscribed to it. This triggers the Angular watches to take over and update the element based on how you bound to it.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(6)">The &lt;sra-data&gt; DOM Element
+</a></p><ul>
+<li>Angular directives are Java Script routines that allow new HTML tags to be defined. All SIMRacingApps Widgets are implemented as directives, and the most basic one is called &quot;sra-data&quot;. <i>(i.e. You will see the &quot;sra&quot; abbreviated for SIMRacingApps throughout to identify attributes specific to SIMRacingApps. Similarly, &quot;ng&quot; is used by Angular for the same reason.)</i></li>
+<li>To use it, simply add it to the DOM as &lt;sra-data&gt;&lt;/sra-data&gt;.</li>
+<li>You need to have at least 2 attributes defined for this directive before it will do anything. Each one is prefixed with &quot;data-&quot; per the HTML5 specification for user defined attributes.</li>
+<ul>
+<li>&lt;sra-data </li>
+<p>data-sra-args-data = &quot;the path(s) to subscribe to&quot;</p>
+<p>data-ng-bind = &quot;data.path.ValueFormatted&quot;</p>
+<p>    &gt;&lt;/sra-data&gt;</p>
+</ul>
+<li>The results of &quot;data-ng-bind&quot; is assigned to the elements text value. It contains JavaScript code where all variables referenced are for the $scope instance assigned to this element. Using inheritance, data subscribed to by an element, is available to all it’s children.</li>
+<li>You can also use, “data-ng-bind-html” if you want to embed other html tags. Useful for adding “span” tags with a different class for formatting with CSS. Angular make sure the HTML is safe, but you can override it.</li>
+<li>These tags can be styled, either inline or with CSS and classes, just like any other tag.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(7)">Data Paths to Subscribe To</a></p><ul>
+<li>There are only a few top level paths to retrieve the data. These paths represent an API that all implemented SIMs will conform to. Therefore, your App will work with any SIM that is implemented. </li>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Connector.html"><u><font color="#0563C1">/(method)/(args)</u></font></a> - Retrieve data for connection.</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Session.html"><u><font color="#0563C1">/Session/(method)/(args)</u></font></a> – Retrieve data for the current session</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Car.html"><u><font color="#0563C1">/Session/Car/(car)/(method)/(args)</u></font></a> or <a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Car.html"><u><font color="#0563C1">/Car/(car)/(method)/(args)</u></font></a> – Retrieve data about a specific car</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Track.html"><u><font color="#0563C1">/Session/Track/(method)/(args)</u></font></a> or <a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/Track.html"><u><font color="#0563C1">/Track/(method)/(args)</u></font></a> – Retrieve data for the current track</li>
+<li><a href="http://localhost/SIMRacingApps/JavaDoc/com/SIMRacingApps/TeamSpeak.html"><u><font color="#0563C1">/TeamSpeak/(method)/(args)</u></font></a> – Retrieve data for TeamSpeak</li>
+</ul>
+<li>If you find the API doesn’t have what you need, you can retrieve data directly from the SIM by prefixing the path with the SIM’s name followed by the path to the data in the SIM. Please be aware that doing this makes your App SIM specific. Consider asking to have the API enhanced to include the data you need. Please note that SIM specific paths will be case sensitive, while the API is not.</li>
+<ul>
+<li>/iRacing/WeekendInfo/TrackDisplayName</li>
+</ul>
+<li>As stated before, these paths should be put in the “data-sra-args-data” attribute of any “sra” directive. But, sometimes you just need get or set a value only once. To do that, use the Angular $http service and prefix these paths with the following URL.</li>
+<ul>
+<li>http://localhost/SIMRacingApps/Data/…</li>
+<ul>
+<li>Example: http://localhost/SIMRacingApps/Data/iRacing/WeekendInfo/TrackDisplayName</li>
+</ul>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(8)">URL Parameters</a></p><ul>
+<li>URL Parameters can be used to give your user options when running your App. Some Widgets take URL Parameters as well as there are a few global parameters. </li>
+<li>URL Parameters are the “key=value” statements that come after the question mark(?) in the URL.</li>
+<li>Multiple URL parameters can be specified by separating them with an ampersand(&amp;).</li>
+<li>Example: <a href="http://localhost/SIMRacingApps/apps/CrewChief?LapsToAverage=1&ALTLAPSTOAVERAGE=0&key=value"><u><font color="#0563C1">http://localhost/SIMRacingApps/apps/CrewChief?LapsToAverage=1&amp;ALTLAPSTOAVERAGE=0&amp;key=value</u></font></a></li>
+<li>All parameters are placed $scope as attributes by prefixing the key with “sraArgs” and appending the key in uppercase. Converting to upper case is a convention used to identify these variables as parameters from the URL instead of parameters placed in the HTML directly using Camel Case.</li>
+<ul>
+<li>In JavaScript, $scope.sraArgsLAPSTOAVERAGE</li>
+<li>In bound attributes like “data-ng-bind”, sraArgsLAPSTOAVERAGE</li>
+<li>In non-bound HTML, {{sraArgsLAPSTOAVERAGE}}</li>
+</ul>
+<li>It is advisable to initialize the variables in the default.js controller code as follows.</li>
+<ul>
+<li>$scope.sraArgsLAPSTOAVERAGE = $scope.sraArgsLAPSTOAVERAGE || “0”;</li>
+</ul>
+<li>It is not advisable to use special characters in the variable name. But you can put them in the value if you convert them according to URL encoding rules. For example, if you need a space character you would put %20.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(9)">A Simple Example</a></p><ul>
+<li>&lt;body&gt;</li>
+<ul>
+<li>&lt;div</li>
+<p>id=&quot;SIMRacingApps-App&quot;</p>
+<p>class=&quot;SIMRacingApps-App SIMRacingApps-App-MyApp&quot;</p>
+<p>data-ng-controller=&quot;SIMRacingApps-Controller&quot;</p>
+<p>data-sra-resize</p>
+<p>&gt;</p>
+<ul>
+<li>&lt;sra-data </li>
+<p>     class=“SIMRacingApps-App-MyApp-leader-lap&quot;</p>
+<p>     data-sra-args-data=&quot;/Car/LEADER/Lap/Completed&quot;</p>
+<p>     data-ng-bind=&quot;data.Car.LEADER.Lap.Completed.ValueFormatted&quot;</p>
+<p>            &gt;&lt;/sra-data&gt;</p>
+<p>&gt;&lt;/div&gt;</p>
+</ul>
+</ul>
+<li>&lt;/body&gt;</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(10)">The &quot;default.css&quot; file</a></p><ul>
+<li>SIMRacingApps tags can be styled just like any other HTML tag by simply naming them either in-line styles or the CSS file.</li>
+<ul>
+<li>sra-data { width: 50%; font-size: 200%; color: blue; }</li>
+</ul>
+<li>If an &quot;id&quot; or &quot;class&quot; is assigned to an element, they can be used in the css as selectors as well.</li>
+<ul>
+<li>.SIMRacingApps-App-MyApp-leader-lap { width: 50%; font-size: 200%; color: blue; } </li>
+</ul>
+<li>When sizing your element or font, it is recommended that you always use percentages so your app can scale to the size of the user's device or browser window. It is rare you need to specify the height because the &quot;data-sra-resize&quot; directive calculates that for you to preserved the aspect ratio of your element relative to the app's ratio.</li>
+<li>SIMRacingApps provides a global CSS file, SIMRacingApps.css, and CSS files for all of its' own widgets. You can override those styles in your style sheet as long as you import the widget's CSS file first. This is because the widget's CSS files are loaded on demand and there's no guarantee of the load order. (NOTE: All selectors in SIMRacingApps follows a strict naming convention to prevent conflicts).</li>
+<ul>
+<li>@import &quot;/SIMRacingApps/widgets/CarNumber/CarNumber.css&quot;</li>
+<li>.SIMRacingApps-Widget-CarNumber { font-family: 'Times Roman'; }</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(11)">CSS Files</a></p><ul>
+<li>SIMRacingApps Apps and Widgets uses a naming convention for the “id” or “class” values that is unique globally. The naming convention is:</li>
+<ul>
+<li>.SIMRacingApps-App-{appName}-{specificDetail}</li>
+<li>.SIMRacingApps-Widget-{widgetName}-{specificDetail}</li>
+</ul>
+<li>If you want to override a Widget’s style, you must first import the Widget’s CSS file, then apply the override in the App’s default.css file. The import just forces the loading order to be correct.</li>
+<li>Each App should also include the “/SIMRacingApps/useroverrides.css” file in the &lt;HEAD&gt; section. This file is not there by default because I don’t want to overwrite what the user has customized when an update is applied. Users have to create it manually. Also, should import any CSS file(s) you are overriding to make sure the load order is preserved properly. </li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(12)">The &lt;HEAD&gt; Section</a></p><ul>
+<li>The &lt;HEAD&gt; section should contain the following, modifying {AppName} and replacing it with your app's name.</li>
+<li>&lt;head&gt;</li>
+<p>    &lt;meta charset=&quot;utf-8&quot;&gt;</p>
+<p>    &lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt;</p>
+<p>    &lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache&quot;&gt;</p>
+<p>    &lt;script type=&quot;text/javascript&quot; src=&quot;/SIMRacingApps/lib/require.config.js&quot;&gt;&lt;/script&gt;</p>
+<p>    &lt;script type=&quot;text/javascript&quot; </p>
+<p>          data-main=&quot;/SIMRacingApps/apps/{AppName}/default&quot; </p>
+<p>           src=&quot;/SIMRacingApps/external/require.js&quot;</p>
+<p>     &gt;&lt;/script&gt;</p>
+<p>    &lt;link rel=&quot;stylesheet&quot; href=&quot;/SIMRacingApps/useroverrides.css&quot; /&gt;</p>
+<p>    &lt;base href=&quot;/&quot; /&gt;</p>
+<p>    &lt;title&gt;{App Name}&lt;/title&gt;</p>
+<p>    &lt;/head&gt;</p>
+<p>
+</p>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(13)">The FPS Div</a></p><ul>
+<li>If you place the following &quot;div&quot; in your body to display the FPS (Frames Per Second), then the dispatcher will update it for you if the URL parameter &quot;showFPS&quot; is added to the URL. It will be placed in the upper left hand corner of your app.</li>
+<ul>
+<li> &lt;div id=&quot;FPS&quot; class=&quot;FPS&quot; data-ng-bind=&quot;data.FPS.Value&quot;&gt;&lt;/div&gt;</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(14)">The &quot;default.html&quot; file</a></p><ul>
+<li>Finally, the &lt;HEAD&gt; and &lt;BODY&gt; must be included in an HTML file that is HTML5 compliant as follows.</li>
+<li>&lt;!DOCTYPE html&gt;</li>
+<p>    &lt;HTML&gt;</p>
+<p>    &lt;HEAD&gt;</p>
+<p>    ...the head tags</p>
+<p>    &lt;/HEAD&gt;</p>
+<p>    &lt;BODY&gt;</p>
+<p>    ...the body tags</p>
+<p>    &lt;/BODY&gt;</p>
+<p>    &lt;/HTML&gt;</p>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(15)">The &quot;default.js&quot; file</a></p><ul>
+<li>&quot;require.js&quot; is used to load the JavaScript files on demand. In the &lt;head&gt; section, when this script is loaded, the &quot;data-main&quot; attribute defines which JavaScript file to load first. By default, that file is named &quot;default.js&quot; and resides in you App’s folder, the same as your &quot;default.html&quot; file. This file should contain the following.</li>
+<ul>
+<li>The &quot;require()&quot; declaration, which lists the dependencies of your app. This will include &quot;angular&quot;, &quot;SIMRacingApps&quot;, and your default.css file as a minimum. It should also list all widgets your app uses.</li>
+<li>The &quot;controller&quot; for your app is used to initialize variables you are using in your default.html file and also to load the translation files.</li>
+<li>A call bootstrap the application as follows, (element,width,height,font-size). These must match the values from the listing.json file.</li>
+<p>           SIMRacingApps.start(angular.element(document.body),800,480,16);</p>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(16)">icon.png</a></p><ul>
+<li>The icon.png file is a preview of your App. It is used by the main menu page.</li>
+<li>If the icon.png file is missing, your App will not appear on the main page.</li>
+<li>Please blur out any user identifiable names that SIMRacingApps doesn’t have documented permission to use it. We don’t want to offend anyone.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(17)">Filters</a></p><ul>
+<li>Filters are an Angular feature that allows you to transform values by passing them through one or more transformations. Filters are placed in the &quot;data-ng-bind&quot; variable with pipe symbols between them (Unix Style).</li>
+<ul>
+<li>data-ng-bind=&quot;(data.Car.LEADER.Lap.Completed.Value | number:0)&quot;</li>
+</ul>
+<li>The statement above uses the Angular Filter called &quot;number&quot;. It takes one argument for the number of decimal places. It returns the number formatted according to the locale's required format, see Localization page. It's safer to place parentheses around these pipelines.</li>
+<li>SIMRacingApps provides additional filters as follows. There are more details in the JavaScript Documentation which can be accessed from the main menu.</li>
+<ul>
+<li>sraNumber - Same as &quot;number&quot;, but allows an entire Data object to be passed so the UOM can be appended.</li>
+<li>sraDuration - Formats a double in seconds to the D:HH:MM:SS.MMM format. Accepts a Data object as well.</li>
+<li>sraLPad, sraRPad - Pads the value either on left or the right.</li>
+<li>sraHex - Formats value as in hexadecimal.</li>
+<li>sraRGB – Formats the value suitable for assigning to a style attribute, like color;</li>
+<li>sraCeil, sraFloor, sraRound – Are simply wrappers for the same JavaScript functions.</li>
+<li>sraDebug - A pass-through filter with a debugger break point set.</li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(18)"> Localization </a></p><ul>
+<li>If you use the built in filters you get localization automatically. By default the locale is defined by the browser. This can be overridden by adding the &quot;lang&quot; URL parameter to your URL when you load you app. It can also be overridden by adding the &quot;data-lang&quot; attribute to a specific tag.</li>
+<li>The attibute's format must conform to format of &quot;{language}_{country}&quot;. For all of the supported formats, see the &quot;external/angular.x.x.x/i18n&quot; folder.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(19)">Translation Files</a></p><ul>
+<li>Translations are stored in .json formatted files.</li>
+<li>It loads them by looking in the &quot;nls&quot; folder of your App's folder. It uses the &quot;lang&quot; variable to find the appropriate file for that language as follows. </li>
+<ul>
+<li>nls/text-en.json </li>
+<li>nls/text-en_{country}.json </li>
+<li>nls/text-{lang}.json </li>
+<li>nls/text-{lang}_{country}.json</li>
+</ul>
+<li>As each is loaded, values are updated if the key exists from a previous load. Therefore, the last one in wins. The “text-en.json“ file is required to contain 100% of your translatable keys. The others, only have add the keys they want to override.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(20)">Translation File Format</a></p><ul>
+<li>The Translation Files use the JSON format. The contents are loaded into the $scope.translations object of the root DOM element and is accessible from all the element's $scope variables via inheritance. Therefore, the format of the file is up to you as you will be referencing the translations in your HTML file as follows.</li>
+<ul>
+<li>data-ng-bind=&quot;translations.LEADER+': '+data.Car.LEADER.Lap.Current.ValueFormatted&quot;</li>
+</ul>
+<li>The most simple JSON format is a key/value pair as follows.</li>
+<ul>
+<li>{</li>
+<p>    &quot;LEADER&quot;: &quot;Leader&quot;,</p>
+<p>    &quot;KEY&quot;: &quot;value&quot;</p>
+<p>    }</p>
+</ul>
+<li>To translate the file to a different language, simply copy the &quot;text-en.json&quot; file to the target language (i.e. &quot;text-{language}.json&quot;) and translate the value side of the contents.</li>
+<li>You could also create a country specific file if needed. It's worthy to point out, all of the contents do not have to be translated, only the ones you need to because the contents are merged. An example is &quot;en&quot; verses &quot;uk&quot;, where most words are spelled the same, but some are not. You only need to put the differences in the &quot;text-uk.json&quot; version of the file.</li>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(21)">The Web Server ReST Interface</a></p><ul>
+<li>By using the server’s Data service, you can use URLs see what values are available by putting it in the address bar of your browser. If your server is running, try it.</li>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track/Name"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track/Name</u></font></a></li>
+</ul>
+<li>You can also set the “output” parameter to control what attribute from the Data object gets returned. By default, “ValueFormatted” is returned. You can also get all of them by specifying “json” as the output.</li>
+<ul>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track/Name?output=Value"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track/Name?output=Value</u></font></a> </li>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track/Name?output=json"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track/Name?output=json</u></font></a></li>
+</ul>
+<li>If the request is not a complete path to a Data value, then all of the Data will be returned with the output as formatted as JSON. This applies to SIM specific paths as well. The following returns all the Data for the Track, like Description, Type, Weather, etc. Retrieving all of the data in you final application, could slow things down, so it is recommended that you only ask for what you need.</li>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track</u></font></a></li>
+</ul>
+<li>A good web site I use to format this into a readable form is <a href="http://jsonlint.com/"><u><font color="#0563C1">http://jsonlint.com</u></font></a></li>
+</ul>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(22)">Widgets</a></p><ul>
+<li>Widgets are small, pre built gadgets to be used by Apps.</li>
+<li>To use a Widget in your App, you must add the path to the Widget in your dependencies list inside your default.js file.</li>
+<ul>
+<li>require(SIMRacingAppsRequireConfig,</li>
+<p>    ['angular ', 'SIMRacingApps','css!default',</p>
+<p>      'widgets/CarNumber/CarNumber' ],</p>
+</ul>
+<li>Then add one or more elements to the DOM in your default.html file using the Widget’s name as the tag. Because HTML is not case sensitive, Angular requires you change from CamelCase to hyphens and you have to always prepend “sra-” to all Widget names as well.</li>
+<ul>
+<li>sraCarNumber in JavaScript becomes &lt;sra-car-number&gt;&lt;/sra-car-number&gt; in the HTML file.</li>
+</ul>
+<li>Widgets can also standalone and work as an App by itself. I have provided an App called WidgetLoader that takes “widget=WidgetName” as a parameter and runs it.</li>
+<li>For a complete list of Widgets, look in the “SRA_DIR\webapps\SIMRacingApps\widgets” folder or <a href="http://localhost/SIMRacingApps/widgets"><u><font color="#0563C1">http://localhost/SIMRacingApps/widgets</u></font></a> .</li>
+<p><i><font color="#FF0000"></i></font></p>
+</ul>
+</div>
+<div align="left"><p><a href="JavaScript:parent.NavigateAbs(23)">Sharing Your App or Widget</a></p><ul>
+<li>Now that you have created a masterpiece, you want to share it. The recommended way is to open Windows Explorer and navigate to the &quot;%USERPROFILE%\SIMRacingApps&quot; folder, right click on the “apps” or “widgets” folder and select &quot;Send To -&gt; Compressed (zipped) Folder&quot;. If you are working on multiple Apps or Widgets, you will want to modify the zip to contain only the one(s) you want to share. The path in the .zip file should be relative to the &quot;%USERPROFILE%\SIMRacingApps&quot; folder.</li>
+<li>Then rename the .zip file to .sra and instruct them to upload it using the Upload form at the bottom of the main menu. If you included a listings.json file, it will be included in the SIMRacingApps main page automatically.</li>
+<li>I will also be willing to evaluate your App or Widget to be included with the standard distribution, if it meets my quality requirements.</li>
+</ul>
+</div>
+</body>
+</html>

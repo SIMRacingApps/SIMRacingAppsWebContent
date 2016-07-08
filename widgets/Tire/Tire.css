@@ -1,0 +1,70 @@
+
+.SIMRacingApps-Widget-Tire {
+    width:              100%;
+    height:             100%;
+    font-size:          300%;
+}
+.SIMRacingApps-Widget-Tire-dirty-Y {
+	color:              cyan;
+}
+.SIMRacingApps-Widget-Tire-fixed-YY {
+    visibility:         hidden;
+}
+.SIMRacingApps-Widget-Tire-fixed-YN {
+    visibility:         hidden;
+}
+.SIMRacingApps-Widget-Tire-fixed-NN {
+    visibility:         hidden;
+}
+.SIMRacingApps-Widget-Tire-increment {
+    text-align:         center;
+    font-size:          200%;
+    line-height:        90%;
+    border-radius:      50%;
+    overflow:           hidden;
+    background-color:   green;
+}
+.SIMRacingApps-Widget-Tire-surface {
+    text-align:         center;
+    border-radius:      12% 12% / 10% 10%;
+    overflow:           hidden;
+    line-height:        140%;
+    background-image:   url('/SIMRacingApps/widgets/Tire/tire.png');
+    background-size:    110%;
+    background-repeat:  no-repeat;
+    background-position: center;
+}
+.SIMRacingApps-Widget-Tire-decrement {
+    text-align:         center;
+    font-size:          200%;
+    line-height:        90%;
+    border-radius:      50%;
+    overflow:           hidden;
+    background-color:   yellow;
+    color:              black;
+}
+.SIMRacingApps-Widget-Tire-padding {
+    line-height:        50%;
+}
+
+.SIMRacingApps-Widget-Tire-background-normal-false {
+    background-color:   black;
+}
+.SIMRacingApps-Widget-Tire-background-selected-false {
+    background-color:   black;
+    border-color:       red;
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-Tire-background-normal-true {
+    background-color:   green;
+}
+.SIMRacingApps-Widget-Tire-background-selected-true {
+    background-color:   green;
+    border-color:       red;
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-Tire-background-clicked {
+    background-color:   rgba(255,0,0,.3);
+}

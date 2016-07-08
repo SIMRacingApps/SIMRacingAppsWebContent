@@ -1,0 +1,12 @@
+<div class="SIMRacingApps-Widget-ShiftLights" 
+     ng-attr-style="height: {{height}}px;">
+    <svg version="1.1" viewBox="0 0 800 100" preserveAspectRatio="xMidYMid meet">
+        <circle
+            ng-repeat        = "light in lights"
+            ng-class         = "light.className"
+            ng-attr-cx       = {{light.x}}
+            ng-attr-cy       = {{light.y}}
+            ng-attr-r        = {{light.r}}
+        />
+    </svg>
+</div>

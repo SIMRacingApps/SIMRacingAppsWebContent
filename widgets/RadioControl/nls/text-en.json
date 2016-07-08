@@ -1,0 +1,9 @@
+{
+    "RADIOCONTROL": "Radio Control",
+    "ADD":          "ADD",
+    "DELETE":       "DELETE",
+    "MUTE":         "MUTE",
+    "UNMUTE":       "UNMUTE",
+    "SCANOFF":      "Set Scan OFF",
+    "SCANON":       "Set Scan ON"
+}

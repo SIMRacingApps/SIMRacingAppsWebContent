@@ -1,0 +1,26 @@
+<div class               = "SIMRacingApps-Widget-Pedals"
+     ng-attr-style       = "height: {{height}}px;"
+     data-sra-data       = "Car/REFERENCE/Gauge/Brake/ValueCurrent;Car/REFERENCE/Gauge/Clutch/ValueCurrent;Car/REFERENCE/Gauge/Throttle/ValueCurrent"
+     data-sra-args-interval="{{defaultInterval}}">
+
+    <div class="SIMRacingApps-Widget-Pedals-background SIMRacingApps-Widget-Pedals-clutchlocation">
+        <div class="SIMRacingApps-Widget-Pedals-pedal SIMRacingApps-Widget-Pedals-clutch"
+             data-ng-style="{ height: (100 - data.Car.REFERENCE.Gauge.Clutch.ValueCurrent.Value)+'%' }">
+        </div>
+        <div class="SIMRacingApps-Widget-Pedals-divider"></div>
+    </div>
+
+    <div class="SIMRacingApps-Widget-Pedals-background SIMRacingApps-Widget-Pedals-brakelocation">
+        <div class="SIMRacingApps-Widget-Pedals-pedal SIMRacingApps-Widget-Pedals-brake"
+             data-ng-style="{ height: (data.Car.REFERENCE.Gauge.Brake.ValueCurrent.Value)+'%' }">
+        </div>
+        <div class="SIMRacingApps-Widget-Pedals-divider"></div>
+    </div>
+
+    <div class="SIMRacingApps-Widget-Pedals-background SIMRacingApps-Widget-Pedals-throttlelocation">
+        <div class="SIMRacingApps-Widget-Pedals-pedal SIMRacingApps-Widget-Pedals-throttle"
+             data-ng-style="{ height: (data.Car.REFERENCE.Gauge.Throttle.ValueCurrent.Value)+'%' }">
+        </div>
+        <div class="SIMRacingApps-Widget-Pedals-divider"></div>
+    </div>
+</div>

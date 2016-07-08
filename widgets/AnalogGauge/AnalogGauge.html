@@ -1,0 +1,83 @@
+<div class="SIMRacingApps-Widget-AnalogGauge" ng-attr-style="height: {{height}}px;">
+    <svg version="1.1" viewBox="0 0 480 480" preserveAspectRatio="xMidYMid meet">
+        <g>
+            <circle class="SIMRacingApps-Widget-AnalogGauge-ring-gasket" cx=240 cy=240 r=240 />
+            <circle class="SIMRacingApps-Widget-AnalogGauge-ring-outter" cx=240 cy=240 ng-attr-r={{240-(ringSize*.2)}} />
+            <circle class="SIMRacingApps-Widget-AnalogGauge-ring-inner"  cx=240 cy=240 ng-attr-r={{240-(ringSize*.5)}} />
+        </g>
+        <circle class="SIMRacingApps-Widget-AnalogGauge-background" cx=240 cy=240 ng-attr-r={{240-ringSize}} />
+        <circle class="SIMRacingApps-Widget-AnalogGauge-revlights"
+                ng-repeat           = "r in revLights"
+                ng-attr-cx          = "{{480-ringSize-majorSize-majorBuffer-majorTextBuffer-(majorFontSize*1.5)}}"
+                cy                  = 240
+                r                   = 15
+                ng-class            = "revLightClasses[r]"
+                ng-attr-transform   = "rotate({{revLightAngles[r]}} 240,240)"
+        />
+        <g transform="translate(0,0)" ng-class="stateClass">
+            <line ng-repeat         = "a in minorScale"
+                  class             = "SIMRacingApps-Widget-AnalogGauge-minor"
+                  ng-attr-x1        = {{480-ringSize-minorBuffer-minorSize}}
+                  y1                = 240
+                  ng-attr-x2        = {{480-ringSize-minorBuffer}}
+                  y2                = 240
+                  ng-attr-transform = "rotate({{a}} 240,240)"
+            />
+            <line ng-repeat         = "m in majorScale"
+                  class             = "SIMRacingApps-Widget-AnalogGauge-major"
+                  ng-attr-x1        = {{480-ringSize-majorBuffer-majorSize}}
+                  y1                = 240
+                  ng-attr-x2        = {{480-ringSize-majorBuffer}}
+                  y2                = 240
+                  ng-attr-transform = "rotate({{m.angle}} 240,240)"
+            />
+            <g    ng-repeat         = "t in majorScale"
+                  class             = "SIMRacingApps-Widget-AnalogGauge-majorText"
+                  ng-attr-transform = "rotate({{t.angle}} 240,240)">
+                  <text ng-attr-x         = {{480-ringSize-majorSize-majorBuffer-majorTextBuffer}}
+                        ng-attr-y         = {{240+(majorFontSize*.4)}}
+                        ng-attr-transform = "rotate({{-t.angle}} {{480-ringSize-majorSize-majorBuffer-majorTextBuffer}},240)"
+                        ng-attr-style     = "font-size: {{majorFontSize}}px; text-anchor: middle;">
+                        {{t.text}}
+                  </text>
+            </g>
+            <text class             = "SIMRacingApps-Widget-AnalogGauge-Label1 SIMRacingApps-Widget-AnalogGauge-{{sraAnalogGauge}}-Label1"
+                  ng-attr-x         = "{{xLabel1}}"
+                  ng-attr-y         = "{{yLabel1}}"
+                  ng-attr-style     = "font-size: {{fontSizeLabel1}}px; text-anchor: {{anchorLabel1}};">
+                  {{Label1}}
+            </text>
+            <text class             = "SIMRacingApps-Widget-AnalogGauge-Label2 SIMRacingApps-Widget-AnalogGauge-{{sraAnalogGauge}}-Label2"
+                  ng-attr-x         = "{{xLabel2}}"
+                  ng-attr-y         = "{{yLabel2}}"
+                  ng-attr-style     = "font-size: {{fontSizeLabel2}}px; text-anchor: {{anchorLabel2}};">
+                  {{Label2}}
+            </text>
+        </g>
+        <text class             = "SIMRacingApps-Widget-AnalogGauge-value SIMRacingApps-Widget-AnalogGauge-{{sraAnalogGauge}}-value"
+              ng-attr-x         = "{{xValue}}"
+              ng-attr-y         = "{{yValue}}"
+              ng-attr-style     = "font-size: {{fontSizeValue}}px; text-anchor: {{anchorValue}}; visibility: {{showValue ? 'inherit' : 'hidden'}}">
+              {{value}}
+        </text>
+        <text class             = "SIMRacingApps-Widget-AnalogGauge-uom SIMRacingApps-Widget-AnalogGauge-{{sraAnalogGauge}}-uom"
+              ng-attr-x         = "{{xUom}}"
+              ng-attr-y         = "{{yUom}}"
+              ng-attr-style     = "font-size: {{fontSizeUom}}px; text-anchor: {{anchorUom}}; visibility: {{showValue ? 'inherit' : 'hidden'}}">
+              {{uom}}
+        </text>
+        <polygon class="SIMRacingApps-Widget-AnalogGauge-needle"
+                 ng-attr-transform="rotate({{needleAngle}} 240,240)"
+                 ng-attr-points="240,{{240-(buttonSize*.2)}}
+                                 {{480-ringSize-needleBuffer}},{{240-3}}
+                                 {{480-ringSize-needleBuffer}},{{240+3}}
+                                 240,{{240+(buttonSize*.2)}}
+                                 240,{{240-(buttonSize*.2)}}
+                                " />
+        <circle class="SIMRacingApps-Widget-AnalogGauge-button"
+                cx=240
+                cy=240
+                ng-attr-r={{buttonSize/2}}
+        />
+    </svg>
+</div>

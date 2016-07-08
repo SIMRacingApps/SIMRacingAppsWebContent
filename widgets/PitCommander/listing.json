@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-pit-commander.html",
+"name": "PitCommander;PitCommander-PITCONTROLLER",
+"description": "View Only, Shows Setup for Next Pit;Sends Pit Commands to SIM to Setup for Next Pit Stop",
+"url": "apps/WidgetLoader?widget=PitCommander&",
+"icon": "widgets/PitCommander/icon.png;widgets/PitCommander/icon.png",
+"width": 600,
+"height": 480,
+"args": "PitCommandsSIMController=false;PitCommandsSIMController=true"
+}

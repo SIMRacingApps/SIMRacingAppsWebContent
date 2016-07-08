@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-car-selector.html",
+"name": "CarSelector",
+"description": "Makes Any Car the Reference Car",
+"url": "apps/WidgetLoader?widget=CarSelector&",
+"icon": "widgets/CarSelector/icon.png",
+"width": 430,
+"height": 480,
+"args": ""
+}

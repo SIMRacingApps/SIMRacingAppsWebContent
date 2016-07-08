@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/SIMRacingApps/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="72x72" href="/SIMRacingApps/SRA-Logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/SIMRacingApps/SRA-Logo-114x114.png">
+    <link rel="apple-touch-icon" href="/SIMRacingApps/SRA-Logo-57x57.png">
+    <script type="text/javascript" src="/SIMRacingApps/lib/require.config.js"></script>
+    <script type="text/javascript" data-main="/SIMRacingApps/apps/Dash-Minimum/default" src="/SIMRacingApps/external/require.js"></script>
+    <base href="/" />
+    <title>Dash-Minimum</title>
+</head>
+<body class="SIMRacingApps-App-Dash-Minimum-body">
+    <div id                 = "SIMRacingApps-App"
+         class              = "SIMRacingApps-App SIMRacingApps-App-Dash-Minimum"
+         data-ng-controller = "SIMRacingApps-Controller"
+         data-sra-resize>
+		<sra-bar-gauge-water-temp class     = "SIMRacingApps-App-Dash-Minimum-WaterTemp"></sra-bar-gauge-water-temp>
+        <sra-bar-gauge-water-pressure class = "SIMRacingApps-App-Dash-Minimum-WaterPressure"></sra-bar-gauge-water-pressure>
+        <sra-bar-gauge-water-level class    = "SIMRacingApps-App-Dash-Minimum-WaterLevel"></sra-bar-gauge-water-level>
+        <sra-bar-gauge-fuel-pressure class  = "SIMRacingApps-App-Dash-Minimum-FuelPressure"></sra-bar-gauge-fuel-pressure>
+        <sra-bar-gauge-voltage class        = "SIMRacingApps-App-Dash-Minimum-Voltage"></sra-bar-gauge-voltage>
+        <sra-bar-gauge-oil-temp class       = "SIMRacingApps-App-Dash-Minimum-OilTemp"></sra-bar-gauge-oil-temp>
+        <sra-bar-gauge-oil-pressure class   = "SIMRacingApps-App-Dash-Minimum-OilPressure"></sra-bar-gauge-oil-pressure>
+        <sra-bar-gauge-oil-level class      = "SIMRacingApps-App-Dash-Minimum-OilLevel"></sra-bar-gauge-oil-level>
+        <sra-bar-gauge-fuel-level class     = "SIMRacingApps-App-Dash-Minimum-FuelLevel"></sra-bar-gauge-fuel-level>
+        <sra-bar-gauge-brake-pressure class = "SIMRacingApps-App-Dash-Minimum-BrakePressure"></sra-bar-gauge-brake-pressure>
+        <sra-data class                     = "SIMRacingApps-App-Dash-Minimum-Car"
+             data-sra-args-data             = "Car/REFERENCE/Gauge/TireWearLFL/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearLFM/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearLFR/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearLRL/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearLRM/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearLRR/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearRFL/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearRFM/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearRFR/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearRRL/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearRRM/ValueHistorical
+                                              ;Car/REFERENCE/Gauge/TireWearRRR/ValueHistorical
+                                              ;Session/IncidentLimit
+                                              ;Car/REFERENCE/Incidents
+                                              ;Car/REFERENCE/IncidentsTeam
+                                              ">
+            <div style="position: relative; width: 100%; height: 100%">
+		        <sra-tire class                 = "SIMRacingApps-App-Dash-Minimum-Tire SIMRacingApps-App-Dash-Minimum-Tire-LF" data-sra-args-tire="LF"></sra-tire>
+		        <sra-tire class                 = "SIMRacingApps-App-Dash-Minimum-Tire SIMRacingApps-App-Dash-Minimum-Tire-LR" data-sra-args-tire="LR"></sra-tire>
+		        <sra-tire class                 = "SIMRacingApps-App-Dash-Minimum-Tire SIMRacingApps-App-Dash-Minimum-Tire-RF" data-sra-args-tire="RF"></sra-tire>
+		        <sra-tire class                 = "SIMRacingApps-App-Dash-Minimum-Tire SIMRacingApps-App-Dash-Minimum-Tire-RR" data-sra-args-tire="RR"></sra-tire>
+		        <div class                      = "SIMRacingApps-App-Dash-Minimum-TireWear SIMRacingApps-App-Dash-Minimum-TireWear-LF">{{((data.Car.REFERENCE.Gauge.TireWearLFL.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearLFM.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearLFR.ValueHistorical.Value) / 3.0) | sraNumber:0}}%</div>
+		        <div class                      = "SIMRacingApps-App-Dash-Minimum-TireWear SIMRacingApps-App-Dash-Minimum-TireWear-LR">{{((data.Car.REFERENCE.Gauge.TireWearLRL.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearLRM.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearLRR.ValueHistorical.Value) / 3.0) | sraNumber:0}}%</div>
+		        <div class                      = "SIMRacingApps-App-Dash-Minimum-TireWear SIMRacingApps-App-Dash-Minimum-TireWear-RF">{{((data.Car.REFERENCE.Gauge.TireWearRFL.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearRFM.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearRFR.ValueHistorical.Value) / 3.0) | sraNumber:0}}%</div>
+		        <div class                      = "SIMRacingApps-App-Dash-Minimum-TireWear SIMRacingApps-App-Dash-Minimum-TireWear-RR">{{((data.Car.REFERENCE.Gauge.TireWearRRL.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearRRM.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearRRR.ValueHistorical.Value) / 3.0) | sraNumber:0}}%</div>
+	            <div class                      = "SIMRacingApps-App-Dash-Minimum-incidents"
+	                 data-ng-style              = "{ display: data.Car.REFERENCE.Incidents.State != 'OFF' ? 'inherit' : 'none' }"
+	                 data-ng-bind-html          = "data.Car.REFERENCE.IncidentsTeam.State != 'OFF'
+	                                            ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+	                                            :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+	                                            "
+	            ></div>
+	            <sra-fuel-tank class            = "SIMRacingApps-App-Dash-Minimum-FuelTank"></sra-fuel-tank>
+	        </div>
+	    </sra-data>
+	    <sra-messages class                 = "SIMRacingApps-App-Dash-Minimum-Messages"></sra-messages>
+        <div id="FPS" class="FPS" data-ng-bind="data.FPS.Value"></div>
+    </div>
+    <link rel="stylesheet" href="/SIMRacingApps/useroverrides.css" />
+</body>
+</html>

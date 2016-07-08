@@ -1,0 +1,159 @@
+<div class = "SIMRacingApps-Widget-LapTiming"
+     ng-attr-style          = "height: {{height}}px;"
+     data-sra-data          = "Session/Type;time"
+     data-sra-args-interval = "{{sraInterval}}">
+    <table 
+        class            = "SIMRacingApps-Widget-LapTiming-header">
+        <tr>
+            <td class    = "SIMRacingApps-Widget-LapTiming-header-title"
+                data-ng-bind-html = "(translations.LAPTIMING+' - '+data.Session.Type.ValueFormatted) | limitTo:23"
+            ></td>
+            <td class    = "SIMRacingApps-Widget-LapTiming-header-time"
+                data-ng-bind-html = "data.time.ValueFormatted"
+            ></td>
+        </tr>
+    </table>
+	<table class = "SIMRacingApps-Widget-LapTiming-middle"
+	       style = "width: 100%; table-layout: fixed;">
+	    <colgroup>
+	        <col style="width: 25%"  />
+	        <col style="width: 25%"  />
+            <col style="width: 25%"  />
+            <col style="width: 25%"  />
+	    </colgroup>
+	    <tbody>
+	        <tr>
+                <td class                  = "SIMRacingApps-Widget-LapTiming-carnumber-reference"
+                    data-sra-car-number    = "{{REFERENCE}}"
+                    data-sra-args-interval = "{{sraInterval}}"
+                ></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td  data-sra-data               = "Session/NumberOfCarClasses;Car/REFERENCE/ClassColor"
+				                 data-ng-style               = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car.REFERENCE.ClassColor.Value | sraHex:6) : 'transparent') }">
+			                    <img class                   = "SIMRacingApps-Widget-LapTiming-mfrlogo"
+			                         data-sra-data           = "Car/REFERENCE/ManufacturerLogo" 
+			                         data-ng-src             = "/SIMRacingApps/{{data.Car.REFERENCE.ManufacturerLogo.Value}}"
+			                         alt                     = ""
+			                    />
+			                </td>
+			                <td>
+					            <img class                   = "SIMRacingApps-Widget-LapTiming-carimg"
+					                 data-sra-data           = "Car/REFERENCE/ImageUrl" 
+					                 data-ng-src             = "/SIMRacingApps/{{data.Car.REFERENCE.ImageUrl.Value}}"
+					                 alt                     = ""
+					            />
+					        </td>
+					    </tr>
+		            </table>
+                </td>
+                <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-rightside-label"
+                    data-sra-data     = "Session/TimeRemaining;Session/TimeElapsed"
+                    data-ng-bind-html = "(data.Session.TimeRemaining.Value > 0 ? translations.REMAINING : translations.ELAPSED)+':'"
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-rightside-data"
+                    data-sra-data     = "Session/TimeRemaining;Session/TimeElapsed"
+                    data-ng-bind-html = "(data.Session.TimeRemaining.Value > 0 
+                                      ?  data.Session.TimeRemaining
+                                      :  data.Session.TimeElapsed) | sraDuration:0:false:true:true:true"
+                ></td>
+            </tr>
+            <tr>
+                <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-leftside-label"
+                    data-ng-bind-html = "translations.LAPRUN+':'"
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-leftside-data"
+                    data-sra-data     = "Car/REFERENCE/Lap/Current;Car/REFERENCE/Lap/SincePitting"
+                    data-ng-bind-html = "data.Car.REFERENCE.Lap.Current.Value + ' / ' + data.Car.REFERENCE.Lap.SincePitting.Value"
+                ></td>
+                <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-rightside-label"
+                    data-ng-bind-html = "translations.CURR+':'"
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-rightside-data"
+                    data-sra-data     = "Car/REFERENCE/LapTime/Current"
+                    data-sra-args-interval = "100"
+                    data-ng-bind-html = "data.Car.REFERENCE.LapTime.Current.Value|sraDuration:1"
+                ></td>
+            </tr>
+            <tr>
+                <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-leftside-label"
+                    data-ng-bind-html = "translations.TOGO+':'"
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-leftside-data"
+                    data-sra-data     = "Session/LapsToGo;Session/Laps"
+                    data-ng-bind-html = "'<span class=&quot;SIMRacingApps-Widget-LapTiming-data-togo&quot;>' 
+                                      +  (data.Session.LapsToGo|sraNumber:0:null:null:null:true) 
+                                      + ' ' + translations.OF + ' ' + data.Session.Laps.Value + '</span>'"
+                ></td>
+                <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-rightside-label"
+                    data-ng-bind-html = "translations.LAST+':'"
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-rightside-data"
+                    data-sra-data     = "Car/REFERENCE/LapTime/SessionLast"
+                    data-ng-bind-html = "data.Car.REFERENCE.LapTime.SessionLast.Value|sraDuration:3"
+                ></td>
+            </tr>
+            <tr>
+                <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-leftside-label"
+                    data-ng-bind-html = "translations.POS+':'"
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-leftside-data"
+                    data-sra-data     = "Car/REFERENCE/Position;Car/REFERENCE/PositionClass"
+                    data-ng-bind-html = "data.Car.REFERENCE.Position.Value + ' / ' + data.Car.REFERENCE.PositionClass.Value"
+                ></td>
+                <td class             = "SIMRacingApps-Widget-LapTiming-rightside-label"
+                    data-sra-data     = "Car/REFERENCE/Lap/SessionBest"
+                    data-ng-bind-html = "'<span class=&quot;SIMRacingAppsLabel&quot>'+translations.BEST+':</span>'
+                                      + (data.Car.REFERENCE.Lap.SessionBest.Value|sraLPad:5)
+                                      "
+                ></td>
+                <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-rightside-data"
+                    data-sra-data     = "Car/REFERENCE/LapTime/SessionBest"
+                    data-ng-bind-html = "data.Car.REFERENCE.LapTime.SessionBest.Value|sraDuration:3"
+                ></td>
+            </tr>
+	    </tbody>
+	</table>
+    <table class = "SIMRacingApps-Widget-LapTiming-footer"
+           style = "width: 100%; table-layout: fixed;">
+	    <colgroup>
+	        <col style="width: 20%"  />
+	        <col style="width: 10%"  />
+	        <col style="width: 47%" />
+	        <col style="width: 23%" />
+	    </colgroup>
+	    <tbody class="SIMRacingApps-Widget-LapTiming-footer-body">
+	        <tr data-ng-repeat        = "position in ['RPC1','RPC-1']">
+	            <td class             = "SIMRacingApps-Widget-LapTiming-footerlabel SIMRacingAppsLabel"
+	                data-ng-bind-html = "(position == 'RPC1' ? translations.AHEAD : translations.BEHIND)+':'">
+	            </td>
+	            <td class                  = "SIMRacingApps-Widget-LapTiming-carnumber SIMRacingAppsData"
+                    data-sra-car-number    = "{{position}}"
+                    data-sra-args-interval = "{{sraInterval}}">
+	            </td>
+	            <td class             = "SIMRacingApps-Widget-LapTiming-drivername SIMRacingAppsData"
+                    data-sra-data     = "Car/{{position}}/DriverName;Car/{{position}}/StatusClass"
+                    data-ng-class     = "'SIMRacingAppsCarStatusClassForeground-' + data.Car[position].StatusClass.Value"
+	                data-ng-bind-html = "data.Car[position].DriverName.Value">
+	            </td>
+	            <td class             = "SIMRacingApps-Widget-LapTiming-time SIMRacingAppsData"
+	                data-sra-data     = "Session/DiffCars/REFERENCE/{{position}};Car/{{position}}/StatusClass"
+                    data-ng-class     = "'SIMRacingAppsCarStatusClassForeground-' + data.Cars[position].StatusClass.Value"
+	                data-ng-bind-html = "data.Session.DiffCars.REFERENCE[position].UOM == 's'
+	                                  ? (data.Session.DiffCars.REFERENCE[position].Value | sraDuration:'1':'+')
+	                                  : (data.Session.DiffCars.REFERENCE[position] | sraDuration:0:'+':true)
+	                                  ">
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+    <sra-data class              = "SIMRacingApps-Widget-LapTiming-incidents"
+         data-sra-args-data      = "Session/IncidentLimit;Car/REFERENCE/Incidents;Car/REFERENCE/IncidentsTeam"
+         data-ng-style           = "{ display: data.Car.REFERENCE.Incidents.State != 'OFF' ? 'inherit' : 'none' }"
+         data-ng-bind-html       = "data.Car.REFERENCE.IncidentsTeam.State != 'OFF'
+                                 ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+                                 :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+                                   "
+    ></sra-data>
+</div>

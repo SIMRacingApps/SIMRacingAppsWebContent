@@ -1,0 +1,24 @@
+<div class                      = "SIMRacingApps-Widget-TimingDelta"
+     data-ng-style              = "{ height:     height+'px',
+                                     visibility: visibility
+                                   }">
+     <div class                 = "SIMRacingApps-Widget-TimingDelta-projected"
+          data-ng-style         = "{ fontWeight: fontWeight, color: fontColor }"
+          data-ng-bind          = "projected|sraDuration:3">
+     </div>
+     <div class                 = "SIMRacingApps-Widget-TimingDelta-bar-container">
+         <div class             = "SIMRacingApps-Widget-TimingDelta-bar"
+              data-ng-style     = "{ width:           barWidth+'%',
+                                     left:            barLeft+'%',
+                                     backgroundColor: (barDeltaColor|sraHex:6:'#')
+                                   }">
+         </div>
+     </div>
+     <div class                 = "SIMRacingApps-Widget-TimingDelta-delta-container">
+         <div class             = "SIMRacingApps-Widget-TimingDelta-delta"
+              data-ng-style     = "{ fontWeight: fontWeight, color: fontColor }"
+              data-ng-bind-html = "(delta|sraDuration:3:'+')
+                                + '<br /><span class=&quot;SIMRacingApps-Widget-TimingDelta-reference&quot>' + translations[value] + '</span>'">
+         </div>
+     </div>
+</div>

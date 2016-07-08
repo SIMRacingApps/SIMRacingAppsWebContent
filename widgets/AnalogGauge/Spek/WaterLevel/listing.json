@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-water-level.html",
+"name": "AnalogGauge-Spek-WaterLevel",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/WaterLevel&",
+"icon": "widgets/AnalogGauge/Spek/WaterLevel/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

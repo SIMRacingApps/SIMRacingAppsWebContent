@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-water-temp.html",
+"name": "BarGauge-WaterTemp",
+"description": "",
+"url": "apps/WidgetLoader?widget=BarGauge/WaterTemp&",
+"icon": "widgets/BarGauge/WaterTemp/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

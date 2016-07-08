@@ -1,0 +1,351 @@
+
+.SIMRacingApps-Widget-PitCommander {
+    width:         100%;
+    height:        100%;
+    font-size:     100%;
+    z-index:       1;
+    overflow:      hidden;
+}
+
+.SIMRacingApps-Widget-PitCommander .SIMRacingAppsLabel {
+    font-weight:        bold;
+}
+
+.SIMRacingApps-Widget-PitCommander-car {
+    position:           absolute;
+    width:              45%;
+    height:             96%;
+    top:                2%;
+    left:               27%;
+/*     background-color:   gray; */
+}
+
+.SIMRacingApps-Widget-PitCommander-nose {
+    position:           relative;
+    width:              100%;
+    height:             5%;
+    clear:              both;
+    border-radius:      15px 15px 0px 0px;
+    background-color:   blue;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-PitCommander-tape {
+    width:              100%;
+    height:             100%;
+    text-align:         center;
+    white-space:        nowrap;
+    color:              white;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-frontwing {
+    width:              100%;
+    height:             100%;
+    text-align:         center;
+    white-space:        nowrap;
+    color:              white;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-frontflap {
+    width:              100%;
+    height:             100%;
+    text-align:         center;
+    white-space:        nowrap;
+    color:              white;
+    line-height:        150%;
+}
+
+.SIMRacingApps-Widget-PitCommander-tape-different {
+    width:              100%;
+    height:             100%;
+    background-color:   red;
+    color:              cyan;
+}
+
+.SIMRacingApps-Widget-PitCommander-body {
+    position:           relative;
+    width:              100%;
+    height:             90%;
+    clear:              both;
+    background-color:   #CCC; /*white;*/
+}
+
+.SIMRacingApps-Widget-PitCommander-carimg {
+    position:           absolute;
+    z-index:            1;
+    width:              60%;
+    left:               20%;
+    top:                10%;
+}
+
+.SIMRacingApps-Widget-PitCommander-repairs {
+    position:           absolute;
+    width:              50%;
+    height:             10%;
+    border-radius:      10px;
+    top:                18%;
+    left:               25%;
+    background-color:   red;
+    color:              white;
+    text-align:         center;
+    font-size:          100%;
+    z-index:            2;
+}
+.SIMRacingApps-Widget-PitCommander-flags {
+    position:   absolute;
+    z-index:    1099;
+    width:      50%;
+    height:     20%;
+    font-size:  17%;
+    left:       25%;
+    top:        0%;
+/*    background-color: rgba(255,0,255,.2);  /*just for placement */
+}
+
+.SIMRacingApps-Widget-PitCommander-tire {
+    position:           absolute;
+    width:              20%;
+    height:             40%;
+    font-size:          30%;
+}
+.SIMRacingApps-Widget-PitCommander-tire-LF {
+    top:                2%;
+    left:               -2%;
+}
+.SIMRacingApps-Widget-PitCommander-tire-LR {
+    bottom:             2%;
+    left:               -2%;
+}
+.SIMRacingApps-Widget-PitCommander-tire-RF {
+    top:                2%;
+    right:              -2%;
+}
+.SIMRacingApps-Widget-PitCommander-tire-RR {
+    bottom:             2%;
+    right:              -2%;
+}
+.SIMRacingApps-Widget-PitCommander-tiremeasurements {
+    position:           absolute;
+    width:              50%;
+    height:             15.5%;
+    font-size:          18%;
+}
+.SIMRacingApps-Widget-PitCommander-tiremeasurements-LF {
+    top:                15%;
+    left:               -56%;
+}
+.SIMRacingApps-Widget-PitCommander-tiremeasurements-LR {
+    bottom:             15%;
+    left:               -56%;
+}
+.SIMRacingApps-Widget-PitCommander-tiremeasurements-RF {
+    top:                15%;
+    right:              -56%;
+}
+.SIMRacingApps-Widget-PitCommander-tiremeasurements-RR {
+    bottom:             15%;
+    right:              -56%;
+}
+.SIMRacingApps-Widget-PitCommander-windshield {
+    position:           absolute;
+    width:              58%;
+    height:             5%;
+    border-radius:      10px;
+    top:                29%;
+    left:               19%;
+    color:              white;
+    text-align:         center;
+    font-size:          80%;
+    white-space:        nowrap;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-fastrepairs {
+    position:           absolute;
+    width:              54%;
+    height:             5%;
+    border-radius:      10px;
+    top:                89%;
+    right:              -60%;
+    color:              white;
+    text-align:         center;
+    font-size:          80%;
+    white-space:        nowrap;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-brakebias {
+    position:           absolute;
+    width:              50%;
+    height:             10%;
+    border-radius:      10px;
+    top:                37%;
+    left:               25%;
+    background-color:   blue;
+    color:              white;
+    text-align:         center;
+    font-size:          100%;
+    line-height:        130%;
+}
+.SIMRacingApps-Widget-PitCommander-fueltank {
+    position:           absolute;
+    width:              60%;
+    height:             53%;
+    font-size:          46%;
+    bottom:             0%;
+    left:               20%;
+}
+.SIMRacingApps-Widget-PitCommander-button-background-normal-false {
+    background-color:   black;
+    border-color:       black;
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-PitCommander-button-background-selected-false {
+    background-color:   black;
+    border-color:       red;
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-PitCommander-button-background-normal-true {
+    background-color:   green;
+    border-color:       green;
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-PitCommander-button-background-selected-true {
+    background-color:   green;
+	border-color:       red;
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-PitCommander-button-background-clicked-true {
+    background-color:   rgba(255,0,0,.3);
+    border-color:       rgba(255,0,0,.3);
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-PitCommander-button-background-clicked-false {
+    background-color:   rgba(255,0,0,.3);
+    border-color:       rgba(255,0,0,.3);
+    border-style:       solid;
+    border-width:       thick;
+}
+.SIMRacingApps-Widget-PitCommander-button-lefts {
+    position:           absolute;
+    width:              46%;
+    height:             14%;
+    border-radius:      50%;
+    top:                52%;
+    left:               -54%;
+    color:              gold;
+    text-align:         center;
+    font-size:          110%;
+    font-weight:        bold;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-PitCommander-button-lefts-gas {
+    position:           absolute;
+    width:              46%;
+    height:             14%;
+    border-radius:      50%;
+    top:                34%;
+    left:               -54%;
+    color:              gold;
+    text-align:         center;
+    font-size:          110%;
+    font-weight:        bold;
+    overflow:           hidden;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-button-rights {
+    position:           absolute;
+    width:              46%;
+    height:             14%;
+    border-radius:      50%;
+    top:                52%;
+    right:              -54%;
+    color:              gold;
+    text-align:         center;
+    font-size:          105%;
+    font-weight:        bold;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-PitCommander-button-rights-gas {
+    position:           absolute;
+    width:              46%;
+    height:             14%;
+    border-radius:      50%;
+    top:                34%;
+    right:              -54%;
+    color:              gold;
+    text-align:         center;
+    font-size:          105%;
+    font-weight:        bold;
+    overflow:           hidden;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-button-tires4 {
+    position:           absolute;
+    width:              46%;
+    height:             14%;
+    border-radius:      50%;
+    top:                -5%;
+    right:              -54%;
+    color:              gold;
+    text-align:         center;
+    font-size:          105%;
+    font-weight:        bold;
+    overflow:           hidden;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-button-tires4-gas {
+    position:           absolute;
+    width:              46%;
+    height:             14%;
+    border-radius:      50%;
+    top:                -5%;
+    left:               -54%;
+    color:              gold;
+    text-align:         center;
+    font-size:          110%;
+    font-weight:        bold;
+    overflow:           hidden;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-tail {
+    position:           relative;
+    width:              100%;
+    height:             5%;
+    clear:              both;
+    background-color:   blue;
+}
+.SIMRacingApps-Widget-PitCommander-wedge {
+    width:              100%;
+    height:             100%;
+    text-align:         center;
+    white-space:        nowrap;
+    color:              white;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-rearwing {
+    width:              100%;
+    height:             100%;
+    text-align:         center;
+    white-space:        nowrap;
+    color:              white;
+    line-height:        150%;
+}
+.SIMRacingApps-Widget-PitCommander-different-true {
+    background-color:   red;
+    color:              cyan;
+}
+.SIMRacingApps-Widget-PitCommander-fixedsetup-true {
+    visibility:         hidden;
+}
+.SIMRacingApps-Widget-PitCommander-incidents {
+    bottom:             6%;
+    left:               -56%;
+    position:           absolute;
+    width:              50%;
+    text-align:         center;
+    font-weight:        bold;
+    color:              yellow;
+}

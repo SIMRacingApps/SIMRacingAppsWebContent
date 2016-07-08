@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/StreamingOverlay.html",
+"name": "StreamingOverlay",
+"description": "Streaming Overlay 1920x1080. Client must support transparency.",
+"url": "apps/StreamingOverlay?",
+"icon": "apps/StreamingOverlay/icon.png",
+"width": 1920,
+"height": 1080,
+"args": ""
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>{WidgetName}.html</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text1.html">Back</a> <a href="text3.html">Continue</a> <a href="text9.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>{WidgetName}.html</h1>
+<ul>
+<li>The {WidgetName}.html file is a snippet of HTML that makes up the content of a widget. When a user uses your Widget, this will replace the HTML contents of the tag that they used to reference it.</li>
+<li>The Template.html contains the following to get you started.</li>
+<ul>
+<li>&lt;div class                      = <i>&quot;SIMRacingApps-Widget-Template&quot;</i></li>
+<h2>     data-ng-style               = <i>&quot;{ height: height+'px' }&quot;</i></h2>
+<h2>     data-ng-bind-html      = <i>&quot;translations.KEY + ': '+data.Car.REFERENCE.Description.ValueFormatted&quot;</i></h2>
+<h2>    &gt;&lt;/div&gt;</h2>
+</ul>
+<li>The outer element, most of the time a DIV, must be decorated with a class using the Widget’s name. Please adhere to the naming convention that each Widget has a unique class name by prefixing it with “SIMRacingApps-Widget-”. This allows users to put styles in the useroverrides.css for specific widgets.</li>
+<li>The “data-ng-style” attribute is an Angular Directive where the height of your Widget will be calculated based on the “width” the user assigns to the instance of your widget in their App. This keeps the aspect ratio from changing. See the {WidgetName}.js file for more info.</li>
+<li>The “data-ng-bind-html” is just an example of how you can get data from the SIM to update your HTML. Feel free to browse other Widget’s HTML file to see the many possibilities.</li>
+<li>Do not use the “id” attribute in a Widget, because a Widget can be added to the same page multiple times and this would cause a conflict. Ids must be unique on a page. Use the “class” attribute to identify elements and style them. With Angular, you rarely, if ever, need to do DOM manipulation beyond what Angular does for you.</li>
+</ul>
+</body>
+</html>

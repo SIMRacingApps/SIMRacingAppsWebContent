@@ -1,0 +1,84 @@
+<table class = "SIMRacingApps-Widget-RelativeSmall"
+       data-ng-style = "{ width: '100%', height: height+'px', tableLayout: 'fixed' }">
+    <colgroup>
+        <col style="width: 6%"  />
+        <col style="width: 6%"  />
+        <col style="width: 10%"  />
+        <col style="width: 6%"  />
+        <col style="width: 55%" />
+        <col style="width: 17%" />
+    </colgroup>
+
+    <thead>
+        <tr>
+            <td class                  = "SIMRacingApps-Widget-RelativeSmall-Title"
+                data-sra-data          = "Session/Type"
+                data-sra-args-interval = "{{defaultInterval}}"
+                data-ng-bind-html      = "translations.RELATIVE+' - '+data.Session.Type.ValueFormatted"
+                colspan                = "7"
+            ></td>
+        </tr>
+    </thead>
+
+    <tbody class="SIMRacingApps-Widget-RelativeSmall-GridBody">
+        <tr class              = "SIMRacingApps-Widget-RelativeSmall-GridRow SIMRacingApps-Widget-RelativeSmall-RowBackground{{position}}"
+            data-ng-repeat     = "position in (sraArgsBYLOCATION ? ['RL3','RL2','RL1','REFERENCE','RL-1','RL-2','RL-3'] : ['R3','R2','R1','REFERENCE','R-1','R-2','R-3'])"
+            data-sra-data      = "Car/{{position}}/Id;Car/{{position}}/StatusClass;Car/{{position}}/IsEqual/TRANSMITTING;Car/{{position}}/IsEqual/REFERENCE"
+            data-ng-style      = "{ visibility: data.Car[position].Id.Value == -1 ? 'hidden' : 'inherit' }"
+            data-ng-class      = "'SIMRacingAppsCarStatusClassForeground-'    + data.Car[position].StatusClass.Value
+                               +  ' SIMRacingApps-Widget-RelativeSmall-GridRowBackground-' + (data.Car[position].IsEqual.TRANSMITTING.Value ? 'talking' : (data.Car[position].IsEqual.REFERENCE.Value ? 'reference' : 'none'))"
+            data-ng-class-odd  = "'SIMRacingAppsGridRow-odd'"
+            data-ng-class-even = "'SIMRacingAppsGridRow-even'">
+            <td  class         = "SIMRacingApps-Widget-RelativeSmall-POS"
+                 data-sra-data = "Car/{{position}}/Position"
+                 data-ng-bind  = "data.Car[position].Position.Value">
+            </td>
+            <td  class         = "SIMRacingApps-Widget-RelativeSmall-POSClass"
+                 data-sra-data = "Car/{{position}}/PositionClass"
+                 data-ng-style = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[position].ClassColor.Value | sraHex:6) : 'inherit'),
+                                    color: (data.Session.NumberOfCarClasses.Value > 1 ? 'black' : 'inherit')
+                                  }"
+                 data-ng-bind  = "data.Car[position].PositionClass.Value">
+            </td>
+            <td  class               = "SIMRacingApps-Widget-RelativeSmall-CarNumber"
+                 data-sra-car-number = "{{position}}"
+                 data-sra-args-interval = "{{sraInterval}}">
+            </td>
+            <td  class             = "SIMRacingApps-Widget-RelativeSmall-MfrLogo"
+                 data-sra-data     = "Car/{{position}}/ManufacturerLogo;Session/NumberOfCarClasses;Car/{{position}}/ClassColor"
+                 data-ng-style     = "{ backgroundImage: 'url(/SIMRacingApps/' + data.Car[position].ManufacturerLogo.Value + ')',
+                                        backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[position].ClassColor.Value | sraHex:6) : 'transparent') 
+                                      }">
+            </td>
+            <td  data-ng-class     = "'SIMRacingApps-Widget-RelativeSmall-CarDriverName'
+                                   + ' SIMRacingApps-Widget-RelativeSmall-BelowMinimumSpeed-' + (data.Car[position].IsBelowMinimumSpeed.Value?'Y':'N')"
+                 data-sra-data     = "Car/{{position}}/DriverName;Car/{{position}}/TeamName;Car/{{position}}/DriverClubName;Car/{{position}}/Discontinuality;Car/{{position}}/IsBelowMinimumSpeed"
+                 data-ng-bind-html = "data.Car[position].DriverName.Value
+                                   + '<span class=SIMRacingApps-Widget-RelativeSmall-CarDriverName-Club> ('
+                                   + data.Car[position].Discontinuality.Value + '-' + (data.Car[position].TeamName.Value ? data.Car[position].TeamName.Value : data.Car[position].DriverClubName.Value) + ')</span>'">
+            </td>
+            <td  class             = "SIMRacingApps-Widget-RelativeSmall-CarBehind"
+                 data-sra-data     = "Session/DiffCarsRelative/REFERENCE/{{position}}"
+                 data-ng-bind-html = "(data.Session.DiffCarsRelative.REFERENCE[position].Value | sraDuration:'1')+data.Session.DiffCarsRelative.REFERENCE[position].UOMAbbr">
+            </td>
+        </tr>
+    </tbody>
+
+    <tfoot class="SIMRacingApps-Widget-RelativeSmall-Footer">
+        <tr>
+            <td class                  = "SIMRacingApps-Widget-RelativeSmall-Lap"
+                colspan                = "3"
+                data-sra-data          = "Car/REFERENCE/Lap;Session/Laps"
+                data-sra-args-interval = "{{defaultInterval}}">
+                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Car.REFERENCE.Lap.Value+' / '+data.Session.Laps.Value"></span>
+            </td>
+            <td class                  = "SIMRacingApps-Widget-RelativeSmall-Last"
+                colspan                = "3"
+                data-sra-data          = "Car/REFERENCE/LapTime/SessionLast"
+                data-sra-args-interval = "{{defaultInterval}}">
+                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAST+': '"></span><span data-ng-bind="data.Car.REFERENCE.LapTime.SessionLast.Value | sraDuration"></span>
+            </td>
+        </tr>
+    </tfoot>
+
+</table> <!-- END of <table class = "SIMRacingApps-Widget-RelativeSmall"> -->

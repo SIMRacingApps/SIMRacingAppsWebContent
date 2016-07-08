@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-shift-lights.html",
+"name": ["ShiftLights","ShiftLights-NOSPEEDING"],
+"description": ["Row of Lights Leading Up to the Shift Point or Pit Road Speed","Row of Lights Leading Up to the Shift Point"],
+"url": "apps/WidgetLoader?widget=ShiftLights&",
+"icon": "widgets/ShiftLights/icon.png",
+"width": 800,
+"height": 100,
+"args": ["PITSPEEDING=true","PITSPEEDING=false"]
+}

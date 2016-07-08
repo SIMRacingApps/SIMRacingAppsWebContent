@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>The &quot;default.css&quot; file</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text9.html">Back</a> <a href="text11.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>The &quot;default.css&quot; file</h1>
+<ul>
+<li>SIMRacingApps tags can be styled just like any other HTML tag by simply naming them either in-line styles or the CSS file.</li>
+<ul>
+<li>sra-data { width: 50%; font-size: 200%; color: blue; }</li>
+</ul>
+<li>If an &quot;id&quot; or &quot;class&quot; is assigned to an element, they can be used in the css as selectors as well.</li>
+<ul>
+<li>.SIMRacingApps-App-MyApp-leader-lap { width: 50%; font-size: 200%; color: blue; } </li>
+</ul>
+<li>When sizing your element or font, it is recommended that you always use percentages so your app can scale to the size of the user's device or browser window. It is rare you need to specify the height because the &quot;data-sra-resize&quot; directive calculates that for you to preserved the aspect ratio of your element relative to the app's ratio.</li>
+<li>SIMRacingApps provides a global CSS file, SIMRacingApps.css, and CSS files for all of its' own widgets. You can override those styles in your style sheet as long as you import the widget's CSS file first. This is because the widget's CSS files are loaded on demand and there's no guarantee of the load order. (NOTE: All selectors in SIMRacingApps follows a strict naming convention to prevent conflicts).</li>
+<ul>
+<li>@import &quot;/SIMRacingApps/widgets/CarNumber/CarNumber.css&quot;</li>
+<li>.SIMRacingApps-Widget-CarNumber { font-family: 'Times Roman'; }</li>
+</ul>
+</ul>
+</body>
+</html>

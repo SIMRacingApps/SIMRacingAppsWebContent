@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Translation Files</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text18.html">Back</a> <a href="text20.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Translation Files</h1>
+<ul>
+<li>Translations are stored in .json formatted files.</li>
+<li>It loads them by looking in the &quot;nls&quot; folder of your App's folder. It uses the &quot;lang&quot; variable to find the appropriate file for that language as follows. </li>
+<ul>
+<li>nls/text-en.json </li>
+<li>nls/text-en_{country}.json </li>
+<li>nls/text-{lang}.json </li>
+<li>nls/text-{lang}_{country}.json</li>
+</ul>
+<li>As each is loaded, values are updated if the key exists from a previous load. Therefore, the last one in wins. The “text-en.json“ file is required to contain 100% of your translatable keys. The others, only have add the keys they want to override.</li>
+</ul>
+</body>
+</html>

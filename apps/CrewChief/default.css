@@ -1,0 +1,120 @@
+@import "/SIMRacingApps/widgets/DataTable/DataTable.css";
+
+.SIMRacingApps-App-CrewChief {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    background: dimgray;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-CrewChief-Info {
+    width: 25%;
+    height: 100%;
+    clear: left;
+    position: relative;
+    float: left;
+    background-color: darkslategray;
+    padding-top: 1%;
+}
+
+.SIMRacingApps-App-CrewChief-PitCommander {
+    width: 75%;
+    position: relative;
+    float: left;
+}
+
+.SIMRacingApps-App-CrewChief-CarTrack {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-time {
+    color: chartreuse;
+    font-size: 120%;
+    line-height: 110%;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-radio {
+    color: orange;
+    font-size: 100%;
+    line-height: 125%;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-drivername {
+	color: gold;
+	font-size: 120%;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-rating {
+    color: gold;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-session {
+    color: gold;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-cardesc {
+    color: chartreuse;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-trackdesc {
+    color: chartreuse;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-trackinfo {
+    font-size: 80%
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-tracktemp {
+    color: orangered;
+}
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-pitinfo {
+    font-size: 80%;
+}
+
+.SIMRacingApps-App-CrewChief-WeatherInfo {
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-top: 2%;
+    font-size: 75%;
+}
+
+.SIMRacingApps-App-CrewChief-lap {
+    color: cyan;
+}
+
+.SIMRacingApps-App-CrewChief-duration {
+    color: magenta;
+}
+
+.SIMRacingApps-App-CrewChief-time {
+    color: chartreuse;
+}
+
+.SIMRacingApps-App-CrewChief-repairs {
+    color: red;
+}
+
+.SIMRacingApps-App-CrewChief-Laps {
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-top: 2%;
+}
+.SIMRacingApps-App-CrewChief-Laps .SIMRacingApps-Widget-DataTable-row-togo {
+    color: orange;
+    font-size: 140%;
+    line-height: 115%;
+}
+.SIMRacingApps-App-CrewChief-Laps .SIMRacingApps-Widget-DataTable-row-cautions {
+    color: yellow;
+}
+
+.SIMRacingApps-App-CrewChief-Stats {
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-top: 2%;
+}
+
+.SIMRacingApps-App-CrewChief-Stats .SIMRacingApps-Widget-DataTable-label {
+    width: 52%;
+}
+.SIMRacingApps-App-CrewChief-Stats .SIMRacingApps-Widget-DataTable-data {
+    width: 45%;
+}

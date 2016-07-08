@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-tire.html",
+"name": "Tire-LF;Tire-LF-PITCONTROLLER;Tire-LR;Tire-LR-PITCONTROLLER;Tire-RF;Tire-RF-PITCONTROLLER;Tire-RR;Tire-RR-PITCONTROLLER",
+"description": "Left Front;Left Front - Sends Pit Commands;Left Rear;Left Rear - Sends Pit Commands;Right Front;Right Front - Sends Pit Commands;Right Rear;Right Rear - Sends Pit Commands",
+"url": "apps/WidgetLoader?widget=Tire&",
+"icon": "widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png",
+"width": 150,
+"height": 480,
+"args": "TIRE=LF&PitCommandsSIMController=false;TIRE=LF&PitCommandsSIMController=true;TIRE=LR&PitCommandsSIMController=false;TIRE=LR&PitCommandsSIMController=true;TIRE=RF&PitCommandsSIMController=false;TIRE=RF&PitCommandsSIMController=true;TIRE=RR&PitCommandsSIMController=false;TIRE=RR&PitCommandsSIMController=true"
+}

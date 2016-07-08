@@ -1,0 +1,34 @@
+<table
+    class                      = "SIMRacingApps-Widget-Tire"
+    data-sra-data
+    data-ng-style              = "{ height: height+'px' }">
+    <tbody>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-Tire-increment"
+                data-ng-class     = "'SIMRacingApps-Widget-Tire-fixed-' + (data.Car.REFERENCE.Gauge['TirePressure'+value].IsFixed.Value?'Y':'N') + (controller?'Y':'N')"
+            >+</td>
+        </tr>
+        <tr><td class="SIMRacingApps-Widget-Tire-padding">&nbsp;</td></tr>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-Tire-surface"
+                data-ng-class     = "'SIMRacingApps-Widget-Tire-background-' + background + '-' + controller"
+                data-xng-style     = "{ backgroundColor: Lcolor }"
+                data-ng-bind-html = "'<span class=&quot;SIMRacingApps-Widget-Tire-dirty-' + (data.Car.REFERENCE.Gauge['TirePressure'+value].IsDirty.Value?'Y':'N') +'&quot;>'
+                                  + (data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.UOM == 'KPA'
+                                    ?(data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.Value|sraNumber:0)
+                                    :(data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.Value|sraNumber:1))
+                                  + '</span><br /><span class=&quot;SIMRacingAppsLabel&quot;>'
+                                  + data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.UOMAbbr
+                                  + '<br />' + translations.LAPS
+                                  + '</span><br />' + data.Car.REFERENCE.Gauge['TirePressure'+value].Laps.Value
+                                  "
+            ></td>
+        </tr>
+        <tr><td class="SIMRacingApps-Widget-Tire-padding">&nbsp;</td></tr>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-Tire-decrement"
+                data-ng-class     = "'SIMRacingApps-Widget-Tire-fixed-' + (data.Car.REFERENCE.Gauge['TirePressure'+value].IsFixed.Value?'Y':'N') + (controller?'Y':'N')"
+            >-</td>
+        </tr>
+    </tbody>
+</table>

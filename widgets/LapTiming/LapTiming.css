@@ -1,0 +1,119 @@
+
+.SIMRacingApps-Widget-LapTiming {
+    font-size: 250%;
+    overflow:hidden;
+    /*background-color: dimgray;*/
+    color: white;
+    padding: 0;
+    overflow: hidden;
+}
+
+.SIMRacingApps-Widget-LapTiming-header {
+	width: 100%;
+    font-size: 110%;
+    font-weight: bold;
+    color: gold;
+    padding-bottom: 0%;
+    padding-left: 1%;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 150%;
+}
+
+.SIMRacingApps-Widget-LapTiming-header-title {
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-header-time {
+    text-align: right;
+    padding-right: 1%;
+    color: chartreuse;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-carnumber-reference {
+    width: 10%;
+    height: 10%;
+    padding-left: 2%;
+}
+
+.SIMRacingApps-Widget-LapTiming-mfrlogo {
+    width:              100%;
+}
+
+.SIMRacingApps-Widget-LapTiming-carimg {
+    width:              100%;
+}
+
+.SIMRacingApps-Widget-LapTiming-leftside-label {
+    text-align: left;
+    padding-left: 1%;
+    line-height: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-leftside-data {
+    text-align: left;
+    padding-left: 1%;
+    line-height: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-rightside-label {
+    text-align: right;
+    padding-right: 1%;
+    line-height: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-rightside-data {
+    text-align: right;
+    padding-right: 1%;
+    line-height: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-footer {
+    padding-top: 0%;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-footerlabel {
+    padding-left: 1%;
+    line-height: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-drivername {
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-time {
+    text-align: right;
+    padding-right: 1%;
+    line-height: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-LapTiming-data-togo {
+	color: cyan;
+}
+
+.SIMRacingApps-Widget-LapTiming-incidents {
+    top:                14%;
+    right:              1%;
+    position:           absolute;
+    width:              25%;
+    text-align:         right;
+    font-weight:        bold;
+    font-size:          75%;
+    color:              yellow;
+    z-index:            100;
+    white-space:        nowrap;
+}

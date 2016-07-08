@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>URL Parameters</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text7.html">Back</a> <a href="text9.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>URL Parameters</h1>
+<ul>
+<li>URL Parameters can be used to give your user options when running your App. Some Widgets take URL Parameters as well as there are a few global parameters. </li>
+<li>URL Parameters are the “key=value” statements that come after the question mark(?) in the URL.</li>
+<li>Multiple URL parameters can be specified by separating them with an ampersand(&amp;).</li>
+<li>Example: <a href="http://localhost/SIMRacingApps/apps/CrewChief?LapsToAverage=1&ALTLAPSTOAVERAGE=0&key=value"><u><font color="#0563C1">http://localhost/SIMRacingApps/apps/CrewChief?LapsToAverage=1&amp;ALTLAPSTOAVERAGE=0&amp;key=value</u></font></a></li>
+<li>All parameters are placed $scope as attributes by prefixing the key with “sraArgs” and appending the key in uppercase. Converting to upper case is a convention used to identify these variables as parameters from the URL instead of parameters placed in the HTML directly using Camel Case.</li>
+<ul>
+<li>In JavaScript, $scope.sraArgsLAPSTOAVERAGE</li>
+<li>In bound attributes like “data-ng-bind”, sraArgsLAPSTOAVERAGE</li>
+<li>In non-bound HTML, {{sraArgsLAPSTOAVERAGE}}</li>
+</ul>
+<li>It is advisable to initialize the variables in the default.js controller code as follows.</li>
+<ul>
+<li>$scope.sraArgsLAPSTOAVERAGE = $scope.sraArgsLAPSTOAVERAGE || “0”;</li>
+</ul>
+<li>It is not advisable to use special characters in the variable name. But you can put them in the value if you convert them according to URL encoding rules. For example, if you need a space character you would put %20.</li>
+</ul>
+</body>
+</html>

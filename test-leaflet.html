@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Test Daytona</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+</head>
+<body>
+    <div id="mask" style="position: absolute; left: 0px; top: 0px; width: 640px; height: 384px; overflow: hidden;">
+        <div id="map" style="left: -100%; top: -105%; width: 300%; height: 400%; -webkit-transform: rotate(233.5deg) scale(.78); position: absolute;"></div>
+    </div>
+    <img src='WEB-INF/classes/com/SIMRacingApps/Tracks/daytona.png' style='position: absolute; top: 0; left: 0; width: 640px; height: 384px; opacity: .3'/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script>
+
+        var lat = 29.187712;
+        var lng = -81.072798;
+        var zoom = 16;
+        var carSize = 30;
+        
+        var map = L.map('map',{
+            'boxZoom': false,
+            'center': [lat,lng],
+            'doubleClickZoom': false,
+            'dragging': false,
+            'keyboard': false,
+            'scrollWheelZoom': false,
+            'touchZoom': false,
+            'zoom': zoom,
+            'zoomControl': false
+        });
+        
+
+        L.tileLayer('http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+            maxZoom: zoom,
+            minZoom: zoom,
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+                '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            id: 'examples.map-i875mjb7'
+        }).addTo(map);
+
+        L.circle([lat + latOffset,lng + lngOffset], carSize, {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5
+        }).addTo(map);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+
+.SIMRacingApps-App-Dash-Small-body {
+    background: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-Dash-Small {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-Dash-Small-laps {
+    color:     cyan;
+}
+
+.SIMRacingApps-App-Dash-Small-Time {
+    width:      16%;
+    height:     5%;
+    font-size:  150%;
+    left:       1%;
+    top:        11%;
+    position:   absolute;
+    text-align: left;
+    color:      chartreuse;
+    z-index:    2;
+}
+
+
+.SIMRacingApps-App-Dash-Small-MyRadioChannel {
+    width:      23%;
+    height:     5%;
+    font-size:  130%;
+    left:       13%;
+    top:        11.5%;
+    z-index:    2;
+    position:   absolute;
+    text-align: left;
+    color:      orange;
+}
+
+.SIMRacingApps-App-Dash-Small-ShiftLights {
+    z-index:    11;
+    width:      40%;
+    position:   absolute;
+    left:       30%;
+    top:        8%;
+    z-index:    2;
+}
+
+.SIMRacingApps-App-Dash-Small-Tach {
+    z-index:    10;
+	width:      100%;
+    position:   absolute;
+    left:       0%;
+    top:        0%;
+    z-index:    1;
+}
+
+.SIMRacingApps-App-Dash-Small-WaterTemp {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       1%;
+    top:        32%;
+}
+
+.SIMRacingApps-App-Dash-Small-WaterPressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       1%;
+    top:        45%;
+}
+
+.SIMRacingApps-App-Dash-Small-WaterLevel {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       1%;
+    top:        58%;
+}
+
+.SIMRacingApps-App-Dash-Small-FuelPressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       1%;
+    top:        71%;
+}
+
+.SIMRacingApps-App-Dash-Small-Voltage {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       1%;
+    top:        84%;
+}
+
+.SIMRacingApps-App-Dash-Small-OilTemp {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      1%;
+    top:        32%;
+}
+
+.SIMRacingApps-App-Dash-Small-OilPressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      1%;
+    top:        45%;
+}
+
+.SIMRacingApps-App-Dash-Small-OilLevel {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      1%;
+    top:        58%;
+}
+
+.SIMRacingApps-App-Dash-Small-FuelLevel {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      1%;
+    top:        71%;
+}
+
+.SIMRacingApps-App-Dash-Small-BrakePressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      1%;
+    top:        84%;
+}
+
+.SIMRacingApps-App-Dash-Small-PitCommander {
+    position:   absolute;
+    width:      57%;
+    font-size:  130%;
+    top:        16%;
+    left:       21.5%;
+}
+
+.SIMRacingApps-App-Dash-Small-WindGauge {
+    position:   absolute;
+    width:      7.5%;
+    top:        18%;
+    right:      6%;
+}
+
+.SIMRacingApps-App-Dash-Small-CarNumber {
+    width:      10%;
+    left:       1%;
+    top:        19%;
+    position:   absolute;
+}
+
+.SIMRacingApps-App-Dash-Small-Gear-background {
+    width:      8%;
+    height:     13.5%;
+    left:       12%;
+    top:        18%;
+    position:   absolute;
+    background-color: gray;
+    opacity:    .8;
+    border-radius: 25% 25% / 28.3% 28.3%;
+    z-index:    1;
+}
+
+.SIMRacingApps-App-Dash-Small-Gear {
+    width:      10%;
+    left:       11%;
+    top:        18.5%;
+    position:   absolute;
+    font-size:  18%;
+    z-index:    2;
+}
+
+.SIMRacingApps-App-Dash-Small-PitRoad {
+    position:   absolute;
+    z-index:    1100;
+    width:      25%;
+    height:     25%;
+    font-size:  36%;
+    left:       37.5%;
+    top:        1%;
+    opacity:    1;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-Dash-Small-gauge-state-NOTAVAILABLE {
+    display: none;
+}

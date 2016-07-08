@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/SIMRacingApps/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="72x72" href="/SIMRacingApps/SRA-Logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/SIMRacingApps/SRA-Logo-114x114.png">
+    <link rel="apple-touch-icon" href="/SIMRacingApps/SRA-Logo-57x57.png">
+    <script type="text/javascript" src="/SIMRacingApps/lib/require.config.js"></script>
+    <script type="text/javascript" data-main="/SIMRacingApps/apps/RaceAdministrator/default" src="/SIMRacingApps/external/require.js"></script>
+    <link rel="stylesheet" href="/SIMRacingApps/useroverrides.css" />
+    <base href="/" />
+    <title>RaceAdministrator</title>
+</head>
+<body class="SIMRacingApps-App-RaceAdministrator-body">
+    <div id                 = "SIMRacingApps-App"
+         class              = "SIMRacingApps-App SIMRacingApps-App-RaceAdministrator"
+         data-ng-controller = "SIMRacingApps-Controller"
+         data-sra-resize>
+        <table 
+            class           = "SIMRacingApps-App-RaceAdministrator"
+            data-ng-style   = "{ width: '100%', height: height+'px', tableLayout: 'fixed' }">
+            <colgroup>
+                <col style  = "width: 47%" />
+                <col style  = "width: 53%" />
+            </colgroup>
+            <tr>
+                <td class = "SIMRacingApps-App-RaceAdministrator-commands">
+                    <table 
+                        class           = "SIMRacingApps-App-RaceAdministrator-commands-all"
+                        data-ng-style   = "{ width: '100%', height: '15%', tableLayout: 'fixed' }">
+                        <colgroup>
+                            <col style  = "width: 25%" />
+                            <col style  = "width: 25%" />
+                            <col style  = "width: 25%" />
+                            <col style  = "width: 25%" />
+                        </colgroup>
+                        <thead>
+                            <tr><td 
+                                colspan           = 4
+                                class             = "SIMRacingApps-App-RaceAdministrator-header"
+                                data-sra-data     = ""
+                                data-ng-bind-html = "translations.SESSIONCOMMANDS"
+                            ></td></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-advance 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.ADVANCE"
+                                    data-sra-args-on-click = "advanceClicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-chaton 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.ALLCHATON"
+                                    data-sra-args-on-click = "chatOnClicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-chatoff 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.ALLCHATOFF"
+                                    data-sra-args-on-click = "chatOffClicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-caution 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.CAUTION"
+                                    data-sra-args-on-click = "cautionClicked"
+                                ></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table 
+                        class           = "SIMRacingApps-App-RaceAdministrator-commands-driver"
+                        data-ng-style   = "{ width: '100%', height: '45%', tableLayout: 'fixed' }">
+                        <colgroup>
+                            <col style  = "width: 25%" />
+                            <col style  = "width: 25%" />
+                            <col style  = "width: 25%" />
+                            <col style  = "width: 25%" />
+                        </colgroup>
+                        <thead>
+                            <tr><td 
+                                colspan           = 4
+                                class             = "SIMRacingApps-App-RaceAdministrator-header"
+                                data-sra-data     = ""
+                                data-ng-bind-html = "translations.DRIVERCOMMANDS"
+                            ></td></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERADMINON' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERADMINON"
+                                    data-sra-args-on-click = "DRIVERADMINON_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERADMINOFF' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERADMINOFF"
+                                    data-sra-args-on-click = "DRIVERADMINOFF_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERCHATON' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERCHATON"
+                                    data-sra-args-on-click = "DRIVERCHATON_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERCHATOFF' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERCHATOFF"
+                                    data-sra-args-on-click = "DRIVERCHATOFF_Clicked"
+                                ></td>
+                            </tr>
+                            <tr>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERBLACK0' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERBLACK0"
+                                    data-sra-args-on-click = "DRIVERBLACK0_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERBLACK15' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERBLACK15"
+                                    data-sra-args-on-click = "DRIVERBLACK15_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERBLACKLAP' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERBLACKLAP"
+                                    data-sra-args-on-click = "DRIVERBLACKLAP_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERDQ' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERDQ"
+                                    data-sra-args-on-click = "DRIVERDQ_Clicked"
+                                ></td>
+                            </tr>
+                            <tr>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERREMOVE' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERREMOVE"
+                                    data-sra-args-on-click = "DRIVERREMOVE_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERWAVEAROUND' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERWAVEAROUND"
+                                    data-sra-args-on-click = "DRIVERWAVEAROUND_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVEREOL' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVEREOL"
+                                    data-sra-args-on-click = "DRIVEREOL_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERCLEARALLPENALTIES' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind-html      = "translations.DRIVERCLEARALLPENALTIES"
+                                    data-sra-args-on-click = "DRIVERCLEARALLPENALTIES_Clicked"
+                                ></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table
+                        class           = "SIMRacingApps-App-RaceAdministrator-commands-sent"
+                        data-ng-style   = "{ width: '100%', tableLayout: 'fixed' }">
+                        <thead>
+                            <tr><td 
+                                class             = "SIMRacingApps-App-RaceAdministrator-header"
+                                data-sra-data     = ""
+                                data-ng-bind-html = "translations.SENTCOMMANDS"
+                            ></td></tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat        = "row in sentCommands">
+                                <td
+                                    class             = "SIMRacingApps-App-RaceAdministrator-senttext"
+                                    data-sra-data     = ""
+                                    data-ng-bind-html = "sentCommandsText[row]"
+                                ></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td class                        = "SIMRacingApps-App-RaceAdministrator-cars"
+                    data-sra-car-selector        = ""
+                    data-sra-args-show-reference = "false"
+                    data-sra-args-show-buttons   = "false"
+                    data-sra-args-on-click       = "carClicked">
+                </td>
+            </tr>
+        </table>
+        <div id="FPS" class="FPS" data-ng-bind="data.FPS.Value"></div>
+    </div>
+    <link rel="stylesheet" href="/SIMRacingApps/useroverrides.css" />
+</body>
+</html>

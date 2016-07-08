@@ -1,0 +1,10 @@
+{
+"name":        "Chat",
+"description": "Send Predefined Chat Messages with a Click of a Button",
+"doc":         "JavaScriptDoc/sra-chat.html",
+"url":         "apps/WidgetLoader?widget=Chat&",
+"icon":        "widgets/Chat/icon.png",
+"width":       800,
+"height":      480,
+"args":        ""
+}

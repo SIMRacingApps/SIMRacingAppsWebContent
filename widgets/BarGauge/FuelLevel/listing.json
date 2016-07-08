@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-fuel-level.html",
+"name": "BarGauge-FuelLevel",
+"description": "",
+"url": "apps/WidgetLoader?widget=BarGauge/FuelLevel&",
+"icon": "widgets/BarGauge/FuelLevel/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

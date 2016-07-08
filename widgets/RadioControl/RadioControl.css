@@ -1,0 +1,97 @@
+.SIMRacingApps-Widget-RadioControl {
+    position:      relative;
+    width:         100%;
+    height:        100%;
+    font-size:     130%;
+    white-space:   nowrap;
+    z-index:       -1;
+}
+
+.SIMRacingApps-Widget-RadioControl-table {
+    background-color: gray;
+	position:      absolute;
+    width:         100%;
+    height:        100%;    /*note: causes table to expand to the containers height */
+    font-size:     100%;
+    line-height:   148%;
+    z-index:       1;
+    border-collapse: collapse;
+}
+
+.SIMRacingApps-Widget-RadioControl-header {
+    background-color: darkcyan;
+    white-space:   nowrap;
+    font-size:     125%;
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+
+.SIMRacingApps-Widget-RadioControl-header2 {
+    background-color: darkcyan;
+    white-space:   nowrap;
+    font-size:     125%;
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+
+.SIMRacingApps-Widget-RadioControl-body {
+}
+
+.SIMRacingApps-Widget-RadioControl-add {
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+
+.SIMRacingApps-Widget-RadioControl-scan {
+    text-align:    center;
+    background-color: green;
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+
+.SIMRacingApps-Widget-RadioControl-talking {
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+    text-align:   center;
+    color:        orange;
+    background-color: black;
+}
+
+.SIMRacingApps-Widget-RadioControl-name {
+    border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+.SIMRacingApps-Widget-RadioControl-mute {
+    text-align:    center;
+	border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+.SIMRacingApps-Widget-RadioControl-delete {
+    text-align:    center;
+	border-color: black;
+    border-width: thin;
+    border-style: outset;
+}
+
+.SIMRacingApps-Widget-RadioControl-GridRowBackground-clicked {
+    background-color: rgba(255,0,0,.3) !important;
+}
+
+.SIMRacingApps-Widget-RadioControl-GridRowBackground-active {
+    background-color: orange !important;
+}
+
+.SIMRacingApps-Widget-RadioControl-GridRowBackground-cantalk {
+    background-color: green !important;
+}
+
+.SIMRacingApps-Widget-RadioControl-GridRowBackground-none {
+}
+

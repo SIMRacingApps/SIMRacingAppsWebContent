@@ -1,0 +1,34 @@
+
+.SIMRacingApps-Widget-TrackMap-FinishLine {
+    width: 100%;
+    height: 100%;
+}
+
+.SIMRacingApps-Widget-TrackMap-FinishLine-line {
+    position: relative;
+	clear: both;
+    background-color: gold;
+}
+
+.SIMRacingApps-Widget-TrackMap-FinishLine-Line1 {
+    position: relative;
+	clear: both;
+}
+
+.SIMRacingApps-Widget-TrackMap-FinishLine-Line2 {
+    position: relative;
+	clear: both;
+}
+
+.SIMRacingApps-Widget-TrackMap-FinishLine-square {
+    position: relative;
+    float: left;
+}
+
+.SIMRacingApps-Widget-TrackMap-FinishLine-white  {
+    background-color: white;
+}
+
+.SIMRacingApps-Widget-TrackMap-FinishLine-black {
+    background-color: black;
+}

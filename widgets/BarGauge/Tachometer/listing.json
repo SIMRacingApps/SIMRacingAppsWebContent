@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-tachometer.html",
+"name": "BarGauge-Tachometer",
+"description": "",
+"url": "apps/WidgetLoader?widget=BarGauge/Tachometer&",
+"icon": "widgets/BarGauge/Tachometer/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

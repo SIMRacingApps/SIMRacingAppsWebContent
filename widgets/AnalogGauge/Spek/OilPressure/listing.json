@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-oil-pressure.html",
+"name": "AnalogGauge/Spek/OilPressure",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/OilPressure&",
+"icon": "widgets/AnalogGauge/Spek/OilPressure/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

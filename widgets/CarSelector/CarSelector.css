@@ -1,0 +1,96 @@
+/*@import any css settings you are going to override in this file */
+/*@import "../?"*/
+
+/*made this a little smaller so the borders on the table would not get clipped */
+.SIMRacingApps-Widget-CarSelector {
+    width:         97%;
+    height:        97%;
+    font-size:     97%;
+    margin-left:   1.5%;
+    margin-top:    1.5%;
+    overflow:      hidden;
+}
+.SIMRacingApps-Widget-CarSelector-header {
+    position:  relative;
+    width:     100%;
+    clear:     both;
+}
+
+.SIMRacingApps-Widget-CarSelector-select {
+    position:  relative;
+    width:     100%;
+    clear:     both;
+}
+
+.SIMRacingApps-Widget-CarSelector-reference {
+    clear:     left;
+    float:     left;
+    white-space: nowrap;
+}
+
+.SIMRacingApps-Widget-CarSelector-button {
+    background-color: green;
+    text-align:center;
+    font-size: 100%;
+    float:     left;
+    white-space: nowrap;
+    margin-left:1%;
+    margin-right:1%;
+    margin-bottom:1%;
+    padding-left:1%;
+    padding-right:1%;
+}
+
+.SIMRacingApps-Widget-CarSelector-all {
+}
+
+.SIMRacingApps-Widget-CarSelector-leader {
+}
+
+.SIMRacingApps-Widget-CarSelector-me {
+}
+
+.SIMRacingApps-Widget-CarSelector-ahead {
+}
+
+.SIMRacingApps-Widget-CarSelector-behind {
+}
+
+.SIMRacingApps-Widget-CarSelector-reply {
+}
+
+.SIMRacingApps-Widget-CarSelector-carstable {
+    table-layout: fixed;
+    width: 90%;
+    font-size: 90%;
+    border-collapse: separate;
+    margin-top: 6%;
+    left: 5%;
+    bottom: 0%;
+    position: absolute;
+    background-color: #333333;
+}
+
+.SIMRacingApps-Widget-CarSelector-car {
+    width: 100%;
+    font-size: 20%;
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+}
+
+.SIMRacingApps-Widget-CarSelector-car .SIMRacingApps-Widget-CarNumberExtended {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 90%;
+}
+
+.SIMRacingApps-Widget-CarSelector-clickedstate-clicked {
+    background-color: rgba(255,0,0,.3) !important;
+}
+
+.SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-Y {
+    border-color: red !important;
+    border-width: thin;
+    border-style: solid;
+}

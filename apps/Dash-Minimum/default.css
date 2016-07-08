@@ -1,0 +1,174 @@
+
+.SIMRacingApps-App-Dash-Minimum-body {
+    background: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-Dash-Minimum {
+    position: relative;
+	width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.SIMRacingApps-App-Dash-Minimum-WaterTemp {
+    position:   absolute;
+    width:      18%;
+    left:       1%;
+    top:        1%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-WaterPressure {
+    position:   absolute;
+    width:      18%;
+    left:       1%;
+    top:        14%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-WaterLevel {
+    position:   absolute;
+    width:      18%;
+    left:       1%;
+    top:        27%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-FuelPressure {
+    position:   absolute;
+    width:      18%;
+    left:       1%;
+    top:        40%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-Voltage {
+    position:   absolute;
+    width:      18%;
+    left:       1%;
+    top:        53%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-OilTemp {
+    position:   absolute;
+	width:      18%;
+    right:      1%;
+    top:        1%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-OilPressure {
+    position:   absolute;
+    width:      18%;
+    right:      1%;
+    top:        14%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-OilLevel {
+    position:   absolute;
+    width:      18%;
+    right:      1%;
+    top:        27%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-FuelLevel {
+    position:   absolute;
+    width:      18%;
+    right:      1%;
+    top:        40%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-BrakePressure {
+    position:   absolute;
+    width:      18%;
+    right:      1%;
+    top:        53%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-Car {
+    position:   absolute;
+	width:      60%;
+	font-size:  60%;
+	height:     100%;
+    top:        0%;
+    left:       20%;
+    background: rgba(100,100,100,.4);
+}
+.SIMRacingApps-App-Dash-Minimum-Tire {
+    width:      15%;
+    font-size:  80%;
+}
+.SIMRacingApps-App-Dash-Minimum-Tire-LF {
+    position:   absolute;
+    top:        0%;
+    left:       13%;
+}
+.SIMRacingApps-App-Dash-Minimum-Tire-LR {
+    position:   absolute;
+    bottom:     0%;
+    left:       13%;
+}
+.SIMRacingApps-App-Dash-Minimum-Tire-RF {
+    position:   absolute;
+    top:        0%;
+    right:      13%;
+}
+.SIMRacingApps-App-Dash-Minimum-Tire-RR {
+    position:   absolute;
+    bottom:     0%;
+    right:      13%;
+}
+
+.SIMRacingApps-App-Dash-Minimum-TireWear {
+    width:      12%;
+    font-size:  200%;
+}
+.SIMRacingApps-App-Dash-Minimum-TireWear-LF {
+    position:   absolute;
+    top:        25%;
+    left:       1%;
+    text-align: right;
+}
+.SIMRacingApps-App-Dash-Minimum-TireWear-LR {
+    position:   absolute;
+    bottom:     25%;
+    left:       1%;
+    text-align: right;
+}
+.SIMRacingApps-App-Dash-Minimum-TireWear-RF {
+    position:   absolute;
+    top:        25%;
+    right:      1%;
+    text-align: left;
+}
+.SIMRacingApps-App-Dash-Minimum-TireWear-RR {
+    position:   absolute;
+    bottom:     25%;
+    right:      1%;
+    text-align: left;
+}
+
+.SIMRacingApps-App-Dash-Minimum-incidents {
+    top:                7%;
+    left:               40%;
+    position:           absolute;
+    width:              20%;
+    text-align:         center;
+    font-weight:        bold;
+    font-size:          200%;
+    color:              yellow;
+}
+
+.SIMRacingApps-App-Dash-Minimum-FuelTank {
+    position:           absolute;
+    width:              42%;
+    height:             75%;
+    font-size:          125%;
+    bottom:             12%;
+    left:               29%;
+}
+.SIMRacingApps-App-Dash-Minimum-Messages {
+    z-index:    1099;
+    width:      16%;
+    font-size:  20%;
+    left:       42%;
+    top:        0%;
+    position:   absolute;
+/* background-color: rgba(255,255,255,.2);  just for placement */
+}
+

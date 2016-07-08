@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-oil-level.html",
+"name": "BarGauge-OilLevel",
+"description": "",
+"url": "apps/WidgetLoader?widget=BarGauge/OilLevel&",
+"icon": "widgets/BarGauge/OilLevel/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>The &lt;sra-data&gt; DOM Element
+</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text5.html">Back</a> <a href="text7.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>The &lt;sra-data&gt; DOM Element
+</h1>
+<ul>
+<li>Angular directives are Java Script routines that allow new HTML tags to be defined. All SIMRacingApps Widgets are implemented as directives, and the most basic one is called &quot;sra-data&quot;. <i>(i.e. You will see the &quot;sra&quot; abbreviated for SIMRacingApps throughout to identify attributes specific to SIMRacingApps. Similarly, &quot;ng&quot; is used by Angular for the same reason.)</i></li>
+<li>To use it, simply add it to the DOM as &lt;sra-data&gt;&lt;/sra-data&gt;.</li>
+<li>You need to have at least 2 attributes defined for this directive before it will do anything. Each one is prefixed with &quot;data-&quot; per the HTML5 specification for user defined attributes.</li>
+<ul>
+<li>&lt;sra-data </li>
+<h2>data-sra-args-data = &quot;the path(s) to subscribe to&quot;</h2>
+<h2>data-ng-bind = &quot;data.path.ValueFormatted&quot;</h2>
+<h2>    &gt;&lt;/sra-data&gt;</h2>
+</ul>
+<li>The results of &quot;data-ng-bind&quot; is assigned to the elements text value. It contains JavaScript code where all variables referenced are for the $scope instance assigned to this element. Using inheritance, data subscribed to by an element, is available to all it’s children.</li>
+<li>You can also use, “data-ng-bind-html” if you want to embed other html tags. Useful for adding “span” tags with a different class for formatting with CSS. Angular make sure the HTML is safe, but you can override it.</li>
+<li>These tags can be styled, either inline or with CSS and classes, just like any other tag.</li>
+</ul>
+</body>
+</html>

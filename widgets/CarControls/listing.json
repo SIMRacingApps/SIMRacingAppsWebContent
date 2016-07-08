@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-car-controls.html",
+"name": "CarControls",
+"description": "Gear / Speed / Clutch / Brake / Throttle / Steering",
+"url": "apps/WidgetLoader?widget=CarControls&",
+"icon": "widgets/CarControls/icon.png",
+"width": 800,
+"height": 350,
+"args": ""
+}

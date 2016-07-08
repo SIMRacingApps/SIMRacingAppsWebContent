@@ -1,0 +1,11 @@
+/*@import any css settings you are going to override in this file */
+/*@import "../?"*/
+
+.SIMRacingApps-Widget-Template {
+    width:         100%;
+    height:        100%;
+    font-size:     450%;
+    text-align:    center;
+    line-height:   650%;
+    overflow:      hidden;
+}

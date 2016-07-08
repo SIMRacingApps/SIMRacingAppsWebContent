@@ -1,0 +1,50 @@
+<table
+    class                      = "SIMRacingApps-Widget-TireMeasurements"
+    data-sra-data
+    data-ng-style              = "{
+                                    height: height+'px',
+                                    background: 'linear-gradient(to right,'+Lcolor+','+Mcolor+','+Rcolor+')'
+                                  }">
+    <tbody>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-temp-left"
+                data-ng-bind-html = "data.Car.REFERENCE.Gauge['TireTemp'+value+'L'].ValueHistorical|sraNumber:0"
+            ></td>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-temp-middle"
+                data-ng-bind-html = "data.Car.REFERENCE.Gauge['TireTemp'+value+'M'].ValueHistorical|sraNumber:0"
+            ></td>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-temp-right"
+                data-ng-bind-html = "data.Car.REFERENCE.Gauge['TireTemp'+value+'R'].ValueHistorical|sraNumber:0"
+            ></td>
+        </tr>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-wear-left"
+                data-ng-bind-html = "data.Car.REFERENCE.Gauge['TireWear'+value+'L'].ValueHistorical|sraNumber:0"
+            ></td>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-wear-middle"
+                data-ng-bind-html = "data.Car.REFERENCE.Gauge['TireWear'+value+'M'].ValueHistorical|sraNumber:0"
+            ></td>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-wear-right"
+                data-ng-bind-html = "data.Car.REFERENCE.Gauge['TireWear'+value+'R'].ValueHistorical|sraNumber:0"
+            ></td>
+        </tr>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-psi"
+                colspan           = "3"
+                data-ng-bind-html = "(data.Car.REFERENCE.Gauge['TirePressure'+value].LapsHistorical.Value|sraNumber:0)
+                                  + ' <span class=&quot;SIMRacingAppsLabel&quot;>' + translations.LAPS
+                                  + '</span>, ' + (data.Car.REFERENCE.Gauge['TirePressure'+value].ValueHistorical|sraNumber:1)
+                                  "
+            ></td>
+        </tr>
+        <tr>
+            <td class             = "SIMRacingApps-Widget-TireMeasurements-lapchanged"
+                colspan           = "3"
+                data-ng-bind-html = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+                                  +  translations.LAPCHANGED
+                                  + '</span> '
+                                  + (data.Car.REFERENCE.Gauge['TirePressure'+value].LapChanged.Value|sraNumber:0)"
+            ></td>
+        </tr>
+    </tbody>
+</table>

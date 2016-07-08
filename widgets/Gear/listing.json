@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-gear.html",
+"name": "Gear",
+"description": "",
+"url": "apps/WidgetLoader?widget=Gear&",
+"icon": "widgets/Gear/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

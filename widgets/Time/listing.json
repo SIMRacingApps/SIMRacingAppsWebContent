@@ -1,0 +1,10 @@
+{
+"name":        ["Time","Time-TIMEZONE","Time-GMT"],
+"description": ["Displays the Current Local Time","Displays the Current Local Time with TimeZone","Displays the Time in GMT/UTC"],
+"doc":         "JavaScriptDoc/sra-time.html",
+"url":         "apps/WidgetLoader?widget=Time&",
+"icon":        ["widgets/Time/icon.png","widgets/Time/icon-TZ.png","widgets/Time/icon-GMT.png"],
+"width":       800,
+"height":      130,
+"args":        ["","SHOWTIMEZONE=true","SHOWTIMEZONE=true&TIMEZONE=GMT&FORMAT=HH:mm:ss"]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>The Web Server Interface</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text20.html">Back</a> <a href="text22.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>The Web Server ReST Interface</h1>
+<ul>
+<li>By using the server’s Data service, you can use URLs see what values are available by putting it in the address bar of your browser. If your server is running, try it.</li>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track/Name"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track/Name</u></font></a></li>
+</ul>
+<li>You can also set the “output” parameter to control what attribute from the Data object gets returned. By default, “ValueFormatted” is returned. You can also get all of them by specifying “json” as the output.</li>
+<ul>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track/Name?output=Value"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track/Name?output=Value</u></font></a> </li>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track/Name?output=json"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track/Name?output=json</u></font></a></li>
+</ul>
+<li>If the request is not a complete path to a Data value, then all of the Data will be returned with the output as formatted as JSON. This applies to SIM specific paths as well. The following returns all the Data for the Track, like Description, Type, Weather, etc. Retrieving all of the data in you final application, could slow things down, so it is recommended that you only ask for what you need.</li>
+<ul>
+<li><a href="http://localhost/SIMRacingApps/Data/Session/Track"><u><font color="#0563C1">http://localhost/SIMRacingApps/Data/Session/Track</u></font></a></li>
+</ul>
+<li>A good web site I use to format this into a readable form is <a href="http://jsonlint.com/"><u><font color="#0563C1">http://jsonlint.com</u></font></a></li>
+</ul>
+</ul>
+</body>
+</html>

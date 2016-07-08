@@ -1,0 +1,31 @@
+.SIMRacingApps-Widget-SteeringWheel {
+    width:            100%;
+    height:           100%;
+}
+
+.SIMRacingApps-Widget-SteeringWheel-wheel {
+    stroke:           rgb(70,70,70);
+    stroke-width:     30px;
+    fill:             rgba(0,0,0,0);
+}
+.SIMRacingApps-Widget-SteeringWheel-tape {
+    stroke:           orange;
+    stroke-width:     30px;
+    fill:             rgba(0,0,0,0);
+}
+.SIMRacingApps-Widget-SteeringWheel-spokes {
+    fill:             silver;
+    stroke:           silver;
+    stroke-width:     30px;
+}
+.SIMRacingApps-Widget-SteeringWheel-button {
+    fill: black;
+}
+
+.SIMRacingApps-Widget-SteeringWheel-talkbackground {
+    fill: black;
+}
+
+.SIMRacingApps-Widget-SteeringWheel-talkforeground {
+    fill: red;
+}

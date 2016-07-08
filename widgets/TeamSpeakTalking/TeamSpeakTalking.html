@@ -1,0 +1,13 @@
+<sra-data class              = "SIMRacingApps-Widget-TeamSpeakTalking"
+     data-sra-args-data      = "TeamSpeak/Talker;TeamSpeak/Whispering"
+     data-ng-style           = "{ visibility: data.TeamSpeak.Talker.Value ? 'inherit' : 'hidden' }">
+	<sra-data-table
+	    class                    = "SIMRacingApps-Widget-TeamSpeakTalking-table"
+	    ng-attr-style            = "height: {{height}}px;"
+	    data-sra-args-header     = "'@TeamSpeak'"
+	    data-sra-args-row-names  = "talk;whisper"
+	    data-sra-args-row-talk   = "data.TeamSpeak.Talker.ValueFormatted || '&nbsp;'"
+	    data-sra-args-row-whisper= "data.TeamSpeak.Whispering.ValueFormatted || '&nbsp;'"
+	    data-sra-args-interval   = {{sraInterval}}
+	></sra-data-table>
+</sra-data>

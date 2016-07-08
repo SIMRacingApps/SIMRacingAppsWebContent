@@ -1,0 +1,95 @@
+
+.SIMRacingApps-Widget-PitRoad {
+    width:         100%;
+    height:        100%;
+    font-size:     200%;
+    color:         white;
+    overflow:      hidden;
+}
+
+.SIMRacingApps-Widget-PitRoad-container {
+    position:      absolute;
+    top:           0%;
+    left:          0%;
+    width:         100%;
+    height:        100%;
+    background-color: teal;
+}
+
+/*
+* The next 8 classes will be assigned to the body based on concatenating the following
+  CarIsUnderPitSpeedLimit + CarIsOverPitSpeedLimit + CarStatus + blinkState
+*/
+.SIMRacingApps-Widget-PitRoad-APPROACHINGPITS-APPROACHINGLIMIT-OFF {
+    background-color: yellow !important;
+    color: black !important;
+}
+.SIMRacingApps-Widget-PitRoad-APPROACHINGPITS-LIMIT-OFF {
+    background-color: green !important;
+    color: white !important;
+}
+.SIMRacingApps-Widget-PitRoad-APPROACHINGPITS-OVERLIMIT-OFF {
+    background-color: red !important;
+    color: white !important;
+}
+.SIMRacingApps-Widget-PitRoad-APPROACHINGPITS-WAYOVERLIMIT-OFF {
+    background-color: red !important;
+    color: white !important;
+}
+.SIMRacingApps-Widget-PitRoad-ONPITROAD-APPROACHINGLIMIT-OFF {
+    background-color: yellow !important;
+    color: black !important;
+}
+.SIMRacingApps-Widget-PitRoad-ONPITROAD-LIMIT-OFF {
+    background-color: green !important;
+    color: white !important;
+}
+.SIMRacingApps-Widget-PitRoad-ONPITROAD-OVERLIMIT-OFF {
+    background-color: red !important;
+    color: white !important;
+}
+.SIMRacingApps-Widget-PitRoad-ONPITROAD-WAYOVERLIMIT-OFF {
+    background-color: red !important;
+    color: white !important;
+}
+
+
+.SIMRacingApps-Widget-PitRoad .SIMRacingApps-Widget-DataTable-header {
+    background-color: gold;
+    color: black;
+/*    border-radius: 10px 10px 0px 0px; */
+}
+
+/* speed limit text */
+.SIMRacingApps-Widget-PitRoad .SIMRacingApps-Widget-DataTable-row-speedlimit {
+    font-size: 175%;
+    font-style: italic;
+    line-height: 170%;
+}
+
+/* speed  */
+.SIMRacingApps-Widget-PitRoad .SIMRacingApps-Widget-DataTable-row-speed {
+    font-size: 400%;
+    line-height: 100%;
+}
+
+/* speed uom  */
+.SIMRacingApps-Widget-PitRoad .SIMRacingApps-Widget-DataTable-row-uom {
+    font-size: 200%;
+    line-height: 100%;
+}
+
+/* time to the pit stall */
+.SIMRacingApps-Widget-PitRoad .SIMRacingApps-Widget-DataTable-footer {
+    font-size: 400%;
+}
+
+.SIMRacingApps-Widget-PitRoad-countdown-OFF {
+    background-color: darkgreen;
+    color: gold !important;
+}
+
+.SIMRacingApps-Widget-PitRoad-countdown-ON {
+    background-color: orange;
+    color: black !important;
+}

@@ -1,0 +1,29 @@
+<div class="SIMRacingApps-Widget-CarNumber" ng-attr-style="position: relative; height: {{height}}px; visibility: {{CarNumber ? 'inherit' : 'hidden'}}">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 0 800 480">
+         <rect class="SIMRacingApps-Widget-CarNumber-background" 
+               x=0 y=0 rx=200 ry=240 width=800 height=480 ng-attr-fill='{{CarColor|sraRGB}}'>
+         </rect>
+         <text class="SIMRacingApps-Widget-CarNumber-text-background"
+               x=410
+               y=430
+               font-size=400
+               text-anchor='middle'
+               ng-attr-transform="{{transform}}"
+               ng-attr-font-family="'{{CarNumberFont}}', 'Arial'"
+               ng-attr-fill="{{CarColorNumberBackground|sraRGB}}"
+               ng-bind="data.Car[value].Number.Value">
+         </text>
+         <text class="SIMRacingApps-Widget-CarNumber-text"
+               x=400
+               y=400
+               font-size=400
+               text-anchor='middle'
+               ng-attr-transform="{{transform}}"
+               ng-attr-font-family="'{{CarNumberFont}}', 'Arial'"
+               ng-attr-stroke="{{CarColorNumberOutline|sraRGB}}"
+               ng-attr-fill="{{CarColorNumber|sraRGB}}"
+               ng-bind="data.Car[value].Number.Value">
+         </text>
+    </svg>
+</div>

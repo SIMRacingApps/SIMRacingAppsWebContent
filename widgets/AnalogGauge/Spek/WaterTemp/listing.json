@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-water-temp.html",
+"name": "AnalogGauge-Spek-WaterTemp",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/WaterTemp&",
+"icon": "widgets/AnalogGauge/Spek/WaterTemp/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

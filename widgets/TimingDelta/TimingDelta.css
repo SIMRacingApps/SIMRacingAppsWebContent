@@ -1,0 +1,52 @@
+/*@import any css settings you are going to override in this file */
+/*@import "../?"*/
+
+.SIMRacingApps-Widget-TimingDelta {
+    width:         100%;
+    height:        100%;
+    font-size:     500%;
+    text-align:    center;
+    overflow:      hidden;
+}
+
+.SIMRacingApps-Widget-TimingDelta-projected {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 40%;
+    font-size: 220%;
+    text-align: center;
+/* background-color: cyan; /* just for testing */
+}
+.SIMRacingApps-Widget-TimingDelta-bar-container {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 30%;
+/* background-color: orange; /* just for testing */
+}
+.SIMRacingApps-Widget-TimingDelta-bar {
+    position: absolute;
+    height: 100%;
+}
+.SIMRacingApps-Widget-TimingDelta-delta-container {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 30%;
+    font-size: 100%;
+/* background-color: purple; /* just for testing */
+}
+.SIMRacingApps-Widget-TimingDelta-delta {
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 100%;
+    line-height: 50%;
+}
+.SIMRacingApps-Widget-TimingDelta-reference {
+    font-size: 50%;
+}

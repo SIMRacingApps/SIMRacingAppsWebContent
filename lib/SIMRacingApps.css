@@ -1,0 +1,707 @@
+@import "cssreset.css";
+
+/*main class that wraps all SIMRacingApps content to get a standard size fo all apps. Usually put on the BODY */
+.SIMRacingApps {
+    width:800px;
+    height:480px;
+    font-size: 16px;
+    position: relative;
+}
+
+.SIMRacingAppsError {
+    background-color: red;
+}
+
+.SIMRacingAppsGridRow-odd {
+    background-color: #222222;
+}
+
+.SIMRacingAppsGridRow-even {
+    background-color: #111111;
+}
+
+.SIMRacingAppsLabel {
+    color:              gold;
+    fill:               gold;
+    padding-right:      0.3%;
+}
+
+/* let the users set their own colors for data
+.SIMRacingAppsData {
+    color:              white;
+    fill:               white;
+    xpadding-left:      0.3%;
+}
+*/
+
+.FPS {
+    background-color: rgba(0,0,255,.3); /*blue*/
+    color: white;
+    position:absolute;
+    z-index:9999;
+    top:0px;
+    left:0px;
+}
+
+/* Styling for CarStatusClass values */
+.SIMRacingAppsCarStatusClassBackground-ONTRACK {
+    background-color:   white !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK {
+    background-color:   white !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS {
+    background-color:   white !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD {
+    background-color:   gray !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL {
+    background-color:   gray !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL {
+    background-color:   gray !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL {
+    background-color:   gray !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS {
+    background-color:   white !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-ME */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-ME {
+    background-color:   yellow !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-ME {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-ME {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-ME {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-LEADER */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-LEADER {
+    background-color:   chartreuse !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-LEADER {
+    background-color:   chartreuse !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-LEADER {
+    background-color:   chartreuse !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-LEADER {
+    background-color:   green !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-LEADER {
+    background-color:   green !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-LEADER {
+    background-color:   green !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-LEADER {
+    background-color:   green !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-LEADER {
+    background-color:   chartreuse !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-LEADER {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-LEADER {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-LEADER {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-PACECAR */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-PACECAR {
+    background-color:   orange !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-PACECAR {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-PACECAR {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-PACECAR {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-REFERENCE */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-REFERENCE {
+    background-color:   magenta !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-REFERENCE {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-REFERENCE {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-REFERENCE {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-LAPAHEAD */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-LAPAHEAD {
+    background-color:   rgb(255,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-LAPAHEAD {
+    background-color:   rgb(255,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-LAPAHEAD {
+    background-color:   rgb(255,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-LAPAHEAD {
+    background-color:   rgb(200,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-LAPAHEAD {
+    background-color:   rgb(200,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-LAPAHEAD {
+    background-color:   rgb(200,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-LAPAHEAD {
+    background-color:   rgb(200,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-LAPAHEAD {
+    background-color:   rgb(255,60,60) !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-LAPAHEAD {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-LAPAHEAD {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-LAPAHEAD {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-LAPBEHIND */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-LAPBEHIND {
+    background-color:   #00c0ff !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-LAPBEHIND {
+    background-color:   #00c0ff !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-LAPBEHIND {
+    background-color:   #00c0ff !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-LAPBEHIND {
+    background-color:   #005d7d !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-LAPBEHIND {
+    background-color:   #005d7d !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-LAPBEHIND {
+    background-color:   #005d7d !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-LAPBEHIND {
+    background-color:   #005d7d !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-LAPBEHIND {
+    background-color:   #00c0ff !important;
+    color:              white !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-LAPBEHIND {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-LAPBEHIND {
+    background-color:   olive !important;
+    color:              black !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-LAPBEHIND {
+    background-color:   gray !important;
+    color:              black !important;
+}
+
+/* Overrides for CarStatusClass-PITSTALL */
+
+.SIMRacingAppsCarStatusClassBackground-ONTRACK-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-OFFTRACK-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ONPITROAD-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INPITSTALL-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INVALID-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-INGARAGE-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+.SIMRacingAppsCarStatusClassBackground-TOWING-PITSTALL {
+    background-color:      black !important;
+    color:                 yellow !important;
+}
+
+/* Styling for CarStatusClass foreground only values values */
+.SIMRacingAppsCarStatusClassForeground-ONTRACK {
+    color:   white !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK {
+    color:   white !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD {
+    color:   gray !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL {
+    color:   gray !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL {
+    color:   gray !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL {
+    color:   gray !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS {
+    color:   white !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-ME */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-ME {
+    color:   yellow !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-ME {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-ME {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-ME {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-LEADER */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-LEADER {
+    color:   chartreuse !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-LEADER {
+    color:   chartreuse !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-LEADER {
+    color:   chartreuse !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-LEADER {
+    color:   green !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-LEADER {
+    color:   green !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-LEADER {
+    color:   green !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-LEADER {
+    color:   green !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-LEADER {
+    color:   chartreuse !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-LEADER {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-LEADER {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-LEADER {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-PACECAR */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-PACECAR {
+    color:   orange !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-PACECAR {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-PACECAR {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-PACECAR {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-REFERENCE */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-REFERENCE {
+    color:   magenta !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-REFERENCE {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-REFERENCE {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-REFERENCE {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-LAPAHEAD */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-LAPAHEAD {
+    color:   rgb(255,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-LAPAHEAD {
+    color:   rgb(255,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-LAPAHEAD {
+    color:   rgb(255,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-LAPAHEAD {
+    color:   rgb(200,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-LAPAHEAD {
+    color:   rgb(200,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-LAPAHEAD {
+    color:   rgb(200,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-LAPAHEAD {
+    color:   rgb(200,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-LAPAHEAD {
+    color:   rgb(255,60,60) !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-LAPAHEAD {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-LAPAHEAD {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-LAPAHEAD {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-LAPBEHIND */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-LAPBEHIND {
+    color:   #00c0ff !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-LAPBEHIND {
+    color:   #00c0ff !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-LAPBEHIND {
+    color:   #00c0ff !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-LAPBEHIND {
+    color:   #005d7d !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-LAPBEHIND {
+    color:   #005d7d !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-LAPBEHIND {
+    color:   #005d7d !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-LAPBEHIND {
+    color:   #005d7d !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-LAPBEHIND {
+    color:   #00c0ff !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-LAPBEHIND {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-LAPBEHIND {
+    color:   olive !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-LAPBEHIND {
+    color:   gray !important;
+}
+
+/* Overrides for CarStatusClassForeground-PITSTALL */
+
+.SIMRacingAppsCarStatusClassForeground-ONTRACK-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-OFFTRACK-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ONPITROAD-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INPITSTALL-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INVALID-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-INGARAGE-PITSTALL {
+    color:   black !important;
+}
+.SIMRacingAppsCarStatusClassForeground-TOWING-PITSTALL {
+    color:   black !important;
+}
+

@@ -1,0 +1,62 @@
+.SIMRacingApps-Widget-DataTable {
+	width:              100%; /* have to have width or the center will not work */
+	/*height:             100%; can use this or it will fill out the container it lives in. Each parent will have to set height */
+	line-height:        120%;
+    position:           relative;
+    table-layout:       fixed;
+    overflow:           hidden;
+}
+
+/*we're doing our own padding in the tables, null this out */
+.SIMRacingApps-Widget-DataTable .SIMRacingAppsLabel {
+    padding-right:      0px;
+}
+
+.SIMRacingApps-Widget-DataTable-header {
+    text-align:         center;
+    vertical-align:     middle;
+    font-size:          140%;
+    line-height:        150%;
+    font-weight:        bold;
+    white-space:        nowrap;
+    color:              gold;
+}
+.SIMRacingApps-Widget-DataTable-row-odd {
+}
+.SIMRacingApps-Widget-DataTable-row-even {
+}
+.SIMRacingApps-Widget-DataTable-label {
+    width:              49%;
+    text-align:         right;
+    vertical-align:     middle;
+    white-space:        nowrap;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-DataTable-spacer {
+    width:              2%;
+    text-align:         right;
+    vertical-align:     middle;
+    white-space:        nowrap;
+}
+.SIMRacingApps-Widget-DataTable-data {
+    width:              49%;
+    text-align:         left;
+    vertical-align:     middle;
+    white-space:        nowrap;
+    overflow:           hidden;
+}
+.SIMRacingApps-Widget-DataTable-data-nolabel {
+    text-align:         center;
+    vertical-align:     middle;
+    white-space:        nowrap;
+}
+.SIMRacingApps-Widget-DataTable-footer {
+    text-align:         center;
+    vertical-align:     middle;
+    font-size:          60%;
+    line-height:        100%;
+    font-style:         italic;
+    white-space:        nowrap;
+    color:              chartreuse;
+}
+

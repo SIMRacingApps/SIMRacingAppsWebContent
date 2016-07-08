@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-standings.html",
+"name": "Standings",
+"description": "Current Positions of the Drivers Near the REFERENCE Car",
+"url": "apps/WidgetLoader?widget=Standings&",
+"icon": "widgets/Standings/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}

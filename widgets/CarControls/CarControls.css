@@ -1,0 +1,44 @@
+.SIMRacingApps-Widget-CarControls {
+    width:            100%;
+    height:           100%;
+}
+
+.SIMRacingApps-Widget-CarControls-gear {
+    position:     absolute;
+    font-size:    50%;
+    width:        30%;
+    height:       60%;
+    left:         0%;
+    top:          5%;
+}
+
+.SIMRacingApps-Widget-CarControls-speed {
+    position:     absolute;
+    font-size:    300%;
+    font-weight:  bold;
+    width:        30%;
+    height:       20%;
+    left:         0%;
+    top:          75%;
+    text-align:   center;
+}
+
+.SIMRacingApps-Widget-CarControls-pedals {
+    position:     absolute;
+    width:        25%;
+    height:       100%;
+    left:         30%;
+    top:          0%;
+}
+
+.SIMRacingApps-Widget-CarControls-steeringwheel {
+    position:     absolute;
+    width:        44%;
+    height:       100%;
+    left:         55%;
+    top:          0%;
+}
+
+.SIMRacingApps-Widget-CarControls-steeringwheel .SIMRacingApps-Widget-SteeringWheel {
+    background-color: transparent;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OpenLayers test</title>
+<!-- 
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+-->
+<link rel="stylesheet" href="http://openlayers.org/en/v3.6.0/css/ol.css" type="text/css">
+<script src="http://openlayers.org/en/v3.6.0/build/ol.js"></script>
+<style>
+.ol-attribution ul {
+    font-size: 50%;
+}
+</style>
+</head>
+<body>
+ <div id="map"  style="z-index: 2; position: absolute; left: 0px; top: 0px; width: 800px; height: 480px;"></div>
+ <div id="mask" style="z-index: 1; transform: rotate(0deg); position: absolute; left: 0px; top: 0px; width: 800px; height: 480px;">
+     <div id='ul' style='left: 0px; top: 0px; position: absolute; width: 0px; height: 0px;'></div>
+     <div id='ur' style='right: 0px; top: 0px; position: absolute; width: 0px; height: 0px;'></div>
+     <div id='ll' style='left: 0px; bottom: 0px; position: absolute; width: 0px; height: 0px;'></div>
+     <div id='lr' style='right: 0px; bottom: 0px; position: absolute; width: 0px; height: 0px;'></div>
+     <!-- 
+     <div style='position: absolute; bottom:0; right: 0; width: 215px; height: 32px; font-size: 10px; background-color: lightgray;'>
+       &copy; OpenStreetMap.org contributors, CC-BY-SA<br />
+       Tiles Courtesy of MapQuest.com <img src='http://developer.mapquest.com/content/osm/mq_logo.png'>
+     </div> 
+     <img src='WEB-INF/classes/com/SIMRacingApps/Tracks/daytona.png' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: .3'/>
+     -->
+ </div>
+ <div id='car' style="z-index: 99; position: absolute; width: 22px; height: 22px; border-radius: 50%; background-color: red"></div>
+<script>
+
+//the Lat/Lng of the finish line
+//daytona
+/*
+var lat = 29.187712;
+var lng = -81.072798;
+var latOffset = -0.0023;
+var lngOffset = 0.0036;
+var north = 143.5;      //degrees to rotate to get finish line near the bottom of the view.
+var zoom = 16;
+var resolution = 3.1;
+*/
+//charlotte
+/*
+var lat = 35.352269;
+var lng = -80.685591;
+var latOffset = -0.0007;
+var lngOffset = 0.0027;
+var north = 166.0;      //degrees to rotate to get finish line near the bottom of the view.
+var resolution = 1.9;
+*/
+
+//kentucky
+var lat = 38.712560;
+var lng = -84.918498;
+var latOffset = -0.0015;
+var lngOffset = 0.002;
+var north = 141.0;      //degrees to rotate to get finish line near the bottom of the view.
+var resolution = 2.1;
+
+var source;
+var view;
+var map = new ol.Map({
+  layers: [
+    new ol.layer.Tile({
+      //source: source = new ol.source.OSM()
+      source: source = new ol.source.MapQuest({layer: 'sat'})
+    })
+  ],
+  target: 'map',
+  controls: ol.control.defaults({
+    zoom: false,
+    rotate: false,
+    attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+      collapsible: false
+    })
+  }),
+  view: view = new ol.View({
+    center: ol.proj.fromLonLat([lng + lngOffset,lat + latOffset]),
+    rotation: ((north + 90) / 360.0) * (Math.PI * 2),
+    resolution: resolution,
+    minResolution: resolution,
+    maxResolution: resolution
+  })
+});
+
+//we want a completely static map, so remove all user interactions
+map.getInteractions().forEach(function(interaction) {
+  map.removeInteraction(interaction);
+}, this);
+
+var dumpped = false;
+source.on('tileloadend',function(event) {
+    //dump the coordinates of the corners before rotating it.
+    if (!dumpped) {
+        var ul = dumpCoordinates('ul');
+        var ur = dumpCoordinates('ur');
+        var ll = dumpCoordinates('ll');
+        var lr = dumpCoordinates('lr');
+        //console.log('Finish = '+((width/2) - Math.min(ul.x,ur.x,ll.x,lr.x))+','+((height/2) - Math.min(ul.y,ur.y,ll.y,lr.y)));
+        var fl = map.getPixelFromCoordinate(ol.proj.fromLonLat([lng,lat]));
+        console.log('Center Lon/Lat: ' + (lng+lngOffset) + "," + (lat+latOffset));
+        console.log('Finish Line X/Y: ' + fl);
+        document.getElementById('car').style.left = (fl[0]-11)+'px';
+        document.getElementById('car').style.top = (fl[1]-11)+'px';
+    }
+    dumpped = true;
+    //now rotate it for the screen capture
+    //document.getElementById("rotate").style.transform = "rotate(-125.5deg)";
+});
+
+function dumpCoordinates(e) {
+    var m = document.getElementById('map');
+    var c = document.getElementById(e);
+    var l = -m.getBoundingClientRect().left + c.getBoundingClientRect().left;
+    var t = -m.getBoundingClientRect().top  + c.getBoundingClientRect().top;
+
+    console.log(e+'('+l+','+t+'): '+ol.proj.toLonLat(map.getCoordinateFromPixel([l,t])));
+    return { x: l, y: t };
+}
+/*
+ul(1374.0523681640625,693.4086303710938): -81.05940728889877,29.188772127461718
+ur(886.2618408203125,1377.265625): -81.06987413809733,29.175960684499387
+ll(963.7381591796875,400.734375): -81.06821167666098,29.194254626312144
+
+lr(475.9476623535156,1084.5914306640625): -81.0786785252047,29.18144386694337
+*/
+</script>
+</body>
+</html>

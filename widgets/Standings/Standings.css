@@ -1,0 +1,106 @@
+
+.SIMRacingApps-Widget-Standings {
+    font-size: 100%;
+    line-height: 150%;
+    overflow:hidden;
+    /* background: dimgray; */
+    color: white;
+    padding: 0;
+}
+
+.SIMRacingApps-Widget-Standings-Title {
+    font-size: 300%;
+    font-weight: bold;
+    color: gold;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    white-space: nowrap;
+    line-height: 115%;
+}
+
+.SIMRacingApps-Widget-Standings-GridBody {
+    font-size: 200%;
+    line-height: 120%; /* this controls the height of the entire table at the given font and padding*/
+}
+
+.SIMRacingApps-Widget-Standings-GridRow {
+}
+
+.SIMRacingApps-Widget-Standings-GridRowBackground-talking {
+    background-color: orange !important;
+}
+
+.SIMRacingApps-Widget-Standings-GridRowBackground-reference {
+    background-color: black !important;
+}
+
+.SIMRacingApps-Widget-Standings-GridRowForeground {
+}
+
+.SIMRacingApps-Widget-Standings-POS {
+    text-align: center;
+}
+
+.SIMRacingApps-Widget-Standings-POSClass {
+    text-align: center;
+}
+
+.SIMRacingApps-Widget-Standings-CarNumber {
+}
+
+.SIMRacingApps-Widget-Standings-MfrLogo {
+    background-repeat:   no-repeat;
+    background-size:     contain;
+    background-position: center;
+}
+
+
+.SIMRacingApps-Widget-Standings-CarDriverName {
+    text-align: left;
+    padding-left: 1%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-color: transparent;
+    border-width: thin;
+    border-style: inset;
+}
+
+.SIMRacingApps-Widget-Standings-CarDriverName-Club {
+    font-size: 80%;
+    font-style: italic;
+}
+
+.SIMRacingApps-Widget-Standings-CarBehindLeader {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.SIMRacingApps-Widget-Standings-Footer {
+    padding-top: 1%;
+    width: 100%;
+    font-size: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.SIMRacingApps-Widget-Standings-Lap {
+	width: 50%;
+	padding-left: 1%;
+	padding-top: 1%
+    text-align: left;
+}
+
+.SIMRacingApps-Widget-Standings-Last {
+	width: 50%;
+	padding-right: 1%;
+    padding-top: 1%;
+	text-align: right;
+}
+
+.SIMRacingApps-Widget-Standings-BelowMinimumSpeed-Y {
+    border-color: red !important;
+    border-width: thin;
+    border-style: inset;
+}

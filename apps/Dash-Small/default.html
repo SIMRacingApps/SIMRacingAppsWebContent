@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/SIMRacingApps/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="72x72" href="/SIMRacingApps/SRA-Logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/SIMRacingApps/SRA-Logo-114x114.png">
+    <link rel="apple-touch-icon" href="/SIMRacingApps/SRA-Logo-57x57.png">
+    <script type="text/javascript" src="/SIMRacingApps/lib/require.config.js"></script>
+    <script type="text/javascript" data-main="/SIMRacingApps/apps/Dash-Small/default" src="/SIMRacingApps/external/require.js"></script>
+    <base href="/" />
+    <title>Dash-Small</title>
+</head>
+<body class="SIMRacingApps-App-Dash-Small-body">
+    <div id                 = "SIMRacingApps-App"
+         class              = "SIMRacingApps-App SIMRacingApps-App-Dash-Small"
+         data-ng-controller = "SIMRacingApps-Controller"
+         data-sra-resize>
+        <!-- have the Tach run at the speed the user wants by passing in the command line interval -->
+		<sra-bar-gauge
+		     class                          = "SIMRacingApps-App-Dash-Small-Tach"
+		     data-sra-args-value            = "Tachometer"
+		     data-sra-args-font-size-label  = 0
+		     data-sra-args-x-label          = 780
+		     data-sra-args-anchor-label     = "end"
+		     data-sra-args-major-top        = 10
+		     data-sra-args-minor-top        = 13
+		     data-sra-args-major-bottom     = 25
+		     data-sra-args-minor-bottom     = 22
+		     data-sra-args-major-font-size  = 20
+		     data-sra-args-major-text-y     = 35
+		     data-sra-args-border-height    = 75
+		     data-sra-args-round-to         = "10"
+		     data-sra-args-show-value       = "{{sraSHOWVALUE||'true'}}"
+		     data-sra-args-font-size-value  = 25
+		     data-sra-args-y-value          = 65
+		     data-sra-args-x-value          = 780
+		     data-sra-args-anchor-value     = 'end'
+		     data-sra-args-interval         = "{{sraArgsInterval||sraInterval||16}}"
+		></sra-bar-gauge>
+
+        <div class="SIMRacingApps-App-Dash-Small-Time"
+             data-sra-data="time"
+             data-ng-bind-html="data.time.ValueFormatted">
+        </div>
+        <sra-data
+            class="SIMRacingApps-App-Dash-Small-MyRadioChannel"
+            data-sra-args-data="Car/REFERENCE/RadioChannelName"
+            data-sra-args-interval="100"
+            data-ng-bind-html="'@'+data.Car.REFERENCE.RadioChannelName.ValueFormatted"
+        ></sra-data>
+        
+        <sra-shift-lights class             = "SIMRacingApps-App-Dash-Small-ShiftLights"></sra-shift-lights>
+		
+		<sra-bar-gauge-water-temp class     = "SIMRacingApps-App-Dash-Small-WaterTemp"></sra-bar-gauge-water-temp>
+        <sra-bar-gauge-water-pressure class = "SIMRacingApps-App-Dash-Small-WaterPressure"></sra-bar-gauge-water-pressure>
+        <sra-bar-gauge-water-level class    = "SIMRacingApps-App-Dash-Small-WaterLevel"></sra-bar-gauge-water-level>
+        <sra-bar-gauge-fuel-pressure class  = "SIMRacingApps-App-Dash-Small-FuelPressure"></sra-bar-gauge-fuel-pressure>
+        <sra-bar-gauge-voltage class        = "SIMRacingApps-App-Dash-Small-Voltage"></sra-bar-gauge-voltage>
+        <sra-bar-gauge-oil-temp class       = "SIMRacingApps-App-Dash-Small-OilTemp"></sra-bar-gauge-oil-temp>
+        <sra-bar-gauge-oil-pressure class   = "SIMRacingApps-App-Dash-Small-OilPressure"></sra-bar-gauge-oil-pressure>
+        <sra-bar-gauge-oil-level class      = "SIMRacingApps-App-Dash-Small-OilLevel"></sra-bar-gauge-oil-level>
+        <sra-bar-gauge-fuel-level class     = "SIMRacingApps-App-Dash-Small-FuelLevel"></sra-bar-gauge-fuel-level>
+        <sra-bar-gauge-brake-pressure class = "SIMRacingApps-App-Dash-Small-BrakePressure"></sra-bar-gauge-brake-pressure>
+
+        <sra-car-number class               = "SIMRacingApps-App-Dash-Small-CarNumber"></sra-car-number>
+        <div class                          = "SIMRacingApps-App-Dash-Small-Gear-background"></div>
+        <sra-gear class                     = "SIMRacingApps-App-Dash-Small-Gear" data-sra-args-interval="100"></sra-gear>
+        
+        <sra-pit-road class                 = "SIMRacingApps-App-Dash-Small-PitRoad"></sra-pit-road>
+
+        <sra-wind-gauge
+            class                       = "SIMRacingApps-App-Dash-Small-WindGauge"
+            style                       = "z-index: 9999"
+            data-sra-args-rotate        = "true"
+            data-sra-args-perspective   = "REFERENCE"
+            data-sra-interval           = "100"
+        ></sra-wind-gauge>
+        
+        <sra-pit-commander
+            class                       = "SIMRacingApps-App-Dash-Small-PitCommander"
+        ></sra-pit-commander>
+
+        <div id="FPS" class="FPS" data-ng-bind="data.FPS.Value"></div>
+    </div>
+    <link rel="stylesheet" href="/SIMRacingApps/useroverrides.css" />
+</body>
+</html>

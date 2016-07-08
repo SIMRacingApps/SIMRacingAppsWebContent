@@ -1,0 +1,37 @@
+{
+"doc": "JavaScriptDoc/sra-driver-info.html",
+"name": [
+    "DriverInfo-REFERENCE",
+    "DriverInfo-ME",
+    "DriverInfo-LEADER",
+    "DriverInfo-AHEAD",
+    "DriverInfo-BEHIND",
+    "DriverInfo-POS-AHEAD",
+    "DriverInfo-POS-BEHIND",
+    "DriverInfo-TRANSMITTING"
+],
+"description": [
+    "Info on the Current REFERENCE Car",
+    "Info on ME",
+    "Info on the LEADER",
+    "Info on the Car AHEAD Relative to your Location",
+    "Info on the car BEHIND Relative to your Location",
+    "Info on the Car AHEAD by Position in Class",
+    "Info on the car BEHIND by Position in Class",
+    "Info on the Driver TRANSMITTING"
+],
+"url": "apps/WidgetLoader?widget=DriverInfo&",
+"icon": "widgets/DriverInfo/icon.png",
+"width": 800,
+"height": 480,
+"args": [
+    "CAR=REFERENCE&TITLE=REFERENCE",
+    "CAR=ME&TITLE=ME",
+    "CAR=LEADER&TITLE=LEADER",
+    "CAR=RL1&TITLE=AHEAD",
+    "CAR=RL-1&TITLE=BEHIND",
+    "CAR=RPC1&TITLE=POS-AHEAD",
+    "CAR=RPC-1&TITLE=POS-BEHIND",
+    "CAR=TRANSMITTING"
+]
+}

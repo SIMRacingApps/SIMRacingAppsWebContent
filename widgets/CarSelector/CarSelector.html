@@ -1,0 +1,135 @@
+<div class                  = "SIMRacingApps-Widget-CarSelector"
+     data-ng-style          = "{ height: height+'px' }">
+    <div style = "position: relative; width: 100%; height: 100%">
+	    <div class                       = "SIMRacingApps-Widget-CarSelector-select"
+	        data-ng-style                = "{ display: sraShowButtons ? 'inherit' : 'none' }">            
+	        <sra-data
+	            class                    = "SIMRacingApps-Widget-CarSelector-reference"
+	            data-ng-style            = "{ display: sraShowClickToSelect ? 'inherit' : 'none' }"          
+	            data-sra-args-data       = "Session/ReferenceCar"
+	            data-ng-bind-html        = "'<span class=&quot;SIMRacingAppsLabel&quot;>' 
+	                                     +  translations.CLICKTOSELECT 
+	                                     +  ':</span>&nbsp;&nbsp;&nbsp;'"
+	        ></sra-data>
+	        <sra-data 
+	            data-ng-style            = "{ display: sraShowAll ? 'inherit' : 'none' }"          
+	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-all SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+	            data-ng-bind-html        = "translations.ALL"
+	            data-sra-args-on-click   = "allClicked"
+	        ></sra-data>
+	        <sra-data 
+	            data-ng-style            = "{ display: sraShowLeader ? 'inherit' : 'none' }"          
+	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-leader SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+	            data-ng-bind-html        = "translations.LEADER"
+	            data-sra-args-on-click   = "leaderClicked"
+	        ></sra-data>
+	        <sra-data 
+	            data-ng-style            = "{ display: sraShowMe ? 'inherit' : 'none' }"          
+	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-me SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+	            data-ng-bind-html        = "translations.ME"
+	            data-sra-args-on-click   = "meClicked"
+	        ></sra-data>
+	        <sra-data 
+	            data-ng-style            = "{ display: sraShowAheadBehind ? 'inherit' : 'none' }"          
+	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-ahead SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+	            data-ng-bind-html        = "translations.AHEAD"
+	            data-sra-args-on-click   = "aheadClicked"
+	        ></sra-data>
+	        <sra-data 
+	            data-ng-style            = "{ display: sraShowAheadBehind ? 'inherit' : 'none' }"           
+	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-behind SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+	            data-ng-bind-html        = "translations.BEHIND"
+	            data-sra-args-on-click   = "behindClicked"
+	        ></sra-data>
+	        <sra-data 
+	            data-ng-style            = "{ display: sraShowReply ? 'inherit' : 'none' }"           
+	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-reply SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+	            data-ng-bind-html        = "translations.REPLY"
+	            data-sra-args-on-click   = "replyClicked"
+	        ></sra-data>
+	    </div>
+	    <div class                       = "SIMRacingApps-Widget-CarSelector-header"
+	        data-ng-style                = "{ display: sraShowReference ? 'inherit' : 'none' }">
+	        <sra-data
+	            class                    = "SIMRacingApps-Widget-CarSelector-reference"
+	            data-sra-args-data       = "Session/ReferenceCar"
+	            data-ng-bind-html        = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+	                                     +  translations.REFERENCECAR + ':</span> ' 
+	                                     +  data.Session.ReferenceCar.ValueFormatted 
+	                                     +  '</span>'"
+	        ></sra-data>
+	    </div>
+	    <table 
+	        class           = "SIMRacingApps-Widget-CarSelector-carstable">
+	        <colgroup>
+	            <col style  = "width: 14.285%" />
+	            <col style  = "width: 14.285%" />
+	            <col style  = "width: 14.285%" />
+	            <col style  = "width: 14.285%" />
+	            <col style  = "width: 14.285%" />
+	            <col style  = "width: 14.285%" />
+	            <col style  = "width: 14.285%" />
+	        </colgroup>
+	        <tbody>
+	            <tr data-ng-repeat                   = "car in [1,8,15,22,29,36,43]">
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+0}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+0)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+0}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+1}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+1)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+1}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+2}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+2)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+2}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+3}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+3)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+3}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+4}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+4)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+4}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+5}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+5)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+5}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	                <td 
+	                    data-sra-args-data           = "Car/NS{{car+6}}/IsBelowMinimumSpeed"
+	                    data-ng-class                = "'SIMRacingApps-Widget-CarSelector-car'
+	                                                 + ' SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()
+	                                                 + ' SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-' + data.Car['NS'+(car+6)].IsBelowMinimumSpeed.Value"
+	                    data-sra-car-number-extended = "NS{{car+6}}"
+	                    data-sra-args-on-click       = "carClicked"
+	                ></td>
+	            </tr>
+	        </tbody>
+	    </table>
+    </div>
+</div>

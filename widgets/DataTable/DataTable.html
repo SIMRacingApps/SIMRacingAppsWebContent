@@ -1,0 +1,52 @@
+<table class                      = "SIMRacingApps-Widget-DataTable"
+       data-ng-class              = "tableClass">
+    <thead data-ng-if             = "header">
+       <tr>
+           <td class              = "SIMRacingApps-Widget-DataTable-header"
+               colspan            = "3"
+               data-ng-class      = "headerClass"
+               data-ng-bind-html  = "header">
+           </td>
+       </tr>
+    </thead>
+    <tbody class                  = "SIMRacingApps-Widget-DataTable-body"
+           data-ng-class          = "bodyClass"
+           data-ng-if             = "rowNames.length">
+        <tr class                 = "SIMRacingApps-Widget-DataTable-row"
+            data-ng-repeat        = "rowName in rowNames"
+            data-ng-class         = "'SIMRacingApps-Widget-DataTable-row-'+rowName+' '+rowsClass[rowName]"
+            data-ng-class-odd     = "'SIMRacingApps-Widget-DataTable-row-odd'"
+            data-ng-class-even    = "'SIMRacingApps-Widget-DataTable-row-even'">
+
+            <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-DataTable-label"
+                data-ng-if        = "labels[rowName]"
+                data-ng-class     = "lablesClass[rowName]"
+                data-ng-bind-html = "labels[rowName]">
+            </td>
+            <td class             = "SIMRacingApps-Widget-DataTable-spacer"
+                data-ng-if        = "labels[rowName]">
+                &nbsp;
+            </td>
+            <td class             = "SIMRacingAppsData SIMRacingApps-Widget-DataTable-data"
+                data-ng-if        = "labels[rowName]"
+                data-ng-class     = "valuesClass[rowName]"
+                data-ng-bind-html = "values[rowName]">
+            </td>
+            <td class             = "SIMRacingAppsData SIMRacingApps-Widget-DataTable-data-nolabel"
+                colspan           = "3"
+                data-ng-if        = "!labels[rowName]"
+                data-ng-class     = "valuesClass[rowName]"
+                data-ng-bind-html = "values[rowName]">
+            </td>
+        </tr>
+    </tbody>
+    <tfoot data-ng-if             = "footer">
+        <tr>
+            <td class             = "SIMRacingApps-Widget-DataTable-footer"
+                colspan           = "3"
+                data-ng-class     = "footerClass"
+                data-ng-bind-html = "footer">
+            </td>
+        </tr>
+    </tfoot>
+</table>

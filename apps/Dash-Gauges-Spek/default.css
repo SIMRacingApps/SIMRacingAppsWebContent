@@ -1,0 +1,80 @@
+
+.SIMRacingApps-App-Dash-Gauges-Spek-body {
+    background: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Tach {
+    z-index:10;
+	width:      40%;
+	height:     66.6%; /* same number of pixels as width for resizing to work */
+    position:   absolute;
+    left:       30%;
+    top:        1%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-small-gauge {
+    position:   absolute;
+	width:      18%;
+	height:     30%; /* same number of pixels as width for resizing to work */
+    z-index:    5;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-WaterTemp {
+    left:       2%;
+    bottom:     69%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-OilTemp {
+    right:      2%;
+    bottom:     69%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-WaterPressure {
+    left:       2%;
+    bottom:     38%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-OilPressure {
+    right:      2%;
+    bottom:     38%;
+}
+
+
+.SIMRacingApps-App-Dash-Gauges-Spek-WaterLevel {
+    left:       2%;
+    bottom:     7%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-OilLevel {
+    right:      2%;
+    bottom:     7%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-FuelPressure {
+    left:       41%;
+    bottom:     1%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-FuelLevel {
+    right:      21.5%;
+    bottom:     1%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Volt {
+    left:       21.5%;
+    bottom:     1%
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-BrakePressure {
+    right:      19%;
+    bottom:     24%;
+    width:      14%;
+}

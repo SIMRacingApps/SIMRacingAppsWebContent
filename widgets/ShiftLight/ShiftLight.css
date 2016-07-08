@@ -1,0 +1,16 @@
+.SIMRacingApps-Widget-ShiftLight {
+    width:         100%;
+    height:        100%;
+}
+
+.SIMRacingApps-Widget-ShiftLight-off {
+    stroke-width: 10;
+    stroke: black;
+    fill:   gray;
+}
+
+.SIMRacingApps-Widget-ShiftLight-on {
+    stroke-width: 10;
+    stroke: black;
+    fill:   red;
+}

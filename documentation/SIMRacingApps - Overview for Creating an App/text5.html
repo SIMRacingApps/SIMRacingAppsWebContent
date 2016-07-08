@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>The Dispatcher</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text4.html">Back</a> <a href="text6.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>The Dispatcher</h1>
+<ul>
+<li>After the POST request is sent, SIMRacingApps.js establishes a connection.</li>
+<li>The &quot;sessionid&quot; is sent to the server to request any updates to the data subscribed to in the POST request.</li>
+<li>The dispatcher can be configured to poll for changes or to have changes pushed by the server to the browser automatically. The default is to poll for new data. The interval for either of these approaches can be defined by the user and defaults to 100 milliseconds. Values as low as 1ms is possible, but it really depends on the needs of the client and the ability of the SIM to produce data and the browser to render the data that fast.</li>
+<li>Once new data is received, it is parsed and assigned to the $scope.data object that is bound to the DOM element that originally subscribed to it. This triggers the Angular watches to take over and update the element based on how you bound to it.</li>
+</ul>
+</body>
+</html>

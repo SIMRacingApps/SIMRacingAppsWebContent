@@ -1,0 +1,137 @@
+<div class                          = "SIMRacingApps-Widget-TrackMap"
+     data-ng-attr-style             = "height: {{height}}px;">
+    <div class                      = "SIMRacingApps-Widget-TrackMap-map"
+         data-ng-style              = "{ zIndex: 1, visibility: sraShowMap ? 'inherit' : 'hidden' }" 
+    ></div>
+    <img class                      = "SIMRacingApps-Widget-TrackMap-img"
+         data-ng-src                = "{{imageUrl}}"
+         data-ng-style              = "{ zIndex: 2, visibility: imageUrl && sraShowMap ? 'inherit' : 'hidden' }" 
+    ></img>
+    <div >
+    </div>
+    <svg version                    = "1.1" 
+         xmlns                      = "http://www.w3.org/2000/svg" 
+         xmlns:xlink                = "http://www.w3.org/1999/xlink"
+         ng-attr-viewBox            = "0 0 {{width}} {{height}}"
+         data-ng-style              = "{ zIndex: 3, visibility: sraShowPath ? 'inherit' : 'hidden' }" 
+         class                      = "SIMRacingApps-Widget-TrackMap-pitroadpath">
+         <path data-ng-class        = "sraShowMap ? 'SIMRacingApps-Widget-TrackMap-pitroadpathline-background' : 'SIMRacingApps-Widget-TrackMap-pitroadpathline-nobackground'"
+               data-ng-attr-d       = "{{pitroadpath}}"
+         ></path>
+    </svg>
+    <svg version                    = "1.1" 
+         xmlns                      = "http://www.w3.org/2000/svg" 
+         xmlns:xlink                = "http://www.w3.org/1999/xlink"
+         ng-attr-viewBox            = "0 0 {{width}} {{height}}"
+         data-ng-style              = "{ zIndex: 4, visibility: sraShowPath ? 'inherit' : 'hidden' }" 
+         class                      = "SIMRacingApps-Widget-TrackMap-trackpath">
+         <path data-ng-class        = "sraShowMap ? 'SIMRacingApps-Widget-TrackMap-trackpathline-background' : 'SIMRacingApps-Widget-TrackMap-trackpathline-nobackground'"
+               data-ng-attr-d       = "{{trackpath}}"
+         ></path>
+    </svg>
+    <sra-data-table
+        data-ng-if                  = "sraShowTitle"
+        class                       = "SIMRacingApps-Widget-TrackMap-trackname"
+        style                       = "z-index: 10"
+        data-sra-horizontal-align   = "center"
+        data-sra-vertical-align     = "top"
+        data-sra-args-interval      = "1000"
+        data-sra-args-data          = "Track/Description;Track/Configuration;Track/City;Track/Country;Track/PitSpeedLimit;Track/Category;Track/Length;Session/Lap;Session/Laps;Session/LapsToGo"
+        data-sra-args-header        = "data.Track.Description.ValueFormatted"
+        data-sra-args-row-names     = ""
+        data-sra-args-row-trackloc  = "data.Track.Configuration.ValueFormatted + ': ' + data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted"
+        data-sra-args-row-trackinfo = "(data.Track.Length.Value|number:'2')+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted+', '+translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit.Value|number:'0')+' '+data.Track.PitSpeedLimit.UOMAbbr"
+        data-sra-args-row-laps      = "translations.LAP+' '+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted+' --- '+data.Session.LapsToGo.ValueFormatted+' '+translations.TOGO"
+    ></sra-data-table>
+
+    <sra-data-table
+        data-ng-if                  = "sraShowInfo"
+        class                       = "SIMRacingApps-Widget-TrackMap-trackinfo"
+        style                       = "z-index: 10"
+        data-sra-horizontal-align   = "left"
+        xdata-sra-vertical-align    = "top"
+        data-sra-args-interval      = "1000"
+        data-sra-args-data          = "Track/Configuration;Track/City;Track/Country;Track/PitSpeedLimit;Track/Category;Track/Length;Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining"
+        data-sra-args-row-names     = "trackconf;trackloc;trackinfo;pitinfo;laps;remaining"
+        data-sra-args-row-trackconf = "data.Track.Configuration.ValueFormatted"
+        data-sra-args-row-trackloc  = "data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted"
+        data-sra-args-row-trackinfo = "(data.Track.Length.Value|number:'2')+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted"
+        data-sra-args-row-pitinfo   = "translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit.Value|number:'0')+' '+data.Track.PitSpeedLimit.UOMAbbr"
+        data-sra-args-row-laps      = "data.Session.LapsToGo.Value < (data.Session.Laps.Value * .5)
+                                    ?  (data.Session.LapsToGo|sraNumber:0:null:null:null:true)+' '+translations.TOGO
+                                    :  translations.LAP+' '+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted"
+        data-sra-args-row-remaining = "data.Session.TimeRemaining|sraDuration:0:false:true:true:true"
+    ></sra-data-table>
+    
+    <sra-flags
+        data-ng-if                  = "sraShowFlags"
+        data-sra-horizontal-align   = "center"
+        data-sra-vertical-align     = "middle"
+        class                       = "SIMRacingApps-Widget-TrackMap-flags"
+        style                       = "z-index: 9999"
+    ></sra-flags>
+
+    <sra-wind-gauge
+        data-ng-if                  = "sraShowWindGauge"
+        class                       = "SIMRacingApps-Widget-TrackMap-windgauge"
+        style                       = "z-index: 10"
+        data-sra-args-rotate        = "true"
+        data-sra-args-perspective   = "TRACK"
+    ></sra-wind-gauge>
+
+    <sra-weather-info
+        data-ng-if                  = "sraShowWeather"
+        class                       = "SIMRacingApps-Widget-TrackMap-weatherinfo"
+        style                       = "z-index: 10"
+    ></sra-weather-info>
+
+
+    <!-- This works funny enough that I should explain. The finish line widget is actually twice as wide as it seems.
+         Half is transparent and the other half draws the line itself. I do this, so the rotation can be done along
+         the top part of the line and this puts it in the middle for rotation to work right.
+         The left and top calculations below simply subtract half of the width and height to center it
+         over the rotation point.
+         The other thing to point out, is the json files have a data.TrackMap.Value.FinishLine.x and y, but they were recorded
+         to try and compensate for this without the math. Now I find it more accurate to use the coordinates
+         of the first OnTrack entry, 1.0, and do the math. finishLeft and finishTop will be populated with the center of the line.
+         Therefore, the translate transformation will be used to actually center it based on the width and height.
+         Also, the -webkit-transform entry is only needed for Safari on iOS8. Chrome, Firefix, and IE11 all support transform now.
+         This probably can't hurt to support Chrome on various Android devices as well.
+         TODO: Clean up the json files and remove the FinishLine.x and y entries but leave degrees for the rotation.
+     -->
+    <sra-track-map-finish-line
+        class              = "SIMRacingApps-Widget-TrackMap-FinishLineContainer"
+        data-ng-style      = "{
+            left:                ((finishLeft | sraRound) - ((width/2)  | sraRound))+'px',
+            top:                 ((finishTop  | sraRound) - ((height/2) | sraRound))+'px',
+            width:               '8%',
+            height:              '7%',
+            transform:           'rotate('+finishDegrees+'deg)',
+            '-webkit-transform': 'rotate('+finishDegrees+'deg)',
+            zIndex:              10
+        }"
+    ></sra-track-map-finish-line>
+
+    <sra-track-map-car
+         data-ng-repeat         = "carid in cars"
+         class                  = "SIMRacingApps-Widget-TrackMap-CarContainer"
+         data-sra-args-value    = "{{carid.id}}"
+         data-sra-interval      = "{{sraInterval}}"
+         data-sra-text-type     = "{{sraTextType}}"
+         data-ng-style          = "{
+                left:                ((carid.left | sraRound) - ((width/2)  | sraRound))+'px',
+                top:                 ((carid.top  | sraRound) - ((height/2) | sraRound))+'px',
+                visibility:          data.Car[carid.id].Status.Value == 'INVALID'
+                                  || data.Car[carid.id].Status.Value == 'INGARAGE'
+                                  ? 'hidden'
+                                  : 'inherit', 
+                zIndex:    data.Car[carid.id].IsEqual.REFERENCE.Value    ? 1005
+                         : data.Car[carid.id].IsEqual.LEADER.Value       ? 1004
+                         : data.Car[carid.id].IsEqual.PACECAR.Value      ? 1002
+                         : data.Car[carid.id].IsEqual.PITSTALL.Value     ? 1001
+                         : data.Car[carid.id].IsEqual.TRANSMITTING.Value ? 1099
+                         :                                                 1003
+         }"
+     ></sra-track-map-car>
+
+</div>

@@ -1,0 +1,13 @@
+{
+"doc": "JavaScriptDoc/sra-shift-light.html",
+"name": ["ShiftLight","ShiftLight-NOSPEEDING"],
+"description": [
+    "Lights Up When it is Time to Shift and When Speeding on Pit Road",
+    "Lights Up When it is Time to Shift, Only"
+],
+"url": "apps/WidgetLoader?widget=ShiftLight&",
+"icon": "widgets/ShiftLight/icon.png",
+"width": 480,
+"height": 480,
+"args": ["PITSPEEDING=true","PITSPEEDING=false"]
+}

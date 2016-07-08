@@ -1,0 +1,420 @@
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-body {
+    background: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-laps {
+    color:     cyan;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-ShiftLights {
+    z-index:    11;
+    width:      40%;
+    position:   absolute;
+    left:       30%;
+    top:        28.5%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Tach {
+    z-index:    10;
+	width:      100%;
+    position:   absolute;
+    left:       0%;
+    top:        17%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-WaterTemp {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       25%;
+    top:        37%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-WaterPressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       25%;
+    top:        48%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-WaterLevel {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       25%;
+    top:        59%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-FuelPressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       25%;
+    top:        70%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Voltage {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    left:       25%;
+    top:        81%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-OilTemp {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      25%;
+    top:        37%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-OilPressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      25%;
+    top:        48%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-OilLevel {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      25%;
+    top:        59%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-FuelLevel {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      25%;
+    top:        70%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-BrakePressure {
+    z-index:    10;
+    width:      18%;
+    position:   absolute;
+    right:      25%;
+    top:        81%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Time {
+    width:      16%;
+    height:     5%;
+    font-size:  125%;
+    left:       23%;
+    top:        0%;
+    z-index:    1;
+    position:   absolute;
+    text-align: left;
+    color:      chartreuse;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-CarControls {
+    width:      23%;
+/*    height:     17.5%; added to element to get from $scope */
+    font-size:  35%;
+    left:       0%;
+    top:        0%;
+    z-index:    1;
+    position:   absolute;
+    background-color: rgba(200,200,200,.4);
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-CarNumber {
+    width:      12%;
+    left:       44%;
+    top:        51%;
+    z-index:    1007;
+    position:   absolute;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-FuelTank {
+    width:      14%;
+    height:     30%;
+    font-size:  55%;
+    left:       43%;
+    top:        64%;
+    z-index:    1007;
+    position:   absolute;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-WindGauge {
+    position:   absolute;
+    width:      10%;
+    left:       45%;
+    top:        35%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-TeamSpeakTalking {
+    width:      10%;
+    font-size:  15%;
+    left:       23%;
+    top:        0%;
+    z-index:    2000;
+    opacity:    1;
+    position:   absolute;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Flags {
+    z-index:    1099;
+    width:      30%;
+    font-size:  50%;
+    left:       35%;
+    top:        0%;
+    position:   absolute;
+/* background-color: rgba(255,255,255,.2);  just for placement */
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-TimingDelta {
+    position:   absolute;
+    z-index:    1098;
+    width:      16%;
+    font-size:  16%;
+    left:       42%;
+    top:        0%;
+}
+
+/* put this on the widget container so when it hides itself, the background also hides */
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-TimingDelta .SIMRacingApps-Widget-TimingDelta {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5% 5% / 8.3% 8.3%;
+}
+
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-PitRoad {
+    position:   absolute;
+    z-index:    1100;
+    width:      25%;
+    height:     25%;
+    font-size:  41%;
+    left:       37.5%;
+    top:        1%;
+    opacity:    .9;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Radio {
+    width:      19%;
+    height:     19%;
+    font-size:  31%;
+    left:       60%;
+    top:        0%;
+    z-index:    2000;
+    opacity:    1;
+    position:   absolute;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-MyRadioChannel {
+    width:      23%;
+    height:     5%;
+    left:       23%;
+    top:        4%;
+    z-index:    1;
+    position:   absolute;
+    text-align: left;
+    color:      orange;
+}
+
+
+/** START LeftSideContainer objects **/
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-LeftSideContainer {
+    position:   absolute;
+    width:      19%;
+    height:     73%;  /* if changed, all containing widgets must be changed as well */
+    left:       0%;
+    top:        37%;
+    z-index:    1;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Ahead {
+    position:   absolute;
+    width:      100%;
+    height:     26%;  /*of the size of the left side container, not the body */
+    font-size:  31%;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Position {
+    position:   absolute;
+    width:      100%;
+    left:       0%;
+    top:        28%;
+    font-size:  160%;
+}
+/* Leave 2% available for spacing beteen the label and the data */
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Position .SIMRacingApps-Widget-DataTable-label {
+    width:      34%;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Position .SIMRacingApps-Widget-DataTable-data {
+    width:      64%;
+}
+
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Behind {
+    position:   absolute;
+    width:      100%;
+    height:     26%;  /*of the size of the left side container, not the body */
+    font-size:  31%;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+    left:       0%;
+    top:        47%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-SessionTimes {
+    position:   absolute;
+    width:      100%;
+    font-size:  160%;
+    left:       0%;
+    top:        74%;
+}
+
+/* Leave 2% available for spacing between the label and the data */
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-SessionTimes .SIMRacingApps-Widget-DataTable-label {
+    width:      54%;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-SessionTimes .SIMRacingApps-Widget-DataTable-data {
+    width:      44%;
+    color:      chartreuse;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-incidents {
+    bottom:             14%;
+    left:               0%;
+    position:           absolute;
+    width:              100%;
+    text-align:         center;
+    font-weight:        bold;
+    font-size:          200%;
+    color:              yellow;
+}
+
+/** END LeftSideContainer objects **/
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Lapinfo {
+    position:   absolute;
+    width:      25%;
+    right:      0%;
+    top:        0%;
+    font-size:  160%;
+}
+
+/* Leave 2% available for spacing beteen the label and the data */
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Lapinfo .SIMRacingApps-Widget-DataTable-label {
+    width:      58%;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Lapinfo .SIMRacingApps-Widget-DataTable-data {
+    width:      40%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Lapinfo .SIMRacingApps-Widget-DataTable-row-racelaps .SIMRacingApps-Widget-DataTable-data {
+    color:     chartreuse;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Lapinfo .SIMRacingApps-Widget-DataTable-row-laprun .SIMRacingApps-Widget-DataTable-data {
+    color:     cyan;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Lapinfo .SIMRacingApps-Widget-DataTable-row-cautions .SIMRacingApps-Widget-DataTable-data {
+    color:     yellow;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Fuelinfo {
+    position:   absolute;
+    width:      28%;
+    right:      0%;
+    top:        37%;
+    font-size:  160%;
+}
+
+/* Leave 2% available for spacing beteen the label and the data */
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Fuelinfo .SIMRacingApps-Widget-DataTable-label {
+    width:      58%;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Fuelinfo .SIMRacingApps-Widget-DataTable-data {
+    width:      40%;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Fuelinfo .SIMRacingApps-Widget-DataTable-data {
+    color:     fuchsia;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo {
+    position:   absolute;
+    width:      28%;
+    right:      0%;
+    top:        55%;
+    font-size:  160%;
+}
+
+/* Leave 2% available for spacing between the label and the data */
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-label {
+    width:      58%;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-data {
+    width:      40%;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-fuel .SIMRacingApps-Widget-DataTable-data {
+    color:      fuchsia;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-fuelneeded .SIMRacingApps-Widget-DataTable-data {
+    color:      fuchsia;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-fueltoadd .SIMRacingApps-Widget-DataTable-data {
+    color:      fuchsia;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-pitlap .SIMRacingApps-Widget-DataTable-data {
+    color:      cyan;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-pittime .SIMRacingApps-Widget-DataTable-data {
+    color:      chartreuse;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-repair .SIMRacingApps-Widget-DataTable-data {
+    color:      red;
+}
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Pitinfo .SIMRacingApps-Widget-DataTable-row-repairopt .SIMRacingApps-Widget-DataTable-data {
+    color:      red;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-dirtygauge-Y {
+    color: cyan;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-gauge-state-NOTAVAILABLE {
+    display: none;
+}
+
+.SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-CarDescription {
+    z-index:    500;
+    position:   absolute;
+    width:      100%;
+    height:     6%;
+    text-align: center;
+    font-size:  175%;
+    bottom:     0%;
+    left:       0%;
+}

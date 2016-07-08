@@ -1,0 +1,92 @@
+<div class                             = "SIMRacingApps-Widget-RadioControl"
+     data-ng-style                     = "{ height: height+'px' }">
+    <table
+        class                          = "SIMRacingApps-Widget-RadioControl-table"
+        data-sra-data                  = "Car/TRANSMITTING/DriverName;Car/TRANSMITTING/RadioChannelName;Car/TRANSMITTING/Number">
+        <colgroup>
+            <col style  = "width: 55%" />
+            <col style  = "width: 20%" />
+            <col style  = "width: 25%" />
+        </colgroup>
+       <thead>
+           <tr>
+               <td class               = "SIMRacingApps-Widget-RadioControl-header SIMRacingAppsLabel"
+                   colspan             = "3"
+                   data-ng-bind-html   = "translations.RADIOCONTROL"
+               ></td>
+           </tr>
+           <tr                          = "SIMRacingApps-Widget-RadioControl-header2">
+               <td class                = "SIMRacingApps-Widget-RadioControl-add"
+                   colspan              = "2">
+<!-- 
+                   <form class          = "SIMRacingApps-Widget-RadioControl-header2-add-form" 
+                         novalidate>
+                         <input 
+                           type          = "text"
+                           required      = "" 
+                           data-ng-model = "channelToAdd" 
+                        />
+                        <input 
+                           type          = "submit" 
+                           data-ng-click = "addChannel(channelToAdd)" 
+                           value         = "{{translations.ADD}}"
+                        />
+                    </form>
+ -->
+               </td>
+               <td class                 = "SIMRacingApps-Widget-RadioControl-scan"
+                   colspan                = "3"
+                   data-sra-data          = "Session/RadioScan"
+                   data-sra-args-on-click = "scanClicked"
+                   data-ng-class          = "'SIMRacingApps-Widget-RadioControl-GridRowBackground-' + scanBackground" 
+                   data-ng-bind-html      = "data.Session.RadioScan.Value
+                                          ? translations.SCANOFF
+                                          : translations.SCANON"
+               ></td>
+           </tr>
+           <tr                        = "SIMRacingApps-Widget-RadioControl-header3">
+               <td class               = "SIMRacingApps-Widget-RadioControl-talking"
+                   colspan             = "3"
+                   data-ng-bind-html   = "(data.Car.TRANSMITTING.DriverName.ValueFormatted 
+                                          ?   '[@' + data.Car.TRANSMITTING.RadioChannelName.ValueFormatted + ']#'
+                                            + data.Car.TRANSMITTING.Number.ValueFormatted
+                                            + ' ' + data.Car.TRANSMITTING.DriverName.ValueFormatted
+                                          : '&nbsp;'
+                                          )
+                                       "
+               ></td>
+           </tr>
+       </thead>
+       <tbody>
+	       <tr data-ng-repeat        = "channel in [0,1,2,3,4,5,6,7,8,9]"
+	           data-sra-data         = "Session/RadioChannelIsScanable/{{channel}}"
+	           data-ng-style         = "{ display: !data.Session.RadioChannelIsScanable[channel].Value ? 'none' : 'table row' 
+	                                    }"
+	           data-ng-class         = "'SIMRacingApps-Widget-RadioControl-GridRowBackground-' + rowBackground[channel]"> 
+	           <td class             = "SIMRacingApps-Widget-RadioControl-name"
+	               data-sra-data     = "Session/RadioChannelName/{{channel}}"
+                   data-sra-args-on-click = "channelClicked"
+                   data-sra-args-on-click-arg = "{{channel}}"
+	               data-ng-bind-html = "data.Session.RadioChannelName[channel].Value ? '@'+data.Session.RadioChannelName[channel].ValueFormatted : '&nbsp;'"></td>
+               <td class             = "SIMRacingApps-Widget-RadioControl-mute"
+                   data-sra-data     = "Session/RadioChannelIsMutable/{{channel}};Session/RadioChannelIsMuted/{{channel}}"
+                   data-sra-args-on-click = "muteClicked"
+                   data-sra-args-on-click-arg = "{{channel}}"
+                   data-ng-bind-html = "data.Session.RadioChannelIsMutable[channel].Value
+                                       && data.Session.RadioChannelActive.Value != channel
+                                     ? (data.Session.RadioChannelIsMuted[channel].Value 
+                                        ? translations.UNMUTE 
+                                        : translations.MUTE)
+                                     : '&nbsp;'"></td>
+               <td class             = "SIMRacingApps-Widget-RadioControl-delete"
+                   data-sra-data     = "Session/RadioChannelIsDeleteable/{{channel}}"
+                   data-sra-args-on-click = "deleteClicked"
+                   data-sra-args-on-click-arg = "{{channel}}"
+                   data-ng-class     = "'SIMRacingApps-Widget-RadioControl-GridRowBackground-' + deleteBackground[channel]" 
+                   data-ng-bind-html = "data.Session.RadioChannelIsDeleteable[channel].Value
+                                        ? translations.DELETE
+                                        : '&nbsp;'"></td>
+	       </tr>
+       </tbody>
+    </table>
+</div>

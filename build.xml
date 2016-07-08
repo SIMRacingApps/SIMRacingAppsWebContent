@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="jar" name="SIMRacingApps-WebContent">
+    <echo message="cwd = ${basedir}" />
+    <property name="verboseFlag" value="0" />
+    <script language="javascript">
+        var logger = project.getBuildListeners().firstElement();
+        var verboseMode = project.getProperty( "verboseFlag" )
+        if ( ! "0".equals( verboseMode ) )
+            logger.setMessageOutputLevel( 9 );
+    </script>
+    <tstamp>
+        <format property="build.time" pattern="yyyy.MM.dd.HH.mm.ss" />
+    </tstamp>
+    <tstamp>
+        <format property="build.date" pattern="yyyy.MM.dd" />
+    </tstamp>
+    <tstamp>
+        <format property="build.year" pattern="yyyy" />
+    </tstamp>
+    <property environment="env" />
+    <property name="userpath" value="${user.home}/Documents/SIMRacingApps" />
+    <property name="javadoc.location" value="${userpath}/JavaDoc" />
+    <property name="javascriptdoc.location" value="${userpath}/JavaScriptDoc" />
+    <property name="SIMRacingAppsServer.location" value="../SIMRacingAppsServer" />
+    <property file="${SIMRacingAppsServer.location}/src/com/SIMRacingApps/version.properties" prefix="version" />
+    <property name="version" value="${version.major}.${version.minor}_Build_${version.build}" />
+    <echo message="Server Version: ${version}" />
+    
+    <property name="jsdoc" location="node_modules/angular-jsdoc/node_modules/.bin/jsdoc.cmd" />
+    
+    <target name="_javascriptdoc">
+        <sequential>
+            <delete dir="${javascriptdoc.location}" />
+            <mkdir dir="${javascriptdoc.location}" />
+            <echo message="Running jsdoc" />
+            <exec executable="${jsdoc}">
+                <arg line="--verbose --destination ${javascriptdoc.location}" />
+                <arg line="-c node_modules/angular-jsdoc/common/conf.json" />
+                <arg line="-t node_modules/angular-jsdoc/angular-template" />
+                <arg line="-R README.md" />
+                <arg line="-r lib" />
+                <arg line="-r widgets" />
+                <arg line="-r apps" />
+            </exec>
+        </sequential>
+    </target>
+    <target name="javascriptdoc" depends="_javascriptdoc">
+        <loadresource property="paths.text">
+            <concat>
+                <fileset dir="${javadoc.location}">
+                    <include name="**/*.html" />
+                    <exclude name="com/SIMRacingApps/SIMPlugins/**" />
+                </fileset>
+                <!-- filterchain>
+                    <linecontainsregexp negate="true">
+                        <regexp pattern="../../../..">
+                        </regexp>
+                    </linecontainsregexp>
+                </filterchain -->
+                <filterchain>
+                    <linecontainsregexp>
+                        <regexp pattern="PATH = ">
+                        </regexp>
+                    </linecontainsregexp>
+                </filterchain>
+            </concat>
+        </loadresource>
+        <echo message="${paths.text}" file="${java.io.tmpdir}/paths.txt" />
+        <exec executable="sort">
+            <arg value="${java.io.tmpdir}/paths.txt" />
+            <arg value="/o" />
+            <arg value="${java.io.tmpdir}/paths.sorted.txt" />
+        </exec>
+        <replaceregexp match=" &lt;p&gt;PATH = &lt;a href=&quot;[.][.]/[.][.]/[.][.]/[.][.]" replace="&lt;a target=&quot;_blank&quot; href=&quot;../JavaDoc" byline="true">
+            <fileset dir="${java.io.tmpdir}" includes="paths.sorted.txt" />
+        </replaceregexp>
+        <replaceregexp match=" &lt;p&gt;PATH = &lt;a href=&quot;[.][.]/[.][.]/[.][.]" replace="&lt;a target=&quot;_blank&quot; href=&quot;../JavaDoc" byline="true">
+            <fileset dir="${java.io.tmpdir}" includes="paths.sorted.txt" />
+        </replaceregexp>
+        <replaceregexp match=" &lt;p&gt;PATH = &lt;a href=&quot;[.][.]/[.][.]" replace="&lt;a target=&quot;_blank&quot; href=&quot;../JavaDoc" byline="true">
+            <fileset dir="${java.io.tmpdir}" includes="paths.sorted.txt" />
+        </replaceregexp>
+        <replaceregexp match="&lt;/div&gt;" replace="&lt;br /&gt;" byline="true">
+            <fileset dir="${java.io.tmpdir}" includes="paths.sorted.txt" />
+        </replaceregexp>
+        <loadresource property="paths.sorted.text">
+            <concat>
+                <fileset dir="${java.io.tmpdir}" includes="paths.sorted.txt" />
+            </concat>
+        </loadresource>
+        <replaceregexp match="PUTPATHSHERE" replace="${paths.sorted.text}" byline="true">
+            <fileset dir="${javascriptdoc.location}" includes="index.html" />
+        </replaceregexp>
+    </target>
+    <target name="jar" description="Bundles the application as a JAR file" depends="javascriptdoc">
+        <sequential>
+            <property file="${version.properties}" prefix="version" />
+            <property name="version" value="${version.major}.${version.minor}_Build_${version.build}" />
+            <jar destfile="${java.io.tmpdir}/SIMRacingAppsWebContent.jar">
+                <manifest>
+                    <attribute name="Manifest-Version" value="${version}" />
+                    <attribute name="Created-By" value="Jeffrey Gilliam" />
+                </manifest>
+                <fileset dir=".">
+                    <exclude name=".*">
+                    </exclude>
+                    <exclude name="build.xml">
+                    </exclude>
+                    <exclude name="node_modules/**">
+                    </exclude>
+                    <exclude name="**.xcf">
+                    </exclude>
+                    <exclude name="test-*">
+                    </exclude>
+                </fileset>
+                <fileset dir="${userpath}">
+                    <include name="JavaScriptDoc/**"/>
+                </fileset>
+            </jar>
+            <echo message="Jar Built for Version_${version}" />
+        </sequential>
+    </target>
+</project>

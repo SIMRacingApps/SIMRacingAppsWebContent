@@ -1,0 +1,26 @@
+.SIMRacingApps-Widget-Messages {
+	position: relative;
+    color: white;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.SIMRacingApps-Widget-Messages-message {
+    width:             100%;
+    height:            auto;
+    text-align:        center;
+    z-index:           2;
+    font-size:         600%;
+    font-weight:       bold;
+    color:             white;
+    background-color:  rgba(0,150,0,.7);
+    border-radius:     5% / 20%;
+    white-space:       nowrap;
+    overflow:          hidden;
+    padding:           1%;
+}
+
+.SIMRAcingApps-Widget-Messages-text {
+    clear:             both;
+}

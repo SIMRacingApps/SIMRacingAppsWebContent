@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+    In this basic example, I will show you how to retrieve data from the server and display it.
+    The is for demonstration purposes only and not intended to be the best way to do this.
+    It will not utilize any 3rd party scripting libraries, just plain HTML5.
+    We are going to poll the server every 16ms for the current RPM value and display it.
+
+    The better way to do this, is to use the Angular JS library where I already provide a Web Socket boot strap.
+    Look at the any of the existing apps to copy from and build your own.
+ -->
+<html>
+<head>
+    <title>Basic HTML Example for SIMRacingApps</title>
+    <style type="text/css">
+        .RPM {
+            font-size: 25px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var el = document.getElementById("RPM");
+            var RPMRequest = new XMLHttpRequest();
+            RPMRequest.onload = function(e) {
+                if (e) {
+                    var data = JSON.parse(RPMRequest.responseText);
+                    el.innerText = data.ValueFormatted;
+                }
+                setTimeout(function() {
+                    RPMRequest.open("GET",'/SIMRacingApps/Data/Car/REFERENCE/Gauge/Tachometer/ValueCurrent?output=json&format='+encodeURI('%.0f %s'));
+                    RPMRequest.send();
+                },16);
+            }
+            RPMRequest.onerror   = function() { RPMRequest.onload(); }  //if it errors out, keep trying
+            RPMRequest.ontimeout = function() { RPMRequest.onload(); }  //if it times out, keep trying
+            RPMRequest.onload();    //prime the request
+        }
+    </script>
+</head>
+<body>
+    <div id="RPM" class="RPM"></div>
+</body>
+</html>

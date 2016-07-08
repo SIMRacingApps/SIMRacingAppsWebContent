@@ -1,0 +1,70 @@
+<div class="SIMRacingApps-Widget-BarGauge SIMRacingApps-Widget-BarGauge-{{sraBarGauge}}" ng-attr-style="height: {{height}}px;">
+    <svg version="1.1" viewBox="0 0 800 280" preserveAspectRatio="xMidYMid meet">
+        <rect class        = "SIMRacingApps-Widget-BarGauge-border-gasket"
+              ng-attr-x    = "{{borderX}}"
+              ng-attr-y    = "{{borderY}}"
+              ng-attr-width= "{{borderWidth}}"
+              ng-attr-height="{{borderHeight}}"
+        />
+        <rect ng-class     = "stateClass"
+              ng-attr-x    = "{{borderX+(borderSize*.2)}}"
+              ng-attr-y    = "{{borderY+(borderSize*.2)}}"
+              ng-attr-width= "{{borderWidth-(borderSize*.2*2)}}"
+              ng-attr-height="{{borderHeight-(borderSize*.2*2)}}"
+        />
+        <rect class        = "SIMRacingApps-Widget-BarGauge-border-inner"
+              ng-attr-x    = "{{borderX+(borderSize*.5)}}"
+              ng-attr-y    = "{{borderY+(borderSize*.5)}}"
+              ng-attr-width= "{{borderWidth-(borderSize*.5*2)}}"
+              ng-attr-height="{{borderHeight-(borderSize*.5*2)}}"
+        />
+        <rect class        = "SIMRacingApps-Widget-BarGauge-barbackground"
+              ng-attr-x    = "{{startBar}}"
+              ng-attr-y    = "{{majorTop < minorTop ? majorTop : minorTop}}"
+              ng-attr-width= "{{(endBar-startBar+1)}}"
+              ng-attr-height="{{(majorBottom < minorBottom ? minorBottom : majorBottom) - (majorTop < minorTop ? majorTop : minorTop)}}"
+        />
+        <rect class        = "SIMRacingApps-Widget-BarGauge-bar"
+              ng-attr-x    = "{{startBar}}"
+              ng-attr-y    = "{{majorTop < minorTop ? majorTop : minorTop}}"
+              ng-attr-width= "{{(endBar-startBar) * barPercent}}"
+              ng-attr-height="{{(majorBottom < minorBottom ? minorBottom : majorBottom) - (majorTop < minorTop ? majorTop : minorTop)}}"
+        />
+        <text class             = "SIMRacingApps-Widget-BarGauge-label SIMRacingApps-Widget-BarGauge-{{sraBarGauge}}-Label SIMRacingAppsLabel"
+              ng-attr-x         = "{{xLabel}}"
+              ng-attr-y         = "{{yLabel}}"
+              ng-attr-style     = "font-size: {{fontSizeLabel}}px; text-anchor: {{anchorLabel}};">
+              {{Label1}} {{Label2}} ({{uom}})
+        </text>
+        <g transform="translate(0,0)" ng-class="stateClass">
+            <line ng-repeat         = "m in minorScale"
+                  class             = "SIMRacingApps-Widget-BarGauge-minor"
+                  ng-attr-x1        = {{m}}
+                  ng-attr-y1        = {{minorTop}}
+                  ng-attr-x2        = {{m}}
+                  ng-attr-y2        = {{minorBottom}}
+            />
+            <line ng-repeat         = "m in majorScale"
+                  class             = "SIMRacingApps-Widget-BarGauge-major"
+                  ng-attr-x1        = {{m.x}}
+                  ng-attr-y1        = {{majorTop}}
+                  ng-attr-x2        = {{m.x}}
+                  ng-attr-y2        = {{majorBottom}}
+            />
+            <g    ng-repeat         = "t in majorScale"
+                  class             = "SIMRacingApps-Widget-BarGauge-majorText">
+                  <text ng-attr-x         = {{t.x}}
+                        ng-attr-y         = {{majorTextY+(majorFontSize*.4)}}
+                        ng-attr-style     = "font-size: {{majorFontSize}}px; text-anchor: middle;">
+                        {{t.text}}
+                  </text>
+            </g>
+        </g>
+        <text class             = "SIMRacingApps-Widget-BarGauge-value SIMRacingApps-Widget-BarGauge-{{sraBarGauge}}-value SIMRacingAppsData"
+              ng-attr-x         = "{{xValue}}"
+              ng-attr-y         = "{{yValue}}"
+              ng-attr-style     = "font-size: {{fontSizeValue}}px; text-anchor: {{anchorValue}}; visibility: {{showValue ? 'inherit' : 'hidden'}}">
+              {{value}} {{uom}}
+        </text>
+    </svg>
+</div>

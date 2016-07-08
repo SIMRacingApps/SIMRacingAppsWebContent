@@ -1,0 +1,190 @@
+@import "/SIMRacingApps/widgets/DataTable/DataTable.css";
+
+.SIMRacingApps-App-CrewChiefLarge {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    background: dimgray;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-pit-commander {
+    width: 40%;
+    height: 50%;
+    font-size: 85%;
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-track-map {
+    width: 40%;
+    height: 40%;
+    font-size: 75%;
+    position: absolute;
+    top: 9.5%;
+    left: 15%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-standings {
+    width: 45%;
+    height: 49%;
+    font-size: 75%;
+    position: absolute;
+    top: 0.5%;
+    right: 0%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-radiocontrol {
+    position: absolute;
+    width: 29%;
+    top: 51%;
+    left: 63%;
+    font-size: 75%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-team-speak {
+    width:      10%;
+    height:     10%;
+    font-size:  15%;
+    left:       44.5%;
+    top:        1.5%;
+    z-index:    2000;
+    opacity:    1;
+    position:   absolute;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-radio {
+    width:      14%;
+    height:     14%;
+    font-size:  23%;
+    left:       28%;
+    top:        0%;
+    z-index:    2000;
+    opacity:    1;
+    position:   absolute;
+    border-radius: 5% 5% / 8.3% 8.3%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-car-number {
+    width:      8%;
+    left:       15.5%;
+    top:        .5%;
+    z-index:    1007;
+    position:   absolute;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-info {
+    width: 15%;
+    height: 100%;
+    font-size: 100%;
+    position: absolute;
+    background-color: darkslategray;
+    padding-top: 1%;
+    top: 0%;
+    left: 0%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-windgauge {
+    position:   absolute;
+    width:      50%;
+    left:       25%;
+    top:        0%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-CarTrack {
+    width: 100%;
+    position: absolute;
+    top: 12%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-time {
+	color: chartreuse;
+	font-size: 150%;
+	line-height: 200%;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-radio {
+    color: orange;
+    font-size: 100%;
+    line-height: 200%;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-drivername {
+	color: gold;
+	font-size: 120%;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-rating {
+    color: gold;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-session {
+    color: gold;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-cardesc {
+    color: chartreuse;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-trackdesc {
+    color: chartreuse;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-trackinfo {
+    font-size: 80%
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-tracktemp {
+    color: orangered;
+}
+.SIMRacingApps-App-CrewChiefLarge-CarTrack .SIMRacingApps-Widget-DataTable-row-pitinfo {
+    font-size: 80%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-Info-weather-info {
+    width: 100%;
+    position: absolute;
+    top: 46%;
+    font-size: 75%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-Laps {
+    width: 100%;
+    position: absolute;
+    top: 51%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-lap {
+    color: cyan;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-duration {
+    color: magenta;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-time {
+    color: chartreuse;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-repairs {
+    color: red;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-Laps .SIMRacingApps-Widget-DataTable-row-togo {
+    color: orange;
+    font-size: 150%;
+    line-height: 125%;
+}
+.SIMRacingApps-App-CrewChiefLarge-Laps .SIMRacingApps-Widget-DataTable-row-cautions {
+    color: yellow;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-Stats {
+    width: 100%;
+    position: absolute;
+    top: 61%;
+}
+
+.SIMRacingApps-App-CrewChiefLarge-Stats .SIMRacingApps-Widget-DataTable-label {
+    width: 52%;
+}
+.SIMRacingApps-App-CrewChiefLarge-Stats .SIMRacingApps-Widget-DataTable-data {
+    width: 45%;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Overriding Shift Light RPM Values</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text17.html">Back</a> <a href="text19.html">Continue</a> <a href="text21.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Overriding Shift Light RPM Values</h1>
+<ul>
+<li>You can override by track, car, gear and engine power.</li>
+<h2>        Track, Gear and Power are optional.</h2>
+<h2>        The format is as follows:</h2>
+<h2>            -[{track}-]{car}-ShiftLightStart[-{gear}][-{power}] = RPM</h2>
+<h2>            -[{track}-]{car}-ShiftLightShift[-{gear}][-{power}]  = RPM</h2>
+<h2>            -[{track}-]{car}-ShiftLightBlink[-{gear}][-{power}] = RPM</h2>
+<li>You must specify all 3 values (start,shift,blink) or they will be ignored.</li>
+<ul>
+<li>Start is where the first light in a row of lights should come on.</li>
+<li>Shift is where the last light will come on and should also be your shift point.</li>
+<li>Blink is after Shift and it's where the light will blink.</li>
+</ul>
+<li>{track} and {car} are the values the SIM returns. Spaces are converted to underscores. You should be able to find these values in the server output window. Here is an example I used for testing with some bogus values:</li>
+<h2>            -stockcars_chevyss-ShiftLightStart = 6000</h2>
+<h2>            -stockcars_chevyss-ShiftLightShift = 7000</h2>
+<h2>            -stockcars_chevyss-ShiftLightBlink = 8000</h2>
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Running the Server with Options</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text15.html">Back</a> <a href="text17.html">Continue</a> <a href="text21.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Running the Server with Options</h1>
+<ul>
+<li>There are 2 ways to pass options to the server. The easiest way is to start the server, connect to the main menu and click the “Gear” icon, change the value(s), then save it. This saves it to a file called settings.txt.</li>
+<li>The other way is to pass the options to the server on the command line. Options on the command line, override the values in the settings.txt file.</li>
+<li>Some of the available options for the server are:</li>
+<ul>
+<li>-SIM = {SIMName}  #the name of the SIM to start for. Defaults to iRacing.</li>
+<li>-Port = {portNumber}  #defaults to 80.</li>
+<li>-level = {logLevel} #where logLevel is SEVERE,WARNING,INFO,FINE,FINER,FINEST. Defaults to INFO.</li>
+<li>-Log = {filename} # creates a log file using the -level option in the -userpath directory.</li>
+<li>-mspec-xxxx {commPortNumber}, see next slide for details.</li>
+</ul>
+<li>To pass options to Java or to force it to use a specific version of Java that you have installed, in the Target field of the a shortcut change it to something similar to this:</li>
+<ul>
+<li>“{pathToJava}\bin\java.exe” -Xms256m -Xmx256m -jar “{pathTo}\SIMRacingAppsServer....exe”</li>
+</ul>
+</ul>
+</body>
+</html>

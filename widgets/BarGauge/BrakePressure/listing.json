@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-brake-pressure.html",
+"name": "BarGauge-BrakePressure",
+"description": "",
+"url": "apps/WidgetLoader?widget=BarGauge/BrakePressure&",
+"icon": "widgets/BarGauge/BrakePressure/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

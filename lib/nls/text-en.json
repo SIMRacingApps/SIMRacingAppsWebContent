@@ -1,0 +1,82 @@
+{
+    "Data": {
+        "COMMENT1": "This level is the Data.Basename. They must all be in upper case",
+        "COMMENT2": "The second level is the actual Value from SIMRacingApps API calls. Left = value from iRacing. Right Translation",
+        "COMMON": {
+            "Y":                "Y",
+            "N":                "N",
+            "true":             "true",
+            "false":            "false"
+        },
+        "CAR": {
+            "BRAKE":            "BRAKE",
+            "THROTTLE":         "THROTTLE",
+            "CLUTCH":           "CLUTCH",
+            "STEERING":         "STEERING",
+            "ANGLE":            "ANGLE",
+            "LF TIRE":          "LF TIRE",
+            "LF/L TIRE":        "LF/L TIRE",
+            "LF/M TIRE":        "LF/M TIRE",
+            "LF/R TIRE":        "LF/R TIRE",
+            "LR TIRE":          "LR TIRE",
+            "LR/L TIRE":        "LR/L TIRE",
+            "LR/M TIRE":        "LR/M TIRE",
+            "LR/R TIRE":        "LR/R TIRE",
+            "RF TIRE":          "RF TIRE",
+            "RF/L TIRE":        "RF/L TIRE",
+            "RF/M TIRE":        "RF/M TIRE",
+            "RF/R TIRE":        "RF/R TIRE",
+            "RR TIRE":          "RR TIRE",
+            "RR/L TIRE":        "RR/L TIRE",
+            "RR/M TIRE":        "RR/M TIRE",
+            "RR/R TIRE":        "RR/R TIRE",
+            "FUEL":             "FUEL",
+            "LEVEL":            "LEVEL",
+            "OIL":              "OIL",
+            "PRESSURE":         "PRESSURE",
+            "RPM":              "RPM",
+            "TEMP":             "TEMP",
+            "WEAR":             "WEAR",
+            "VOLT":             "VOLT",
+            "WATER":            "WATER",
+            "x1000":            "x1000",
+            "INVALID":          "Invalid",
+            "INGARAGE":         "In Garage",
+            "ENTERINGPITSTALL": "Entering Pitstall",
+            "INPITSTALL":       "In Pitstall",
+            "EXITINGPITSTALL":  "Exiting Pitstall",
+            "ONPITROAD":        "On Pit Road",
+            "APPROACHINGPITS":  "Approaching Pits",
+            "LEAVINGPITS":      "Leaving Pits",
+            "OFFTRACK":         "Off Track",
+            "ONTRACK":          "On Track"
+        },
+        "SESSION": {
+            "RACE":             "Race",
+            "PRACTICE":         "Practice",
+            "OPEN QUALIFY":     "Open Qualify",
+            "LONE QUALIFY":     "Lone Qualify",
+            "QUALIFYING":       "Qualifying",
+            "OFFLINE":          "Offline",
+            "OFFLINE TESTING":  "Offline Testing"
+        },
+        "TRACK": {
+            "Clear":            "Clear",
+            "Partly Cloudy":    "Partly Cloudy",
+            "Mostly Cloudy":    "Mostly Cloudy",
+            "Overcast":         "Overcast",
+            "N":                "N",
+            "NE":               "NE",
+            "NW":               "NW",
+            "S":                "S",
+            "SE":               "SE",
+            "SW":               "SW",
+            "E":                "E",
+            "W":                "W"
+        }
+    },
+    "UOMAbbr": {
+    },
+    "UOMDesc": {
+    }
+}

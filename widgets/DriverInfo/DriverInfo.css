@@ -1,0 +1,108 @@
+@import "../DataTable/DataTable.css"; /* load this first to override below */
+
+.SIMRacingApps-Widget-DriverInfo {
+	position:      relative;
+    width:         100%;
+    height:        100%;
+    font-size:     300%;
+    z-index:       -1;
+}
+
+.SIMRacingApps-Widget-DriverInfo-table .SIMRacingApps-Widget-DataTable {
+	position:      absolute;
+    width:         100%;
+    height:        100%;    /*note: causes table to expand to the containers height */
+    font-size:     100%;
+    line-height:   148%;
+    z-index:       1;
+    background-color: rgba(0,139,139,.9); /* darkcyan */
+}
+
+.SIMRacingApps-Widget-DriverInfo-table .SIMRacingApps-Widget-DataTable-header {
+    font-size:     110%;
+    xline-height:   200%;
+}
+
+.SIMRacingApps-Widget-DriverInfo-table .SIMRacingApps-Widget-DataTable-body {
+    xfont-size:     125%;
+}
+
+.SIMRacingApps-Widget-DriverInfo-transmitting-Y {
+    background-color: rgba(255,165,0,.9) !important;  /*orange*/
+}
+
+.SIMRacingApps-Widget-DriverInfo-hidden {
+    visibility: hidden;
+}
+
+.SIMRacingApps-Widget-DriverInfo-table .SIMRacingApps-Widget-DataTable-row-dname {
+    color: cyan;
+	background-color: rgba(0,0,0,.3);
+}
+
+.SIMRacingApps-Widget-DriverInfo-table
+.SIMRacingApps-Widget-DataTable-row-dname
+.SIMRacingApps-Widget-DataTable-data-nolabel {
+    font-weight: bold;
+    font-style: italic;
+	font-size:   100%;
+    text-align: left;
+    padding-left: 25%;
+    line-height: 180%;
+    border-color: transparent;
+    border-width: thick;
+    border-style: solid;
+}
+
+.SIMRacingApps-Widget-DriverInfo-rating {
+	padding-top: .5%;
+	padding-bottom: .5%;
+	padding-left: 2%;
+	padding-right: 2%;
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-DriverInfo-club {
+    font-style: italic;
+    font-size: 120%;
+    color: yellow;
+}
+
+.SIMRacingApps-Widget-DriverInfo-laps {
+    background-color: rgba(0,0,0,.5);
+    color: cyan;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-DriverInfo-time {
+    background-color: rgba(0,0,0,.5);
+    padding-left: 3%;
+    padding-right: 3%;
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-DriverInfo-mfrlogo {
+	height:         15%;
+	width:          16%;
+	position:       absolute;
+	background-repeat: no-repeat;
+	background-size: contain;
+	left:           0%;
+	vertical-align: middle;
+}
+
+.SIMRacingApps-Widget-DriverInfo-carnumber {
+    position:       absolute;
+    width:          21%;
+    xheight:         25%;
+    top:            17%;
+    left:           1%;
+    z-index:        2;'
+}
+
+
+.SIMRacingApps-Widget-DriverInfo-BelowMinimumSpeed-Y {
+    border-color: red !important;
+}

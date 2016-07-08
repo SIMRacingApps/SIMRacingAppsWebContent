@@ -1,0 +1,36 @@
+<div class                  = "SIMRacingApps-Widget-PitRoad"
+     data-ng-attr-style     = "height: {{height}}px;"
+     data-sra-data          = "Car/REFERENCE/PitSpeedLimit;Car/REFERENCE/Gauge/Speedometer/ValueCurrent;Session/DiffCars/REFERENCE/PITSTALL;Car/REFERENCE/Status;Car/REFERENCE/PitTime"
+     data-sra-args-interval = "{{sraInterval}}">
+     <div 
+        class                            = "SIMRacingApps-Widget-PitRoad-container"
+        data-ng-show                     = "data.Car.REFERENCE.Status.Value == 'APPROACHINGPITS'
+                                         || data.Car.REFERENCE.Status.Value == 'ONPITROAD'
+                                         || data.Car.REFERENCE.Status.Value == 'INPITSTALL'
+                                         || data.Car.REFERENCE.Status.Value == 'ENTERINGPITSTALL'
+                                         || data.Car.REFERENCE.Status.Value == 'EXITINGPITSTALL'
+                                         ">
+	     <sra-data-table
+	        class                        = "SIMRacingApps-Widget-PitRoad-table"
+	        data-sra-args-header         = "translations.PITROAD"
+	        data-sra-args-body-class     = "'SIMRacingApps-Widget-PitRoad-'
+	                                     +  data.Car.REFERENCE.Status.Value
+	                                     +  '-'+data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State
+	                                     +  '-'+blinkState
+	                                     "
+	        data-sra-args-row-names      = "speedlimit;speed;uom"
+	        data-sra-args-row-speedlimit = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
+	                                     +  translations.SPEEDLIMIT+':</span> '
+	                                     +  (data.Car.REFERENCE.PitSpeedLimit.Value|number:1)
+	                                     +  ' ' + data.Car.REFERENCE.PitSpeedLimit.UOMAbbr
+	                                     "
+	        data-sra-args-row-speed      = "data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.Value|number:1"
+	        data-sra-args-row-uom        = "data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.UOMAbbr"
+	        data-sra-args-footer         = "(data.Session.DiffCars.REFERENCE.PITSTALL.Value|sraRound) <= sraPitCountdown
+	                                     && (data.Session.DiffCars.REFERENCE.PITSTALL.Value|sraRound) > 0
+	                                        ? (data.Session.DiffCars.REFERENCE.PITSTALL.Value|sraRound|sraNumber:0)
+	                                        : (data.Car.REFERENCE.PitTime|sraDuration:1:false:true)"
+	        data-sra-args-footer-class   = "countDownClass"
+	     ></sra-data-table>
+	 </div>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Translation File Format</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">First page</a> <a href="text19.html">Back</a> <a href="text21.html">Continue</a> <a href="text23.html">Last page</a> <a href="default.html">Graphics</a></center><br>
+<h1>Translation File Format</h1>
+<ul>
+<li>The Translation Files use the JSON format. The contents are loaded into the $scope.translations object of the root DOM element and is accessible from all the element's $scope variables via inheritance. Therefore, the format of the file is up to you as you will be referencing the translations in your HTML file as follows.</li>
+<ul>
+<li>data-ng-bind=&quot;translations.LEADER+': '+data.Car.LEADER.Lap.Current.ValueFormatted&quot;</li>
+</ul>
+<li>The most simple JSON format is a key/value pair as follows.</li>
+<ul>
+<li>{</li>
+<h2>    &quot;LEADER&quot;: &quot;Leader&quot;,</h2>
+<h2>    &quot;KEY&quot;: &quot;value&quot;</h2>
+<h2>    }</h2>
+</ul>
+<li>To translate the file to a different language, simply copy the &quot;text-en.json&quot; file to the target language (i.e. &quot;text-{language}.json&quot;) and translate the value side of the contents.</li>
+<li>You could also create a country specific file if needed. It's worthy to point out, all of the contents do not have to be translated, only the ones you need to because the contents are merged. An example is &quot;en&quot; verses &quot;uk&quot;, where most words are spelled the same, but some are not. You only need to put the differences in the &quot;text-uk.json&quot; version of the file.</li>
+</ul>
+</body>
+</html>

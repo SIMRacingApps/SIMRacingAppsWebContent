@@ -1,0 +1,78 @@
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-body {
+	xbackground-color: red;
+    background-image: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position: relative;
+    z-index:-1;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-Tach {
+    z-index:    10;
+	width:      21.6%;
+    position:   absolute;
+    left:       39.2%;
+    top:        0%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-small-gauge {
+    position:   absolute;
+	width:      11%;
+    z-index:    5;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-WaterTemp {
+    left:       28.5%;
+    top:        4%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-OilTemp {
+    right:      28.5%;
+    top:        4%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-WaterPressure {
+    left:       14.5%;
+    top:        4%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-OilPressure {
+    right:      14.5%;
+    top:        4%;
+}
+
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-WaterLevel {
+    left:       .5%;
+    top:        4%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-OilLevel {
+    right:      .5%;
+    top:        4%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-FuelPressure {
+    left:       7.5%;
+    top:        46%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-Volt {
+    right:      7.5%;
+    top:        46%
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-FuelLevel {
+    left:       21.5%;
+    top:        46%;
+}
+
+.SIMRacingApps-App-Dash-Gauges-Spek-Horizontal-BrakePressure {
+    right:      21.5%;
+    top:        46%;
+}

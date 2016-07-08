@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-flags.html",
+"name": ["Flags","Flags-NOMESSAGES"],
+"description": ["Flags, Red/Green/Yellow/Blue/Black/Repair","Flags, Red/Green/Yellow/Blue/Black/Repair - No Messages"],
+"url": "apps/WidgetLoader?widget=Flags&",
+"icon": "widgets/Flags/icon.png",
+"width": 800,
+"height": 480,
+"args": ["","SHOWMESSAGES=false"]
+}

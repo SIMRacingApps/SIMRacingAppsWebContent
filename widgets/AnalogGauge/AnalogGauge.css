@@ -1,0 +1,116 @@
+.SIMRacingApps-Widget-AnalogGauge {
+    width:         100%;
+    height:        100%;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ring-gasket {
+    stroke: none;
+    fill:   black;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ring-outter {
+    stroke: none;
+    fill:   rgb(100,100,100);
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ring-inner {
+    stroke: none;
+    fill:   rgb(60,60,60);
+}
+
+.SIMRacingApps-Widget-AnalogGauge-background {
+    stroke: none;
+    fill:   rgb(21,21,21);
+}
+
+
+.SIMRacingApps-Widget-AnalogGauge-button {
+    stroke: none;
+    fill:   gray;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-major {
+    stroke-width: 9;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-minor {
+    stroke-width: 3;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-needle {
+    fill: orangered;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-value {
+	fill: white;
+    color: white;
+    font-family: "Arial";
+    font-weight: normal;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-uom {
+    fill: white;
+    color: white;
+    font-family: "Arial";
+    font-weight: normal;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ShiftLights-start {
+    stroke: chartreuse;
+    fill:   chartreuse;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ShiftLights-middle {
+    stroke: yellow;
+    fill:   yellow;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ShiftLights-end {
+	stroke: red;
+    fill:   red;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-state-APPROACHINGLIMIT {
+    fill:   yellow;
+    stroke: yellow;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-CRITICAL {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-LIMIT {
+    fill:   chartreuse;
+    stroke: chartreuse;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-SHIFTLIGHTS {
+    fill:   royalblue;
+    stroke: royalblue;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-NORMAL {
+    fill:   royalblue;
+    stroke: royalblue;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-OFF {
+    fill:   dimgray;
+    stroke: dimgray;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-OVERLIMIT {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-SHIFT {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-SHIFTBLINK {
+    fill:   red;
+    stroke: red;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-WARNING {
+    fill:   yellow;
+    stroke: yellow;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-WAYOVERLIMIT {
+    fill:   royalblue;
+    stroke: royalblue;
+}

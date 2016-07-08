@@ -1,0 +1,37 @@
+<div class                  = "SIMRacingApps-Widget-LapsBanner"
+     data-ng-style          = "{ height: height+'px' }"
+     data-sra-data          = "Session/LapsToGo
+                              ;Session/Laps
+                              ;Session/Lap
+                              ;Session/IsCheckeredFlag
+                              ;Session/IsCautionFlag
+                              ;Session/IsRedFlag
+                              ;Session/IsWhiteFlag
+                              ;Session/IsGreenFlag
+                              ;Session/IsCrossedFlag
+                              ;Session/Messages
+                              ;Session/NumberOfCarClasses
+                              ;Session/Type">
+    <div class              = "SIMRacingApps-Widget-LapsBanner-status"
+         data-ng-class      = "'SIMRacingApps-Widget-LapsBanner-status-'+flag">
+        <div class          = "SIMRacingApps-Widget-LapsBanner-status-title"
+          data-ng-style     = "{ fontSize: titleFontSize }"
+          data-ng-bind-html = "title || data.Session.Type.ValueFormatted"
+        ></div>
+        <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
+          data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
+                            ? translations.ONELAPTOGREEN
+                            : data.Session.IsCrossedFlag.Value
+                            ? translations.CROSSED
+                            : data.Session.IsCheckeredFlag.Value
+                            ? translations.CHECKERED
+                            : data.Session.LapsToGo.Value < (data.Session.Laps.Value * .5)
+                            ? (data.Session.LapsToGo|sraNumber:0:null:null:null:true) + ' ' + translations.TOGO
+                            : data.Session.Lap.ValueFormatted + ' ' + translations.OF + ' ' + data.Session.Laps.ValueFormatted"
+        ></div>
+        <img class          = "SIMRacingApps-Widget-LapsBanner-status-sponsor-img"
+          data-ng-attr-src  = "/SIMRacingApps/{{sponsorImageUrl}}"
+          onerror           = "this.src='SRA-Logo-with-URL.png'"
+        ></img>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+@import '/SIMRacingApps/widgets/CarSelector/CarSelector.css';
+
+.SIMRacingApps-Widget-Chat {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    /* background: dimgray; */
+    z-index:-1;
+}
+
+.SIMRacingApps-Widget-Chat-CarSelector {
+    position:   absolute;
+    width:      53.75%;     /* 430 / 800 */
+    top:        0%;
+    left:       23.125%     /* ((800/2) - (430/2)) / 800 */
+}
+
+.SIMRacingApps-Widget-Chat-button {
+    position:   absolute;
+    width:      100%;
+    height:     15.625%;
+    background: green;
+    display:    inline-table;
+    overflow:   hidden;
+    border-radius: 25%;
+}
+
+.SIMRacingApps-Widget-Chat-button-text-wrapper {
+	position:   absolute;
+    width:      100%;
+    height:     100%;
+    max-width:  100%;
+    max-height: 100%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-Widget-Chat-button-text-table {
+    display:    inline-table;
+    width:      100%;
+    height:     100%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-Widget-Chat-button-text {
+    display:    table-cell;
+    vertical-align: middle;
+    text-align: center;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-Chat-column {
+    position:   absolute;
+    width:      9.375%;
+    top:        0.55%;
+    height:     100%;
+}
+
+.SIMRacingApps-Widget-Chat-col1 {
+    left:       1%;
+}
+.SIMRacingApps-Widget-Chat-col2 {
+    left:       12%;
+}
+.SIMRacingApps-Widget-Chat-col3 {
+    right:      12%;
+}
+.SIMRacingApps-Widget-Chat-col4 {
+    right:      1%;
+}
+
+.SIMRacingApps-Widget-Chat-row1 {
+    top:        0%;
+}
+.SIMRacingApps-Widget-Chat-row2 {
+    top:        16.666%;
+}
+.SIMRacingApps-Widget-Chat-row3 {
+    top:        33.333%;
+}
+.SIMRacingApps-Widget-Chat-row4 {
+    top:        50%;
+}
+.SIMRacingApps-Widget-Chat-row5 {
+    top:        66.666%;
+}
+.SIMRacingApps-Widget-Chat-row6 {
+    top:       83.333%;
+}
+
+.SIMRacingApps-Widget-Chat-clicked-Y {
+    border-width:   medium;
+    border-color:   red;
+    border-style:   ridge;
+}
+
+.SIMRacingApps-Widget-Chat-clicked-N {
+    border-width:   medium;
+    border-color:   gold;
+    border-style:   ridge;
+}
+
+.SIMRacingApps-Widget-Chat .SIMRacingApps-Widget-CarSelector-button {
+    font-size: 140% !important;
+}

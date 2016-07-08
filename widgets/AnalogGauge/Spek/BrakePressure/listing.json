@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-brake-pressure.html",
+"name": "AnalogGauge-Spek-BrakePressure",
+"description": "",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/BrakePressure&",
+"icon": "widgets/AnalogGauge/Spek/BrakePressure/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

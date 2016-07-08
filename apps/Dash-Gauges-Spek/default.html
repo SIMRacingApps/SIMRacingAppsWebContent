@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/SIMRacingApps/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="72x72" href="/SIMRacingApps/SRA-Logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/SIMRacingApps/SRA-Logo-114x114.png">
+    <link rel="apple-touch-icon" href="/SIMRacingApps/SRA-Logo-57x57.png">
+    <script type="text/javascript" src="/SIMRacingApps/lib/require.config.js"></script>
+    <script type="text/javascript" data-main="/SIMRacingApps/apps/Dash-Gauges-Spek/default" src="/SIMRacingApps/external/require.js"></script>
+    <base href="/" />
+    <title>Dash-Gauges-Spek</title>
+</head>
+<body class="SIMRacingApps-App-Dash-Gauges-Spek-body">
+    <div id                 = "SIMRacingApps-App"
+         class              = "SIMRacingApps-App SIMRacingApps-App-Dash-Gauges-Spek"
+         data-ng-controller = "SIMRacingApps-Controller"
+         data-sra-resize>
+        <!-- have the Tach run at the speed the user wants by passing in the command line interval -->
+        <sra-analog-gauge-spek-tachometer     class="SIMRacingApps-App-Dash-Gauges-Spek-Tach" data-sra-args-round-to="10" data-sra-args-interval="{{sraInterval}}">Loading...</sra-analog-gauge-spek-tachometer>
+        <sra-analog-gauge-spek-water-temp     class="SIMRacingApps-App-Dash-Gauges-Spek-WaterTemp             SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-water-temp>
+        <sra-analog-gauge-spek-oil-temp       class="SIMRacingApps-App-Dash-Gauges-Spek-OilTemp               SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-oil-temp>
+        <sra-analog-gauge-spek-water-pressure class="SIMRacingApps-App-Dash-Gauges-Spek-WaterPressure         SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-water-pressure>
+        <sra-analog-gauge-spek-oil-pressure   class="SIMRacingApps-App-Dash-Gauges-Spek-OilPressure           SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-oil-pressure>
+        <sra-analog-gauge-spek-water-level    class="SIMRacingApps-App-Dash-Gauges-Spek-WaterLevel            SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-water-level>
+        <sra-analog-gauge-spek-oil-level      class="SIMRacingApps-App-Dash-Gauges-Spek-OilLevel              SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-oil-level>
+        <sra-analog-gauge-spek-fuel-pressure  class="SIMRacingApps-App-Dash-Gauges-Spek-FuelPressure          SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-fuel-pressure>
+        <sra-analog-gauge-spek-voltage        class="SIMRacingApps-App-Dash-Gauges-Spek-Volt                  SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-voltage>
+        <sra-analog-gauge-spek-fuel-level     class="SIMRacingApps-App-Dash-Gauges-Spek-FuelLevel             SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-fuel-level>
+        <sra-analog-gauge-spek-brake-pressure class="SIMRacingApps-App-Dash-Gauges-Spek-BrakePressure         SIMRacingApps-App-Dash-Gauges-Spek-small-gauge"></sra-analog-gauge-spek-brake-pressure>
+        <div id="FPS" class="FPS" data-ng-bind="data.FPS.Value"></div>
+    </div>
+    <link rel="stylesheet" href="/SIMRacingApps/useroverrides.css" />
+</body>
+</html>

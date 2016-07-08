@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-radio-control.html",
+"name": "RadioControl",
+"description": "Change Channels, Delete Channels, Control Radio",
+"url": "apps/WidgetLoader?widget=RadioControl&",
+"icon": "widgets/RadioControl/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

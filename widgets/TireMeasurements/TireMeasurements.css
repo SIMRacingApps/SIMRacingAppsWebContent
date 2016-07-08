@@ -1,0 +1,39 @@
+
+.SIMRacingApps-Widget-TireMeasurements {
+    width:              100%;
+    height:             100%;
+    font-size:          500%;
+    /* background-color:   black; */
+/* parent should set this when used based on parent's ratio. These are based on 800x480
+    border-radius:      5% 5% / 8.33% 8.33%;
+    overflow:           hidden;
+/**/
+}
+.SIMRacingApps-Widget-TireMeasurements-lapchanged {
+    text-align:         center;
+}
+.SIMRacingApps-Widget-TireMeasurements-temp-left {
+    padding-left:       1%;
+    text-align:         left;
+}
+.SIMRacingApps-Widget-TireMeasurements-temp-middle {
+    text-align:         center;
+}
+.SIMRacingApps-Widget-TireMeasurements-temp-right {
+    text-align:         right;
+    padding-right:      1%;
+}
+.SIMRacingApps-Widget-TireMeasurements-wear-left {
+    padding-left:       1%;
+    text-align:         left;
+}
+.SIMRacingApps-Widget-TireMeasurements-wear-middle {
+    text-align:         center;
+}
+.SIMRacingApps-Widget-TireMeasurements-wear-right {
+    text-align:         right;
+    padding-right:      1%;
+}
+.SIMRacingApps-Widget-TireMeasurements-psi {
+    text-align:         center;
+}

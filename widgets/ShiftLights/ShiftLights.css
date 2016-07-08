@@ -1,0 +1,40 @@
+.SIMRacingApps-Widget-ShiftLights {
+    width:         100%;
+    height:        100%;
+}
+
+.SIMRacingApps-Widget-ShiftLights-off {
+    stroke-width: 2;
+    stroke: black;
+    fill:   gray;
+}
+
+.SIMRacingApps-Widget-ShiftLights-start {
+    stroke-width: 2;
+    stroke: black;
+    fill:   chartreuse;
+}
+
+.SIMRacingApps-Widget-ShiftLights-middle {
+    stroke-width: 2;
+    stroke: black;
+    fill:   yellow;
+}
+
+.SIMRacingApps-Widget-ShiftLights-end {
+    stroke-width: 2;
+    stroke: black;
+    fill:   red;
+}
+
+.SIMRacingApps-Widget-ShiftLights-limit {
+    stroke-width: 2;
+    stroke: black;
+    fill:   chartreuse;
+}
+
+.SIMRacingApps-Widget-ShiftLights-overlimit {
+    stroke-width: 2;
+    stroke: black;
+    fill:   red;
+}

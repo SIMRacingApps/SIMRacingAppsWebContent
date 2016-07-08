@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/RaceAdministrator.html",
+"name": "RaceAdministrator",
+"description": "For Issuing Admin Commands with a Click of a Button",
+"url": "apps/RaceAdministrator?",
+"icon": "apps/RaceAdministrator/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}

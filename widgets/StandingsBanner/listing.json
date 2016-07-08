@@ -1,0 +1,10 @@
+{
+"name":        ["StandingsBanner","StandingsBanner-SHORTNAME"],
+"description": ["Standings Banner like seen on TV","Standings Banner like seen on TV with Shortened Name"],
+"doc":         "JavaScriptDoc/sra-standings-banner.html",
+"url":         "apps/WidgetLoader?widget=StandingsBanner&",
+"icon":        "widgets/StandingsBanner/icon.png",
+"width":       800,
+"height":      106,
+"args":        ["&SHOWSHORTNAME=N","&SHOWSHORTNAME=Y"]
+}

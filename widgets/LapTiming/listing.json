@@ -1,0 +1,10 @@
+{
+"doc": "JavaScriptDoc/sra-lap-timing.html",
+"name": "LapTiming",
+"description": "",
+"url": "apps/WidgetLoader?widget=LapTiming&",
+"icon": "widgets/LapTiming/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}
