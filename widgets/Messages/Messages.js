@@ -4,7 +4,7 @@
  * <p>
  * Example(s):
  * <p><b>
- * &lt;sra-flags&gt;&lt;/sra-messages&gt;<br />
+ * &lt;sra-messages&gt;&lt;/sra-messages&gt;<br />
  * </b>
  * <img src="../widgets/Messages/icon.png" />
  * @ngdoc directive
