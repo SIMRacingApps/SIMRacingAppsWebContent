@@ -1,10 +1,14 @@
 {
 "doc": "JavaScriptDoc/Spectator.html",
-"name": ["Spectator","Broadcaster,Spotter"],
-"description": ["When someone else is watching you. Reference Car cannot be changed","When you are Spectating, Spotting or Broadcasting for someone else. Reference Car can be changed"],
+"name": ["Spectator","Broadcaster,Spotter","Broadcaster,Spotter-CAMERA"],
+"description": [
+    "When someone else is watching you. Reference Car cannot be changed",
+    "When you are Spectating, Spotting or Broadcasting for someone else. Reference Car can be changed",
+    "When you are Spectating, Spotting or Broadcasting for someone else. Reference Car and Camera can be changed"
+],
 "url": "apps/Spectator?",
 "icon": "apps/Spectator/icon.png",
 "width": 1280,
 "height": 768,
-"args": ["","BROADCASTER=true"]
+"args": ["","BROADCASTER=true","BROADCASTER=true&CHANGECAMERA=true"]
 }

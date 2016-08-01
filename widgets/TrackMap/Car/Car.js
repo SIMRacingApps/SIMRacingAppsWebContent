@@ -47,6 +47,7 @@ function(SIMRacingApps) {
                 $scope.defaultHeight   = self.defaultHeight;
                 $scope.defaultInterval = self.defaultInterval;
 
+                $scope.sraChangeCamera      = false;
                 $scope.backgroundColor      = "transparent";
                 $scope.backgroundColorClass = "";
                 
@@ -100,6 +101,7 @@ function(SIMRacingApps) {
                 $scope[self.name]     = sraDispatcher.getTruthy($attrs.sraArgsCar, $attrs[self.name], $attrs.sraArgsValue, "REFERENCE");
                 $scope.sraTextType    = sraDispatcher.getTruthy($scope.sraArgsTEXTTYPE, $attrs.sraArgsTEXTTYPE, $attrs.sraArgsTextType, 'number').toLowerCase();  //id, number, initials, percentage
                 $scope.sraPercentage  = sraDispatcher.getTruthy($attrs.sraArgsPercentage,0);         //for markers to place them where you want them
+                $scope.sraChangeCamera= sraDispatcher.getBoolean($scope.sraArgsCHANGECAMERA   , $attrs.sraArgsChangeCamera,     $scope.sraChangeCamera);
 
                 $scope.text           = ""; //this is what will be displayed on the car
 
@@ -122,6 +124,8 @@ function(SIMRacingApps) {
                 //if a car is clicked, make them the reference car
                 sraDispatcher.onClick($scope,$element,function($event) {
                     sraDispatcher.sendCommand("Session/setReferenceCar/"+$scope.sraCar);
+                    if ($scope.sraChangeCamera)
+                        sraDispatcher.sendCommand("Session/setCamera/"+$scope.sraCar);
                 });
 
             /**standard code that should be in every directive **/

@@ -105,6 +105,10 @@
     color:             cyan;
 }
 
+.SIMRacingApps-Widget-TrackMap-trackinfo .SIMRacingApps-Widget-DataTable-row-cautions .SIMRacingAppsData {
+    color:             yellow;
+}
+
 .SIMRacingApps-Widget-TrackMap-trackinfo .SIMRacingApps-Widget-DataTable-row-remaining .SIMRacingAppsData {
     color:             chartreuse;
 }

@@ -22,6 +22,7 @@
  * @param {boolean} sra-show-buttons false to hide all buttons. Defaults to true,
  * @param {boolean} sra-show-ahead-behind true to show the Ahead and Behind buttons. Defaults to false.
  * @param {boolean} sra-show-reply true to show the REPLY button. Defaults to false.
+ * @param {boolean} sra-change-camera Set to true to change the current camera to the selected car. Defaults to false.
  * @param {String} data-sra-args-on-click Optional name of a function in the parent's scope that will get called when clicked. Default is to make the car clicked the REFERENCE car.
  * @param {int} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 1000.
  * @author Jeffrey Gilliam
@@ -72,6 +73,7 @@ function(SIMRacingApps) {
                 $scope.sraShowButtons       = true;
                 $scope.sraShowAheadBehind   = false;
                 $scope.sraShowReply         = false;
+                $scope.sraChangeCamera      = false;
                 
                 //This function will get called from the CarNumberExtended widget when it is clicked.
                 $scope.carClicked = function($clickedScope,car) {
@@ -85,14 +87,17 @@ function(SIMRacingApps) {
                             if (angular.isFunction($scope.$parent[$scope.sraOnClick]))
                                 $scope.$parent[$scope.sraOnClick]($clickedScope,car);
                             
-                            //if the function doesn't exist, do nothing.
                         }
                         else {
                             $clickedScope.setClickedState('clicked');
                             if (car != "ALL")
                                 sraDispatcher.sendCommand("Session/setReferenceCar/"+car);
                         }
-                            
+
+                        if ($scope.sraChangeCamera) {
+                            if (car != "ALL")
+                                sraDispatcher.sendCommand("Session/setCamera/"+car);
+                        }
                         
                         if (!$scope.sraClickedPersistent) {
                             //delay a little, then clear the clicked state.
@@ -137,6 +142,7 @@ function(SIMRacingApps) {
                 $scope.sraShowButtons       = sraDispatcher.getBoolean($scope.sraArgsSHOWBUTTONS,     $attrs.sraArgsShowButtons,      $scope.sraShowButtons);
                 $scope.sraShowAheadBehind   = sraDispatcher.getBoolean($scope.sraArgsSHOWAHEADBEHIND, $attrs.sraArgsShowAheadBehind,  $scope.sraShowAheadBehind);
                 $scope.sraShowReply         = sraDispatcher.getBoolean($scope.sraArgsSHOWREPLY      , $attrs.sraArgsShowReply,        $scope.sraShowReply);
+                $scope.sraChangeCamera      = sraDispatcher.getBoolean($scope.sraArgsCHANGECAMERA   , $attrs.sraArgsChangeCamera,     $scope.sraChangeCamera);
                 $scope.sraOnClick           = $attrs.sraArgsOnClick;
 
                 /** your code goes here **/
