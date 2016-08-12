@@ -21,6 +21,7 @@
     left: 25%;
     background-color: black; /*do not want to see through this to cover the chat*/
     border-radius: 1% 1% / 10% 10%;
+    z-index: 1;
 }
 
 .SIMRacingApps-App-StreamingOverlay-Relative {
@@ -31,6 +32,7 @@
     right: 0%;
     bottom: 0%;
     background-color: black; /*do not want to see through this to cover black boxes */
+    z-index: 1;
 }
 
 .SIMRacingApps-App-StreamingOverlay-LapTiming {
@@ -40,6 +42,7 @@
     font-size: 52%;
     left: 0%;
     bottom: 0%;
+    z-index: 1;
 }
 
 .SIMRacingApps-App-StreamingOverlay-LapTiming .SIMRacingApps-Widget-LapTiming {
@@ -51,7 +54,8 @@
     width: 25%;
     right: 0%;
     bottom: 26%;
-    font-size: 65%
+    font-size: 65%;
+    z-index: 1;
 }
 
 /** Override the car size and make it bigger **/
@@ -69,6 +73,7 @@
     bottom: 0%;
     left: 25%;
     background: url(Black-Background-Metal-800x480.png);
+    z-index: 1;
 }
 
 .SIMRacingApps-App-StreamingOverlay-Tach {
@@ -134,4 +139,13 @@
 .SIMRacingApps-App-StreamingOverlay-BrakePressure {
     right:      21.5%;
     top:        46%;
+}
+
+.SIMRacingApps-App-StreamingOverlay-WaitingForSIM {
+    position:   absolute;
+    width:      50%;
+    height:     50%;
+    top:        25%;
+    left:       10%;
+    z-index:    9999;
 }

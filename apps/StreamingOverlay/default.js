@@ -3,6 +3,19 @@
  * 
  * <img src="../apps/StreamingOverlay/icon.png" />
  * 
+ * To change the WaitingForSIM to cover the entire area, 
+ * add this to your Documents/SIMRacingApps/useroverrides.css file.
+ * <pre>
+ * .SIMRacingApps-App-StreamingOverlay-WaitingForSIM {
+ *   width:      100%;
+ *   height:     100%;
+ *   top:        0%;
+ *   left:       0%;
+ * }
+ * </pre>
+ * To have it display a custom image instead, create a PNG file called
+ * Documents/SIMRacingApps/WaitingForSIM.png.
+ *  
  * @ngdoc apps
  * @name StreamingOverlay
  * @param {boolean} showFPS When any value is seen in the URL for this attribute, the Frames Per Second(FPS) will be shown. Defaults to not show.
@@ -30,6 +43,7 @@ require(SIMRacingAppsRequireConfig,
         ,'widgets/AnalogGauge/Spek/WaterPressure/WaterPressure'
         ,'widgets/AnalogGauge/Spek/WaterTemp/WaterTemp'
         ,'widgets/AnalogGauge/Spek/BrakePressure/BrakePressure'
+        ,'widgets/WaitingForSIM/WaitingForSIM'
         ],
 function( angular,  SIMRacingApps) {
     angular.element(document).ready(function() {
