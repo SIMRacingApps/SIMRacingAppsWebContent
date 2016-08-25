@@ -90,6 +90,29 @@ Example(s):
 1. http://Your.Server.IP.Address:Port/SIMRacingApps/Data/...
 2. http://192.168.1.61:80/SIMRacingApps/Data/Track/Description
 
+Returns a JSON structure by default that looks like this:
+
+<pre>
+{
+    "Type": "STRING",
+    "UOM": "",
+    "Format": "",
+    "StatePercent": "0.0",
+    "State": "NORMAL",
+    "Value": "Charlotte Motor Speedway",
+    "UOMAbbr": "",
+    "UOMDesc": "",
+    "Lang": "en",
+    "ValueFormatted": "Charlotte Motor Speedway",
+    "Name": "/Track/Description"
+}
+</pre>
+
+You can also add the "output" parameter to the URL to just get the value you need. For example, this URL only returns the ValueFormatted. You can use "localhost" when your browser is running on the same computer as the server.
+
+1. http://localhost/SIMRacingApps/Data/Track/Description?output=valueformatted
+
+
 PUTPATHSHERE
 
 [Copyright (C) 2015 - 2016 Jeffrey Gilliam](../COPYRIGHT.TXT)
