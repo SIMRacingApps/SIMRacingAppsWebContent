@@ -1,10 +1,10 @@
 {
 "doc": "JavaScriptDoc/sra-track-map.html",
-"name": "TrackMap-MAP;TrackMap-SAT;TrackMap-OSM;TrackMap-MAPQUEST;TrackMap-NOBACKGROUND",
-"description": "Map - Static Image;Satellite Static Image;Open Street Maps - Real-time;Map Quest - Real-time;No background",
+"name": "TrackMap-MAP;TrackMap-OSM;TrackMap-NOBACKGROUND",
+"description": "Map - Static Image;Open Street Maps - Real-time;No background",
 "url": "apps/WidgetLoader?widget=TrackMap&",
-"icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon.png;widgets/TrackMap/icon-nobackground.png",
+"icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-nobackground.png",
 "width": 800,
 "height": 480,
-"args": "MAPLAYER=map;MAPLAYER=sat;MAPLAYER=osm;MAPLAYER=mapquest;MAPLAYER=none&SHOWMAP=false"
+"args": "MAPLAYER=map;MAPLAYER=osm;MAPLAYER=none&SHOWMAP=false"
 }
