@@ -91,6 +91,8 @@ function(SIMRacingApps) {
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/ValueHistorical";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/LapsHistorical";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/LapChanged";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/Count";
+                $attrs.sraArgsData += ";Car/REFERENCE/MaxTires";
 
                 $scope.$watch("data.Car.REFERENCE.Gauge['TireTemp"+$scope.value+"L'].ValueHistorical",$scope.updateBackground,true);
                 $scope.$watch("data.Car.REFERENCE.Gauge['TireTemp"+$scope.value+"M'].ValueHistorical",$scope.updateBackground,true);

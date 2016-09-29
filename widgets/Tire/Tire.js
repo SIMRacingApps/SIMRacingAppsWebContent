@@ -144,6 +144,8 @@ function(SIMRacingApps) {
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/IsDirty";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/IsFixed";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/ChangeFlag";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/Count";
+                $attrs.sraArgsData += ";Car/REFERENCE/MaxTires";
 
                 /**standard code that should be in every directive **/
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));

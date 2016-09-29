@@ -1,4 +1,5 @@
 {
     "LAPS":                "Laps",
-    "LAPCHANGED":          "Lap Changed:"
+    "LAPCHANGED":          "Lap:",
+    "USED":                "Used:"
 }
