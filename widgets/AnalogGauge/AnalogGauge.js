@@ -64,6 +64,10 @@
  * @param {pixels} data-sra-args-y-value The Y coordinate of where to put the digital value. Defaults to 330.
  * @param {pixels} data-sra-args-font-size-value The font size of the second label. Defaults to 50.
  * @param {pixels} data-sra-args-anchor-value The anchor defines where the X/Y coordinates are in relation to the entire text. Values are "middle", "left", "right". Defaults to "middle".
+ * @param {pixels} data-sra-args-x-value2 The X coordinate of where to put the digital value. Defaults to 240.
+ * @param {pixels} data-sra-args-y-value2 The Y coordinate of where to put the digital value. Defaults to 440.
+ * @param {pixels} data-sra-args-font-size-value2 The font size of the second label. Defaults to 50.
+ * @param {pixels} data-sra-args-anchor-value2 The anchor defines where the X/Y coordinates are in relation to the entire text. Values are "middle", "left", "right". Defaults to "middle".
  * @param {string} data-sra-args-uom The unit of measure to display. Overrides what comes from the SIM. Defaults to blank, let the SIM decide.
  * @param {pixels} data-sra-args-x-uom The X coordinate of where to put the UOM. Defaults to 240.
  * @param {pixels} data-sra-args-y-uom The Y coordinate of where to put the UOM. Defaults to 370.
@@ -150,6 +154,11 @@ function(SIMRacingApps) {
                 $scope.fontSizeUom    = 30;
                 $scope.anchorUom      = 'middle';
 
+                $scope.xValue2        = 240;
+                $scope.yValue2        = 440;
+                $scope.fontSizeValue2 = 50;
+                $scope.anchorValue2   = 'middle';
+                
                 $scope.flashRate      = 500;
                 $scope.flashOnCritical= true;
 
@@ -436,6 +445,11 @@ function(SIMRacingApps) {
                 $scope.fontSizeValue  = sraDispatcher.getTruthy($scope.sraArgsFONTSIZEVALUE    ,$attrs.sraArgsFontSizeValue   ,$scope.fontSizeValue)   * 1;
                 $scope.anchorValue    = sraDispatcher.getTruthy($scope.sraArgsANCHORVALUE      ,$attrs.sraArgsAnchorValue     ,$scope.anchorValue);
 
+                $scope.xValue2        = sraDispatcher.getTruthy($scope.sraArgsXVALUE2          ,$attrs.sraArgsXValue2         ,$scope.xValue2)         * 1;
+                $scope.yValue2        = sraDispatcher.getTruthy($scope.sraArgsYVALUE2          ,$attrs.sraArgsYValue2         ,$scope.yValue2)         * 1;
+                $scope.fontSizeValue2 = sraDispatcher.getTruthy($scope.sraArgsFONTSIZEVALUE2   ,$attrs.sraArgsFontSizeValue2  ,$scope.fontSizeValue2)  * 1;
+                $scope.anchorValue2   = sraDispatcher.getTruthy($scope.sraArgsANCHORVALUE2     ,$attrs.sraArgsAnchorValue2    ,$scope.anchorValue2);
+                
                 $scope.argsUOM        = sraDispatcher.getTruthy($scope.sraArgsUOM              ,$attrs.sraArgsUom             ,$scope.argsUOM);
                 $scope.xUom           = sraDispatcher.getTruthy($scope.sraArgsXUOM             ,$attrs.sraArgsXUom            ,$scope.xUom)            * 1;
                 $scope.yUom           = sraDispatcher.getTruthy($scope.sraArgsYUOM             ,$attrs.sraArgsYUom            ,$scope.yUom)            * 1;
@@ -491,6 +505,25 @@ function(SIMRacingApps) {
                     $scope.$watch("data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State",                                           $scope.updateColor);
                     $scope.$watch("data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State",                                           $scope.updateRevLights);
                     $scope.$watch("data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.StatePercent",                                    $scope.updateRevLights);
+                }
+                
+                //if it's the brake pressure gauge, show the bias value if it has one
+                if ($scope.sraAnalogGauge.toUpperCase() == "BRAKEPRESSURE") {
+                    $attrs.sraArgsData += ";Car/REFERENCE/Gauge/BrakeBiasAdjustment/ValueCurrent";
+                    $scope.$watch("data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueCurrent.Value", function(oldValue,newValue) {
+                        var bias = $scope.data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueCurrent;
+                        if (bias.State == 'NORMAL') {
+                            //if just the delta, show only 2 decimals, else none
+                            if (bias.Value > 0 && bias.Value < 10.0)
+                                $scope.value2 = $filter('sraNumber')(bias.Value,2,false);
+                            else
+                                $scope.value2 = $filter('sraNumber')(bias.Value,0,false);
+                            
+                            $scope.uom2   = bias.UOMAbbr;
+                        }                        
+//$scope.value2 = -2.25; $scope.uom2 = '%';
+
+                    });
                 }
                 
                 if ($scope.sraAnalogGauge.toUpperCase() == "TACHOMETER") {

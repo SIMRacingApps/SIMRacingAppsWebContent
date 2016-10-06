@@ -57,6 +57,14 @@
     font-weight: normal;
 }
 
+.SIMRacingApps-Widget-BarGauge-value2 {
+    stroke: black;
+    stroke-width: 1;
+    fill: chartreuse;
+    font-family: "Arial";
+    font-weight: bold;
+}
+
 .SIMRacingApps-Widget-BarGauge-state-APPROACHINGLIMIT {
     fill:   yellow;
     stroke: yellow;

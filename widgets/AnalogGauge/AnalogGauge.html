@@ -66,6 +66,12 @@
               ng-attr-style     = "font-size: {{fontSizeUom}}px; text-anchor: {{anchorUom}}; visibility: {{showValue ? 'inherit' : 'hidden'}}">
               {{uom}}
         </text>
+        <text class             = "SIMRacingApps-Widget-AnalogGauge-value2 SIMRacingApps-Widget-AnalogGauge-{{sraAnalogGauge}}-value2"
+              ng-attr-x         = "{{xValue2}}"
+              ng-attr-y         = "{{yValue2}}"
+              ng-attr-style     = "font-size: {{fontSizeValue2}}px; text-anchor: {{anchorValue2}}; visibility: {{showValue ? 'inherit' : 'hidden'}}">
+              {{value2}}{{uom2}}
+        </text>
         <polygon class="SIMRacingApps-Widget-AnalogGauge-needle"
                  ng-attr-transform="rotate({{needleAngle}} 240,240)"
                  ng-attr-points="240,{{240-(buttonSize*.2)}}

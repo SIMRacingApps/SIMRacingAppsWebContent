@@ -55,6 +55,13 @@
     font-weight: normal;
 }
 
+.SIMRacingApps-Widget-AnalogGauge-value2 {
+    fill: white;
+    color: white;
+    font-family: "Arial";
+    font-weight: normal;
+}
+
 .SIMRacingApps-Widget-AnalogGauge-ShiftLights-start {
     stroke: chartreuse;
     fill:   chartreuse;
