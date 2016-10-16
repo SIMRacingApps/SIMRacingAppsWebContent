@@ -347,13 +347,16 @@ function(SIMRacingApps) {
                         var bias = $scope.data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueCurrent;
                         if (bias.State == 'NORMAL') {
                             //if just the delta, show only 2 decimals, else none
-                            if (bias.Value > 0 && bias.Value < 10.0)
+                            if ((bias.Value > 0 && bias.Value < 10.0) || (bias.Value < 0 && bias.Value > -10.0))
                                 $scope.value2 = $filter('sraNumber')(bias.Value,2,false);
                             else
                                 $scope.value2 = $filter('sraNumber')(bias.Value,0,false);
                             
                             $scope.uom2   = bias.UOMAbbr;
-                        }                        
+                        }
+                        else {
+                            $scope.value2 = $scope.uom2 = "";
+                        }
 //$scope.value2 = -2.25; $scope.uom2 = '%';
 
                     });
