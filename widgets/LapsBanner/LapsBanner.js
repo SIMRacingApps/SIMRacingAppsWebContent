@@ -31,7 +31,7 @@
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
  * @author Jeffrey Gilliam, Robert Moyer Jr.
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2016 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2017 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps'

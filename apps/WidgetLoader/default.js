@@ -9,7 +9,7 @@
  * @param {string} widget The name of the Widget to load.
  * @author Jeffrey Gilliam
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2016 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2017 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 require(SIMRacingAppsRequireConfig,
