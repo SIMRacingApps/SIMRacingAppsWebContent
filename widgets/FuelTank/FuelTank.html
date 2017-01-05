@@ -225,7 +225,7 @@
                 </tbody>
             </table>
             <div class                = "SIMRacingApps-Widget-FuelTank-fuel"
-                 data-ng-bind-html    = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent | sraNumber:1"
+                 data-ng-bind-html    = "(data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1) + ' / ' + (data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum | sraNumber:1)"
             ></div>
         </div>
     </div>
