@@ -1,0 +1,9 @@
+{
+    "RADIOCONTROL": "Radio/Funk",
+    "ADD":          "hinzuf\u00fcgen",
+    "DELETE":       "l\u00f6schen",
+    "MUTE":         "Ton aus",
+    "UNMUTE":       "Ton an",
+    "SCANOFF":      "Radioscan aus",
+    "SCANON":       "Radioscan an"
+}

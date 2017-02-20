@@ -10,5 +10,7 @@
     "POS-AHEAD": "Pos Ahead",
     "POS-BEHIND": "Pos Behind",
     "LEADER": "Leader",
-    "ME": "Me"
+    "ME": "Me",
+    "REFERENCE": "Reference",
+    "TRANSMITTING": "Transmitting"
 }

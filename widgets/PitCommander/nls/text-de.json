@@ -1,0 +1,19 @@
+{
+	"TIRES4":              "4<br />Reifen",
+	"BRAKEBIASADJ":        "BrakeBias Einst:",
+	"TIRES4GAS":           "Benzin &amp;<br />4 Reifen",
+	"LEFTS":               "<br />Links",
+    "LEFTSGAS":            "Benzin &amp;<br />Links",
+    "REPAIRS":             "Reparatur (opt)",
+    "RIGHTS":              "<br />Rechts",
+    "RIGHTSGAS":           "Benzin &amp;<br />Rechts",
+    "TAPE":                "Tape:",
+    "WEDGEADJ":            "Keil Einst.LH/RH:",
+    "FRONTWING":           "Fl\u00fcgel vorne:",
+    "FRONTFLAP":           "Flap/Lippe vorne:",
+    "REARWING":            "Fl\u00fcgel hinten:",
+    "WINDSHIELD":          "Scheibe reinigen:",
+    "FASTREPAIRS":         "Fast Repair:",
+    "Y":                   "J",
+    "N":                   "N"
+}

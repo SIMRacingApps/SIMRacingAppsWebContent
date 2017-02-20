@@ -1,0 +1,82 @@
+{
+    "Data": {
+        "COMMENT1": "This level is the Data.Basename. They must all be in upper case",
+        "COMMENT2": "The second level is the actual Value from SIMRacingApps API calls. Left = value from iRacing. Right Translation",
+        "COMMON": {
+            "Y":                "J",
+            "N":                "N",
+            "true":             "wahr",
+            "false":            "falsch"
+        },
+        "CAR": {
+            "BRAKE":            "Bremse",
+            "THROTTLE":         "Gas",
+            "CLUTCH":           "Kupplung",
+            "STEERING":         "Lenkung",
+            "ANGLE":            "Winkel",
+            "LF TIRE":          "LV Reifen",
+            "LF/L TIRE":        "LV/L Reifen",
+            "LF/M TIRE":        "LV/M Reifen",
+            "LF/R TIRE":        "LV/R Reifen",
+            "LR TIRE":          "LH Reifen",
+            "LR/L TIRE":        "LH/L Reifen",
+            "LR/M TIRE":        "LH/M Reifen",
+            "LR/R TIRE":        "LH/R Reifen",
+            "RF TIRE":          "RV Reifen",
+            "RF/L TIRE":        "RV/L Reifen",
+            "RF/M TIRE":        "RV/M Reifen",
+            "RF/R TIRE":        "RV/R Reifen",
+            "RR TIRE":          "RH Reifen",
+            "RR/L TIRE":        "RH/L Reifen",
+            "RR/M TIRE":        "RH/M Reifen",
+            "RR/R TIRE":        "RH/R Reifen",
+            "FUEL":             "Benzin",
+            "LEVEL":            "Menge",
+            "OIL":              "\u00d6l",
+            "PRESSURE":         "Druck",
+            "RPM":              "Rpm",
+            "TEMP":             "Temp.",
+            "WEAR":             "Verschlei\u00df",
+            "VOLT":             "Volt",
+            "WATER":            "Wasser",
+            "x1000":            "x1000",
+            "INVALID":          "Ung\u00fcltig",
+            "INGARAGE":         "In der Garage",
+            "ENTERINGPITSTALL": "erreicht Boxenplatz",
+            "INPITSTALL":       "Am Boxenplatz",
+            "EXITINGPITSTALL":  "verl\u00e4sst Boxenplatz",
+            "ONPITROAD":        "In der Boxengasse",
+            "APPROACHINGPITS":  "f\u00e4hrt in Boxengasse",
+            "LEAVINGPITS":      "f\u00e4hrt aus Boxengasse",
+            "OFFTRACK":         "neben der Strecke",
+            "ONTRACK":          "auf der Strecke"
+        },
+        "SESSION": {
+            "RACE":             "Rennen",
+            "PRACTICE":         "Training",
+            "OPEN QUALIFY":     "Offene Qualifikation",
+            "LONE QUALIFY":     "Einzel-Qualifikation",
+            "QUALIFYING":       "Qualifikation",
+            "OFFLINE":          "Offline",
+            "OFFLINE TESTING":  "OfflineTest"
+        },
+        "TRACK": {
+            "Clear":            "Klar",
+            "Partly Cloudy":    "leicht bew\u00f6lkt",
+            "Mostly Cloudy":    "bew\u00f6lkt",
+            "Overcast":         "bedeckt",
+            "N":                "N",
+            "NE":               "NO",
+            "NW":               "NW",
+            "S":                "S",
+            "SE":               "SO",
+            "SW":               "SW",
+            "E":                "O",
+            "W":                "W"
+        }
+    },
+    "UOMAbbr": {
+    },
+    "UOMDesc": {
+    }
+}

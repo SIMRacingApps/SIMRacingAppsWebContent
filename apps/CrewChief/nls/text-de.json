@@ -1,0 +1,18 @@
+{
+    "BEHIND":              "zur\u00fcck",
+    "BEST":                "beste",
+    "CAUTIONS":            "Gelbphase(n)",
+    "ELAPSED":             "vergangen",
+    "FUELLAPS":            "Benzin/Runden",
+    "FUELRUN":             "Benzin/Stint",
+    "FUELPERLAP":          "Verbrauch/Runde",
+    "LAP":                 "Runde",
+    "OF":                  "von",
+    "LAST":                "letzte",
+    "PITLAPTIME":          "Pit-Runde/Zeit",
+    "POSITIONCLASS":       "Pos./ Klasse",
+    "PITROADSPEEDLIMIT":   "Boxengasse Speed-Limit",
+    "REMAINING":           "verbleibend",
+    "TOGO":                "Rd.verbleibend",
+    "TRACKTEMP":           "Streckentemp."
+}

@@ -1,0 +1,16 @@
+{
+    "LAPTIMING":      "Info",
+    "LAP":            "Runde",
+    "LAPRUN":         "Rd./Lauf",
+    "TOGO":           "noch",
+    "OF":             "von",
+    "POS":            "Pos/Klasse",
+    "AHEAD":          "davor",
+    "BEHIND":         "dahinter",
+    "TIME":           "Zeit",
+    "REMAINING":      "verbleibend",
+    "ELAPSED":        "vergangen",
+    "CURR":           "aktuell",
+    "LAST":           "letzte",
+    "BEST":           "beste"
+}

@@ -1,0 +1,32 @@
+{
+    "ALL ME":           { "name": "ALL ME",                     "text": "[#[CARNUMBER]] All Me" },
+    "GOOD LUCK":        { "name": "GOOD LUCK",                  "text": "[#[CARNUMBER]] Good Luck from SIMRacingApps.com" },
+    "GOOD RACE":        { "name": "GOOD RACE",                  "text": "[#[CARNUMBER]] Good Race from SIMRacingApps.com" },
+    "GOOD WIN":         { "name": "/[CAR]<br />GOOD WIN",       "text": "/LEADER [#[CARNUMBER]] Good Win" },
+    "NO PROBLEM":       { "name": "NO PROBLEM",                 "text": "[#[CARNUMBER]] No Problem" },
+    "OK":               { "name": "OK",                         "text": "[#[CARNUMBER]] Ok" },
+    "PASS LEFT":        { "name": "/[CAR]<br />PASS LEFT",      "text": "/RL-1 [#[CARNUMBER]] Pass Left" },
+    "PASS RIGHT":       { "name": "/[CAR]<br />PASS RIGHT",     "text": "/RL-1 [#[CARNUMBER]] Pass Right" },
+    "PITTING IN":       { "name": "PITTING IN",                 "text": "[#[CARNUMBER]] Pitting In" },
+    "PITTING OUT":      { "name": "PITTING OUT",                "text": "[#[CARNUMBER]] Pitting Out" },
+    "SORRY":            { "name": "SORRY",                      "text": "[#[CARNUMBER]] Sorry" },
+    "SWITCH IN 1":      { "name": "SWITCH IN 1",                "text": "[#[CARNUMBER]] Switch In 1" },
+    "SWITCH IN 3":      { "name": "SWITCH IN 3",                "text": "[#[CARNUMBER]] Switch In 3" },
+    "THANKS":           { "name": "/[CAR]<br />THANKS",         "text": "/RL-1 [#[CARNUMBER]] Thanks" },
+    "YOU'RE WELCOME":   { "name": "/[CAR]<br />YOU'RE WELCOME", "text": "/RL1 [#[CARNUMBER]] You're Welcome" },
+    "RACING DEAL":      { "name": "RACING DEAL",                "text": "[#[CARNUMBER]] Racing Deal" },
+    "LOL":              { "name": "LOL",                        "text": "[#[CARNUMBER]] LoL" },
+    "HELLO":            { "name": "HELLO",                      "text": "[#[CARNUMBER]] Hello" },
+    
+    "@ALLTEAMS":        { "name": "@ALL TEAMS",                 "text": "@transmit ALLTEAMS" },
+    "@DRIVERS":         { "name": "@DRIVERS",                   "text": "@transmit DRIVERS" },
+    "@TEAM":            { "name": "@TEAM",                      "text": "@transmit TEAM" },
+    "@CLUB":            { "name": "@CLUB",                      "text": "@transmit CLUB" },
+    "@PRIVATE":         { "name": "@PRIVATE",                   "text": "@transmit PRIVATE" },
+    "@RACE CONTROL":    { "name": "@RACE CONTROL",              "text": "@transmit RACECONTROL" },
+    "@ADD CH":          { "name": "@ADD CH[CARORME]",           "text": "@add CH[CARORME]" },
+    "JOIN ME @CH":      { "name": "JOIN ME @CH[CARNUMBER]",     "text": "[#[CARNUMBER]] Join Me @ADD CH[CARNUMBER]" },
+    "@CH":              { "name": "@CH[CARORME]",               "text": "@add CH[CARORME]" },
+    
+    "?":                { "name": "?",                          "text": "[#[CARNUMBER]] ?" }
+}

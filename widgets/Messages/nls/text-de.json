@@ -1,0 +1,23 @@
+{
+    "FIVETOGO":       "noch 5 Runden",
+    "GREENHELD":      "Start verz\u00f6gert",
+    "HALFWAY":        "Halbzeit",
+    "ONELAPTOGREEN":  "eine bis Gr\u00fcn",
+    "TENTOGO":        "noch 10 Runden",
+    "TWOTOGO":        "noch 2 Runden",
+    "CAUTION":        "Achtung",
+    "GREEN":          "Gr\u00fcne Fahne",
+    "YELLOW":         "Gelbe Fahne",
+    "BLACK":          "Schwarze Fahne",
+    "REPAIR":         "Reparatur",
+    "WHITE":          "Weisse Fahne",
+    "BLUE":           "Blaue Fahne",
+    "RED":            "Rote Fahne",
+    "CHECKERED":      "Karierte Fahne",
+    "DISQUALIFY":     "Disqualifiziert",
+    "DISCONNECTED":   "Verbindung getrennt",
+    "STARTREADY":     "Ready",
+    "STARTSET":       "Set",
+    "STARTGO":        "Go",
+    "PITSPEEDLIMITER":"Pit-Speed Limiter"
+}
