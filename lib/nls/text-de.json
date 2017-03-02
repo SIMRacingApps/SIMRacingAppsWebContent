@@ -61,7 +61,7 @@
             "OFFLINE TESTING":  "OfflineTest"
         },
         "TRACK": {
-            "Clear":            "Klar",
+            "Clear":            "klar",
             "Partly Cloudy":    "leicht bew\u00f6lkt",
             "Mostly Cloudy":    "bew\u00f6lkt",
             "Overcast":         "bedeckt",

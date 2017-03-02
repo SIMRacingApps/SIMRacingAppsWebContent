@@ -1,5 +1,5 @@
 {
-    "STANDINGSTOP43": "Zeitnahme - TOP43",
+    "STANDINGSTOP43": "Reihenfolge - TOP43",
     "SOF":            "SOF",
     "OF":             "von",
     "LAP":            "Runde",
@@ -14,7 +14,7 @@
     "BEHIND":         "Abstand",
     "BEST":           "beste",
     "LAST":           "letzte",
-    "POSDIFF":        "C\u0394",
-    "PIT":            "Pittime",
+    "POSDIFF":        "P\u0394",
+    "PIT":            "PitZeit",
     "RUN":            "Stint"
 }

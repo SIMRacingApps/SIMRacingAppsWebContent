@@ -1,13 +1,13 @@
 {
-    "FUELTANK":            "Fuel Tank",
+    "FUELTANK":            "Fuel/Tank",
     "ADDING":              "hinzuf.",
     "LAPS":                "Rd.",
-    "WORST":               "max",
+    "WORST":               "max.",
     "UOM":                 "UOM",
     "INTANK":              "im Tank",
     "TOGO":                "noch",
     "PERTANK":             "Tank voll",
-    "PITSTOPS":            "Pit-Stops",
+    "PITSTOPS":            "PitStops",
     "TOFINISH":            "bis Ziel",
     "NEEDED":              "ben\u00f6tigt",
     "":""
