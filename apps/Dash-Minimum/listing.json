@@ -1,7 +1,14 @@
 {
 "doc": "JavaScriptDoc/Dash-Minimum.html",
 "name": "Dash-Minimum;Dash-Minimum-PITCONTROLLER",
-"description": "Minimum Dash for Phones, No Pit Commands;Minimum Dash for Phones, With Pit Commands",
+"description": [
+    "Minimum Dash for Phones, No Pit Commands",
+    "Minimum Dash for Phones, With Pit Commands"
+],
+"description-de": [
+    "Minimum Dash for Phones, No Pit Commands",
+    "Minimum Dash for Phones, With Pit Commands"
+],
 "url": "apps/Dash-Minimum?",
 "icon": "apps/Dash-Minimum/icon.png;apps/Dash-Minimum/icon.png",
 "width": 960,

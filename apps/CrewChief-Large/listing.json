@@ -1,7 +1,14 @@
 {
 "doc": "JavaScriptDoc/CrewChief-Large.html",
 "name": "CrewChief-Large;CrewChief-Large-PITCONTROLLER",
-"description": "View Only, No Pit Commands;Will Send Pit Commands to the SIM",
+"description": [
+    "CrewChief-Large View Only, No Pit Commands",
+    "Will Send Pit Commands to the SIM"
+],
+"description-de": [
+    "CrewChief-Large View Only, No Pit Commands",
+    "Will Send Pit Commands to the SIM"
+],
 "url": "apps/CrewChief-Large?",
 "icon": "apps/CrewChief-Large/icon.png;apps/CrewChief-Large/icon.png",
 "width": 1280,

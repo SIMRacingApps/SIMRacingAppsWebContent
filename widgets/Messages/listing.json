@@ -2,6 +2,7 @@
 "doc": "JavaScriptDoc/sra-messages.html",
 "name": "Messages",
 "description": "Messages from the SIM",
+"description-de": "Messages from the SIM",
 "url": "apps/WidgetLoader?widget=Messages&",
 "icon": "widgets/Messages/icon.png",
 "width": 800,

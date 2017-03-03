@@ -1,6 +1,13 @@
 {
 "name":        ["StandingsBanner","StandingsBanner-SHORTNAME"],
-"description": ["Standings Banner like seen on TV","Standings Banner like seen on TV with Shortened Name"],
+"description": [
+    "Standings Banner like seen on TV",
+    "Standings Banner like seen on TV with Shortened Name"
+],
+"description-de": [
+    "Standings Banner like seen on TV",
+    "Standings Banner like seen on TV with Shortened Name"
+],
 "doc":         "JavaScriptDoc/sra-standings-banner.html",
 "url":         "apps/WidgetLoader?widget=StandingsBanner&",
 "icon":        "widgets/StandingsBanner/icon.png",

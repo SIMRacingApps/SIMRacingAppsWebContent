@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-water-pressure.html",
 "name": "BarGauge-WaterPressure",
-"description": "",
+"description": "Bar Gauge Water Pressure",
+"description-de": "Bar Gauge Water Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/WaterPressure&",
 "icon": "widgets/BarGauge/WaterPressure/icon.png",
 "width": 800,

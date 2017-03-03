@@ -2,6 +2,7 @@
 "doc": "JavaScriptDoc/sra-standings-top-10.html",
 "name": "StandingsTop10",
 "description": "Top 10 Positions, Pit Time, Run Length, Lap Times",
+"description-de": "Top 10 Positions, Pit Time, Run Length, Lap Times",
 "url": "apps/WidgetLoader?widget=StandingsTop10&",
 "icon": "widgets/StandingsTop10/icon.png",
 "width": 800,

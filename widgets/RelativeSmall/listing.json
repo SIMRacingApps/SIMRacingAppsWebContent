@@ -1,7 +1,14 @@
 {
 "doc": "JavaScriptDoc/sra-relative-small.html",
 "name": ["RelativeSmall","RelativeSmall-BYLOCATION"],
-"description": ["Shows Drivers Nearby for a small screen","Shows Drivers Nearby for a small screen based on your location (On Track or Pit Road)"],
+"description": [
+    "Shows Drivers Nearby for a small screen",
+    "Shows Drivers Nearby for a small screen based on your location (On Track or Pit Road)"
+],
+"description-de": [
+    "Shows Drivers Nearby for a small screen",
+    "Shows Drivers Nearby for a small screen based on your location (On Track or Pit Road)"
+],
 "url": "apps/WidgetLoader?widget=RelativeSmall&",
 "icon": "widgets/Relative/icon.png",
 "width": 800,

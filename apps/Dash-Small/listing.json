@@ -1,7 +1,14 @@
 {
 "doc": "JavaScriptDoc/Dash-Small.html",
 "name": "Dash-Small;Dash-Small-PITCONTROLLER",
-"description": "Smaller Dash for Phones, No Pit Commands;Smaller Dash for Phones, With Pit Commands",
+"description": [
+    "Smaller Dash for Phones, No Pit Commands",
+    "Smaller Dash for Phones, With Pit Commands"
+],
+"description-de": [
+    "Smaller Dash for Phones, No Pit Commands",
+    "Smaller Dash for Phones, With Pit Commands"
+],
 "url": "apps/Dash-Small?",
 "icon": "apps/Dash-Small/icon.png;apps/Dash-Small/icon.png",
 "width": 1280,

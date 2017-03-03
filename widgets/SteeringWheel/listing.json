@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-steering-wheel.html",
 "name": "SteeringWheel",
-"description": "",
+"description": "Steering Wheel",
+"description-de": "Steering Wheel",
 "url": "apps/WidgetLoader?widget=SteeringWheel&",
 "icon": "widgets/SteeringWheel/icon.png",
 "width": 480,

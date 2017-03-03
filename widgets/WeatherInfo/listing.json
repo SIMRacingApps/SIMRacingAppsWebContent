@@ -2,6 +2,7 @@
 "doc": "JavaScriptDoc/sra-weather-info.html",
 "name": "WeatherInfo",
 "description": "Temperature (Ambient and Track), Wind Speed and Direction, etc.", 
+"description-de": "Temperature (Ambient and Track), Wind Speed and Direction, etc.", 
 "url": "apps/WidgetLoader?widget=WeatherInfo&",
 "icon": "widgets/WeatherInfo/icon.png",
 "width": 800,

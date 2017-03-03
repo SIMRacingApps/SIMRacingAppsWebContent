@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-brake-pressure.html",
 "name": "BarGauge-BrakePressure",
-"description": "",
+"description": "Bar Gauge Brake Pressure",
+"description-de": "Bar Gauge Brake Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/BrakePressure&",
 "icon": "widgets/BarGauge/BrakePressure/icon.png",
 "width": 800,

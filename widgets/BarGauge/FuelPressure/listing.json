@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-fuel-pressure.html",
 "name": "BarGauge-FuelPressure",
-"description": "",
+"description": "Bar Gauge Fuel Pressure",
+"description-de": "Bar Gauge Fuel Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/FuelPressure&",
 "icon": "widgets/BarGauge/FuelPressure/icon.png",
 "width": 800,

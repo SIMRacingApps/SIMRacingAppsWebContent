@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-analog-gauge-spek-voltage.html",
 "name": "AnalogGauge-Spek-Voltage",
-"description": "",
+"description": "Analog Gauge Spek Voltage",
+"description-de": "Analog Gauge Spek Voltage",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/Voltage&",
 "icon": "widgets/AnalogGauge/Spek/Voltage/icon.png",
 "width": 480,

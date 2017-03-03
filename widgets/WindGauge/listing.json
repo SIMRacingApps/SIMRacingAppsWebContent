@@ -1,7 +1,14 @@
 {
 "doc": "JavaScriptDoc/sra-wind-gauge.html",
 "name": "WindGauge;WindGauge-COMPASS",
-"description": "Wind Speed and Direction, North Straight Up;Wind Speed and Direction, Rotates to Heading of the Car",
+"description": [
+    "Wind Gauge - Wind Speed and Direction, North Straight Up",
+    "Wind Gauge - Wind Speed and Direction, Rotates to Heading of the Car"
+],
+"description-de": [
+    "Wind Gauge - Wind Speed and Direction, North Straight Up",
+    "Wind Gauge - Wind Speed and Direction, Rotates to Heading of the Car"
+],
 "url": "apps/WidgetLoader?widget=WindGauge&",
 "icon": "widgets/WindGauge/icon.png",
 "width": 480,

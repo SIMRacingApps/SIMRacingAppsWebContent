@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-analog-gauge-spek-oil-level.html",
 "name": "AnalogGauge-Spek-OilLevel",
-"description": "",
+"description": "Analog Gauge Spek Oil Level",
+"description-de": "Analog Gauge Spek Oil Level",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/OilLevel&",
 "icon": "widgets/AnalogGauge/Spek/OilLevel/icon.png",
 "width": 480,

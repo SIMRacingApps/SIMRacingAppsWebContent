@@ -20,6 +20,16 @@
             "Displays Fuel Remaining using Last 2 Laps Averaged only - With Pit Commands",
             "Dsiplays Fuel Remaining with no text table. Graphical only - With Pit Commands"
         ],
+"description-de": [
+            "Displays Fuel Remaining using worst lap and last 2 laps averaged",
+            "Displays Fuel Remaining using worst lap only",
+            "Displays Fuel Remaining using Last 2 Laps Averaged only",
+            "Dsiplays Fuel Remaining with no text table. Graphical only",
+            "Displays Fuel Remaining using worst lap and last 2 laps averaged - With Pit Commands",
+            "Displays Fuel Remaining using worst lap only - With Pit Commands",
+            "Displays Fuel Remaining using Last 2 Laps Averaged only - With Pit Commands",
+            "Dsiplays Fuel Remaining with no text table. Graphical only - With Pit Commands"
+        ],
 "url": "apps/WidgetLoader?widget=FuelTank&",
 "icon": [
             "widgets/FuelTank/icon.png",

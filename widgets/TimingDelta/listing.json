@@ -2,6 +2,7 @@
 "doc": "JavaScriptDoc/sra-timing-delta.html",
 "name": "TimingDelta",
 "description": "Shows Timing Relative to Best Lap in the Session",
+"description-de": "Shows Timing Relative to Best Lap in the Session",
 "url": "apps/WidgetLoader?widget=TimingDelta&",
 "icon": "widgets/TimingDelta/icon.png",
 "width": 800,

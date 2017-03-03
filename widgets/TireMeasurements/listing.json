@@ -1,7 +1,24 @@
 {
 "doc": "JavaScriptDoc/sra-tire-measurements.html",
 "name": "TireMeasurements-LF;TireMeasurements-LR;TireMeasurements-RF;TireMeasurements-RR",
-"description": "Left Front;Left Rear;Right Front;Right Rear",
+"description": [
+    "Left Front Tire Measurements",
+    "Left Rear Tire Measurements",
+    "Right Front Tire Measurements",
+    "Right Rear Tire Measurements"
+],
+"description-en-uk": [
+    "Left Front Tyre Measurements",
+    "Left Rear Tyre Measurements",
+    "Right Front Tyre Measurements",
+    "Right Rear Tyre Measurements"
+],
+"description-de": [
+    "Left Front Tire Measurements",
+    "Left Rear Tire Measurements",
+    "Right Front Tire Measurements",
+    "Right Rear Tire Measurements"
+],
 "url": "apps/WidgetLoader?widget=TireMeasurements&",
 "icon": "widgets/TireMeasurements/icon.png",
 "width": 800,

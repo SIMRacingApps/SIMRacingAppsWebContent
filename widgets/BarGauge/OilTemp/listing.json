@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-oil-temp.html",
 "name": "BarGauge-OilTemp",
-"description": "",
+"description": "Bar Gauge Oil Tempareture",
+"description-de": "Bar Gauge Oil Tempareture",
 "url": "apps/WidgetLoader?widget=BarGauge/OilTemp&",
 "icon": "widgets/BarGauge/OilTemp/icon.png",
 "width": 800,

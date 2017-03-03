@@ -15,8 +15,8 @@ function( angular,angularSanitize ) {
         }]);
         
         module.controller("SIMRacingApps-Controller",
-        ['$scope', '$http', '$window', '$location', '$document',
-        function($scope,$http,$window,$location,$document) {
+        ['$scope', '$http', '$window', '$location', '$document','$locale',
+        function($scope,$http,$window,$location,$document,$locale) {
 
             $scope.headers = {};
             $scope.listings = {};
@@ -26,10 +26,41 @@ function( angular,angularSanitize ) {
             $scope.versionString = "";
             $scope.updateString = "";
 
+            $scope.translations = {};
+            $scope.lang = "";
+            $scope.country = "";
+            $scope.locale = "";
+            
             var args = $location.search();
+            
             $scope.args = "";
             for (var arg in args) {
                 $scope.args += '&'+arg+'='+args[arg];
+                if (arg == "lang")
+                    $scope.lang = args[arg];
+                if (arg == "country")
+                    $scope.country = args[arg];
+                if (arg == "locale")
+                    $scope.locale = args[arg];
+            }
+
+            //if user did not pass in a lang, then use the default one.
+            if ($scope.lang.length == 0 && $scope.country.length == 0) {
+                var l = $locale.id.split(/[-_@;]/);
+                if (l.length > 1) {
+                    $scope.lang    = l[0];
+                    $scope.country = l[1];
+                }
+                else
+                if (l.length > 0) {
+                    $scope.lang    = l[0];
+                }
+            }
+            
+            if ($scope.locale.length == 0) {
+                $scope.locale = $scope.country.length > 0 
+                              ? $scope.lang + "-" + $scope.country 
+                              : $scope.lang;
             }
             
 //            sraDispatcher.loadTranslations("/SIMRacingApps","text",function(path) {
@@ -68,8 +99,9 @@ function( angular,angularSanitize ) {
                     $scope.websiteVersion.minor *= 1;
                     $scope.websiteBETAVersion.major *= 1;
                     $scope.websiteBETAVersion.minor *= 1;
+                    $scope.translations = $scope.version.translations;
                     
-                    $scope.versionString = "Version: "+$scope.version.major+"."+$scope.version.minor+"-"+$scope.version.build;
+                    $scope.versionString = $scope.translations.VERSION+": "+$scope.version.major+"."+$scope.version.minor+"-"+$scope.version.build;
                     var websiteBETABuild = "";
                     var a = $scope.websiteBETAVersion.build.split(/[-.]/);
                     for (var i=0;i < a.length;i++) {
@@ -115,7 +147,7 @@ function( angular,angularSanitize ) {
             
             var request = {
                 method:  'GET',
-                url:     '/SIMRacingApps/listings',
+                url:     '/SIMRacingApps/listings' + ($scope.locale.length > 0 ? '?lang='+$scope.locale : ''),
                 cache:   false,
                 timeout: 5000
             };

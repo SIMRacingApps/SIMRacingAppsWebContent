@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-voltage.html",
 "name": "BarGauge-Voltage",
-"description": "",
+"description": "Bar Gauge Voltage",
+"description-de": "Bar Gauge Voltage",
 "url": "apps/WidgetLoader?widget=BarGauge/Voltage&",
 "icon": "widgets/BarGauge/Voltage/icon.png",
 "width": 800,

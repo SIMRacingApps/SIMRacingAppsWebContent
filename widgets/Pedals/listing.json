@@ -2,6 +2,7 @@
 "doc": "JavaScriptDoc/sra-pedals.html",
 "name": "Pedals",
 "description": "Clutch / Brake / Throttle",
+"description-de": "Clutch / Brake / Throttle",
 "url": "apps/WidgetLoader?widget=Pedals&",
 "icon": "widgets/Pedals/icon.png",
 "width": 480,

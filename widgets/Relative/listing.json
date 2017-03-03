@@ -28,6 +28,20 @@
     "Shows 25 Drivers Nearby in your Class",
     "Shows 25 Drivers Nearby in your Class based on your location (On Track or Pit Road)"
 ],
+"description-de": [
+    "Shows Drivers Nearby",
+    "Shows Drivers Nearby based on your location (On Track or Pit Road)",
+    "Shows Drivers Nearby in your Class",
+    "Shows Drivers Nearby in your Class based on your location (On Track or Pit Road)",
+    "Shows 13 Drivers Nearby",
+    "Shows 13 Drivers Nearby based on your location (On Track or Pit Road)",
+    "Shows 13 Drivers Nearby in your Class",
+    "Shows 13 Drivers Nearby in your Class based on your location (On Track or Pit Road)",
+    "Shows 25 Drivers Nearby",
+    "Shows 25 Drivers Nearby based on your location (On Track or Pit Road)",
+    "Shows 25 Drivers Nearby in your Class",
+    "Shows 25 Drivers Nearby in your Class based on your location (On Track or Pit Road)"
+],
 "url": "apps/WidgetLoader?widget=Relative&",
 "icon": "widgets/Relative/icon.png",
 "width":  [800,800,800,800,800,800,800,800,800, 800, 800, 800],

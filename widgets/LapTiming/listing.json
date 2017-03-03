@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-lap-timing.html",
 "name": "LapTiming",
-"description": "",
+"description": "Lap Timing",
+"description-de": "Lap Timing",
 "url": "apps/WidgetLoader?widget=LapTiming&",
 "icon": "widgets/LapTiming/icon.png",
 "width": 800,

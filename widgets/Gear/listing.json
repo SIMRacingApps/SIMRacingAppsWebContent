@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-gear.html",
 "name": "Gear",
-"description": "",
+"description": "Gear",
+"description-de": "Gear",
 "url": "apps/WidgetLoader?widget=Gear&",
 "icon": "widgets/Gear/icon.png",
 "width": 480,

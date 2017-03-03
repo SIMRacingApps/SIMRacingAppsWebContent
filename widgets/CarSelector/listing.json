@@ -1,7 +1,14 @@
 {
 "doc": "JavaScriptDoc/sra-car-selector.html",
 "name": "CarSelector;CarSelector-CAMERA",
-"description": "Makes Any Car the Reference Car;Makes Any Car the Reference Car and changes the Camera to focus on that car.",
+"description": [
+    "Makes Any Car the Reference Car",
+    "Makes Any Car the Reference Car and changes the Camera to focus on that car."
+],
+"description-de": [
+    "Makes Any Car the Reference Car",
+    "Makes Any Car the Reference Car and changes the Camera to focus on that car."
+],
 "url": "apps/WidgetLoader?widget=CarSelector&",
 "icon": "widgets/CarSelector/icon.png",
 "width": 430,

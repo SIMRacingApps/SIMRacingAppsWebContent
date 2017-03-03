@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-oil-pressure.html",
 "name": "BarGauge-OilPressure",
-"description": "",
+"description": "Bar Gauge Oil Pressure",
+"description-de": "Bar Gauge Oil Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/OilPressure&",
 "icon": "widgets/BarGauge/OilPressure/icon.png",
 "width": 800,

@@ -1,7 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-analog-gauge-spek-oil-temp.html",
 "name": "AnalogGauge-Spek-OilTemp",
-"description": "",
+"description": "Analog Gauge Spek Oil Tempareture",
+"description-de": "Analog Gauge Spek Oil Tempareture",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/OilTemp&",
 "icon": "widgets/AnalogGauge/Spek/OilTemp/icon.png",
 "width": 480,

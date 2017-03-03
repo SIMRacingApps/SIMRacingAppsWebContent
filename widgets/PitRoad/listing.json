@@ -2,6 +2,7 @@
 "doc": "JavaScriptDoc/sra-pit-road.html",
 "name": "PitRoad",
 "description": "Pit Road Speed, Count Down to Pit Stall",
+"description-de": "Pit Road Speed, Count Down to Pit Stall",
 "url": "apps/WidgetLoader?widget=PitRoad&",
 "icon": "widgets/PitRoad/icon.png",
 "width": 800,
