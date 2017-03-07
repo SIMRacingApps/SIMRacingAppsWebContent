@@ -46,7 +46,9 @@ function( angular,angularSanitize ) {
 
             //if user did not pass in a lang, then use the default one.
             if ($scope.lang.length == 0 && $scope.country.length == 0) {
-                var l = $locale.id.split(/[-_@;]/);
+                //if the browser sets the navigator.language, then use it instead of $locale.id
+                console.log("$locale = "+JSON.stringify($locale));
+                var l = ($locale.id).split(/[-_@;]/);
                 if (l.length > 1) {
                     $scope.lang    = l[0];
                     $scope.country = l[1];
@@ -231,6 +233,40 @@ function( angular,angularSanitize ) {
                 });
         }]);
         
-        angular.bootstrap(document.body,['SIMRacingApps']);
+        var i18n = 'i18n/angular-locale_';
+        //this method confirmed with IE
+        if (window.navigator.userLanguage)
+            i18n += window.navigator.userLanguage.toLowerCase().split(/[-_]/).join('-');
+        else
+        if (window.navigator.language)
+            //this method confirmed with FireFox, Chrome, Safari iOS8
+            i18n += window.navigator.language.toLowerCase().split(/[-_]/).join('-');
+        else
+            i18n += 'en';
+        
+        var search = window.location.search;
+        if (search) {
+            //now parse the URL search string for arguments we need before bootstrapping angular
+            search = search.split(/[\?&]/);
+
+            for (var i=0; i < search.length; i++) {
+                var s = search[i].split("=");
+                if (s.length > 1) {
+                    if (s[0].toLowerCase() == "lang") {
+                        i18n = 'i18n/angular-locale_'+s[1].toLowerCase().split(/[-_]/).join('-');
+                    }
+                }
+            }
+        }
+        
+
+        require([i18n],
+        function(vi18n) {
+            angular.bootstrap(document.body,['SIMRacingApps']);
+        }, function(err) {
+            console.log(err.toString());
+            angular.element(document.body).prepend( "<div class='SIMRacingAppsError'>"+err.toString()+"</div>" );
+        });
+            
     });
 });
