@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-standings.html",
 "name": "Standings",
 "description": "Current Positions of the Drivers Near the REFERENCE Car",
-"description-de": "Current Positions of the Drivers Near the REFERENCE Car",
+"description-de": "Derzeitige Abst\u00e4nde der Fahrer in der N\u00e4he des REFERENZ-Fzg.",
 "url": "apps/WidgetLoader?widget=Standings&",
 "icon": "widgets/Standings/icon.png",
 "width": 800,

@@ -14,10 +14,10 @@
     "Right Rear Tyre Measurements"
 ],
 "description-de": [
-    "Left Front Tire Measurements",
-    "Left Rear Tire Measurements",
-    "Right Front Tire Measurements",
-    "Right Rear Tire Measurements"
+    "Linker Vorderreifen - Info",
+    "Linker Hinterreifen - Info",
+    "Rechter Vorderreifen - Info",
+    "Rechter Hinterreifen - Info"
 ],
 "url": "apps/WidgetLoader?widget=TireMeasurements&",
 "icon": "widgets/TireMeasurements/icon.png",

@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-bar-gauge-water-level.html",
 "name": "BarGauge-WaterLevel",
 "description": "Bar Gauge Water Level",
-"description-de": "Bar Gauge Water Level",
+"description-de": "Balken-Anzeige - Wassermenge",
 "url": "apps/WidgetLoader?widget=BarGauge/WaterLevel&",
 "icon": "widgets/BarGauge/WaterLevel/icon.png",
 "width": 800,

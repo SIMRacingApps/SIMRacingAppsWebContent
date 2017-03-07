@@ -1,7 +1,7 @@
 {
 "name":        "LapsBanner",
 "description": "Shows Laps, Custom Title and Rotating Sponsor Images",
-"description-de": "Shows Laps, Custom Title and Rotating Sponsor Images",
+"description-de": "Zeigt Runden, \u00dcberschrift/Titel kann ge\u00e4ndert werden, wechselnde Sponsor-Bilder",
 "doc":         "JavaScriptDoc/sra-laps-banner.html",
 "url":         "apps/WidgetLoader?widget=LapsBanner&",
 "icon":        "widgets/LapsBanner/icon.png",

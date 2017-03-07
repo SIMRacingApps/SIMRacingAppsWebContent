@@ -6,8 +6,8 @@
     "PitCommander Sends Pit Commands to SIM to Setup for Next Pit Stop"
 ],
 "description-de": [
-    "PitCommander View Only, Shows Setup for Next Pit",
-    "PitCommander Sends Pit Commands to SIM to Setup for Next Pit Stop"
+    "Nur PitCommander Ansicht, zeigt Einstellung f\u00fcr n\u00e4chsten Boxenstop",
+    "PitCommander, sendet Boxen-Befehle an die SIM / Einstellungen f\u00fcr den n\u00e4chsten Boxenstop"
 ],
 "url": "apps/WidgetLoader?widget=PitCommander&",
 "icon": "widgets/PitCommander/icon.png;widgets/PitCommander/icon.png",

@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-analog-gauge-spek-oil-level.html",
 "name": "AnalogGauge-Spek-OilLevel",
 "description": "Analog Gauge Spek Oil Level",
-"description-de": "Analog Gauge Spek Oil Level",
+"description-de": "Analoge Rundinstrument-Anzeige - \u00d6lmenge",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/OilLevel&",
 "icon": "widgets/AnalogGauge/Spek/OilLevel/icon.png",
 "width": 480,

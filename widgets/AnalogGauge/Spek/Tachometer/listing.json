@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-analog-gauge-spek-tachometer.html",
 "name": "AnalogGauge-Spek-Tachometer",
 "description": "Analog Gauge Spek Tachometer",
-"description-de": "Analog Gauge Spek Tachometer",
+"description-de": "Analoge Rundinstrument-Anzeige - Drehzahlmesser",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/Tachometer&",
 "icon": "widgets/AnalogGauge/Spek/Tachometer/icon.png",
 "width": 480,

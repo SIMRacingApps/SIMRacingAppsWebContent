@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-gear.html",
 "name": "Gear",
 "description": "Gear",
-"description-de": "Gear",
+"description-de": "Ganganzeige",
 "url": "apps/WidgetLoader?widget=Gear&",
 "icon": "widgets/Gear/icon.png",
 "width": 480,

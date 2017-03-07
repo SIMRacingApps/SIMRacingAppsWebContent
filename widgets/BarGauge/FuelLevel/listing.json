@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-bar-gauge-fuel-level.html",
 "name": "BarGauge-FuelLevel",
 "description": "Bar Gauge Fuel Level",
-"description-de": "Bar Gauge Fuel Level",
+"description-de": "Balken-Anzeige - Benzinmenge",
 "url": "apps/WidgetLoader?widget=BarGauge/FuelLevel&",
 "icon": "widgets/BarGauge/FuelLevel/icon.png",
 "width": 800,

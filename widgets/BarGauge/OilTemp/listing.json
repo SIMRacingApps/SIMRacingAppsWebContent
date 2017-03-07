@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-bar-gauge-oil-temp.html",
 "name": "BarGauge-OilTemp",
 "description": "Bar Gauge Oil Tempareture",
-"description-de": "Bar Gauge Oil Tempareture",
+"description-de": "Balken-Anzeige - \u00ltemperatur",
 "url": "apps/WidgetLoader?widget=BarGauge/OilTemp&",
 "icon": "widgets/BarGauge/OilTemp/icon.png",
 "width": 800,

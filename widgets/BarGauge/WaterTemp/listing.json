@@ -1,8 +1,8 @@
 {
 "doc": "JavaScriptDoc/sra-bar-gauge-water-temp.html",
 "name": "BarGauge-WaterTemp",
-"description": "Bar Gauge Water Tempareture",
-"description-de": "Bar Gauge Water Tempareture",
+"description": "Bar Gauge Water Temperature",
+"description-de": "Balken-Anzeige - Wassertemperatur",
 "url": "apps/WidgetLoader?widget=BarGauge/WaterTemp&",
 "icon": "widgets/BarGauge/WaterTemp/icon.png",
 "width": 800,

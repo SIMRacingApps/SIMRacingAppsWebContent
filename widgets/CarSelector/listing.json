@@ -6,8 +6,8 @@
     "Makes Any Car the Reference Car and changes the Camera to focus on that car."
 ],
 "description-de": [
-    "Makes Any Car the Reference Car",
-    "Makes Any Car the Reference Car and changes the Camera to focus on that car."
+    "Mache ein Fahrzeug zum Referenz-Fzg.",
+    "Mache ein Fahrzeug zum Referenz-Fzg und fokussiere die Kamera auf dieses Fzg."
 ],
 "url": "apps/WidgetLoader?widget=CarSelector&",
 "icon": "widgets/CarSelector/icon.png",

@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-bar-gauge-voltage.html",
 "name": "BarGauge-Voltage",
 "description": "Bar Gauge Voltage",
-"description-de": "Bar Gauge Voltage",
+"description-de": "Balken-Anzeige - Batteriespannung / Volt",
 "url": "apps/WidgetLoader?widget=BarGauge/Voltage&",
 "icon": "widgets/BarGauge/Voltage/icon.png",
 "width": 800,

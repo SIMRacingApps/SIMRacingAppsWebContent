@@ -6,8 +6,8 @@
     "Wind Gauge - Wind Speed and Direction, Rotates to Heading of the Car"
 ],
 "description-de": [
-    "Wind Gauge - Wind Speed and Direction, North Straight Up",
-    "Wind Gauge - Wind Speed and Direction, Rotates to Heading of the Car"
+    "Wind-Anzeige - Windgeschwindigkeit und Richtung, Norden immer oben",
+    "Wind-Anzeige - Windgeschwindigkeit und Richtung, drehend - richtet sich nach dem Fahrzeug aus"
 ],
 "url": "apps/WidgetLoader?widget=WindGauge&",
 "icon": "widgets/WindGauge/icon.png",

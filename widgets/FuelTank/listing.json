@@ -14,21 +14,21 @@
             "Displays Fuel Remaining using worst lap and last 2 laps averaged",
             "Displays Fuel Remaining using worst lap only",
             "Displays Fuel Remaining using Last 2 Laps Averaged only",
-            "Dsiplays Fuel Remaining with no text table. Graphical only",
+            "Diplays Fuel Remaining with no text table. Graphical only",
             "Displays Fuel Remaining using worst lap and last 2 laps averaged - With Pit Commands",
             "Displays Fuel Remaining using worst lap only - With Pit Commands",
             "Displays Fuel Remaining using Last 2 Laps Averaged only - With Pit Commands",
-            "Dsiplays Fuel Remaining with no text table. Graphical only - With Pit Commands"
+            "Diplays Fuel Remaining with no text table. Graphical only - With Pit Commands"
         ],
 "description-de": [
-            "Displays Fuel Remaining using worst lap and last 2 laps averaged",
-            "Displays Fuel Remaining using worst lap only",
-            "Displays Fuel Remaining using Last 2 Laps Averaged only",
-            "Dsiplays Fuel Remaining with no text table. Graphical only",
-            "Displays Fuel Remaining using worst lap and last 2 laps averaged - With Pit Commands",
-            "Displays Fuel Remaining using worst lap only - With Pit Commands",
-            "Displays Fuel Remaining using Last 2 Laps Averaged only - With Pit Commands",
-            "Dsiplays Fuel Remaining with no text table. Graphical only - With Pit Commands"
+            "Tank Reichweite / Rechner, bezieht sich auf schlechteste und letzte 2 Runden-Durchschnitt",
+            "Tank Reichweite / Rechner, bezieht sich auf schlechteste Runde",
+            "Tank Reichweite / Rechner, bezieht sich auf letzte 2 Runden-Durchschnitt",
+            "Tank Benzin Anzeige, ohne Tabelle, nur grafische Ansicht",
+            "Tank Reichweite / Rechner, bezieht sich auf schlechteste und letzte 2 Runden-Durchschnitt - mit Boxen-Befehlen",
+            "Tank Reichweite / Rechner, bezieht sich auf schlechteste Runde - mit Boxen-Befehlen",
+            "Tank Reichweite / Rechner, bezieht sich auf letzte 2 Runden-Durchschnitt - mit Boxen-Befehlen",
+            "Tank Benzin Anzeige, ohne Tabelle, nur grafische Ansicht - mit Boxen-Befehlen"
         ],
 "url": "apps/WidgetLoader?widget=FuelTank&",
 "icon": [

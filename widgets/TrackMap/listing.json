@@ -7,9 +7,9 @@
     "Track Map - No background"
 ],
 "description-de": [
-    "Track Map - Static Image",
-    "Track Map - Open Street Maps - Real-time",
-    "Track Map - No background"
+    "Live TrackMap / Streckenkarte - statischer/fester Hintergrund",
+    "Live TrackMap / Streckenkarte - Open Street Maps - Real-time",
+    "Live TrackMap / Streckenkarte - ohne Hintergrund"
 ],
 "url": "apps/WidgetLoader?widget=TrackMap&",
 "icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-nobackground.png",

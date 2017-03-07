@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-radio-control.html",
 "name": "RadioControl",
 "description": "Change Channels, Delete Channels, Control Radio",
-"description-de": "Change Channels, Delete Channels, Control Radio",
+"description-de": "\u00c4ndere Kan\u00e4le, l\u00f6sche Kan\u00e4le, Radio/Funk-Steuerung",
 "url": "apps/WidgetLoader?widget=RadioControl&",
 "icon": "widgets/RadioControl/icon.png",
 "width": 480,

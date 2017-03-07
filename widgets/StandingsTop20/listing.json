@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-standings-top-20.html",
 "name": "StandingsTop20",
 "description": "Top 20 Positions, Pit Time, Run Length, Lap Times",
-"description-de": "Top 20 Positions, Pit Time, Run Length, Lap Times",
+"description-de": "Top 20 Positionen, BoxenStop-Zeit, L\u00e4nge des Stints, Rundenzeiten",
 "url": "apps/WidgetLoader?widget=StandingsTop20&",
 "icon": "widgets/StandingsTop20/icon.png",
 "width": 800,

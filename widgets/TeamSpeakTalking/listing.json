@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-team-speak-talking.html",
 "name": "TeamSpeakTalking",
 "description": "TeamSpeak's Client Query Plugin Must Be Enabled",
-"description-de": "TeamSpeak's Client Query Plugin Must Be Enabled",
+"description-de": "TeamSpeak's Client Query Plugin muss daf\u00fcr zugelassen/erlaubt werden",
 "url": "apps/WidgetLoader?widget=TeamSpeakTalking&",
 "icon": "widgets/TeamSpeakTalking/icon.png",
 "width": 800,

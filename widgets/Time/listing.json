@@ -6,9 +6,9 @@
     "Displays the Time in GMT/UTC"
 ],
 "description-de": [
-    "Displays the Current Local Time",
-    "Displays the Current Local Time with TimeZone",
-    "Displays the Time in GMT/UTC"
+    "Lokale Uhrzeit",
+    "Lokale Uhrzeit mit Zeitzone",
+    "Uhrzeit in GMT/UTC"
 ],
 "doc":         "JavaScriptDoc/sra-time.html",
 "url":         "apps/WidgetLoader?widget=Time&",

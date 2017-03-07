@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-standings-top-43.html",
 "name": "StandingsTop43",
 "description": "Top 43 Positions, Pit Time, Run Length, Lap Times",
-"description-de": "Top 43 Positions, Pit Time, Run Length, Lap Times",
+"description-de": "Top 43 Positionen, BoxenStop-Zeit, L\u00e4nge des Stints, Rundenzeiten",
 "url": "apps/WidgetLoader?widget=StandingsTop43&",
 "icon": "widgets/StandingsTop43/icon.png",
 "width": 730,

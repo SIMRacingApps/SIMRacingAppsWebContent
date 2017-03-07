@@ -22,14 +22,14 @@
     "Right Rear Tyre - Sends Pit Commands"
 ],
 "description-de": [
-    "Left Front Tire",
-    "Left Front Tire - Sends Pit Commands",
-    "Left Rear Tire",
-    "Left Rear Tire - Sends Pit Commands",
-    "Right Front Tire",
-    "Right Front Tire - Sends Pit Commands",
-    "Right Rear Tire",
-    "Right Rear Tire - Sends Pit Commands"
+    "Linker Vorderreifen",
+    "Linker Vorderreifen - Sendet Boxen-Befehle",
+    "Linker Hinterreifen",
+    "Linker Hinterreifen - Sendet Boxen-Befehle",
+    "Rechter Vorderreifen",
+    "Rechter Vorderreifen - Sendet Boxen-Befehle",
+    "Rechter Hinterreifen",
+    "Rechter Hinterreifen - Sendet Boxen-Befehle"
 ],
 "url": "apps/WidgetLoader?widget=Tire&",
 "icon": "widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png;widgets/Tire/icon-nopit.png;widgets/Tire/icon.png",

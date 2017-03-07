@@ -2,12 +2,12 @@
 "doc": "JavaScriptDoc/sra-flags.html",
 "name": ["Flags","Flags-NOMESSAGES"],
 "description": [
-    "Flags, Red/Green/Yellow/Blue/Black/Repair",
-    "Flags, Red/Green/Yellow/Blue/Black/Repair - No Messages"
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair - No Messages"
 ],
 "description-de": [
-    "Flags, Red/Green/Yellow/Blue/Black/Repair",
-    "Flags, Red/Green/Yellow/Blue/Black/Repair - No Messages"
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur - keine Nachrichten"
 ],
 "url": "apps/WidgetLoader?widget=Flags&",
 "icon": "widgets/Flags/icon.png",

@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-bar-gauge-tachometer.html",
 "name": "BarGauge-Tachometer",
 "description": "Bar Gauge Tachometer",
-"description-de": "Bar Gauge Tachometer",
+"description-de": "Balken-Anzeige - Drehzahlmesser",
 "url": "apps/WidgetLoader?widget=BarGauge/Tachometer&",
 "icon": "widgets/BarGauge/Tachometer/icon.png",
 "width": 800,

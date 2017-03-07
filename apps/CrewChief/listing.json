@@ -5,12 +5,12 @@
     "CrewChief-PITCONTROLLER"
 ],
 "description": [
-    "Crew Chief View Only. No Pit Commands",
-    "Crew Chief Will Send Pit Commands to the SIM"
+    "CrewChief View Only, No Pit Commands",
+    "CrewChief Will Send Pit Commands to the SIM"
 ],
 "description-de": [
-    "Crew Chief View Only. No Pit Commands",
-    "Crew Chief Will Send Pit Commands to the SIM"
+    "Nur CrewChief Ansicht, keine Boxen-Befehle",
+    "CrewChief, sendet Boxen-Befehle an die SIM"
 ],
 "url": "apps/CrewChief?",
 "icon": [

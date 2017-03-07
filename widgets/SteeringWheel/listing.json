@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-steering-wheel.html",
 "name": "SteeringWheel",
 "description": "Steering Wheel",
-"description-de": "Steering Wheel",
+"description-de": "Lenkrad",
 "url": "apps/WidgetLoader?widget=SteeringWheel&",
 "icon": "widgets/SteeringWheel/icon.png",
 "width": 480,

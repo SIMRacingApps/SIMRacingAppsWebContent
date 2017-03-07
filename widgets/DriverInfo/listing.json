@@ -21,14 +21,14 @@
     "Info on the Driver TRANSMITTING"
 ],
 "description-de": [
-    "Info on the Current REFERENCE Car",
-    "Info on ME",
-    "Info on the LEADER",
-    "Info on the Car AHEAD Relative to your Location",
-    "Info on the car BEHIND Relative to your Location",
-    "Info on the Car AHEAD by Position in Class",
-    "Info on the car BEHIND by Position in Class",
-    "Info on the Driver TRANSMITTING"
+    "Info \u00fcber das derzeitige REFERENZ-Fahrzeug",
+    "Info \u00fcber (M)ICH",
+    "Info \u00fcber F\u00dcHRENDER",
+    "Info \u00fcber das Fzg. VOR dir / relativ",
+    "Info \u00fcber das Fzg. HINTER dir / relativ",
+    "Info \u00fcber das Fzg. VOR dir / Klasse",
+    "Info \u00fcber das Fzg. HINTER dir / Klasse",
+    "Info \u00fcber den Fahrer der SENDET/ redet"
 ],
 "url": "apps/WidgetLoader?widget=DriverInfo&",
 "icon": "widgets/DriverInfo/icon.png",
