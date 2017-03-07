@@ -101,7 +101,7 @@ function( angular,angularSanitize ) {
                     $scope.websiteBETAVersion.minor *= 1;
                     $scope.translations = $scope.version.translations;
                     
-                    $scope.versionString = $scope.translations.VERSION+": "+$scope.version.major+"."+$scope.version.minor+"-"+$scope.version.build;
+                    $scope.versionString = $scope.translations.VERSION+": "+$scope.version.major+"."+$scope.version.minor+"-"+$scope.version.build + ' [' + $scope.locale + ']';
                     var websiteBETABuild = "";
                     var a = $scope.websiteBETAVersion.build.split(/[-.]/);
                     for (var i=0;i < a.length;i++) {
@@ -157,7 +157,7 @@ function( angular,angularSanitize ) {
                     $scope.version = data.version;
                     $scope.headers = data.headers;
                     
-                    $document[0].title = 'SIMRacingApps '+ $scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build;
+                    $document[0].title = 'SIMRacingApps '+ $scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build + ' [' + $scope.locale + ']';
                     ga('set','av',$scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build);
                     ga('send', 'pageview', '/SIMRacingApps');
 
