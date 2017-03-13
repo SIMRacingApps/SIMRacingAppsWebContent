@@ -1,5 +1,5 @@
 {
-    "STANDINGSTOP35": "Reihenfolge - TOP 35",
+    "STANDINGSTOP35": "- TOP 35",
     "SOF":            "SOF",
     "OF":             "von",
     "LAP":            "Runde",
@@ -8,7 +8,7 @@
     "POSQUAL":        "Q.",
     "#":              "#",
     "NAME":           "Name",
-    "BLINK":          "Blk",
+    "BLINK":          "Lag",
     "RATING":         "iR/SR",
     "LAP":            "Runde",
     "BEHIND":         "Abstand",

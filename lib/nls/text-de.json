@@ -54,8 +54,8 @@
         "SESSION": {
             "RACE":             "Rennen",
             "PRACTICE":         "Training",
-            "OPEN QUALIFY":     "Offene Qualifikation",
-            "LONE QUALIFY":     "Einzel-Qualifikation",
+            "OPEN QUALIFY":     "Qualifikation",
+            "LONE QUALIFY":     "Einzel-Quali.",
             "QUALIFYING":       "Qualifikation",
             "OFFLINE":          "Offline",
             "OFFLINE TESTING":  "OfflineTest"
