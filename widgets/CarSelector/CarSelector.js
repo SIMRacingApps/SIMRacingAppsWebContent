@@ -96,7 +96,7 @@ function(SIMRacingApps) {
 
                         if ($scope.sraChangeCamera) {
                             if (car != "ALL")
-                                sraDispatcher.sendCommand("Session/setCamera/"+car);
+                                sraDispatcher.sendCommand("Car/"+car+"/setCamera");
                         }
                         
                         if (!$scope.sraClickedPersistent) {
