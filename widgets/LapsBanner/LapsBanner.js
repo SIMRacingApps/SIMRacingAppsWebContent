@@ -10,8 +10,8 @@
  * {
  *   "title":            "TALLADEGA 500",
  *   "fontSize":         "100%",
- *   "sponsorImageUrls": ["Sponsors/Sponsor1.png","Sponsors/Sponsor2.png"],
- *   "sponsorSeconds":   [60,120]
+ *   "sponsorImageUrls": ["Sponsors/Sponsor1.png","Sponsors/Sponsor2.png","sra"],
+ *   "sponsorSeconds":   [60,120,60]
  * }
  * </pre>
  * In the example, the sponsor logos is an array of files that are stored in the "Documents/SIMRacingApps/Sponsors" folder.
@@ -19,6 +19,14 @@
  * Each sponsor can have their own display time using the seconds array.
  * The first sponsor will be displayed for 60 seconds, the second for 120 seconds, then start over.
  * You can add more sponsors and seconds to display as needed.
+ * Any image that cannot be found will be replaced with the stock SRA logo.
+ * <p>
+ * Example list of the files.
+ * <pre>
+ *    Documents\SIMRacingApps\LapsBanner.json
+ *    Documents\SIMRacingApps\Sponsors\Sponsor1.png
+ *    Documents\SIMRacingApps\Sponsors\Sponsor2.png
+ * </pre>
  * <p>
  * Example:
  * <p><b>
