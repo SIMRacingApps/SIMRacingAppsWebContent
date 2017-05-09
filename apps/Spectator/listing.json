@@ -1,19 +1,15 @@
 {
 "doc": "JavaScriptDoc/Spectator.html",
-"name": ["Spectator","Broadcaster,Spotter","Broadcaster,Spotter-CAMERA"],
+"name": ["Spectator"],
 "description": [
-    "Spectator View Only When someone else is watching you. Reference Car cannot be changed",
-    "When you are Spectating, Spotting or Broadcasting for someone else. Reference Car can be changed",
-    "When you are Spectating, Spotting or Broadcasting for someone else. Reference Car and Camera can be changed"
+    "Spectator View Only When someone else is watching you. Reference Car cannot be changed"
 ],
 "description-de": [
-    "Nur Zuschauer-Ansicht, Wenn dir jemand zuschaut. Referenz-Fzg. kann nicht ver\u00e4ndert werden",
-    "Wenn du jemandem zuschaust, spottest oder \u00fcbertr\u00e4gst/streamst. Referenz-Fzg. kann ver\u00e4ndert werden",
-    "Wenn du jemandem zuschaust, spottest oder \u00fcbertr\u00e4gst/streamst. Referenz-Fzg. und Kamera kann ver\u00e4ndert werden"
+    "Nur Zuschauer-Ansicht, Wenn dir jemand zuschaut. Referenz-Fzg. kann nicht ver\u00e4ndert werden"
 ],
 "url": "apps/Spectator?",
 "icon": "apps/Spectator/icon.png",
 "width": 1280,
 "height": 768,
-"args": ["","BROADCASTER=true","BROADCASTER=true&CHANGECAMERA=true"]
+"args": [""]
 }

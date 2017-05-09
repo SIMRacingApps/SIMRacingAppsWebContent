@@ -1,0 +1,162 @@
+.SIMRacingApps-Widget-ReplayControl {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    /* background: dimgray; */
+    z-index:-1;
+}
+
+.SIMRacingApps-Widget-ReplayControl-button {
+    position:   absolute;
+    display:    inline-table;
+    overflow:   hidden;
+    color:      white;
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-ReplayControl-isreplayplaying-false {
+    background-color: black;
+}
+
+.SIMRacingApps-Widget-ReplayControl-isreplayplaying-true {
+    background-color: green;
+}
+
+.SIMRacingApps-Widget-ReplayControl-play {
+    width:      10%;
+    height:     40%;
+    font-size:  500%;
+    text-align: center;
+    border-radius: 13% 13% / 15% 15%;
+    left:       45%;
+    top:        1%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-pause {
+    width:      10%;
+    height:     30%;
+    font-size:  250%;
+    text-align: center;
+    border-radius: 13% 13% / 15% 15%;
+    left:       37%;
+    top:        69%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-ff {
+    width:      6%;
+    height:     40%;
+    font-size:  400%;
+    text-align: center;
+    border-radius: 13% 13% / 15% 15%;
+    left:       60.5%;
+    top:        6%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-rw {
+    width:      6%;
+    height:     40%;
+    font-size:  400%;
+    text-align: center;
+    border-radius: 13% 13% / 15% 15%;
+    left:       30%;
+    top:        6%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-sm {
+    width:      10%;
+    height:     30%;
+    font-size:  250%;
+    text-align: center;
+    border-radius: 13% 13% / 15% 15%;
+    left:       53%;
+    top:        69%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-state {
+	position:   absolute;
+    width:      20%;
+    height:     16%;
+    font-size:  180%;
+    text-align: center;
+    border-radius: 3% 3% / 15% 15%;
+    left:       40%;
+    top:        51.5%;
+    color:      white;
+    font-weight: bold;
+    background-color: black;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-button {
+    position:   absolute;
+    display:    inline-table;
+    overflow:   hidden;
+    color:      white;
+    width:      25%;
+    height:     16%;
+    font-size:  140%;
+    text-align: center;
+    border-radius: 3% 3% / 15% 15%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-prevframe {
+    left:       2%;
+    top:        1%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-nextframe {
+    left:       73%;
+    top:        1%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-prevlap {
+    left:       2%;
+    top:        21%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-nextlap {
+    left:       73%;
+    top:        21%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-prevcrash {
+    left:       2%;
+    top:        41%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-nextcrash {
+    left:       73%;
+    top:        41%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-start {
+    left:       2%;
+    top:        61%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-end {
+    left:       73%;
+    top:        61%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-prevsession {
+    left:       2%;
+    top:        81%;
+}
+
+.SIMRacingApps-Widget-ReplayControl-position-nextsession {
+    left:       73%;
+    top:        81%;
+}
+
+
+.SIMRacingApps-Widget-ReplayControl-clicked-Y {
+    border-width:   medium;
+    border-color:   red;
+    border-style:   ridge;
+}
+
+.SIMRacingApps-Widget-ReplayControl-clicked-N {
+    border-width:   medium;
+    border-color:   gold;
+    border-style:   ridge;
+}

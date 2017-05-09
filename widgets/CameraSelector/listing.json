@@ -1,0 +1,11 @@
+{
+"name":        "CameraSelector",
+"description": "Selects a camera with replay controls",
+"description-de": "Selects a camera with replay controls",
+"doc":         "JavaScriptDoc/sra-camera-selector.html",
+"url":         "apps/WidgetLoader?widget=CameraSelector&",
+"icon":        "widgets/CameraSelector/icon.png",
+"width":       800,
+"height":      480,
+"args":        ""
+}

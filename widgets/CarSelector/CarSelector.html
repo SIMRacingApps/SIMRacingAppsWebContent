@@ -2,7 +2,7 @@
      data-ng-style          = "{ height: height+'px' }">
     <div style = "position: relative; width: 100%; height: 100%">
 	    <div class                       = "SIMRacingApps-Widget-CarSelector-select"
-	        data-ng-style                = "{ display: sraShowButtons ? 'inherit' : 'none' }">            
+	        data-ng-style                = "{ display: sraShowButtons || sraChangeFocus ? 'inherit' : 'none' }">            
 	        <sra-data
 	            class                    = "SIMRacingApps-Widget-CarSelector-reference"
 	            data-ng-style            = "{ display: sraShowClickToSelect ? 'inherit' : 'none' }"          
@@ -47,6 +47,24 @@
 	            data-ng-bind-html        = "translations.REPLY"
 	            data-sra-args-on-click   = "replyClicked"
 	        ></sra-data>
+            <sra-data 
+                data-ng-style            = "{ display: sraChangeFocus ? 'inherit' : 'none' }"          
+                data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-focus-leader SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+                data-ng-bind-html        = "translations.LEADER"
+                data-sra-args-on-click   = "focusOnLeaderClicked"
+            ></sra-data>
+            <sra-data 
+                data-ng-style            = "{ display: sraChangeFocus ? 'inherit' : 'none' }"          
+                data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-focus-crashes SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+                data-ng-bind-html        = "translations.CRASHES"
+                data-sra-args-on-click   = "focusOnCrashesClicked"
+            ></sra-data>
+            <sra-data 
+                data-ng-style            = "{ display: sraChangeFocus ? 'inherit' : 'none' }"          
+                data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-focus-exciting SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
+                data-ng-bind-html        = "translations.EXCITING"
+                data-sra-args-on-click   = "focusOnExcitingClicked"
+            ></sra-data>
 	    </div>
 	    <div class                       = "SIMRacingApps-Widget-CarSelector-header"
 	        data-ng-style                = "{ display: sraShowReference ? 'inherit' : 'none' }">

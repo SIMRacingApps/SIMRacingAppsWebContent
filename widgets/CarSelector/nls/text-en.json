@@ -6,5 +6,7 @@
     "ME":            "ME",
     "AHEAD":         "AHEAD",
     "BEHIND":        "BEHIND",
-    "REPLY":         "REPLY"
+    "REPLY":         "REPLY",
+    "CRASHES":       "CRASHES",
+    "EXCITING":      "EXCITING"
 }

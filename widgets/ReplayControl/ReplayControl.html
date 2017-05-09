@@ -1,0 +1,122 @@
+<div class                  = "SIMRacingApps-Widget-ReplayControl"
+     data-ng-style          = "{ height: height+'px' }"
+>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-button SIMRacingApps-Widget-ReplayControl-pause"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus + 
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-sra-args-on-click   = "onButtonClick"
+        data-sra-args-on-click-arg="PAUSE"   
+    >||</sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-button SIMRacingApps-Widget-ReplayControl-play"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus + 
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-sra-args-on-click   = "onButtonClick"
+        data-sra-args-on-click-arg="PLAY"   
+    >&gt;</sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-button SIMRacingApps-Widget-ReplayControl-rw"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-sra-args-on-click   = "onButtonClick"
+        data-sra-args-on-click-arg="RW"   
+    >&lt;&lt;</sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-button SIMRacingApps-Widget-ReplayControl-ff"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-sra-args-on-click   = "onButtonClick"
+        data-sra-args-on-click-arg="FF"   
+    >&gt;&gt;</sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-button SIMRacingApps-Widget-ReplayControl-sm"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-sra-args-on-click   = "onButtonClick"
+        data-sra-args-on-click-arg="SM"   
+    >&lt;|&gt;</sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-state"
+        data-ng-bind-html        = "currentState"                                     
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-prevframe"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.PREVFRAME"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="PREVFRAME"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-nextframe"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.NEXTFRAME"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="NEXTFRAME"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-prevlap"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.PREVLAP"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="PREVLAP"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-nextlap"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.NEXTLAP"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="NEXTLAP"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-prevcrash"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.PREVCRASH"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="PREVCRASH"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-nextcrash"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.NEXTCRASH"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="NEXTCRASH"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-start"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.START"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="START"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-end"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.END"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="END"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-prevsession"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.PREVSESSION"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="PREVSESSION"   
+    ></sra-data>
+    <sra-data class              = "SIMRacingApps-Widget-ReplayControl-position-button SIMRacingApps-Widget-ReplayControl-position-nextsession"
+        data-ng-class            = "'SIMRacingApps-Widget-ReplayControl-clicked-' + clickedStatus  +
+                                    ' SIMRacingApps-Widget-ReplayControl-isreplayplaying-' + data.Session.IsReplay.Value
+                                   "
+        data-ng-bind-html        = "translations.NEXTSESSION"                                     
+        data-sra-args-on-click   = "onPositionButtonClick"
+        data-sra-args-on-click-arg="NEXTSESSION"   
+    ></sra-data>
+</div>

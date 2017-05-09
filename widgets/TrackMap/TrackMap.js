@@ -272,7 +272,7 @@ function(SIMRacingApps,ol) {
                 $scope.sraShowInfo      = sraDispatcher.getBoolean($scope.sraArgsSHOWINFO, $attrs.sraArgsShowInfo, true);
                 $scope.sraShowMap       = sraDispatcher.getBoolean($scope.sraArgsSHOWMAP, $attrs.sraArgsShowMap, true);
                 $scope.sraShowPath      = sraDispatcher.getBoolean($scope.sraArgsSHOWPATH, $attrs.sraArgsShowPath, true);
-                $scope.sraMapLayer      = sraDispatcher.getTruthy($scope.sraArgsMAPLAYER, $attrs.sraArgsMapLayer, 'sat').toUpperCase();
+                $scope.sraMapLayer      = sraDispatcher.getTruthy($scope.sraArgsMAPLAYER, $attrs.sraArgsMapLayer, 'map').toUpperCase();
                 $scope.sraCars          = sraDispatcher.getTruthy($scope.sraArgsTRACKMAPCARS, $attrs.sraArgsTrackMapCars, '');
 
                 //put everything off screen, out of view, until we get the coordinates of where to put them

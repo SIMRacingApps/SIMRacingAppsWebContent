@@ -1,0 +1,15 @@
+{
+"doc": "JavaScriptDoc/Spotter.html",
+"name": ["Spotter or Broadcaster"],
+"description": [
+    "When you are Spotting or Broadcasting for someone else with Camera and Replay controls."
+],
+"description-de": [
+    "When you are Spotting or Broadcasting for someone else with Camera and Replay controls."
+],
+"url": "apps/Spotter?",
+"icon": "apps/Spotter/icon.png",
+"width": 1280,
+"height": 768,
+"args": [""]
+}

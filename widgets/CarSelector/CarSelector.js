@@ -23,6 +23,7 @@
  * @param {boolean} sra-show-ahead-behind true to show the Ahead and Behind buttons. Defaults to false.
  * @param {boolean} sra-show-reply true to show the REPLY button. Defaults to false.
  * @param {boolean} sra-change-camera Set to true to change the current camera to the selected car. Defaults to false.
+ * @param {boolean} sra-change-focus Set to true to change what the current camera is focused on. Defaults to false.
  * @param {String} data-sra-args-on-click Optional name of a function in the parent's scope that will get called when clicked. Default is to make the car clicked the REFERENCE car.
  * @param {int} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 1000.
  * @author Jeffrey Gilliam
@@ -74,6 +75,7 @@ function(SIMRacingApps) {
                 $scope.sraShowAheadBehind   = false;
                 $scope.sraShowReply         = false;
                 $scope.sraChangeCamera      = false;
+                $scope.sraChangeFocus       = false;
                 
                 //This function will get called from the CarNumberExtended widget when it is clicked.
                 $scope.carClicked = function($clickedScope,car) {
@@ -95,8 +97,9 @@ function(SIMRacingApps) {
                         }
 
                         if ($scope.sraChangeCamera) {
-                            if (car != "ALL")
+                            if (car != "ALL") {
                                 sraDispatcher.sendCommand("Car/"+car+"/setCamera");
+                            }
                         }
                         
                         if (!$scope.sraClickedPersistent) {
@@ -126,7 +129,26 @@ function(SIMRacingApps) {
                 $scope.replyClicked = function($clickedScope) {
                     $scope.carClicked($clickedScope,"REPLY");
                 };
-
+                
+                $scope.focusClicked = function($clickedScope,focus) {
+                    if (focus) {
+                        console.log("CarSelector.focusClicked("+focus+")");
+                        if ($scope.sraChangeFocus) {
+                            sraDispatcher.sendCommand("Session/setCameraFocus/"+focus);
+                            sraDispatcher.sendCommand("Session/setReferenceCar/"+focus);
+                        }
+                    }
+                };
+                
+                $scope.focusOnLeaderClicked = function($clickedScope) {
+                    $scope.focusClicked($clickedScope,"LEADER");
+                };
+                $scope.focusOnCrashesClicked = function($clickedScope) {
+                    $scope.focusClicked($clickedScope,"CRASHES");
+                };
+                $scope.focusOnExcitingClicked = function($clickedScope) {
+                    $scope.focusClicked($clickedScope,"EXCITING");
+                };
             }]
             , link: function($scope,$element,$attrs) {
                 //copy arguments to our scope. First if using attribute, second tag, else default to something.
@@ -143,9 +165,17 @@ function(SIMRacingApps) {
                 $scope.sraShowAheadBehind   = sraDispatcher.getBoolean($scope.sraArgsSHOWAHEADBEHIND, $attrs.sraArgsShowAheadBehind,  $scope.sraShowAheadBehind);
                 $scope.sraShowReply         = sraDispatcher.getBoolean($scope.sraArgsSHOWREPLY      , $attrs.sraArgsShowReply,        $scope.sraShowReply);
                 $scope.sraChangeCamera      = sraDispatcher.getBoolean($scope.sraArgsCHANGECAMERA   , $attrs.sraArgsChangeCamera,     $scope.sraChangeCamera);
+                $scope.sraChangeFocus       = sraDispatcher.getBoolean($scope.sraArgsCHANGEFOCUS    , $attrs.sraArgsChangeFocus,      $scope.sraChangeFocus);
                 $scope.sraOnClick           = $attrs.sraArgsOnClick;
 
                 /** your code goes here **/
+                //if focus is on, turn on the camera change option also
+                if ($scope.sraChangeFocus) {
+                    $scope.sraChangeCamera = 
+                    $scope.sraShowReference = true;
+                    $scope.sraShowLeader = 
+                    $scope.sraShowMe = false;
+                }
 
                 /**standard code that should be in every directive **/
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));
