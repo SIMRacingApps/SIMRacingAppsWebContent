@@ -22,7 +22,7 @@ function(SIMRacingApps) {
         url:             'ReplayControl',
         template:        'ReplayControl.html',
         defaultWidth:    800,
-        defaultHeight:   200,
+        defaultHeight:   300,
         defaultInterval: 300   //initialize with the default interval
     };
 

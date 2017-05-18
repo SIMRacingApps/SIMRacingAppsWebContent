@@ -1,0 +1,14 @@
+{
+    "PREVFRAME":        "Bild zur\u00fcck",
+    "NEXTFRAME":        "n\u00e4chstes Bild",
+    "PREVLAP":          "Runde zur\u00fcck",
+    "NEXTLAP":          "n\u00e4chste Runde",
+    "PREVCRASH":        "Crash davor",
+    "NEXTCRASH":        "n\u00e4chster Crash",
+    "START":            "Start der Session",
+    "END":              "Ende der Session",
+    "PREVSESSION":      "Session davor",
+    "NEXTSESSION":      "n\u00e4chste Session",
+    "SKIPBACKWARDS":    "Sprung vorw\u00e4rts",
+    "SKIPFORWARDS":     "Sprung zur\u00fcck"
+}
