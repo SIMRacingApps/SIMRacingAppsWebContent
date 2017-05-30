@@ -1,0 +1,217 @@
+
+.SIMRacingApps-Widget-CarTelemetry {
+    width:          100%;
+    font-size:      120%;
+    line-height:    150%;
+    overflow:       hidden;
+    z-index:        -1;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-background {
+	position:       absolute;
+	top:            0%;
+	left:           0%;
+    width:          100%;
+    height:         100%;
+    background-color: black;
+    opacity:        .7;
+    border-radius:  1% 1% / 5% 5%;
+    z-index:        1;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Box-CarNumber {
+    border-color:   white;
+    border-width:   thin;
+    border-style:   solid;
+    position:       absolute;
+    top:            1%;
+    left:           1%;
+    width:          24%;
+    height:         30%;
+    border-radius:  8% 8% / 15% 15%;
+    z-index:        2;
+    background-color: transparent;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Box-DriverName {
+    border-color:   white;
+    border-width:   thin;
+    border-style:   solid;
+    position:       absolute;
+    top:            1%;
+    left:           26%;
+    width:          73%;
+    height:         30%;
+    border-radius:  3% 3% / 15% 15%;
+    z-index:        2;
+    background-color: transparent;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Box-MPH {
+    border-color:   white;
+    border-width:   thin;
+    border-style:   solid;
+    position:       absolute;
+    top:            68%;
+    left:           1%;
+    width:          48%;
+    height:         30%;
+    border-radius:  5% 5% / 15% 15%;
+    z-index:        2;
+    background-color: transparent;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Box-RPM {
+    border-color:   white;
+    border-width:   thin;
+    border-style:   solid;
+    position:       absolute;
+    top:            68%;
+    left:           51%;
+    width:          48%;
+    height:         30%;
+    border-radius:  5% 5% / 15% 15%;
+    z-index:        2;
+    background-color: transparent;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-CarNumber {
+    position:       absolute;
+    width:          20%;
+    top:            4%;
+    left:           3%;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-DriverName {
+    position:       absolute;
+    width:          74%;
+    height:         24%;
+    top:            3%;
+    left:           25%;
+    text-align:     center;
+    font-size:      75%;
+    white-space:    nowrap;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Throttle-text {
+    position:       absolute;
+    width:          74%;
+    height:         10%;
+    font-size:      60%;
+    white-space:    nowrap;
+    text-align:     center;
+    top:            35%;
+    left:           1%;
+    line-height:    100%;
+    font-weight:    bold;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Brake-text {
+    position:       absolute;
+    width:          23%;
+    height:         10%;
+    font-size:      60%;
+    white-space:    nowrap;
+    top:            35%;
+    left:           76%;
+    text-align:     center;
+    line-height:    100%;
+    font-weight:    bold;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Throttle {
+    position:       absolute;
+    height:         20%;
+    top:            46%;
+    left:           2%;
+    background-color: green;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks {
+    border-color:   darkgray;
+    border-width:   thin;
+    border-style:   solid;
+    position:       absolute;
+    top:            46%;
+    width:          2%;
+    height:         20%;
+    z-index:        4;
+    background-color: transparent;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-1 { left: 2%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-2 { left: 6%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-3 { left: 10%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-4 { left: 14%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-5 { left: 18%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-6 { left: 22%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-7 { left: 26%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-8 { left: 30%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-9 { left: 34%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-10{ left: 38%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-11{ left: 42%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-12{ left: 46%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-13{ left: 50%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-14{ left: 54%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-15{ left: 58%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-16{ left: 62%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-17{ left: 66%; }
+.SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-18{ left: 70%; }
+
+
+
+.SIMRacingApps-Widget-CarTelemetry-Brake {
+    position:       absolute;
+    width:          23%;
+    height:         20%;
+    top:            46%;
+    left:           76%;
+    background-color: red;
+    border-radius:  25% 25% / 50% 50%;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-MPH {
+    position:       absolute;
+    width:          22%;
+    top:            71%;
+    left:           2%;
+    color:          gold;
+    font-weight:    bold;
+    text-align:     center;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-MPH-UOM {
+    position:       absolute;
+    width:          24%;
+    top:            71%;
+    left:           24%;
+    font-weight:    bold;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-RPM {
+    position:       absolute;
+    width:          25%;
+    top:            71%;
+    left:           52%;
+    color:          gold;
+    font-weight:    bold;
+    text-align:     center;
+    z-index:        3;
+}
+
+.SIMRacingApps-Widget-CarTelemetry-RPM-UOM {
+    position:       absolute;
+    width:          22%;
+    top:            71%;
+    left:           77%;
+    font-weight:    bold;
+    z-index:        3;
+}

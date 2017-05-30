@@ -1,0 +1,53 @@
+<div class                          = "SIMRacingApps-Widget-CarTelemetry"
+     data-ng-style                  = "{ height: height+'px' }">
+     <div class                     = "SIMRacingApps-Widget-CarTelemetry-background"></div>
+     <div class                     = "SIMRacingApps-Widget-CarTelemetry-Box-CarNumber"></div>
+     <div class                     = "SIMRacingApps-Widget-CarTelemetry-Box-DriverName"></div>
+     <div class                     = "SIMRacingApps-Widget-CarTelemetry-Box-MPH"></div>
+     <div class                     = "SIMRacingApps-Widget-CarTelemetry-Box-RPM"></div>
+     <sra-car-number 
+        class                       = "SIMRacingApps-Widget-CarTelemetry-CarNumber"
+        data-sra-args-car-number    = "{{value}}"
+     ></sra-car-number>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-DriverName"
+        data-ng-bind-html           = "data.Car[value].DriverName.ValueFormatted"
+     ></div>
+     <div 
+        class                       = "SIMRacingApps-Widget-CarTelemetry-Throttle-text"
+        data-ng-bind-html           = "translations.THROTTLE"
+     ></div>
+     <div 
+        class                       = "SIMRacingApps-Widget-CarTelemetry-Brake-text"
+        data-ng-bind-html           = "translations.BRAKE"
+     ></div>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-Throttle"
+        data-ng-style               = "{ width: (data.Car[value].Gauge.Throttle.ValueCurrent.Value * .7)+'%' }"
+     ></div>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-Throttle-Marks"
+        data-ng-repeat              = "mark in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]"
+        data-ng-class               = "'SIMRacingApps-Widget-CarTelemetry-Throttle-Marks-'+mark"
+     ></div> 
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-Brake"
+        data-ng-style               = "{ opacity: (data.Car[value].Gauge.Brake.ValueCurrent.Value / 100.0) }"
+     ></div>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-MPH"
+        data-ng-bind-html           = "(data.Car[value].Gauge.Speedometer.ValueCurrent.Value | sraNumber:0)"
+     ></div>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-MPH-UOM"
+        data-ng-bind-html           = "data.Car[value].Gauge.Speedometer.ValueCurrent.UOMAbbr | sraUpperCase"
+     ></div>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-RPM"
+        data-ng-bind-html           = "(data.Car[value].Gauge.Tachometer.ValueCurrent.Value | sraNumber:-2)+'00'"
+     ></div>
+     <div
+        class                       = "SIMRacingApps-Widget-CarTelemetry-RPM-UOM"
+        data-ng-bind-html           = "data.Car[value].Gauge.Tachometer.ValueCurrent.UOMAbbr | sraUpperCase"
+     ></div>
+</div>

@@ -44,9 +44,9 @@ function(SIMRacingApps) {
                 $scope.defaultInterval = self.defaultInterval;
 
                 //load translations, if you have any un-comment this
-//              sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
-//                  $scope.translations = sraDispatcher.getTranslation(path);
-//              });
+              sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
+                  $scope.translations = sraDispatcher.getTranslation(path);
+              });
 
                 /** your code goes here **/
 

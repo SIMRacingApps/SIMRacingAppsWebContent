@@ -7,7 +7,8 @@
 	    data-sra-args-header     = "'@TeamSpeak'"
 	    data-sra-args-row-names  = "talk;whisper"
 	    data-sra-args-row-talk   = "data.TeamSpeak.Talker.ValueFormatted || '&nbsp;'"
-	    data-sra-args-row-whisper= "data.TeamSpeak.Whispering.ValueFormatted || '&nbsp;'"
+	    data-sra-args-row-whisper= "translations[data.TeamSpeak.Whispering.Value] || '&nbsp;'"
+	    data-sra-args-row-whisper-class = "'SIMRacingApps-Widget-TeamSpeakTalking-'+data.TeamSpeak.Whispering.Value+'-true'"
 	    data-sra-args-interval   = {{sraInterval}}
 	></sra-data-table>
 </sra-data>

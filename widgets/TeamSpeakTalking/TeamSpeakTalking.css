@@ -32,4 +32,8 @@
 .SIMRacingApps-Widget-TeamSpeakTalking .SIMRacingApps-Widget-DataTable-row-whisper {
     font-size: 525%;
     line-height: 194%;
- }
+}
+
+.SIMRacingApps-Widget-TeamSpeakTalking-Whispering-true {
+    background-color: red;
+}
