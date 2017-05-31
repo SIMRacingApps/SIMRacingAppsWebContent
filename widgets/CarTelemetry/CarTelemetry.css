@@ -40,7 +40,7 @@
     position:       absolute;
     top:            1%;
     left:           26%;
-    width:          73%;
+    width:          72%;
     height:         30%;
     border-radius:  3% 3% / 15% 15%;
     z-index:        2;
@@ -55,7 +55,7 @@
     top:            68%;
     left:           1%;
     width:          48%;
-    height:         30%;
+    height:         29%;
     border-radius:  5% 5% / 15% 15%;
     z-index:        2;
     background-color: transparent;
@@ -68,8 +68,8 @@
     position:       absolute;
     top:            68%;
     left:           51%;
-    width:          48%;
-    height:         30%;
+    width:          47%;
+    height:         29%;
     border-radius:  5% 5% / 15% 15%;
     z-index:        2;
     background-color: transparent;
@@ -111,12 +111,12 @@
 
 .SIMRacingApps-Widget-CarTelemetry-Brake-text {
     position:       absolute;
-    width:          23%;
+    width:          25%;
     height:         10%;
     font-size:      60%;
     white-space:    nowrap;
     top:            35%;
-    left:           76%;
+    left:           74%;
     text-align:     center;
     line-height:    100%;
     font-weight:    bold;
@@ -125,7 +125,7 @@
 
 .SIMRacingApps-Widget-CarTelemetry-Throttle {
     position:       absolute;
-    height:         20%;
+    height:         20.3%;
     top:            46%;
     left:           2%;
     background-color: green;
