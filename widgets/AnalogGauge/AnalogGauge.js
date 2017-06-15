@@ -517,7 +517,7 @@ function(SIMRacingApps) {
                             if ((bias.Value > 0 && bias.Value < 10.0) || (bias.Value < 0 && bias.Value > -10.0))
                                 $scope.value2 = $filter('sraNumber')(bias.Value,2,false);
                             else
-                                $scope.value2 = $filter('sraNumber')(bias.Value,0,false);
+                                $scope.value2 = $filter('sraNumber')(bias.Value,1,false);
                             
                             $scope.uom2   = bias.UOMAbbr;
                         }                        
