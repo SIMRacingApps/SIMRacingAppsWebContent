@@ -7,10 +7,10 @@
 </head>
 <body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
 <div align="left"><p><a href="JavaScript:parent.NavigateAbs(0)">SIMRacingApps</a></p><p>Quick Start Guide</p>
-<p>Updated: May 5, 2016</p>
+<p>Updated: June 20, 2017</p>
 </div>
 <div align="left"><p><a href="JavaScript:parent.NavigateAbs(1)">What does it cost? Who is this for?</a></p><ul>
-<li>The cost is free. By making it free, if hope to get participation from other developers to really make SIM racing better for everyone. Source code to the JavaScript/HTML clients is included. But for now, I do not plan release the source code to the server until my Generic API becomes more mature.</li>
+<li>The cost is free. By making it free, if hope to get participation from other developers to really make SIM racing better for everyone. Source code is available on GitHub at <a href="http://github.com/SIMRacingApps">http://github.com/SIMRacingApps</a>.</li>
 <li>This is for anyone wanting to get more information from their SIM to help them make better decisions and possibly even go faster. There are some Apps and Widgets that simply mimic functionality already provided by the SIM. But, those were only created as a baseline to be improved on. There are several Apps and Widgets to choose from.</li>
 <li>Only the server has to be running on the same computer as the SIM and I have found it doesn’t affect the SIM’s performance. The server can handle connections from many clients. I routinely run 7 clients.</li>
 </ul>
@@ -33,7 +33,7 @@
 <li>Note: If it opens your browser to the Java Download page, it means you don't have the correct version of Java installed. Install Java and run the server again.</li>
 <li>I recommended you turn off automatic installation of updates for Java in the Control Panel, Java -&gt; Update tab. You don't want it updating while you are racing. It has caused black screens when it updates while racing. Change it to notify you before downloading and change the time it checks to when you are not likely to be racing. Also, on the Java -&gt; Security tab, you can disable Java in the browser if you don't need it for any other website. I do recommend you stay up to date, just do it manually.</li>
 </ul>
-<li>To enable TeamSpeak integration, you must enable the Client Query Plug-in in the TeamSpeak options of the TeamSpeak client. Then SIMRacingApps will auto append your car number to your alias automatically and pop up who's talking on some of the apps.</li>
+<li>To enable TeamSpeak integration, you must enable the Client Query Plug-in in the TeamSpeak options of the TeamSpeak client and enter the security key in the settings. Then SIMRacingApps will auto append your car number to your alias automatically and pop up who's talking on some of the apps. More information can be found at <a href="https://github.com/SIMRacingApps/SIMRacingApps/wiki/TeamSpeak-Integration">https://github.com/SIMRacingApps/SIMRacingApps/wiki/TeamSpeak-Integration</a>.</li>
 </ul>
 </div>
 <div align="left"><p><a href="JavaScript:parent.NavigateAbs(4)">Launching SIMRacingApps Clients</a></p><ul>
@@ -41,7 +41,7 @@
 <ul>
 <li>For example (this is mine): @ <a href="http://192.168.1.61/">http://192.168.1.61</a> or http://192.168.1.61:port</li>
 <li>Please be aware that this address may change over time, maybe from day to day, based on the settings in your router’s DNS lease times. If you do not want it to change, search the web for information on how to make your computer use a static IP address that is not within the Dynamic DNS range of your router and not used by any other devices on your network.</li>
-<li>Please “Allow” the server to run when you see the Java Security pop-up window. You may have to re-confirm this every time Java is updated.</li>
+<li>Please “Allow” the server to run when you see the Java Security pop-up window from Windows Firewall. You may have to re-confirm this every time Java is updated. More information can be found at <a href="https://github.com/SIMRacingApps/SIMRacingApps/wiki/How-to-fix-Firewall-issues">https://github.com/SIMRacingApps/SIMRacingApps/wiki/How-to-fix-Firewall-issues</a>.</li>
 </ul>
 <li>If your IP address does not change, then SIMRacingApps Apps and Widgets can be bookmarked. Once you launch it for the first time from the main page, simply save it as a favorite. Later you may want to add optional arguments to the URL to change its’ behavior. To add an argument add a question mark(?) to the end of the URL, then the key value pairs separated by an ampersand(&amp;).</li>
 <ul>
@@ -245,10 +245,6 @@
 </div>
 <div align="left"><p><a href="JavaScript:parent.NavigateAbs(19)">Other Clients</a></p><ul>
 <li>Any client that acts like a browser should also work. Follow these links to find out more.</li>
-<li>Overwolf (<a href="http://github.com/SIMRacingApps/SIMRacingAppsOverwolf">http://github.com/SIMRacingApps/SIMRacingAppsOverwolf</a>)</li>
-<ul>
-<li>Use when you want to overlay the Apps within the SIM only.</li>
-</ul>
 <li>Electron (<a href="http://github.com/SIMRacingApps/SIMRacingAppsElectron">http://github.com/SIMRacingApps/SIMRacingAppsElectron</a>)</li>
 <ul>
 <li>Use when you have more monitors than the SIM uses that you want to display Apps on.</li>
