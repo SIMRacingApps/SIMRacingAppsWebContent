@@ -71,6 +71,14 @@
             text-align: center;
         }
         .settings {
+            color: white;
+            font-size: 25px;
+            float: right;
+            text-align: right;
+            white-space: nowrap;
+            margin-right: 5%;
+        }
+        .settings-image {
             width: 3%;
             float: right;
             margin-right: 5%;
@@ -136,7 +144,7 @@
 		    </td>
 		    </tr>
 		    <tr><td colspan="2">
-		        <a data-ng-click="launch('/SIMRacingApps/settings.html',800,800)" target="_blank"><img class="settings" src="/SIMRacingApps/settings-icon.png" alt="Settings"></a>
+		        <a class="settings" data-ng-click="launch('/SIMRacingApps/settings.html',800,800)" target="_blank"><img class="settings-image" src="/SIMRacingApps/settings-icon.png" alt="Settings">{{translations.SETTINGS}}</a>
 		    </td></tr>
 		    </table>
 		</div>    
