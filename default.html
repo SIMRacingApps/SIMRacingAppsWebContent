@@ -66,6 +66,7 @@
             max-width:  200px;
             max-height: 120px;
             text-align: center;
+            cursor: pointer;
         }
         .name {
             text-align: center;
@@ -77,11 +78,13 @@
             text-align: right;
             white-space: nowrap;
             margin-right: 5%;
+            cursor: pointer;
         }
         .settings-image {
             width: 3%;
             float: right;
             margin-right: 5%;
+            cursor: pointer;
         }
         .itemtext {
             height: 100%;
@@ -89,12 +92,14 @@
             text-align: left;
             white-space: nowrap;
             color: white;
+            cursor: pointer;
         }
         .itemdesc {
             height: 100%;
             font-size: 20px;
             text-align: left;
             color: white;
+            cursor: pointer;
         }
         .upload {
             font-size: 25px;
@@ -144,7 +149,7 @@
 		    </td>
 		    </tr>
 		    <tr><td colspan="2">
-		        <a class="settings" data-ng-click="launch('/SIMRacingApps/settings.html',800,800)" target="_blank"><img class="settings-image" src="/SIMRacingApps/settings-icon.png" alt="Settings">{{translations.SETTINGS}}</a>
+		        <a class="settings" data-ng-click="launch('/SIMRacingApps/settings.html',800,800)" target="_blank">{{translations.SETTINGS}}<img class="settings-image" src="/SIMRacingApps/settings-icon.png" alt="Settings"></a>
 		    </td></tr>
 		    </table>
 		</div>    
