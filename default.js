@@ -77,6 +77,7 @@ function( angular,angularSanitize ) {
                     if (url.indexOf('?') < 0 && $scope.args)
                         $scope.args = "?" + $scope.args.substring(1);
 
+                    console.log('launch('+url+$scope.args+')');
                     var eventWin  = $window.open(url + $scope.args, "_blank", 'width=' + useWidth + ', height=' + useHeight + ', resizable=1, scrollbars=1, status=0, toolbar=0, location=0, menubar=0');
                     //var eventWin  = $window.open(url + $scope.args, url + $scope.args, 'width=' + useWidth + ', height=' + useHeight + ', resizable=1, scrollbars=1, status=0, toolbar=0, location=0, menubar=0');
                     eventWin.focus();
@@ -173,8 +174,18 @@ function( angular,angularSanitize ) {
                             var item = data[header][itemidx];
                             var count = 0;
                             var newitem = {};
-                            newitem.url  = '/SIMRacingApps/'+item.url;
-                            newitem.doc  = '/SIMRacingApps/'+item.doc;
+                            if (item.url.match(/^http:/)) {
+                                newitem.url  = item.url;
+                            }
+                            else {
+                                newitem.url  = '/SIMRacingApps/'+item.url;
+                            }
+                            if (item.doc.match(/^http:/)) {
+                                newitem.doc  = item.doc;
+                            }
+                            else {
+                                newitem.doc  = '/SIMRacingApps/'+item.doc;
+                            }
                             newitem.width = item.width;
                             newitem.height = item.height;
                             newitem.description = item.description;
