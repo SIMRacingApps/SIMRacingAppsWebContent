@@ -116,7 +116,7 @@ function(SIMRacingApps) {
                 ];
                 $scope.minorScale     = [];
                 $scope.barPercent     = 0;
-                $scope.stateClass     = 'SIMRacingApps-Widget-BarGauge-state-OFF';
+                $scope.stateClass     = 'SIMRacingApps-Widget-BarGauge-state-NOTAVAILABLE';
 
                 $scope.sraBarGauge    = "Generic";
                 $scope.gaugeValue     = "Current";
@@ -226,7 +226,7 @@ function(SIMRacingApps) {
                 $scope.updateColor = function() {
                     var pitLimiter = $scope.sraBarGauge.toUpperCase() == "TACHOMETER" && $scope.data.Car.REFERENCE.Messages.Value.indexOf(";PITSPEEDLIMITER;") >= 0;
 
-                    $scope.state      = $scope.data.Car.REFERENCE.Gauge[$scope.sraBarGauge]['Value'+$scope.gaugeValue][$scope.argsUOM].State        || "OFF";
+                    $scope.state      = $scope.data.Car.REFERENCE.Gauge[$scope.sraBarGauge]['Value'+$scope.gaugeValue][$scope.argsUOM].State        || "NOTAVAILABLE";
 //$scope.state = "CRITICAL";
                     $scope.stateClass = 'SIMRacingApps-Widget-BarGauge-state-'+$scope.state;
                     //stop the blinking if we are not in the critical state.

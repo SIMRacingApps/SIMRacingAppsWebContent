@@ -77,6 +77,10 @@
     fill:   red;
 }
 
+.SIMRacingApps-Widget-AnalogGauge-state-UNAVAILABLE {
+    fill:   black;
+    stroke: black;
+}
 .SIMRacingApps-Widget-AnalogGauge-state-APPROACHINGLIMIT {
     fill:   yellow;
     stroke: yellow;

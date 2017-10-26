@@ -194,12 +194,12 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                         return;
                     var command;
                     if ($scope.tires4 == "selected") {
-                        command = "Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/false";
+                        command = "Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/false";
                         if (!$scope.GAS)
                             command += ";Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/false";
                     }
                     else
-                        command = "Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/true;Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/true";
+                        command = "Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/true;Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/true";
                     sraDispatcher.sendCommand(command);
                     $scope.tires4 = "clicked";
                 };
@@ -210,9 +210,9 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
 
                     var command;
                     if ($scope.tires4gas == "selected")
-                        command = "Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/false;Car/REFERENCE/Gauge/FuelLevel/setValueNext/0;Car/REFERENCE/Gauge/FuelLevel/setChangeFlag/false;Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/false";
+                        command = "Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/false;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/false;Car/REFERENCE/Gauge/FuelLevel/setValueNext/0;Car/REFERENCE/Gauge/FuelLevel/setChangeFlag/false;Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/false";
                     else
-                        command = "Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/true;Car/REFERENCE/Gauge/FuelLevel/setValueNext/"+MAX+";Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/true";
+                        command = "Car/REFERENCE/Gauge/TirePressureRF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureRR/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureLF/setChangeFlag/true;Car/REFERENCE/Gauge/TirePressureLR/setChangeFlag/true;Car/REFERENCE/Gauge/FuelLevel/setValueNext/"+MAX+";Car/REFERENCE/Gauge/WindshieldTearoff/setChangeFlag/true";
                     sraDispatcher.sendCommand(command);
                     $scope.tires4gas = "clicked";
                 };

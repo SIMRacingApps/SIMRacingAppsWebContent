@@ -24,9 +24,9 @@
         data-sra-args-row-club         = "'<span class=&quot;SIMRacingApps-Widget-DriverInfo-club&quot;>('
                                        + (data.Car[value].TeamName.Value ? data.Car[value].TeamName.Value : data.Car[value].DriverClubName.ValueFormatted)
                                        + ')'
-                                       + (data.Car[value].Incidents.State == 'OFF'
+                                       + (data.Car[value].Incidents.State == 'NOTAVAILABLE'
                                        ? '' 
-                                       : data.Car[value].IncidentsTeam.State != 'OFF'
+                                       : data.Car[value].IncidentsTeam.State == 'NORMAL'
                                          ?  ' - ' + data.Car[value].Incidents.Value + '/' + data.Car[value].IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                          :  ' - ' + data.Car[value].Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                          )

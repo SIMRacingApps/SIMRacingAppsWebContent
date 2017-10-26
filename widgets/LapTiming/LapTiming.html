@@ -150,8 +150,8 @@
 	</table>
     <sra-data class              = "SIMRacingApps-Widget-LapTiming-incidents"
          data-sra-args-data      = "Session/IncidentLimit;Car/REFERENCE/Incidents;Car/REFERENCE/IncidentsTeam"
-         data-ng-style           = "{ display: data.Car.REFERENCE.Incidents.State != 'OFF' ? 'inherit' : 'none' }"
-         data-ng-bind-html       = "data.Car.REFERENCE.IncidentsTeam.State != 'OFF'
+         data-ng-style           = "{ display: data.Car.REFERENCE.Incidents.State != 'NOTAVAILABLE' ? 'inherit' : 'none' }"
+         data-ng-bind-html       = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
                                  ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                  :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                    "

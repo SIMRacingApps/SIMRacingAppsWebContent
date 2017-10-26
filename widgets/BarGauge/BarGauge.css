@@ -65,6 +65,10 @@
     font-weight: bold;
 }
 
+.SIMRacingApps-Widget-BarGauge-state-NOTAVAILABLE {
+    fill:   black;
+    stroke: black;
+}
 .SIMRacingApps-Widget-BarGauge-state-APPROACHINGLIMIT {
     fill:   yellow;
     stroke: yellow;

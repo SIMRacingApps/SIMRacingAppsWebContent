@@ -2,7 +2,7 @@
 "name":        "Template",
 "description": "Template",
 "description-de": "Vorlage/Muster",
-"doc":         "JavaScriptDoc/sra-template.html",
+"doc":         "widgets/Template/doc.html",
 "url":         "apps/WidgetLoader?widget=Template&",
 "icon":        "widgets/Template/icon.png",
 "width":       800,

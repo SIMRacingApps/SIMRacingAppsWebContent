@@ -180,7 +180,7 @@ function(SIMRacingApps) {
                         { angle: 420, text: '100' }
                 ];
                 $scope.minorScale     = [];
-                $scope.stateClass     = 'SIMRacingApps-Widget-AnalogGauge-state-OFF';
+                $scope.stateClass     = 'SIMRacingApps-Widget-AnalogGauge-state-NOTAVAILABLE';
                 $scope.revLights      = [];
                 $scope.revLightBlinkState  = false;
                 $scope.revLightAngles = [];
@@ -251,9 +251,9 @@ function(SIMRacingApps) {
                 };
 
                 $scope.updateColor = function() {
-                    var state = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].State || "OFF";
+                    var state = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].State || "NOTAVAILABLE";
 
-                    var speedstate = $scope.useSpeedometer ? $scope.data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State || "OFF" : "OFF";
+                    var speedstate = $scope.useSpeedometer ? $scope.data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State || "NOTAVAILABLE" : "NOTAVAILABLE";
                     
 //state = "CRITICAL";
                     //stop the blinking if we are not in the critical state.
@@ -310,7 +310,7 @@ function(SIMRacingApps) {
                     $scope.updateColor();
                     
                     if ($scope.revLights.length > 0) {
-                        var state      = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].State || "OFF";
+                        var state      = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].State || "NOTAVAILABLE";
                         var percent    = ($scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].StatePercent || 0) / 100.0;
                         var pitLimiter = $scope.data.Car.REFERENCE.Messages.Value.indexOf(";PITSPEEDLIMITER;") >= 0;
                         var cutoff;
@@ -329,7 +329,7 @@ function(SIMRacingApps) {
                         && !sraDispatcher.State.isSHIFTBLINK(state)
                         && !sraDispatcher.State.isCRITICAL(state)
                         ) {
-                            state   = $scope.data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State || "OFF";
+                            state   = $scope.data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State || "NOTAVAILABLE";
                             percent = ($scope.data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.StatePercent || 0) / 100.0;
                         }
                         

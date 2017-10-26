@@ -48,8 +48,9 @@
                     data-ng-bind-html = "showShortName ? data.Car[position].DriverNameShort.ValueFormatted : data.Car[position].DriverName.ValueFormatted"
                 ></td>
                 <td class   = "SIMRacingApps-Widget-StandingsBanner-green-box-behind"
-                    data-ng-bind-html = "(data.Session.DiffCars[position].Value | sraDuration:2:null:true)
-                                      + (data.Session.DiffCars[position].UOM == 'lap' ? data.Session.DiffCars[position].UOMAbbr : '')"
+                    data-ng-bind-html = "(data.Session.DiffCars[position].UOM == 'lap' 
+                                      ?  (data.Session.DiffCars[position] | sraDuration:0) 
+                                      :  (data.Session.DiffCars[position].Value | sraDuration:2:null:true))"
                 ></td>
             </tr>
         </table>
@@ -78,8 +79,9 @@
                     data-ng-bind-html = "showShortName ? data.Car[position].DriverNameShort.ValueFormatted : data.Car[position].DriverName.ValueFormatted"
                 ></td>
                 <td class   = "SIMRacingApps-Widget-StandingsBanner-green-box-behind"
-                    data-ng-bind-html = "(data.Session.DiffCars[position].Value | sraDuration:2:null:true)
-                                      + (data.Session.DiffCars[position].UOM == 'lap' ? data.Session.DiffCars[position].UOMAbbr : '')"
+                    data-ng-bind-html = "(data.Session.DiffCars[position].UOM == 'lap' 
+                                      ?  (data.Session.DiffCars[position] | sraDuration:0) 
+                                      :  (data.Session.DiffCars[position].Value | sraDuration:2:null:true))"
                 ></td>
             </tr>
         </table>

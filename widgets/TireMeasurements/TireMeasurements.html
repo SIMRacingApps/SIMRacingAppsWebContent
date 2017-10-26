@@ -41,9 +41,9 @@
             <td class             = "SIMRacingApps-Widget-TireMeasurements-lapchanged"
                 colspan           = "3"
                 data-ng-bind-html = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                  +  translations.USED
+                                  +  translations.TIRE
                                   + '</span> '
-                                  + (data.Car.REFERENCE.Gauge['TirePressure'+value].Count|sraNumber:0)
+                                  + ((data.Car.REFERENCE.Gauge['TirePressure'+value].Count - 1)|sraNumber:0)
                                   + (data.Car.REFERENCE.MaxTires.State == 'NORMAL'
                                     ? '/' + (data.Car.REFERENCE.MaxTires|sraNumber:0)
                                     : ''
