@@ -23,7 +23,7 @@ function(SIMRacingApps) {
         url:             'WeatherInfo',
         template:        'WeatherInfo.html',
         defaultWidth:    800,
-        defaultHeight:   480,
+        defaultHeight:   130,
         defaultInterval: 1000   //initialize with the default interval
     };
 

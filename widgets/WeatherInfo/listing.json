@@ -6,6 +6,6 @@
 "url": "apps/WidgetLoader?widget=WeatherInfo&",
 "icon": "widgets/WeatherInfo/icon.png",
 "width": 800,
-"height": 480,
+"height": 130,
 "args": ""
 }
