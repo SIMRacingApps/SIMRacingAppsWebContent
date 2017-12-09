@@ -73,7 +73,10 @@
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
                                          + translations.BRAKEBIASADJ
                                          + '</span><br />'
-                                         + (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext | sraNumber:3)"
+                                         + (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext > 10.0
+                                         ?  (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext | sraNumber:1)
+                                         :  (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext | sraNumber:3)
+                                           )"
             ></div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+lefts+'-'+controller"
