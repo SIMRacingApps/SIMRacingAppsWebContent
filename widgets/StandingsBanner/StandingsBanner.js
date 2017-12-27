@@ -37,6 +37,7 @@
  * @ngdoc directive
  * @name sra-standings-banner
  * @param show-short-name Set to true to show the short name. Default is false.
+ * @param show-team-name Set to false to not show the team name. Default is true.
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
  * @author Jeffrey Gilliam
  * @since 1.0
@@ -92,6 +93,8 @@ define(['SIMRacingApps'
                 $scope.greenBoxes       = [];
                 $scope.showGreenBox     = [];
                 $scope.showLeaders      = false;
+                $scope.showTeamName     = true;
+                $scope.displayTeamName  = false;
                 
                 for (var i=0; i < ($scope.numberOfPages * $scope.numberOfBoxes); i++) {
                     $scope.boxes.push(i);
@@ -99,6 +102,11 @@ define(['SIMRacingApps'
                     $scope.greenBoxes.push(i);
                     $scope.showGreenBox.push(false);
                 }
+                
+                $scope.showTeams = function() {
+                    if ($scope.showTeamName)
+                        $scope.displayTeamName = true;
+                };
                 
                 $scope.updateYellowPages = function() {
                     $scope.prevPage = $scope.currentPage;
@@ -127,6 +135,8 @@ define(['SIMRacingApps'
                         }
                     }
                     
+                    $scope.displayTeamName = false;
+                    $timeout($scope.showTeams,$scope.pageDelay / 2);
                     $scope.yellowTimer = $timeout($scope.updateYellowPages,$scope.pageDelay);
                 };
 
@@ -142,11 +152,13 @@ define(['SIMRacingApps'
                     
                     if (!$scope.yellowTimer) {
                         $scope.currentPage = 0;
+                        $scope.displayTeamName = false;
                         
                         //initially turn on the boxes on the first page
                         for (var i=0; i < $scope.numberOfBoxes; i++)
                             $scope.showBox[i] = true;
                         
+                        $timeout($scope.showTeams,$scope.pageDelay / 2);
                         $scope.yellowTimer = $timeout($scope.updateYellowPages,$scope.pageDelay);
                     }
                 };
@@ -169,6 +181,8 @@ define(['SIMRacingApps'
                         $scope.showGreenBox[$scope.prevPage]    = false;
                     }
                     
+                    $scope.displayTeamName = false;
+                    $timeout($scope.showTeams,$scope.pageDelay / 4);
                     $scope.greenTimer = $timeout($scope.updateGreenPages,$scope.pageDelay / 2);
                 };
 
@@ -181,11 +195,13 @@ define(['SIMRacingApps'
                         $scope.showBox[i] = false;
                     if (!$scope.greenTimer) {
                         $scope.currentPage = 0;
+                        $scope.displayTeamName = false;
                         
                         //initially turn on the leaders and the first box
                         $scope.showLeaders = true;
                         $scope.showGreenBox[0] = true;
                         
+                        $timeout($scope.showTeams,$scope.pageDelay / 4);
                         $scope.greenTimer = $timeout($scope.updateGreenPages,$scope.pageDelay / 2);
                     }
                 };
@@ -223,6 +239,7 @@ if ($scope.data.Car.REFERENCE.Messages.Value.indexOf(";REPAIR;") >= 0) {
                 $scope.value = 
                 $scope[self.name] = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
                 $scope.showShortName = sraDispatcher.getBoolean($scope.sraArgsSHOWSHORTNAME,$attrs.sraArgsShowShortName,$scope.showShortName);
+                $scope.showTeamName  = sraDispatcher.getBoolean($scope.sraArgsSHOWTEAMNAME,$attrs.sraArgsShowTeamName,$scope.showTeamName);
 
                 /** your code goes here **/
 
