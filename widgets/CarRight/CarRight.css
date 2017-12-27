@@ -1,0 +1,12 @@
+.SIMRacingApps-Widget-CarRight {
+    width: 100%;
+    height: 100%;
+}
+
+.SIMRacingApps-Widget-CarRight-text {
+    font-size:      1300%;
+    font-weight:    bold;
+    line-height:    150%;
+    text-align:     center;
+    color:          gold;
+}
