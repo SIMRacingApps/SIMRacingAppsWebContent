@@ -1,6 +1,6 @@
 'use strict';
 /**
- * This widget displays a TV style banner showing the standings.
+ * This widget displays a TV style banner showing the standings for your class.
  * Designed to be used as an overlay with OBS.
  * 
  * By default, the session type is displayed as the title.
@@ -31,31 +31,31 @@
  * <p>
  * Example:
  * <p><b>
- * &lt;sra-standings-banner&gt;&lt;/sra-standings-banner&gt;<br />
+ * &lt;sra-standings-banner-class-vertical&gt;&lt;/sra-standings-banner-class-vertical&gt;<br />
  * </b>
- * <img src="../widgets/StandingsBanner/icon.png" alt="Image goes here"/>
+ * <img src="../widgets/StandingsBannerClassVertical/icon.png" alt="Image goes here"/>
  * @ngdoc directive
- * @name sra-standings-banner
+ * @name sra-standings-banner-class-vertical
  * @param show-short-name Set to true to show the short name. Default is false.
  * @param show-team-name Set to false to not show the team name. Default is true.
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
  * @author Jeffrey Gilliam
- * @since 1.0
- * @copyright Copyright (C) 2015 - 2017 Jeffrey Gilliam
+ * @since 1.6
+ * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps'
-       ,'css!widgets/StandingsBanner/StandingsBanner'
+       ,'css!widgets/StandingsBannerClassVertical/StandingsBannerClassVertical'
        ,'widgets/LapsBanner/LapsBanner'
        ,'widgets/CarNumber/CarNumber'
 ],function(SIMRacingApps) {
 
     var self = {
-        name:            "sraStandingsBanner",
-        url:             'StandingsBanner',
-        template:        'StandingsBanner.html',
-        defaultWidth:    800,
-        defaultHeight:   106,
+        name:            "sraStandingsBannerClassVertical",
+        url:             'StandingsBannerClassVertical',
+        template:        'StandingsBannerClassVertical.html',
+        defaultWidth:    210,
+        defaultHeight:   340,
         defaultInterval: 500   //initialize with the default interval
     };
 

@@ -1,0 +1,17 @@
+{
+"name":        ["StandingsBannerClassVertical","StandingsBannerClassVertical-SHORTNAME"],
+"description": [
+    "Standings Banner Vertical for your class like seen on TV",
+    "Standings Banner Vertical for your class like seen on TV with Shortened Name"
+],
+"description-de": [
+    "Kleine Anzeige der Reihenfolge Vertical for your class wie im TV",
+    "Kleine Anzeige der Reihenfolge Vertical for your class wie im TV, mit kurzen Namen"
+],
+"doc":         "JavaScriptDoc/sra-standings-banner-class-vertical.html",
+"url":         "apps/WidgetLoader?widget=StandingsBannerClassVertical&",
+"icon":        "widgets/StandingsBannerClassVertical/icon.png",
+"width":       210,
+"height":      340,
+"args":        ["&SHOWSHORTNAME=N","&SHOWSHORTNAME=Y"]
+}

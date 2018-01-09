@@ -1,6 +1,6 @@
 'use strict';
 /**
- * This widget displays a TV style banner showing the standings.
+ * This widget displays a TV style banner showing the standings of your class.
  * Designed to be used as an overlay with OBS.
  * 
  * By default, the session type is displayed as the title.
@@ -40,20 +40,20 @@
  * @param show-team-name Set to false to not show the team name. Default is true.
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
  * @author Jeffrey Gilliam
- * @since 1.0
- * @copyright Copyright (C) 2015 - 2017 Jeffrey Gilliam
+ * @since 1.6
+ * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps'
-       ,'css!widgets/StandingsBanner/StandingsBanner'
+       ,'css!widgets/StandingsBannerClass/StandingsBannerClass'
        ,'widgets/LapsBanner/LapsBanner'
        ,'widgets/CarNumber/CarNumber'
 ],function(SIMRacingApps) {
 
     var self = {
-        name:            "sraStandingsBanner",
-        url:             'StandingsBanner',
-        template:        'StandingsBanner.html',
+        name:            "sraStandingsBannerClass",
+        url:             'StandingsBannerClass',
+        template:        'StandingsBannerClass.html',
         defaultWidth:    800,
         defaultHeight:   106,
         defaultInterval: 500   //initialize with the default interval

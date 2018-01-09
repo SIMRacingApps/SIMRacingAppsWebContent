@@ -1,0 +1,17 @@
+{
+"name":        ["StandingsBannerVertical","StandingsBannerVertical-SHORTNAME"],
+"description": [
+    "Standings Banner Vertical like seen on TV",
+    "Standings Banner Vertical like seen on TV with Shortened Name"
+],
+"description-de": [
+    "Kleine Anzeige der Reihenfolge Vertical wie im TV",
+    "Kleine Anzeige der Reihenfolge Vertical wie im TV, mit kurzen Namen"
+],
+"doc":         "JavaScriptDoc/sra-standings-banner-vertical.html",
+"url":         "apps/WidgetLoader?widget=StandingsBannerVertical&",
+"icon":        "widgets/StandingsBannerVertical/icon.png",
+"width":       210,
+"height":      340,
+"args":        ["&SHOWSHORTNAME=N","&SHOWSHORTNAME=Y"]
+}
