@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-in-garage-html",
+"name": "InGarage",
+"description": "Screen to show whe the Car is in the garage.",
+"description-de": "The Car is in the garage",
+"url": "apps/WidgetLoader?widget=InGarage&",
+"icon": "widgets/InGarage/icon.png",
+"width": 1920,
+"height": 1080,
+"args": ""
+}
