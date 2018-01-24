@@ -5,8 +5,8 @@
     "Standings Banner Vertical for your class like seen on TV with Shortened Name"
 ],
 "description-de": [
-    "Kleine Anzeige der Reihenfolge Vertical for your class wie im TV",
-    "Kleine Anzeige der Reihenfolge Vertical for your class wie im TV, mit kurzen Namen"
+    "Kleine Anzeige der Reihenfolge vertikal/senkrecht deiner Klasse",
+    "Kleine Anzeige der Reihenfolge vertikal/senkrecht deiner Klasse, mit kurzen Namen"
 ],
 "doc":         "JavaScriptDoc/sra-standings-banner-class-vertical.html",
 "url":         "apps/WidgetLoader?widget=StandingsBannerClassVertical&",

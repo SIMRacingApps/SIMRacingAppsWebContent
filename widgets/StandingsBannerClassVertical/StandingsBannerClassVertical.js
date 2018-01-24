@@ -123,7 +123,8 @@ define(['SIMRacingApps'
                     
                     //but only if there are drivers on that page
                     if ((($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1) > $scope.data.Session.Cars.Value
-                    ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1)].Number.Value
+                    ||  !$scope.data.Car['PC'+(($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1)]
+                    ||  !$scope.data.Car['PC'+(($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1)].Number.Value
                     )
                         $scope.currentPage = 0;
 
@@ -177,14 +178,19 @@ define(['SIMRacingApps'
                         $scope.currentPage = 0;
                     
                     //but only if there are drivers on that page
-                    if ((($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1) > $scope.data.Session.Cars.Value
-                    ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1)].Number.Value
+                    if ((($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/) > $scope.data.Session.Cars.Value
+                    ||  !$scope.data.Car['PC'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/)]
+                    ||  !$scope.data.Car['PC'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/)].Number.Value
                     )
                         $scope.currentPage = 0;
 
                     if ($scope.prevPage != $scope.currentPage) {
-                        $scope.showGreenBox[$scope.currentPage] = true;
-                        $scope.showGreenBox[$scope.prevPage]    = false;
+                        for (var i=0; i < $scope.numberOfGreenBoxes; i++) {
+                            $timeout( function(scope,prevPage,currentPage,box,numberOfGreenBoxes) {
+                                scope.showGreenBox[(currentPage * numberOfGreenBoxes) + box] = true;
+                                scope.showGreenBox[(prevPage    * numberOfGreenBoxes) + box] = false;
+                            },$scope.boxDelay * i,true,$scope,$scope.prevPage,$scope.currentPage,i,$scope.numberOfGreenBoxes);
+                        }
                     }
                     
                     $scope.displayTeamName = false;

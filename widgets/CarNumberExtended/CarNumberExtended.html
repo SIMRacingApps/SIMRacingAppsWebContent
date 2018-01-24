@@ -1,13 +1,19 @@
 <div
      class                        = "SIMRacingApps-Widget-CarNumberExtended"
-     data-ng-style                = "{ position: 'relative', height: height+'px', backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[sraCarNumberExtended].ClassColor.Value | sraHex:6) : '') }">
+     data-ng-style                = "{ position: 'relative', 
+                                       height: height+'px', 
+                                       backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[sraCarNumberExtended].ClassColor.Value | sraHex:6) : ''), 
+                                       color: (data.Session.NumberOfCarClasses.Value > 1 ? 'black' : 'inherit')
+                                     }">
      <div
          class                    = "SIMRacingApps-Widget-CarNumberExtended-number"
          data-sra-car-number      = "{{sraCarNumberExtended}}"
      ></div>
      <div
          data-ng-class            = "'SIMRacingApps-Widget-CarNumberExtended-name SIMRacingAppsCarStatusClassForeground-'+data.Car[sraCarNumberExtended].StatusClass.Value"
-         data-xng-style            = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[sraCarNumberExtended].ClassColor.Value | sraHex:6) : 'transparent') }"
+         data-xng-style            = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[sraCarNumberExtended].ClassColor.Value | sraHex:6) : 'transparent'),
+                                        color: (data.Session.NumberOfCarClasses.Value > 1 ? 'black' : 'inherit')
+                                      }"
          data-ng-bind-html        = "(showShortName ? data.Car[sraCarNumberExtended].DriverNameShort.ValueFormatted : data.Car[sraCarNumberExtended].DriverName.ValueFormatted.replace(' ','<br />'))
                                   + (data.Session.DiffCars.LEADER[sraCarNumberExtended].UOM.toUpperCase() == 'LAP' 
                                     ? ' ' + (data.Session.DiffCars.LEADER[sraCarNumberExtended].Value|sraNumber:0) + 'L'

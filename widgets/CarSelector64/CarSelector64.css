@@ -2,7 +2,7 @@
 /*@import "../?"*/
 
 /*made this a little smaller so the borders on the table would not get clipped */
-.SIMRacingApps-Widget-CarSelector {
+.SIMRacingApps-Widget-CarSelector64 {
     width:         97%;
     height:        97%;
     font-size:     97%;
@@ -10,25 +10,25 @@
     margin-top:    1.5%;
     overflow:      hidden;
 }
-.SIMRacingApps-Widget-CarSelector-header {
+.SIMRacingApps-Widget-CarSelector64-header {
     position:  relative;
     width:     100%;
     clear:     both;
 }
 
-.SIMRacingApps-Widget-CarSelector-select {
+.SIMRacingApps-Widget-CarSelector64-select {
     position:  relative;
     width:     100%;
     clear:     both;
 }
 
-.SIMRacingApps-Widget-CarSelector-reference {
+.SIMRacingApps-Widget-CarSelector64-reference {
     clear:     left;
     float:     left;
     white-space: nowrap;
 }
 
-.SIMRacingApps-Widget-CarSelector-button {
+.SIMRacingApps-Widget-CarSelector64-button {
     background-color: green;
     text-align:center;
     font-size: 100%;
@@ -41,25 +41,25 @@
     padding-right:1%;
 }
 
-.SIMRacingApps-Widget-CarSelector-all {
+.SIMRacingApps-Widget-CarSelector64-all {
 }
 
-.SIMRacingApps-Widget-CarSelector-leader {
+.SIMRacingApps-Widget-CarSelector64-leader {
 }
 
-.SIMRacingApps-Widget-CarSelector-me {
+.SIMRacingApps-Widget-CarSelector64-me {
 }
 
-.SIMRacingApps-Widget-CarSelector-ahead {
+.SIMRacingApps-Widget-CarSelector64-ahead {
 }
 
-.SIMRacingApps-Widget-CarSelector-behind {
+.SIMRacingApps-Widget-CarSelector64-behind {
 }
 
-.SIMRacingApps-Widget-CarSelector-reply {
+.SIMRacingApps-Widget-CarSelector64-reply {
 }
 
-.SIMRacingApps-Widget-CarSelector-carstable {
+.SIMRacingApps-Widget-CarSelector64-carstable {
     table-layout: fixed;
     width: 90%;
     font-size: 90%;
@@ -71,7 +71,7 @@
     background-color: #333333;
 }
 
-.SIMRacingApps-Widget-CarSelector-car {
+.SIMRacingApps-Widget-CarSelector64-car {
     width: 100%;
     font-size: 20%;
     border-color: black;
@@ -80,17 +80,17 @@
     overflow: hidden;
 }
 
-.SIMRacingApps-Widget-CarSelector-car .SIMRacingApps-Widget-CarNumberExtended {
+.SIMRacingApps-Widget-CarSelector64-car .SIMRacingApps-Widget-CarNumberExtended {
     width: 90%;
     margin-left: 5%;
     font-size: 90%;
 }
 
-.SIMRacingApps-Widget-CarSelector-clickedstate-clicked {
+.SIMRacingApps-Widget-CarSelector64-clickedstate-clicked {
     background-color: rgba(255,0,0,.3) !important;
 }
 
-.SIMRacingApps-Widget-CarSelector-BelowMinimumSpeed-Y {
+.SIMRacingApps-Widget-CarSelector64-BelowMinimumSpeed-Y {
     border-color: red !important;
     border-width: thin;
     border-style: solid;

@@ -41,7 +41,7 @@
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
  * @author Jeffrey Gilliam
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2017 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps'
@@ -84,7 +84,7 @@ define(['SIMRacingApps'
                 $scope.showShortName      = false;
                 $scope.numberOfPages      = 10;   //need enough for 60 cars
                 $scope.numberOfBoxes      = 3;    //must match number of tables in the HTML
-                $scope.numberOfLines      = 3;    //This must match what's in the HTML table rows repeat
+                $scope.numberOfLines      = 4;    //This must match what's in the HTML table rows repeat
                 $scope.numberOfGreenPages = 16;   //need enough for 60 cars
                 $scope.numberOfGreenBoxes = 1;
                 $scope.numberOfGreenLines = 4;    //This must match what's in the HTML table rows repeat
@@ -123,17 +123,13 @@ define(['SIMRacingApps'
                     
                     //but only if there are drivers on that page
                     if ((($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1) > $scope.data.Session.Cars.Value
+                    ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1)]
                     ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfLines * $scope.numberOfBoxes) + 1)].Number.Value
                     )
                         $scope.currentPage = 0;
 
                     if ($scope.prevPage != $scope.currentPage) {
                         for (var i=0; i < $scope.numberOfBoxes; i++) {
-//                            var updateShowBox = function(prevPage,currentPage,box) {
-//                                $scope.showBox[(currentPage * $scope.numberOfBoxes) + box] = true;
-//                                $scope.showBox[(prevPage    * $scope.numberOfBoxes) + box] = false;
-//                            };
-//                            $timeout(updateShowBox.bind(null,$scope.prevPage,$scope.currentPage,i),$scope.boxDelay * i);
                             $timeout( function(scope,prevPage,currentPage,box,numberOfBoxes) {
                                 scope.showBox[(currentPage * numberOfBoxes) + box] = true;
                                 scope.showBox[(prevPage    * numberOfBoxes) + box] = false;
@@ -177,14 +173,19 @@ define(['SIMRacingApps'
                         $scope.currentPage = 0;
                     
                     //but only if there are drivers on that page
-                    if ((($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1) > $scope.data.Session.Cars.Value
-                    ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1)].Number.Value
+                    if ((($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/) > $scope.data.Session.Cars.Value
+                    ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/)]
+                    ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/)].Number.Value
                     )
                         $scope.currentPage = 0;
 
                     if ($scope.prevPage != $scope.currentPage) {
-                        $scope.showGreenBox[$scope.currentPage] = true;
-                        $scope.showGreenBox[$scope.prevPage]    = false;
+                        for (var i=0; i < $scope.numberOfGreenBoxes; i++) {
+                            $timeout( function(scope,prevPage,currentPage,box,numberOfGreenBoxes) {
+                                scope.showGreenBox[(currentPage * numberOfGreenBoxes) + box] = true;
+                                scope.showGreenBox[(prevPage    * numberOfGreenBoxes) + box] = false;
+                            },$scope.boxDelay * i,true,$scope,$scope.prevPage,$scope.currentPage,i,$scope.numberOfGreenBoxes);
+                        }
                     }
                     
                     $scope.displayTeamName = false;

@@ -8,9 +8,10 @@
 
 .SIMRacingApps-Widget-CameraSelector-carselector {
     position:   absolute;
-    width:      48%;
+    width:      50%;
     left:       51%;
     top:        1%;
+    font-size:  80%;
 }
 
 .SIMRacingApps-Widget-CameraSelector-horizontal {

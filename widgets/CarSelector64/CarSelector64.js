@@ -1,6 +1,6 @@
 'use strict';
 /**
- * This widget shows a grid of cars that when clicked, makes that car the reference car.
+ * This widget shows a grid of up to 64 cars that when clicked, makes that car the reference car.
  * This is a global setting and all open widgets will act as if that car is "ME".
  * <p>
  * Other Widgets and Apps can use this widget and override that behavior. 
@@ -8,11 +8,11 @@
  * <p>
  * Example:
  * <p><b>
- * &lt;sra-car-selector&gt;&lt;/sra-car-selector&gt;<br />
+ * &lt;sra-car-selector64-&gt;&lt;/sra-car-selector64&gt;<br />
  * </b>
- * <img src="../widgets/CarSelector/icon.png" alt="Image goes here"/>
+ * <img src="../widgets/CarSelector64/icon.png" alt="Image goes here"/>
  * @ngdoc directive
- * @name sra-car-selector
+ * @name sra-car-selector64
  * @param {boolean} sra-click-persistent true will leave the car clicked highlighted. Defaults to false.
  * @param {boolean} sra-show-all true to show the "ALL" button. Defaults to false.
  * @param {boolean} sra-show-reference false to hide the current reference car. Defaults to true.
@@ -31,15 +31,15 @@
  * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
  * @license Apache License 2.0
  */
-define(['SIMRacingApps','css!widgets/CarSelector/CarSelector','widgets/CarNumberExtended/CarNumberExtended'],
+define(['SIMRacingApps','css!widgets/CarSelector64/CarSelector64','widgets/CarNumberExtended/CarNumberExtended'],
 function(SIMRacingApps) {
 
     var self = {
-        name:            "sraCarSelector",
-        url:             'CarSelector',
-        template:        'CarSelector.html',
-        defaultWidth:    430,
-        defaultHeight:   480,
+        name:            "sraCarSelector64",
+        url:             'CarSelector64',
+        template:        'CarSelector64.html',
+        defaultWidth:    490,
+        defaultHeight:   540,
         defaultInterval: 1000   //initialize with the default interval
     };
 
@@ -80,7 +80,7 @@ function(SIMRacingApps) {
                 //This function will get called from the CarNumberExtended widget when it is clicked.
                 $scope.carClicked = function($clickedScope,car) {
                     if (car) {
-                        console.log("CarSelector.carClicked("+car+")");
+                        console.log("CarSelector64.carClicked("+car+")");
 
                         //if an onclick function was passed in
                         if ($scope.sraOnClick) {
@@ -132,7 +132,7 @@ function(SIMRacingApps) {
                 
                 $scope.focusClicked = function($clickedScope,focus) {
                     if (focus) {
-                        console.log("CarSelector.focusClicked("+focus+")");
+                        console.log("CarSelector64.focusClicked("+focus+")");
                         if ($scope.sraChangeFocus) {
                             sraDispatcher.sendCommand("Session/setCameraFocus/"+focus);
                             sraDispatcher.sendCommand("Session/setReferenceCar/"+focus);
@@ -156,7 +156,7 @@ function(SIMRacingApps) {
                 $scope.value = 
                 $scope[self.name]           = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
                 $scope.sraChangeFocus       = sraDispatcher.getBoolean($scope.sraArgsCHANGEFOCUS    , $attrs.sraArgsChangeFocus,      $scope.sraChangeFocus);
-                
+
                 //if focus is on, turn on the camera change option also
                 if ($scope.sraChangeFocus) {
                     $scope.sraChangeCamera = 
