@@ -174,13 +174,13 @@ function( angular,angularSanitize ) {
                             var item = data[header][itemidx];
                             var count = 0;
                             var newitem = {};
-                            if (item.url.match(/^http:/)) {
+                            if (item.url.match(/^http/)) {
                                 newitem.url  = item.url;
                             }
                             else {
                                 newitem.url  = '/SIMRacingApps/'+item.url;
                             }
-                            if (item.doc.match(/^http:/)) {
+                            if (item.doc.match(/^http/)) {
                                 newitem.doc  = item.doc;
                             }
                             else {
