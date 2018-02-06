@@ -1,0 +1,31 @@
+<div 	class                           = "SIMRacingApps-Widget-RadioTransmitting"
+		data-sra-data                   = "Car/TRANSMITTING/Id"
+		data-ng-style                   = "{ visibility: data.Car.TRANSMITTING.Id.Value > -1 ? 'inherit' : 'hidden', height: height+'px' }">
+	<sra-data-table
+	    class                          	= "SIMRacingApps-Widget-RadioTransmitting-table"
+	    data-sra-args-data             	= "Car/TRANSMITTING/Id;Car/TRANSMITTING/IsEqual/TRANSMITTING;Car/TRANSMITTING/DriverName;Car/TRANSMITTING/TeamName;Car/TRANSMITTING/RadioChannelName"
+        data-sra-args-row-names        	= "dname"
+	    data-sra-args-class            	= "'SIMRacingApps-Widget-RadioTransmitting-transmitting-'+data.Car[value].IsEqual.TRANSMITTING.Value"
+        data-sra-args-body-class       	= "data.Car.TRANSMITTING.Id.Value == -1 ? 'SIMRacingApps-Widget-RadioTransmitting-hidden' : ''"
+        data-sra-args-row-dname-value-class = "'SIMRacingApps-Widget-RadioTransmitting-BelowMinimumSpeed-' + data.Car.TRANSMITTING.IsBelowMinimumSpeed.Value"
+	    data-sra-args-interval         	= "{{sraInterval}}"
+	></sra-data-table>
+	
+	<div class                          = "SIMRacingApps-Widget-RadioTransmitting-driverName"
+		data-sra-data          			= "Car/TRANSMITTING/DriverName"					
+		data-ng-bind-html 				= "data.Car.TRANSMITTING.DriverName.ValueFormatted"	
+	></div>		
+		
+	<sra-car-number 
+		class                   		= "SIMRacingApps-Widget-RadioTransmitting-carnumber"
+		data-ng-class               	= "data.Car.TRANSMITTING.Id.Value == -1 ? 'SIMRacingApps-Widget-RadioTransmitting-hidden' : ''"
+		data-sra-args-car-number       	= "TRANSMITTING"
+		data-sra-args-interval         	= "{{sraInterval}}"
+	></sra-car-number>
+
+	<div
+		data-ng-class                  	= "data.Car.TRANSMITTING.Id.Value == -1 ? 'SIMRacingApps-Widget-RadioTransmitting-hidden' : ''"
+	> 
+		<img class                      = "SIMRacingApps-Widget-RadioTransmitting-radioImage" src="widgets/RadioTransmitting/AudioEq.gif">
+	</div>
+</div>

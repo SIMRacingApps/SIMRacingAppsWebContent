@@ -1,0 +1,74 @@
+@import "../DataTable/DataTable.css"; /* load this first to override below */
+
+.SIMRacingApps-Widget-RadioTransmitting {
+	position:      relative;
+    width:         100%;
+    height:        100%;
+    font-size:     300%;
+    z-index:       -1;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-table .SIMRacingApps-Widget-DataTable {
+	position:      absolute;
+    width:         100%;
+    height:        100%;    /*note: causes table to expand to the containers height */
+    font-size:     100%;
+    line-height:   148%;
+    z-index:       1;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-table .SIMRacingApps-Widget-DataTable-header {
+    font-size:     110%;
+    xline-height:   200%;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-table .SIMRacingApps-Widget-DataTable-body {
+    xfont-size:     125%;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-transmitting-Y {
+    background-color: rgba(255,165,0,.9) !important;  /*orange*/
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-hidden {
+    visibility: hidden;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-table .SIMRacingApps-Widget-DataTable-row-dname {
+    color: white;
+	background-color: rgba(0,0,0,.5);
+	left: 20%;
+	opacity: .5;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-carnumber {
+    position:       absolute;
+    width:          7%;
+    xheight:        5%;
+	top:            0%;
+    left:           12%;
+    z-index:        2;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-driverName {
+    position:       absolute;
+    width:          100%;
+    xheight:        5%;
+	font-size:      50%;
+	top:            30%;
+    left:           20%;
+    z-index:        2;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-radioImage {
+    position:       absolute;
+    width:          10%;
+    xheight:        5%;
+	top:            30%;
+    left:           1%;
+    z-index:        2;
+}
+
+.SIMRacingApps-Widget-RadioTransmitting-BelowMinimumSpeed-Y {
+    border-color: red !important;
+}

@@ -1,0 +1,11 @@
+{
+"name":        "RadioTransmitting",
+"description": "Display who is transmitting on the radio. Contributed by Ricky Thompson.",
+"description-de": "Display who is transmitting on the radio. Contributed by Ricky Thompson.",
+"doc":         "JavaScriptDoc/sra-radio-transmitting.html",
+"url":         "apps/WidgetLoader?widget=RadioTransmitting&",
+"icon":        "widgets/RadioTransmitting/icon.png",
+"width":       800,
+"height":      50,
+"args":        ""
+}
