@@ -81,10 +81,12 @@
                     data-ng-bind-html = "translations.TOGO+':'"
                 ></td>
                 <td class             = "SIMRacingAppsData SIMRacingApps-Widget-LapTiming-leftside-data"
-                    data-sra-data     = "Session/LapsToGo;Session/Laps"
+                    data-sra-data     = "Session/LapsToGo;Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining"
                     data-ng-bind-html = "'<span class=&quot;SIMRacingApps-Widget-LapTiming-data-togo&quot;>' 
-                                      +  (data.Session.LapsToGo|sraNumber:0:null:null:null:true) 
-                                      + ' ' + translations.OF + ' ' + data.Session.Laps.Value + '</span>'"
+                                      +  (data.Session.LapsToGo|sraNumber:0:null:null:null:true) + ' / ' 
+                                      +  ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true)+'~': data.Session.Laps.Value)
+                                       + '</span>'
+                                      "
                 ></td>
                 <td class             = "SIMRacingAppsLabel SIMRacingApps-Widget-LapTiming-rightside-label"
                     data-ng-bind-html = "translations.LAST+':'"

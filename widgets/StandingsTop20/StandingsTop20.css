@@ -7,23 +7,21 @@
 }
 
 .SIMRacingApps-Widget-StandingsTop20-Title {
-    font-size: 150%;
+    font-size: 140%;
     font-weight: bold;
     color: gold;
     padding-bottom: 1%;
     padding-left: 1%;
     white-space: nowrap;
-    line-height: 130%;
 }
 
 .SIMRacingApps-Widget-StandingsTop20-SOF {
-    font-size: 150%;
+    font-size: 140%;
     color: gold;
     padding-bottom: 1%;
     padding-right: 1%;
     white-space: nowrap;
     text-align: right;
-    line-height: 130%;
 }
 
 .SIMRacingApps-Widget-StandingsTop20-GridHeader {

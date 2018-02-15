@@ -69,7 +69,9 @@ function(SIMRacingApps) {
                 
                 $attrs.sraArgsData = "Session/Type"
                                    + ";Session/Laps"
+                                   + ";Session/TimeRemaining"
                                    + ";Car/"+$scope.sraRelativeCar+"/Lap"
+                                   + ";Car/"+$scope.sraRelativeCar+"/LapsToGo"
                                    + ";Car/"+$scope.sraRelativeCar+"/LapTime/SessionLast"
                                    + ";Session/NumberOfCarClasses";
 

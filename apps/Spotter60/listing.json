@@ -1,0 +1,15 @@
+{
+"doc": "JavaScriptDoc/Spotter60.html",
+"name": ["Spotter or Broadcaster 60"],
+"description": [
+    "When you are Spotting or Broadcasting for someone else with Camera and Replay controls."
+],
+"description-de": [
+    "Wenn du jemandem zuschaust, spottest oder \u00fcbertr\u00e4gst/streamst. Mit Kamera- und Replay-Bedienung/Kontrolle."
+],
+"url": "apps/Spotter60?",
+"icon": "apps/Spotter60/icon.png",
+"width": 1280,
+"height": 768,
+"args": [""]
+}

@@ -12,47 +12,47 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/SIMRacingApps/SRA-Logo-114x114.png">
     <link rel="apple-touch-icon" href="/SIMRacingApps/SRA-Logo-57x57.png">
     <script type="text/javascript" src="/SIMRacingApps/lib/require.config.js"></script>
-    <script type="text/javascript" data-main="/SIMRacingApps/apps/Spectator/default" src="/SIMRacingApps/external/require.js"></script>
+    <script type="text/javascript" data-main="/SIMRacingApps/apps/Spectator60/default" src="/SIMRacingApps/external/require.js"></script>
     <base href="/" />
-    <title>Spectator</title>
+    <title>Spectator60</title>
 </head>
-<body class="SIMRacingApps-App-Spectator-body">
+<body class="SIMRacingApps-App-Spectator60-body">
     <div id                 = "SIMRacingApps-App"
-         class              = "SIMRacingApps-App SIMRacingApps-App-Spectator"
+         class              = "SIMRacingApps-App SIMRacingApps-App-Spectator60"
          data-ng-controller = "SIMRacingApps-Controller"
          data-sra-resize>
-        <sra-driver-info class       = "SIMRacingApps-App-Spectator-referencecar"></sra-driver-info>
+        <sra-driver-info class       = "SIMRacingApps-App-Spectator60-referencecar"></sra-driver-info>
         <sra-team-speak-talking
-            class                    = "SIMRacingApps-App-Spectator-teamspeak"
+            class                    = "SIMRacingApps-App-Spectator60-teamspeak"
         ></sra-team-speak-talking>
-        <sra-car-number class       = "SIMRacingApps-App-Spectator-carnumber"></sra-car-number>
-        <sra-car-image class        = "SIMRacingApps-App-Spectator-carimage"></sra-car-image>
+        <sra-car-number class       = "SIMRacingApps-App-Spectator60-carnumber"></sra-car-number>
+        <sra-car-image class        = "SIMRacingApps-App-Spectator60-carimage"></sra-car-image>
         <sra-driver-info 
-            class                    = "SIMRacingApps-App-Spectator-talking" 
+            class                    = "SIMRacingApps-App-Spectator60-talking" 
             data-sra-args-car        = "TRANSMITTING"
         ></sra-driver-info>
-        <sra-standings-top-43 class  = "SIMRacingApps-App-Spectator-standings"></sra-standings-top-43>
+        <sra-standings-top-60 class  = "SIMRacingApps-App-Spectator60-standings"></sra-standings-top-60>
         <sra-wind-gauge
-            class                    = "SIMRacingApps-App-Spectator-windgauge"
+            class                    = "SIMRacingApps-App-Spectator60-windgauge"
             data-sra-args-data       = "Car/REFERENCE/Id"
             data-ng-style            = "{ visibility: data.Car.REFERENCE.Id.Value > -1 ? 'inherit' : 'hidden' }"
             data-sra-args-rotate     = "true"
             data-sra-args-perspective= "REFERENCE"
             data-sra-interval        = "100"
         ></sra-wind-gauge>
-        <sra-relative class          = "SIMRacingApps-App-Spectator-relative"></sra-relative>
-        <sra-car-controls class      = "SIMRacingApps-App-Spectator-carcontrols"></sra-car-controls>
-        <sra-lap-timing class        = "SIMRacingApps-App-Spectator-laptiming"></sra-lap-timing>
-        <sra-track-map class         = "SIMRacingApps-App-Spectator-trackmap"></sra-track-map>
-        <sra-car-selector 
-            class                    = "SIMRacingApps-App-Spectator-carselector" 
+        <sra-relative class          = "SIMRacingApps-App-Spectator60-relative"></sra-relative>
+        <sra-car-controls class      = "SIMRacingApps-App-Spectator60-carcontrols"></sra-car-controls>
+        <sra-lap-timing class        = "SIMRacingApps-App-Spectator60-laptiming"></sra-lap-timing>
+        <sra-track-map class         = "SIMRacingApps-App-Spectator60-trackmap"></sra-track-map>
+        <sra-car-selector64 
+            class                    = "SIMRacingApps-App-Spectator60-carselector" 
             data-sra-args-on-click   = "onClickCarSelector"
             data-sra-args-show-buttons = "{{sraArgsBROADCASTER||false}}"
             data-sra-args-show-reference = "{{sraArgsBROADCASTER||false}}"
             data-sra-args-change-camera = "{{sraArgsCHANGECAMERA||false}}"
-        ></sra-car-selector>
+        ></sra-car-selector64>
         <sra-data-table
-            class                               = "SIMRacingApps-App-Spectator-lapinfo"
+            class                               = "SIMRacingApps-App-Spectator60-lapinfo"
             data-sra-args-data                  = "Session/Lap;Session/Laps;Session/LapsToGo;Session/Cautions;Session/CautionLaps"
             data-sra-args-row-names             = "lap;togo;cautions"
             data-sra-args-row-lap               = "data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted"

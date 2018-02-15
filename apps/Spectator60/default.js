@@ -1,6 +1,6 @@
 'use strict';
 /**
- * This is the Spectator, Spotter, Broadcaster App.
+ * This is the Spectator60, Spotter, Broadcaster App.
  * With this App you can see what's going on from a none driver's point of view.
  * 
  * In Spectator mode, you cannot change the reference car.
@@ -9,10 +9,10 @@
  * 
  * In Broadcaster / Spotter mode, it is the same experience, except you can change the reference car because you are not driving.
  * 
- * <img src="../apps/Spectator/icon.png" />
+ * <img src="../apps/Spectator60/icon.png" />
  * 
  * @ngdoc apps
- * @name Spectator
+ * @name Spectator60
  * @param {boolean} BROADCASTER Set to true to be able to change the Reference Car. Defaut is false.
  * @param {boolean} showFPS When any value is seen in the URL for this attribute, the Frames Per Second(FPS) will be shown. Defaults to not show.
  * @author Jeffrey Gilliam
@@ -25,9 +25,9 @@ require(SIMRacingAppsRequireConfig,
         ,'SIMRacingApps'
         ,'css!default'
         ,'widgets/DriverInfo/DriverInfo'
-        ,'widgets/CarSelector/CarSelector'
+        ,'widgets/CarSelector64/CarSelector64'
         ,'widgets/TrackMap/TrackMap'
-        ,'widgets/StandingsTop43/StandingsTop43'
+        ,'widgets/StandingsTop60/StandingsTop60'
         ,'widgets/Relative/Relative'
         ,'widgets/LapTiming/LapTiming'
         ,'widgets/CarControls/CarControls'
@@ -46,7 +46,7 @@ function( angular,  SIMRacingApps) {
                ['$scope','$timeout', 'sraDispatcher',
         function($scope,  $timeout, sraDispatcher) {
                    
-           sraDispatcher.loadTranslations("/SIMRacingApps/apps/Spectator","text",function(path) {
+           sraDispatcher.loadTranslations("/SIMRacingApps/apps/Spectator60","text",function(path) {
                $scope.translations = sraDispatcher.getTranslation(path,"auto");
            });
            
@@ -55,7 +55,7 @@ function( angular,  SIMRacingApps) {
            
            $scope.onClickCarSelector = function($clickedScope,name) {
                if ($scope.broadcaster) {
-                   console.log("Spectator.setReferenceCar("+name+")");
+                   console.log("Spectator60.setReferenceCar("+name+")");
                    $clickedScope.setClickedState('clicked');
                    sraDispatcher.sendCommand("Session/setReferenceCar/"+name);
                    //delay a little, then clear the clicked state.

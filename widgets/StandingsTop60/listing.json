@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-standings-top-60.html",
+"name": "StandingsTop60",
+"description": "Top 60 Positions, Pit Time, Run Length, Lap Times",
+"description-de": "Top 60 Positionen, BoxenStop-Zeit, L\u00e4nge des Stints, Rundenzeiten",
+"url": "apps/WidgetLoader?widget=StandingsTop60&",
+"icon": "widgets/StandingsTop43/icon.png",
+"width": 600,
+"height": 900,
+"args": ""
+}

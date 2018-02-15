@@ -25,14 +25,14 @@
                 colspan                = "7"
             ></td>
             <td class                  = "SIMRacingApps-Widget-StandingsTop35-SOF"
-                data-sra-data          = "Session/StrengthOfField;Session/Cars;Session/Lap;Session/Laps"
+                data-sra-data          = "Session/StrengthOfField;Session/Cars;Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining"
                 data-sra-args-interval = "{{defaultInterval}}"
                 data-ng-bind-html      = "translations.SOF+': '
                                        +  data.Session.StrengthOfField.ValueFormatted
                                        +  ' ' + translations.OF + ' '
                                        +  data.Session.Cars.ValueFormatted
                                        +  ', ' + translations.LAP + ': '
-                                       +  data.Session.Lap.ValueFormatted + ' / ' + data.Session.Laps.ValueFormatted
+                                       +  data.Session.Lap.ValueFormatted + ' / ' + ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + (data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')': '')
                                        "
                 colspan                = "7"
             ></td>

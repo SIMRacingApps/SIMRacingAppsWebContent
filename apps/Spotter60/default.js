@@ -1,22 +1,19 @@
 'use strict';
 /**
- * This is the Spectator, Spotter, Broadcaster App.
+ * This is the Spotter, Broadcaster App for 60 cars.
  * With this App you can see what's going on from a none driver's point of view.
+ * You can change the Camera angle, the car to focus on and control the replay postion.
+ *
+ * Note that when the reference car is not you, SIMs do not always transmit the same amount of data for other cars.
+ * For example, one common complaint is iRacing does let you see the fuel or tire measurements of other cars.
  * 
- * In Spectator mode, you cannot change the reference car.
- * This mode is intended to be used by other members of your household while you are racing.
- * Therefore, they cannot change the Reference Car.
- * 
- * In Broadcaster / Spotter mode, it is the same experience, except you can change the reference car because you are not driving.
- * 
- * <img src="../apps/Spectator/icon.png" />
+ * <img src="../apps/Spotter60/icon.png" />
  * 
  * @ngdoc apps
- * @name Spectator
- * @param {boolean} BROADCASTER Set to true to be able to change the Reference Car. Defaut is false.
+ * @name Spotter60
  * @param {boolean} showFPS When any value is seen in the URL for this attribute, the Frames Per Second(FPS) will be shown. Defaults to not show.
  * @author Jeffrey Gilliam
- * @since 1.0
+ * @since 1.3
  * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
  * @license Apache License 2.0
  */
@@ -25,9 +22,10 @@ require(SIMRacingAppsRequireConfig,
         ,'SIMRacingApps'
         ,'css!default'
         ,'widgets/DriverInfo/DriverInfo'
+        ,'widgets/CameraSelector/CameraSelector'
         ,'widgets/CarSelector/CarSelector'
         ,'widgets/TrackMap/TrackMap'
-        ,'widgets/StandingsTop43/StandingsTop43'
+        ,'widgets/StandingsTop60/StandingsTop60'
         ,'widgets/Relative/Relative'
         ,'widgets/LapTiming/LapTiming'
         ,'widgets/CarControls/CarControls'
@@ -46,7 +44,7 @@ function( angular,  SIMRacingApps) {
                ['$scope','$timeout', 'sraDispatcher',
         function($scope,  $timeout, sraDispatcher) {
                    
-           sraDispatcher.loadTranslations("/SIMRacingApps/apps/Spectator","text",function(path) {
+           sraDispatcher.loadTranslations("/SIMRacingApps/apps/Spotter60","text",function(path) {
                $scope.translations = sraDispatcher.getTranslation(path,"auto");
            });
            
@@ -55,7 +53,7 @@ function( angular,  SIMRacingApps) {
            
            $scope.onClickCarSelector = function($clickedScope,name) {
                if ($scope.broadcaster) {
-                   console.log("Spectator.setReferenceCar("+name+")");
+                   console.log("Spotter60.setReferenceCar("+name+")");
                    $clickedScope.setClickedState('clicked');
                    sraDispatcher.sendCommand("Session/setReferenceCar/"+name);
                    //delay a little, then clear the clicked state.

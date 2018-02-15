@@ -1,0 +1,146 @@
+@import '/SIMRacingApps/widgets/LapTiming/LapTiming.css';
+@import '/SIMRacingApps/widgets/Relative/Relative.css';
+
+.SIMRacingApps-App-Spectator60 {
+    width:     100%;
+    height:    100%;
+    overflow:  hidden;
+    position:  relative;
+    z-index:   -1;
+}
+
+.SIMRacingApps-App-Spectator60-referencecar {
+    position:  absolute;
+    width:     20%;
+    font-size: 31%;
+    bottom:    1%;
+    left:      1%;
+    z-index:   99;
+}
+
+.SIMRacingApps-App-Spectator60-standings {
+    position:  absolute;
+    width:     28%;
+    font-size: 55%;
+    top:       1%;
+    left:      7%;
+    z-index:   1;
+}
+
+
+.SIMRacingApps-App-Spectator60-trackmap {
+    position:  absolute;
+    width:     42%;
+    font-size: 75%;
+    top:       1%;
+    right:     1%;
+    z-index:   99;
+}
+
+.SIMRacingApps-App-Spectator60-relative {
+    position:  absolute;
+    width:     20%;
+    font-size: 33%;
+    bottom:    1%;
+    left:      25.5%;
+    z-index:   99;
+}
+
+.SIMRacingApps-App-Spectator60-relative .SIMRacingApps-Widget-Relative {
+    background-color: rgba(32,32,32,.5) !important;
+}
+
+.SIMRacingApps-App-Spectator60-teamspeak {
+    position:  absolute;
+    width:     10%;
+    font-size: 15%;
+    top:       51%;
+    left:      41%;
+    z-index:   999;
+}
+
+.SIMRacingApps-App-Spectator60-carnumber {
+    position:  absolute;
+    width:     10%;
+    font-size: 10%;
+    top:       13%;
+    left:      43.5%;
+    z-index:   999;
+}
+
+.SIMRacingApps-App-Spectator60-carimage {
+    position:  absolute;
+    width:     10%;
+    font-size: 10%;
+    top:       24%;
+    left:      43.5%;
+    z-index:   999;
+}
+
+.SIMRacingApps-App-Spectator60-windgauge {
+    position:   absolute;
+    width:      7%;
+    left:       45%;
+    top:        1%;
+}
+
+.SIMRacingApps-App-Spectator60-talking {
+    position:  absolute;
+    width:     16%;
+    font-size: 26%;
+    bottom:    37%;
+    left:      51.5%;
+    z-index:   999;
+}
+
+.SIMRacingApps-App-Spectator60-carcontrols {
+    position:  absolute;
+    width:     19%;
+    font-size: 31%;
+    bottom:    21%;
+    left:      50%;
+    z-index:   99;
+    background-color: slategray;
+}
+
+.SIMRacingApps-App-Spectator60-laptiming {
+    position:  absolute;
+    width:     19%;
+    font-size: 31%;
+    bottom:    1%;
+    left:      50%;
+    z-index:   99;
+}
+
+.SIMRacingApps-App-Spectator60-laptiming .SIMRacingApps-Widget-LapTiming {
+    background-color: rgba(32,32,32,.5) !important;
+}
+
+.SIMRacingApps-App-Spectator60-carselector {
+    position:  absolute;
+    width:     29%;
+    font-size: 90%;
+    bottom:    1%;
+    right:     1%;
+    z-index:   99;
+}
+
+.SIMRacingApps-App-Spectator60-lapinfo {
+    width:    10%;
+    position: absolute;
+    top:      33%;
+    left:     43.5%;
+    font-size:100%;
+}
+.SIMRacingApps-App-Spectator60-lapinfo .SIMRacingApps-Widget-DataTable-row-lap {
+    color: cyan;
+}
+.SIMRacingApps-App-Spectator60-lapinfo .SIMRacingApps-Widget-DataTable-row-togo {
+    color: orange;
+    font-size: 140%;
+    line-height: 115%;
+}
+.SIMRacingApps-App-Spectator60-lapinfo .SIMRacingApps-Widget-DataTable-row-cautions {
+    color: yellow;
+}
+

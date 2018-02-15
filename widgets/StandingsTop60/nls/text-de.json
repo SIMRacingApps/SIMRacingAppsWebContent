@@ -1,0 +1,20 @@
+{
+    "STANDINGSTOP60": "- TOP60",
+    "SOF":            "SOF",
+    "OF":             "von",
+    "LAP":            "Runde",
+    "POS":            "P.",
+    "POSCLASS":       "Kl.",
+    "POSQUAL":        "Q.",
+    "#":              "#",
+    "NAME":           "Name",
+    "BLINK":          "Lag",
+    "RATING":         "iR/SR",
+    "LAP":            "Runde",
+    "BEHIND":         "Abstand",
+    "BEST":           "beste",
+    "LAST":           "letzte",
+    "POSDIFF":        "P\u0394",
+    "PIT":            "PitZeit",
+    "RUN":            "Stint"
+}

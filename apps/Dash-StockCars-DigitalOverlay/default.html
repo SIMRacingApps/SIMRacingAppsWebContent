@@ -136,7 +136,7 @@
                 data-sra-args-row-names            = "racelaps;laprun;cautions;togo"
                 data-sra-args-data                 = "Session/Type;Session/Lap;Session/Laps;Car/REFERENCE/Lap;Car/REFERENCE/Lap/SincePitting;Session/Cautions;Session/CautionLaps;Session/LapsToGo"
                 data-sra-args-row-racelaps-label   = "data.Session.Type.ValueFormatted+':'"
-                data-sra-args-row-racelaps         = "data.Session.Lap.Value+' '+translations.OF+' '+data.Session.Laps.Value"
+                data-sra-args-row-racelaps         = "data.Session.Lap.Value+' '+translations.OF+' '+((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? (data.Car.REFERENCE.Lap.Value+data.Session.LapsToGo.Value-1|sraNumber:0:true)+'~' : data.Session.Laps.Value)"
                 data-sra-args-row-laprun-label     = "translations['LAP/RUN']+':'"
                 data-sra-args-row-laprun           = "'<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot>'
                                                    + data.Car.REFERENCE.Lap.Value+' / '+data.Car.REFERENCE.Lap.SincePitting.Value

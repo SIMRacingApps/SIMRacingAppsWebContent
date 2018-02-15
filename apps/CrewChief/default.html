@@ -47,7 +47,7 @@
                 class                               = "SIMRacingApps-App-CrewChief-Laps"
                 data-sra-args-data                  = "Session/Lap;Session/Laps;Session/LapsToGo;Session/Cautions;Session/CautionLaps"
                 data-sra-args-row-names             = "lap;togo;cautions"
-                data-sra-args-row-lap               = "'<span class=&quot;SIMRacingApps-App-CrewChief-lap&quot>'+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted+'</span>'"
+                data-sra-args-row-lap               = "'<span class=&quot;SIMRacingApps-App-CrewChiefLarge-lap&quot>'+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? (data.Session.Lap.Value+data.Session.LapsToGo.Value-1|sraNumber:0:true)+'~' : data.Session.Laps.ValueFormatted)+'</span>'"
                 data-sra-args-row-togo              = "(data.Session.LapsToGo|sraNumber:0:null:null:null:true)+' '+translations.TOGO"
                 data-sra-args-row-cautions          = "data.Session.Cautions.ValueFormatted+' '+translations.CAUTIONS+', '+(data.Session.CautionLaps|sraNumber:0)"
             ></sra-data-table>

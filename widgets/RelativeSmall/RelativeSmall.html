@@ -68,9 +68,9 @@
         <tr>
             <td class                  = "SIMRacingApps-Widget-RelativeSmall-Lap"
                 colspan                = "3"
-                data-sra-data          = "Car/REFERENCE/Lap;Session/Laps"
+                data-sra-data          = "Car/REFERENCE/Lap;Session/Laps;Car/REFERENCE/LapsToGo;Session/TimeRemaining"
                 data-sra-args-interval = "{{defaultInterval}}">
-                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Car.REFERENCE.Lap.Value+' / '+data.Session.Laps.Value"></span>
+                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Car.REFERENCE.Lap.Value+' / '+ ((data.Car.REFERENCE.Lap.Value+data.Car.REFERENCE.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Car.REFERENCE.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + (data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : '')"></span>
             </td>
             <td class                  = "SIMRacingApps-Widget-RelativeSmall-Last"
                 colspan                = "3"

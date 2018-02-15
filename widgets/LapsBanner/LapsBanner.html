@@ -2,6 +2,7 @@
      data-ng-style          = "{ height: height+'px' }"
      data-sra-data          = "Session/LapsToGo
                               ;Session/Laps
+                              ;Session/TimeRemaining
                               ;Session/Lap
                               ;Session/IsCheckeredFlag
                               ;Session/IsCautionFlag
@@ -26,8 +27,9 @@
                             : data.Session.IsCheckeredFlag.Value
                             ? translations.CHECKERED
                             : data.Session.LapsToGo.Value < (data.Session.Laps.Value * .5)
-                            ? (data.Session.LapsToGo|sraNumber:0:null:null:null:true) + ' ' + translations.TOGO
-                            : data.Session.Lap.ValueFormatted + ' ' + translations.OF + ' ' + data.Session.Laps.ValueFormatted"
+                            ? (data.Session.LapsToGo|sraNumber:0:null:null:null:true) + (data.Session.TimeRemaining.UOM == 's' ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ') ' : ' ') + translations.TOGO
+                            : data.Session.Lap.ValueFormatted + ' ' + translations.OF + ' '  
+                             + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + '~ (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : data.Session.Laps.ValueFormatted)"
         ></div>
         <img class          = "SIMRacingApps-Widget-LapsBanner-status-sponsor-img"
           data-ng-attr-src  = "/SIMRacingApps/{{sponsorImageUrl}}"
