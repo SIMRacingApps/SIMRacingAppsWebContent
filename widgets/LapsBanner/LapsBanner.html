@@ -12,6 +12,10 @@
                               ;Session/IsCrossedFlag
                               ;Session/Messages
                               ;Session/NumberOfCarClasses
+                              ;Car/LEADERCLASS/Lap
+                              ;Car/LEADERCLASS/LapsToGo
+                              ;Car/REFERENCE/Lap
+                              ;Car/REFERENCE/LapsToGo
                               ;Session/Type">
     <div class              = "SIMRacingApps-Widget-LapsBanner-status"
          data-ng-class      = "'SIMRacingApps-Widget-LapsBanner-status-'+flag">
@@ -20,6 +24,7 @@
           data-ng-bind-html = "title || data.Session.Type.ValueFormatted"
         ></div>
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
+          data-ng-if        = "!byClass"
           data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
                             ? translations.ONELAPTOGREEN
                             : data.Session.IsCrossedFlag.Value
@@ -30,6 +35,32 @@
                             ? (data.Session.LapsToGo|sraNumber:0:null:null:null:true) + (data.Session.TimeRemaining.UOM == 's' ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ') ' : ' ') + translations.TOGO
                             : data.Session.Lap.ValueFormatted + ' ' + translations.OF + ' '  
                              + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + '~ (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : data.Session.Laps.ValueFormatted)"
+        ></div>
+        <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
+          data-ng-if        = "byClass && data.Session.Type.Value == 'RACE'"
+          data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
+                            ? translations.ONELAPTOGREEN
+                            : data.Session.IsCrossedFlag.Value
+                            ? translations.CROSSED
+                            : data.Session.IsCheckeredFlag.Value
+                            ? translations.CHECKERED
+                            : data.Car.LEADERCLASS.LapsToGo.Value < (data.Session.Laps.Value * .5)
+                            ? (data.Car.LEADERCLASS.LapsToGo|sraNumber:0:null:null:null:true) + (data.Session.TimeRemaining.UOM == 's' ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ') ' : ' ') + translations.TOGO
+                            : data.Car.LEADERCLASS.Lap.ValueFormatted + ' ' + translations.OF + ' '  
+                             + ((data.Car.LEADERCLASS.LapsToGo.UOM|limitTo:1) == '~' ? ((data.Car.LEADERCLASS.Lap.Value+data.Car.LEADERCLASS.LapsToGo.Value-1)|sraNumber:0:true) + '~ (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : data.Session.Laps.ValueFormatted)"
+        ></div>
+        <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
+          data-ng-if        = "byClass && data.Session.Type.Value != 'RACE'"
+          data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
+                            ? translations.ONELAPTOGREEN
+                            : data.Session.IsCrossedFlag.Value
+                            ? translations.CROSSED
+                            : data.Session.IsCheckeredFlag.Value
+                            ? translations.CHECKERED
+                            : data.Car.REFERENCE.LapsToGo.Value < (data.Session.Laps.Value * .5)
+                            ? (data.Car.REFERENCE.LapsToGo|sraNumber:0:null:null:null:true) + (data.Session.TimeRemaining.UOM == 's' ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ') ' : ' ') + translations.TOGO
+                            : data.Car.REFERENCE.Lap.ValueFormatted + ' ' + translations.OF + ' '  
+                             + ((data.Car.REFERENCE.LapsToGo.UOM|limitTo:1) == '~' ? ((data.Car.REFERENCE.Lap.Value+data.Car.REFERENCE.LapsToGo.Value-1)|sraNumber:0:true) + '~ (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : data.Session.Laps.ValueFormatted)"
         ></div>
         <img class          = "SIMRacingApps-Widget-LapsBanner-status-sponsor-img"
           data-ng-attr-src  = "/SIMRacingApps/{{sponsorImageUrl}}"

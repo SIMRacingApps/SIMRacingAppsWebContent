@@ -1,0 +1,17 @@
+{
+"name":        ["StandingsBannerVertical20","StandingsBannerVertical20-SHORTNAME"],
+"description": [
+    "Standings Banner Vertical like seen on TV with 20 drivers",
+    "Standings Banner Vertical like seen on TV with Shortened Name with 20 drivers"
+],
+"description-de": [
+    "Kleine Anzeige der Reihenfolge vertikal/senkrecht with 20 drivers",
+    "Kleine Anzeige der Reihenfolge vertikal/senkrecht, mit kurzen Namen with 20 drivers"
+],
+"doc":         "JavaScriptDoc/sra-standings-banner-vertical20.html",
+"url":         "apps/WidgetLoader?widget=StandingsBannerVertical20&",
+"icon":        "widgets/StandingsBannerVertical20/icon.png",
+"width":       330,
+"height":      880,
+"args":        ["&SHOWSHORTNAME=N","&SHOWSHORTNAME=Y"]
+}

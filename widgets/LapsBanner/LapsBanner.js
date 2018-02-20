@@ -132,6 +132,7 @@ if ($scope.data.Car.REFERENCE.Messages.Value.indexOf(";REPAIR;") >= 0) {
                 $scope.value = 
                 $scope[self.name]     = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
                 $scope.titleFilename  = sraDispatcher.getTruthy($scope.sraArgsTITLEFILENAME,$attrs.sraArgsTitleFilename,$scope.titleFilename);
+                $scope.byClass        = sraDispatcher.getBoolean($scope.sraArgsBYCLASS,$attrs.sraArgsByClass,false);
 
                 /** your code goes here **/
 

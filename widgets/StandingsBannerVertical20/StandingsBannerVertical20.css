@@ -1,0 +1,143 @@
+.SIMRacingApps-Widget-StandingsBannerVertical20 {
+    width:          100%;
+    height:         100%;
+    font-size:      100%;
+    line-height:    150%;
+    overflow:       hidden;
+    position:       relative;
+    background-color: rgba(255,255,255,.4);
+    border-radius:  5% 5% / 1% 1%;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-LapsBanner {
+    position:       absolute;
+    /*width and height designed to get a 200x50 ratio for the sponsor image */
+    width:          95.23809523809524%;
+    height:         18%;
+    top:            1%;
+    left:           2.38095238095238%;
+    font-size:      140%;
+    font-weight:    bold;
+    text-align:     center;
+    overflow:       hidden;
+    border-radius:  5% 5% / 10% 10%;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-green
+{
+	background-color: rgba(0,128,0,.7);
+    color:          white;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-checkered
+{
+    background:     url('/SIMRacingApps/widgets/StandingsBanner/checkered.png');
+    color:          white;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-white
+{
+    background-color: rgba(255,255,255,.7);
+    color:          black;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-yellow
+{
+    background-color: rgba(255,215,0,.7);
+    color:          black;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-red
+{
+    background-color: rgba(255,0,0,.7);
+    color:          white;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-title {
+    position:       relative;
+    width:          100%;
+    height:         25%;
+    clear:          both;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-laps {
+    position:       relative;
+    width:          100%;
+    height:         25%;
+    clear:          both;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-status-sponsor-img {
+    position:       relative;
+    width:          100%;
+    height:         50%;
+    clear:          both;
+    border-radius:  0% 5%/ 20% 0%;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-boxleaders {
+    position:       absolute;
+    width:          95.23809523809524%;
+    height:         39%;
+    top:            20%;
+    left:           2.38095238095238%;
+    background-color: rgba(0,0,0,.7);
+    color:          white;
+    font-weight:    bold;
+    text-align:     center;
+    white-space:    nowrap;
+    overflow:       hidden;
+    border-radius:  3% 3% / 3% 3%;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box {
+    position:       absolute;
+    width:          95.23809523809524%;
+    height:         39%;
+    top:            60%;
+    left:           2.38095238095238%;
+    background-color: rgba(0,0,0,.7);
+    color:          white;
+    font-weight:    bold;
+    text-align:     center;
+    white-space:    nowrap;
+    overflow:       hidden;
+    border-radius:  3% 3% / 3% 3%;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-table {
+    width:          100%;
+    height:         100%;
+    table-layout:   fixed;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-row-header {
+    background-color: rgba(0,0,0,.9);
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-row {
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-position {
+    text-align:     right;
+    padding-top:    2%;
+    padding-right:  2%;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-number {
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-name {
+    text-align:     left;
+    padding-top:    2%;
+    padding-left:  2%;
+    overflow:       hidden;
+}
+
+.SIMRacingApps-Widget-StandingsBannerVertical20-green-box-behind {
+    text-align:     right;
+    padding-top:    2%;
+    padding-right:  2%;
+    overflow:       hidden;
+}
