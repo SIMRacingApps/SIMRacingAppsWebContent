@@ -1,19 +1,25 @@
 {
 "doc": "JavaScriptDoc/sra-track-map.html",
-"name": "TrackMap-MAP;TrackMap-OSM;TrackMap-NOBACKGROUND",
+"name": "TrackMap-MAP;TrackMap-OSM;TrackMap-NOBACKGROUND;TrackMap-REFERENCE",
 "description": [
     "Track Map - Static Image",
     "Track Map - Open Street Maps - Real-time",
-    "Track Map - No background"
+    "Track Map - No background",
+    "Track Map - Reference Car and Leader Only"
 ],
 "description-de": [
     "Live TrackMap / Streckenkarte - statischer/fester Hintergrund",
     "Live TrackMap / Streckenkarte - Open Street Maps - Real-time",
-    "Live TrackMap / Streckenkarte - ohne Hintergrund"
+    "Live TrackMap / Streckenkarte - ohne Hintergrund",
+    "Live TrackMap / Streckenkarte - nur Referenz-Fahrzeug und F\u00fchrender"
 ],
 "url": "apps/WidgetLoader?widget=TrackMap&",
-"icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-nobackground.png",
+"icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-nobackground.png;widgets/TrackMap/icon-reference.png",
 "width": 800,
 "height": 480,
-"args": "MAPLAYER=map;MAPLAYER=osm;MAPLAYER=none&SHOWMAP=false"
-}
+"args": [
+    "MAPLAYER=map",
+    "MAPLAYER=osm",
+    "MAPLAYER=none&SHOWMAP=false",
+    "MAPLAYER=none&SHOWFLAGS=false&SHOWWINDGAUGE=false&SHOWWEATHER=false&SHOWTITLE=false&SHOWINFO=false&SHOWMAP=false&TRACKMAPCARS=REFERENCE%3BLEADERCLASS"
+]}

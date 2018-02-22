@@ -78,7 +78,7 @@
                 colspan                = "3"
                 data-sra-data          = "Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining"
                 data-sra-args-interval = "{{defaultInterval}}">
-                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Session.Lap.Value+' / '+ ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + (data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')': '')"></span>
+                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Session.Lap.Value+' / '+ ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' && data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')': '')"></span>
             </td>
             <td class                  = "SIMRacingApps-Widget-Standings-Last"
                 colspan                = "2"

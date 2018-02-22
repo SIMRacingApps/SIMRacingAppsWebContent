@@ -5,8 +5,8 @@
     "Standings Banner Vertical like seen on TV with Shortened Name with 20 drivers"
 ],
 "description-de": [
-    "Kleine Anzeige der Reihenfolge vertikal/senkrecht with 20 drivers",
-    "Kleine Anzeige der Reihenfolge vertikal/senkrecht, mit kurzen Namen with 20 drivers"
+    "Kleine Anzeige der Reihenfolge vertikal/senkrecht, zeigt 20 Fahrer",
+    "Kleine Anzeige der Reihenfolge vertikal/senkrecht, mit kurzen Namen, 20 Fahrer"
 ],
 "doc":         "JavaScriptDoc/sra-standings-banner-vertical20.html",
 "url":         "apps/WidgetLoader?widget=StandingsBannerVertical20&",

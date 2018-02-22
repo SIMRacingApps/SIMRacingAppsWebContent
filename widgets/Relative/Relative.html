@@ -78,7 +78,7 @@
             <td class                  = "SIMRacingApps-Widget-Relative-Lap"
                 colspan                = "3"
                 data-sra-args-interval = "{{defaultInterval}}">
-                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Car[sraRelativeCar].Lap.Value+' / '+((data.Car[sraRelativeCar].Lap.Value+data.Car[sraRelativeCar].LapsToGo.Value-1)|sraNumber:0:true) + ((data.Car[sraRelativeCar].LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + (data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : '')"></span>
+                <span class='SIMRacingAppsLabel' data-ng-bind-html="translations.LAP+': '"></span><span data-ng-bind="data.Car[sraRelativeCar].Lap.Value+' / '+((data.Car[sraRelativeCar].Lap.Value+data.Car[sraRelativeCar].LapsToGo.Value-1)|sraNumber:0:true) + ((data.Car[sraRelativeCar].LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + ((data.Car[sraRelativeCar].LapsToGo.UOM|limitTo:1) == '~' && data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')' : '')"></span>
             </td>
             <td class                  = "SIMRacingApps-Widget-Relative-Last"
                 colspan                = "3"

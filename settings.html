@@ -136,7 +136,9 @@
     </td></tr>
     <tr><td>
         <form class="upload" method="POST" action="/SIMRacingApps/settings">
-            <input type="submit" value="Save" name="upload" id="upload" /><br />
+            <input type="submit" value="Save" name="upload" id="upload" />
+            <!-- input type="button" onclick="self.close()" value="Cancel" name="cancel" id="cancel" / -->
+            <br />
             <textarea id="settings" name="settings">{{settings}}</textarea>
         </form>
     </td></tr>

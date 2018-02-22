@@ -15,7 +15,7 @@
  * <img src="../widgets/TrackMap/icon.png" atl="Image goes here"/>
  * @ngdoc directive
  * @name sra-track-map
- * @param {String} data-sra-args-cars A semicolon list of cars to show.
+ * @param {String} data-sra-args-track-map-cars A semicolon list of cars to show.
  *                 If you want to see the PITSTALL and PACECAR, you must include them in this list.
  *                 Defaults to PITSTALL and all cars in the session.
  *                 URL argument is TRACKMAPCARS.
