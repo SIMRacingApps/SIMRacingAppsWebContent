@@ -1,0 +1,149 @@
+<html>
+<head>
+    <style>
+        body {
+            width:     100%;
+            font-size: 30px;
+        }
+        .logo {
+            float: left;
+            width: 30%;
+        }
+        .logoimg {
+            width: 140px;
+        }
+        .header {
+            background-color: blue;
+            color:            white;
+            width:            100%;
+            clear:            both;
+            font-size:        70px;
+            text-align:       center;
+            padding-bottom:   10px;
+            white-space:      nowrap;
+        }
+        .instructions {
+            background-color: blue;
+            color:            white;
+            width:            100%;
+            clear:            both;
+            font-size:        20px;
+            text-align:       center;
+            padding-bottom:   10px;
+            white-space:      nowrap;
+        }
+        #sratitle {
+            color:            white;
+        }
+        #update {
+            color:            chartreuse;
+            font-size:        20px;
+        }
+        .copyright {
+            color:            white;
+            font-size:        20px;
+        }
+        .license {
+            color:            white;
+            font-size:        20px;
+        }
+        .notice {
+            color:            white;
+            font-size:        20px;
+        }
+        .releasenotes {
+            color:            white;
+            font-size:        25px;
+        }
+        .version {
+            background-color: blue;
+            color:            white;
+            width:            100%;
+            clear:            both;
+            font-size:        30px;
+            text-align:       center;
+            padding-bottom:   10px;
+            white-space:      nowrap;
+        }
+        .item {
+            width: 100%;
+            height: 120px;
+            background-color: lightgray;
+            margin-bottom: 3px;
+            margin-top: 3px;
+        }
+        .icon {
+            max-width:  200px;
+            max-height: 120px;
+            text-align: center;
+        }
+        .name {
+            text-align: center;
+        }
+        .itemtext {
+            height: 100%;
+            font-size: 30px;
+            text-align: left;
+            white-space: nowrap;
+        }
+        #useroverrides {
+            width: 90%;
+            min-width: 400px;
+            height: 400px;
+            white-space: nowrap;
+        }
+        .upload {
+            font-size: 25px;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="expires" content="Sat, 01 Mar 2014 00:00:00 GMT">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="72x72" href="/SIMRacingApps/SRA-Logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/SIMRacingApps/SRA-Logo-114x114.png">
+    <link rel="apple-touch-icon" href="/SIMRacingApps/SRA-Logo-57x57.png">
+    <script type="text/javascript" src="/SIMRacingApps/lib/require.config.js"></script>
+    <script type="text/javascript" data-main="/SIMRacingApps/useroverrides" src="/SIMRacingApps/external/require.js"></script>
+    <base href="/" />
+    <title>SIMRacingApps</title>
+</head>
+<body data-ng-controller = "SIMRacingApps-Controller">
+<table>
+	<tr><td width='100%'>
+		<div class="header">
+		    <table width='100%'><tr>
+			    <td>
+	                <a onclick="javascript:location.href='/SIMRacingApps/default.html'">
+	                    <img class="logoimg" src="/SRA-Logo.png" /><br />
+	                </a>
+			    </td>
+			    <td class="header">
+		            <a id="sratitle" target="_blank" href="http://SIMRacingApps.com">SIMRacingApps.com</a><br />
+		            <div class="instructions">
+					This is your useroverrides.css file.<br />
+					All class names start with ".SIMRacingApps-Widget-{widgetname}"<br />
+					or ".SIMRacingApps-App-{appname}".<br />
+					There are some global class names that start with ".SIMRacingApps"<br />
+					Hint: Use your browser's debugger (F12) on the App/Widget to<br />
+					discover what you need to change and even experiment. 
+					</div>
+			    </td>
+			    </tr>
+		    </table>
+		</div>    
+    </td></tr>
+    <tr><td>
+        <form class="upload" method="POST" action="/SIMRacingApps/useroverrides">
+            <input type="submit" value="Save" name="upload" id="upload" />
+            <!-- input type="button" onclick="self.close()" value="Cancel" name="cancel" id="cancel" / -->
+            <br />
+            <textarea id="useroverrides" name="useroverrides">{{useroverrides}}</textarea>
+        </form>
+    </td></tr>
+</table>
+</body>
+</html>
