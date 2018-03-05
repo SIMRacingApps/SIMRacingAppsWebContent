@@ -32,7 +32,7 @@
                                        +  ' ' + translations.OF + ' '
                                        +  data.Session.Cars.ValueFormatted
                                        +  ', ' + translations.LAP + ': '
-                                       +  data.Session.Lap.ValueFormatted + ' / ' + ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' && data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')': '')
+                                       +  data.Session.Lap.ValueFormatted + ' / ' + ((data.Session.Lap.Value+data.Session.LapsToGo.Value-1)|sraNumber:0:true) + ((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? '~' : '') + (data.Session.TimeRemaining.Value ? ' (' + (data.Session.TimeRemaining|sraDuration:0:null:null:true:true) + ')': '')
                                        "
                 colspan                = "6"
             ></td>

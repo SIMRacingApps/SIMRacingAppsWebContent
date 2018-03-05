@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-analog-gauge-spek-speedometer.html",
+"name": "AnalogGauge-Spek-Speedometer",
+"description": "Analog Gauge Spek Speedometer",
+"description-de": "Analoge Rundinstrument-Anzeige - Geschwindigkeit",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/Speedometer&",
+"icon": "widgets/AnalogGauge/Spek/Speedometer/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

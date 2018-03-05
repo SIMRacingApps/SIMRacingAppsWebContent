@@ -28,7 +28,7 @@
  * @ngdoc directive
  * @name sra-analog-gauge-spek-tachometer
  * @param {boolean} data-sra-args-show-digital-value Set to true or false for displaying the digital value. Defaults to true. Can be overridden from the URL with "SHOWDIGITALVALUE=false".
- * @param {double}  data-sra-args-round-to The value to round the digital display to. Defaults to 1. Can be overridden from the URL with "TACHROUNDTO=10".
+ * @param {double}  data-sra-args-tach-round-to The value to round the digital display to. Defaults to 1. Can be overridden from the URL with "TACHROUNDTO=10".
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 16.
  * @author Jeffrey Gilliam
  * @since 1.0

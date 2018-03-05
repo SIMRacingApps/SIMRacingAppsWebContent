@@ -36,6 +36,8 @@
  * @ngdoc directive
  * @name sra-laps-banner
  * @param {string} data-sra-args-title-filename The name of the file to read the title and sponsors from. Defaults to "LapsBanner".
+ * @param {boolean} data-sra-args-show-estimated If true, shows the estimated time remaining. Default is false, will only show time remaining if not estimated.
+ * @param {boolean} data-sra-args-by-class If true estimated laps are based on the REFERENCE car's class. Default is false.
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
  * @author Jeffrey Gilliam, Robert Moyer Jr.
  * @since 1.0
@@ -78,7 +80,8 @@ define(['SIMRacingApps'
                 /** your code goes here **/
 
                 $scope.titleFilename    = "LapsBanner";
-                $scope.showShortName    = false;
+                $scope.byClass          = false;
+                $scope.showEstimated    = false;
                 $scope.flag             = "green"; //green, yellow, white, checkered, red
                 $scope.title            = "";
                 $scope.titleFontSize    = 100;
@@ -132,7 +135,8 @@ if ($scope.data.Car.REFERENCE.Messages.Value.indexOf(";REPAIR;") >= 0) {
                 $scope.value = 
                 $scope[self.name]     = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
                 $scope.titleFilename  = sraDispatcher.getTruthy($scope.sraArgsTITLEFILENAME,$attrs.sraArgsTitleFilename,$scope.titleFilename);
-                $scope.byClass        = sraDispatcher.getBoolean($scope.sraArgsBYCLASS,$attrs.sraArgsByClass,false);
+                $scope.byClass        = sraDispatcher.getBoolean($scope.sraArgsBYCLASS,$attrs.sraArgsByClass,$scope.byClass);
+                $scope.showEstimated  = sraDispatcher.getBoolean($scope.sraArgsSHOWESTIMATED,$attrs.sraArgsShowEstimated,$scope.showEstimated);
 
                 /** your code goes here **/
 

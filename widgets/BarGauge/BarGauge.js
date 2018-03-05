@@ -224,7 +224,7 @@ function(SIMRacingApps) {
                 };
 
                 $scope.updateColor = function() {
-                    var pitLimiter = $scope.sraBarGauge.toUpperCase() == "TACHOMETER" && $scope.data.Car.REFERENCE.Messages.Value.indexOf(";PITSPEEDLIMITER;") >= 0;
+                    var pitLimiter = ($scope.sraBarGauge.toUpperCase() == "TACHOMETER" || $scope.sraBarGauge.toUpperCase() == "SPEEDOMETER") && $scope.data.Car.REFERENCE.Messages.Value.indexOf(";PITSPEEDLIMITER;") >= 0;
 
                     $scope.state      = $scope.data.Car.REFERENCE.Gauge[$scope.sraBarGauge]['Value'+$scope.gaugeValue][$scope.argsUOM].State        || "NOTAVAILABLE";
 //$scope.state = "CRITICAL";
@@ -362,7 +362,7 @@ function(SIMRacingApps) {
                     });
                 }
                 
-                if ($scope.sraBarGauge.toUpperCase() == "TACHOMETER") {
+                if ($scope.sraBarGauge.toUpperCase() == "TACHOMETER" || $scope.sraBarGauge.toUpperCase() == "SPEEDOMETER") {
 
                     $attrs.sraArgsData += ";Car/REFERENCE/Messages";
                     $scope.$watch("data.Car.REFERENCE.Messages.Value",$scope.updateColor);

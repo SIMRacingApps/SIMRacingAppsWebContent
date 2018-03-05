@@ -529,7 +529,9 @@ function(SIMRacingApps) {
                     });
                 }
                 
-                if ($scope.sraAnalogGauge.toUpperCase() == "TACHOMETER") {
+                if ($scope.sraAnalogGauge.toUpperCase() == "TACHOMETER"
+                ||  $scope.sraAnalogGauge.toUpperCase() == "SPEEDOMETER"
+                ) {
                     $attrs.sraArgsData += ";Car/REFERENCE/Messages";
                     $scope.$watch("data.Car.REFERENCE.Messages.Value", $scope.updateRevLights);
                     

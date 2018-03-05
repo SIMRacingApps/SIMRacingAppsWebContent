@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-speedometer.html",
+"name": "BarGauge-Speedometer",
+"description": "Bar Gauge Speedometer",
+"description-de": "Balken-Anzeige - Geschwindigkeit",
+"url": "apps/WidgetLoader?widget=BarGauge/Speedometer&",
+"icon": "widgets/BarGauge/Speedometer/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

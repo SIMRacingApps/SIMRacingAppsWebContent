@@ -193,6 +193,33 @@ function( angular,  SIMRacingApps) {
                     }, $scope.clickDelay);
                 }
             };
+
+            /**
+            //TODO: Move this code to the server and add these to the settings
+            var car = 'P10';        //Car to watch
+            var delay = 0;          //amount to delay (milliseconds) before throwing the caution
+            var laps = [45,90];     //laps throw caution on. Add as many as you want
+            var interval = 100;     //polling frequency in milliseconds
+            
+            sraDispatcher.subscribe($scope,{
+                sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag"
+            },interval);
+            $scope.$watch('data.Car.'+car+'.Lap.COMPLETED.Value', function() {
+                if ($scope.data.Session.Type.Value == 'RACE' 
+                && !$scope.data.Session.IsCautionFlag.Value
+                && !$scope.data.Session.IsGreenFlag.Value   //if were under yellow and just going back green, do not throw another one
+                ) {
+                    for (var i=0; i < laps.length; i++) {
+                        if ($scope.data.Car[car].Lap.COMPLETED.Value == laps[i]) {
+                            $timeout(function () {
+                                $scope.sendCommand("Session/setCautionFlag");
+                            }, delay);
+                        }
+                    }
+                }
+            });
+            /**/
+
         }]);
 
         //now start the process by passing in the element where the SIMRacingsApps class is defined.
