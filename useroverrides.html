@@ -90,7 +90,7 @@
             width: 90%;
             min-width: 400px;
             height: 400px;
-            white-space: nowrap;
+            white-space: pre;
         }
         .upload {
             font-size: 25px;
@@ -141,7 +141,7 @@
             <input type="submit" value="Save" name="upload" id="upload" />
             <!-- input type="button" onclick="self.close()" value="Cancel" name="cancel" id="cancel" / -->
             <br />
-            <textarea id="useroverrides" name="useroverrides">{{useroverrides}}</textarea>
+            <textarea id="useroverrides" name="useroverrides" wrap="off">{{useroverrides}}</textarea>
         </form>
     </td></tr>
 </table>
