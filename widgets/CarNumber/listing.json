@@ -5,7 +5,7 @@
 "description-de": "Fahrzeug-Nummer mit Farben aus der SIM",
 "url": "apps/WidgetLoader?widget=CarNumber&",
 "icon": "widgets/CarNumber/icon.png",
-"width": 480,
+"width": 800,
 "height": 480,
 "args": ""
 }

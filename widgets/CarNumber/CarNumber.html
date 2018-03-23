@@ -1,5 +1,6 @@
 <div class="SIMRacingApps-Widget-CarNumber" ng-attr-style="position: relative; height: {{height}}px; visibility: {{CarNumber ? 'inherit' : 'hidden'}}">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         class="SIMRacingApps-Widgets-CarNumber-svg"
          viewBox="0 0 800 480">
          <rect class="SIMRacingApps-Widget-CarNumber-background" 
                x=0 y=0 rx=200 ry=240 width=800 height=480 ng-attr-fill='{{CarColor|sraRGB}}'>
@@ -26,4 +27,7 @@
                ng-bind="data.Car[value].Number.Value">
          </text>
     </svg>
+    <div class         ="SIMRacingApps-Widget-CarNumber-image"
+         data-ng-style = "{ backgroundImage: 'url(/SIMRacingApps/CarNumbers/LeagueID-'+data.Session.LeagueID.Value+'/'+data.Car[value].Number.Value+'.png)' }"
+    ></div>
 </div>

@@ -2,6 +2,23 @@
 /**
  * This widget simply displays the car number using the colors returned by the SIM.
  * <p>
+ * You can provide an image of your car number that is based on the league id returned by the SIM.
+ * It requires your league be run using iRacing's leagues.
+ * It will not work if it is a hosted session because iRacing does not return a league number.
+ * The image path should be as follows:
+ * <p>
+ * Documents/SIMRacingApps/CarNumbers/LeagueID-{leagueId}/{carNumber}.png
+ * <p>
+ * The leagueId can be found in iRacing's League Directory listing by clicking on the league you are in 
+ * and looking at the URL for that page. 
+ * If you want to make numbers for your official races, use the league id of 0. 
+ * Then create numbers for 1-60 to cover them all. These will be used by all cars.
+ * <p>
+ * Example: Documents/SIMRacingApps/CarNumbers/LeagueID-1489/61.png
+ * <p>
+ * All images should have an aspect ratio of 1.666 (i.e. 800 wide, 480 high) to cover the original number.
+ * Note: Taking a screen shot of your number while in iRacing creates a dull image.
+ * <p>
  * Example(s):
  * <p><b>
  * &lt;sra-car-number data-sra-args-car="ME"&gt;&lt;/sra-car-number&gt;<br />
@@ -68,7 +85,8 @@ function(SIMRacingApps) {
                   + ";Car/" + $scope.value + "/Color"
                   + ";Car/" + $scope.value + "/ColorNumber"
                   + ";Car/" + $scope.value + "/ColorNumberOutline"
-                  + ";Car/" + $scope.value + "/ColorNumberBackground";
+                  + ";Car/" + $scope.value + "/ColorNumberBackground"
+                  + ";Session/LeagueID";
 
                 $scope.$watch("data.Car['"+$scope.value+"'].Number.Value", function() {
                     $scope.CarNumber = $scope.data.Car[$scope.value].Number.ValueFormatted;
