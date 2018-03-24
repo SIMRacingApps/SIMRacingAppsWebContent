@@ -1,0 +1,16 @@
+
+.SIMRacingApps-Widget-SRALogo {
+    width:         100%;
+    height:        100%;
+    font-size:     100%;
+    z-index:       1;
+    overflow:      hidden;
+}
+
+.SIMRacingApps-Widget-SRALogo-img {
+    width:              100%;
+    height:             100%;
+    background-size:    100%;
+    background-repeat:  no-repeat;
+    background-position: center;
+}
