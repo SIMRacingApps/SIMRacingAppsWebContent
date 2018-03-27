@@ -3,9 +3,9 @@
  * This widget displays a message that we are in the garage.
  * Mostly to be used by streamers to cover up their garage settings,
  * but could be use to put up a setup guide.
- * 
+ * <p>
  * Streamers should add the argument to the URL to set the background to transparent, &BACKGROUNDCOLOR=transparent.
- * 
+ * <p>
  * Users can override the message with an image file of their own.
  * Place a file called "InGarage.png" or "InGarage.gif" in your "Documents/SIMRacingApps" folder.
  * If both are there, the gif will take priority.
