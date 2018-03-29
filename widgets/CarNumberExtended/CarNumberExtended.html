@@ -14,7 +14,10 @@
          data-xng-style            = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[sraCarNumberExtended].ClassColor.Value | sraHex:6) : 'transparent'),
                                         color: (data.Session.NumberOfCarClasses.Value > 1 ? 'black' : 'inherit')
                                       }"
-         data-ng-bind-html        = "(showShortName ? data.Car[sraCarNumberExtended].DriverNameShort.ValueFormatted : data.Car[sraCarNumberExtended].DriverName.ValueFormatted.replace(' ','<br />'))
+         data-ng-bind-html        = "(showShortName 
+                                      ? (data.Car[sraCarNumberExtended].DriverNameShort.ValueFormatted|sraEncodeEntities) 
+                                      : (data.Car[sraCarNumberExtended].DriverName.ValueFormatted|sraEncodeEntities).replace(' ','<br />')
+                                     )
                                   + (data.Session.DiffCars.LEADER[sraCarNumberExtended].UOM.toUpperCase() == 'LAP' 
                                     ? ' ' + (data.Session.DiffCars.LEADER[sraCarNumberExtended].Value|sraNumber:0) + 'L'
                                     : '')

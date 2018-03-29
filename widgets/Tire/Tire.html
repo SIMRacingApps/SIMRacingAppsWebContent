@@ -19,15 +19,15 @@
                                     :(data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.Value|sraNumber:1))
                                   + '</span><br />'
                                   + '<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                  + data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.UOMAbbr
+                                  + (data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.UOMAbbr|sraEncodeEntities)
                                   + '</span><br />'
-                                  + '#'+(data.Car.REFERENCE.Gauge['TirePressure'+value].Count|sraDebug|sraNumber:0)
+                                  + '#'+(data.Car.REFERENCE.Gauge['TirePressure'+value].Count|sraNumber:0)
                                   + (data.Car.REFERENCE.MaxTires.State == 'NORMAL'
                                     ? '/' + (data.Car.REFERENCE.MaxTires|sraNumber:0)
                                     : ''
                                     )
                                   + '<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                  + '<br />' + translations.LAPS
+                                  + '<br />' + (translations.LAPS|sraEncodeEntities)
                                   + '</span><br />' + data.Car.REFERENCE.Gauge['TirePressure'+value].Laps.Value
                                   "
             ></td>

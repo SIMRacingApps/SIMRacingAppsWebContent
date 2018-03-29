@@ -59,7 +59,7 @@
 		        <div class                      = "SIMRacingApps-App-Dash-Minimum-TireWear SIMRacingApps-App-Dash-Minimum-TireWear-RR">{{((data.Car.REFERENCE.Gauge.TireWearRRL.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearRRM.ValueHistorical.Value + data.Car.REFERENCE.Gauge.TireWearRRR.ValueHistorical.Value) / 3.0) | sraNumber:0}}%</div>
 	            <div class                      = "SIMRacingApps-App-Dash-Minimum-incidents"
 	                 data-ng-style              = "{ display: data.Car.REFERENCE.Incidents.State != 'NOTAVAILABLE' ? 'inherit' : 'none' }"
-	                 data-ng-bind-html          = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
+	                 data-ng-bind               = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
 	                                            ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
 	                                            :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
 	                                            "

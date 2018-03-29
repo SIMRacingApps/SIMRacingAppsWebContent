@@ -58,11 +58,11 @@ function(SIMRacingApps) {
                 $scope.$watch("data.Car['"+$scope.value+"'].SpotterMessage.Value", function() {
                     if ($scope.data.Car[$scope.value].SpotterMessage.Value == "CARLEFT"
                     ||  $scope.data.Car[$scope.value].SpotterMessage.Value == "CARLEFTRIGHT") {
-                        $scope.arrow = "&lt;";
+                        $scope.arrow = "<";
                     }
                     else
                     if ($scope.data.Car[$scope.value].SpotterMessage.Value == "CARSLEFT") {
-                        $scope.arrow = "&lt;&lt;";
+                        $scope.arrow = "<<";
                     }
                     else {
                         $scope.arrow = "";

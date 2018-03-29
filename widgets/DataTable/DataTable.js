@@ -16,8 +16,9 @@
  *      data-sra-args-header       = "'Some Constant'"
  *      data-sra-args-header-class = "'myHeaderClass'"
  *      &lt;!-- or if using the data object --&gt;
- *      data-sra-args-header       = "'Driver = ' + data.Car.REFERENCE.DriverName.ValueFormatted"
+ *      data-sra-args-header       = "'Driver = ' + (data.Car.REFERENCE.DriverName.ValueFormatted|sraEncodeEntities)"
  * </pre>
+ * NOTE: All data should be cleansed with a call to the sraEncodeEntities filter.
  * For the rows, each row must be given a name and listed in the order to display them. 
  * They are assigned to the row-names parameter separated with semicolons, commas or spaces as follows:
  * <pre>
@@ -25,13 +26,13 @@
  * </pre>
  * Once each row has a name, then a Class, HTML, or Label can be assigned to those rows by using their name in the argument variable name as follows:
  * <pre>
- *      data-sra-args-row-name-label       = "translations.NAME + ':'"
- *      data-sra-args-row-name             = "data.Car.REFERENCE.DriverName.ValueFormatted"
+ *      data-sra-args-row-name-label       = "(translations.NAME|sraEncodeEntities) + ':'"
+ *      data-sra-args-row-name             = "(data.Car.REFERENCE.DriverName.ValueFormatted|sraEncodeEntities)"
  *      data-sra-args-row-name-class       = "'myNameClass'"
  *      data-sra-args-row-name-label-class = "'myNameLabelClass'"
  *      data-sra-args-row-name-value-class = "'myNameValueClass'"
- *      data-sra-args-row-carnum-label     = "translations.CARNUMBER + ':'"
- *      data-sra-args-row-carnum           = "data.Car.REFERENCE.CarNumber.ValueFormatted"      
+ *      data-sra-args-row-carnum-label     = "(translations.CARNUMBER|sraEncodeEntities) + ':'"
+ *      data-sra-args-row-carnum           = "(data.Car.REFERENCE.CarNumber.ValueFormatted|sraEncodeEntities)"      
  * </pre>
  * <p>
  * Example from the CrewChief App:
@@ -40,13 +41,13 @@
  *      id                                  = "SIMRacingApps-App-CrewChief-CarTrack"
  *      data-sra-args-data                  = "Car/REFERENCE/DriverName;Car/REFERENCE/Number;Car/REFERENCE/DriverRating;Session/Type;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Length;Track/Category;Track/PitSpeedLimit"
  *      data-sra-args-row-names             = "drivername;rating;session;cardesc;trackdesc;trackinfo;pitinfo"
- *      data-sra-args-row-drivername        = "data.Car.REFERENCE.DriverName.ValueFormatted"
- *      data-sra-args-row-rating            = "data.Car.REFERENCE.DriverRating.ValueFormatted+' #'+data.Car.REFERENCE.Number.ValueFormatted"
- *      data-sra-args-row-session           = "data.Session.Type.ValueFormatted+' - '+data.Car.REFERENCE.Status.ValueFormatted"
- *      data-sra-args-row-cardesc           = "data.Car.REFERENCE.Description.ValueFormatted"
- *      data-sra-args-row-trackdesc         = "data.Track.Description.ValueFormatted"
- *      data-sra-args-row-trackinfo         = "(data.Track.Length.Value|sraNumber:1)+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted"
- *      data-sra-args-row-pitinfo           = "translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit|sraNumber:0)"
+ *      data-sra-args-row-drivername        = "(data.Car.REFERENCE.DriverName.ValueFormatted|sraEncodeEntities)"
+ *      data-sra-args-row-rating            = "(data.Car.REFERENCE.DriverRating.ValueFormatted+' #'+data.Car.REFERENCE.Number.ValueFormatted)|sraEncodeEntities"
+ *      data-sra-args-row-session           = "(data.Session.Type.ValueFormatted+' - '+data.Car.REFERENCE.Status.ValueFormatted)|sraEncodeEntities"
+ *      data-sra-args-row-cardesc           = "data.Car.REFERENCE.Description.ValueFormatted|sraEncodeEntities"
+ *      data-sra-args-row-trackdesc         = "data.Track.Description.ValueFormatted|sraEncodeEntities"
+ *      data-sra-args-row-trackinfo         = "((data.Track.Length.Value|sraNumber:1)+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted)|sraEncodeEntities"
+ *      data-sra-args-row-pitinfo           = "(translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit|sraNumber:0))|sraEncodeEntities"
  * &gt;&lt;/sra-data-table&gt;
  * </b></pre>
  * @ngdoc directive

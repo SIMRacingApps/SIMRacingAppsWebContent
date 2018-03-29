@@ -207,14 +207,19 @@
     font-size:          100%;
 }
 
+.SIMRacingApps-Widget-FuelTank-togo { width: 39%; }
+.SIMRacingApps-Widget-FuelTank-sign { width: 5%; }
+
 .SIMRacingApps-Widget-FuelTank-number {
     text-align:         right;
     font-size:          100%;
+    width:              23%;
 }
 
 .SIMRacingApps-Widget-FuelTank-uom {
     text-align:         left;
     font-size:          45%;
+    width:              23%
 }
 
 .SIMRacingApps-Widget-FuelTank-enoughToFinish {

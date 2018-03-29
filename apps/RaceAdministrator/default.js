@@ -47,7 +47,7 @@ function( angular,  SIMRacingApps) {
             $scope.activeDriverButton     = "";
             $scope.currentCarCommand      = "";
             $scope.sentCommands           = [0,1,2,3,4];
-            $scope.sentCommandsText       = ['&nbsp;','&nbsp;','&nbsp;','&nbsp;','&nbsp;'];
+            $scope.sentCommandsText       = [' ',' ',' ',' ',' '];
             
             $scope.sendCommand = function(command) {
                 sraDispatcher.sendCommand(command);

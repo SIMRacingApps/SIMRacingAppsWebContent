@@ -3,11 +3,11 @@
     ng-attr-style            = "height: {{height}}px;"
     data-sra-args-data       = "Track/WeatherTemp;Track/Temp;Track/WeatherWindDirection/Text;Track/WeatherWindSpeed;Track/WeatherSkies;Track/WeatherRelativeHumidity;Track/WeatherFogLevel"
     data-sra-args-row-names  = "temp;feel"
-    data-sra-args-row-temp   = "(data.Track.WeatherTemp.Value|number:0) + ' / ' + (data.Track.Temp.Value|number:0) + ' '  + data.Track.WeatherTemp.UOMAbbr
+    data-sra-args-row-temp   = "((data.Track.WeatherTemp.Value|number:0) + ' / ' + (data.Track.Temp.Value|number:0) + ' '  + data.Track.WeatherTemp.UOMAbbr
                                + ', '  + translations.WIND + ' '   + data.Track.WeatherWindDirection.Text.ValueFormatted
-                               + ' @ ' + (data.Track.WeatherWindSpeed.Value|number:0) + ' '   + (data.Track.WeatherWindSpeed.UOMAbbr|uppercase)"
-    data-sra-args-row-feel   = "data.Track.WeatherSkies.ValueFormatted
+                               + ' @ ' + (data.Track.WeatherWindSpeed.Value|number:0) + ' '   + (data.Track.WeatherWindSpeed.UOMAbbr|uppercase))|sraEncodeEntities"
+    data-sra-args-row-feel   = "(data.Track.WeatherSkies.ValueFormatted
                                + ', '  + translations.RH + ' ' + (data.Track.WeatherRelativeHumidity.Value|number:0) + data.Track.WeatherRelativeHumidity.UOMAbbr
-                               + ', '  + translations.FOG + ' ' + (data.Track.WeatherFogLevel.Value|number:0) + data.Track.WeatherFogLevel.UOMAbbr"
+                               + ', '  + translations.FOG + ' ' + (data.Track.WeatherFogLevel.Value|number:0) + data.Track.WeatherFogLevel.UOMAbbr)|sraEncodeEntities"
     data-sra-args-interval   = {{sraInterval}}
 ></sra-data-table>

@@ -8,61 +8,61 @@
 	            data-ng-style            = "{ display: sraShowClickToSelect ? 'inherit' : 'none' }"          
 	            data-sra-args-data       = "Session/ReferenceCar"
 	            data-ng-bind-html        = "'<span class=&quot;SIMRacingAppsLabel&quot;>' 
-	                                     +  translations.CLICKTOSELECT 
+	                                     +  (translations.CLICKTOSELECT|sraEncodeEntities) 
 	                                     +  ':</span>&nbsp;&nbsp;&nbsp;'"
 	        ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowAll ? 'inherit' : 'none' }"          
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-all SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-	            data-ng-bind-html        = "translations.ALL"
+	            data-ng-bind             = "translations.ALL"
 	            data-sra-args-on-click   = "allClicked"
 	        ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowLeader ? 'inherit' : 'none' }"          
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-leader SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-	            data-ng-bind-html        = "translations.LEADER"
+	            data-ng-bind             = "translations.LEADER"
 	            data-sra-args-on-click   = "leaderClicked"
 	        ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowMe ? 'inherit' : 'none' }"          
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-me SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-	            data-ng-bind-html        = "translations.ME"
+	            data-ng-bind             = "translations.ME"
 	            data-sra-args-on-click   = "meClicked"
 	        ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowAheadBehind ? 'inherit' : 'none' }"          
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-ahead SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-	            data-ng-bind-html        = "translations.AHEAD"
+	            data-ng-bind             = "translations.AHEAD"
 	            data-sra-args-on-click   = "aheadClicked"
 	        ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowAheadBehind ? 'inherit' : 'none' }"           
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-behind SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-	            data-ng-bind-html        = "translations.BEHIND"
+	            data-ng-bind             = "translations.BEHIND"
 	            data-sra-args-on-click   = "behindClicked"
 	        ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowReply ? 'inherit' : 'none' }"           
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-reply SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-	            data-ng-bind-html        = "translations.REPLY"
+	            data-ng-bind             = "translations.REPLY"
 	            data-sra-args-on-click   = "replyClicked"
 	        ></sra-data>
             <sra-data 
                 data-ng-style            = "{ display: sraChangeFocus ? 'inherit' : 'none' }"          
                 data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-focus-leader SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-                data-ng-bind-html        = "translations.LEADER"
+                data-ng-bind             = "translations.LEADER"
                 data-sra-args-on-click   = "focusOnLeaderClicked"
             ></sra-data>
             <sra-data 
                 data-ng-style            = "{ display: sraChangeFocus ? 'inherit' : 'none' }"          
                 data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-focus-crashes SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-                data-ng-bind-html        = "translations.CRASHES"
+                data-ng-bind             = "translations.CRASHES"
                 data-sra-args-on-click   = "focusOnCrashesClicked"
             ></sra-data>
             <sra-data 
                 data-ng-style            = "{ display: sraChangeFocus ? 'inherit' : 'none' }"          
                 data-ng-class            = "'SIMRacingApps-Widget-CarSelector-button SIMRacingApps-Widget-CarSelector-focus-exciting SIMRacingApps-Widget-CarSelector-clickedstate-' + getClickedState()"
-                data-ng-bind-html        = "translations.EXCITING"
+                data-ng-bind             = "translations.EXCITING"
                 data-sra-args-on-click   = "focusOnExcitingClicked"
             ></sra-data>
 	    </div>
@@ -72,21 +72,21 @@
 	            class                    = "SIMRacingApps-Widget-CarSelector-reference"
 	            data-sra-args-data       = "Session/ReferenceCar"
 	            data-ng-bind-html        = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-	                                     +  translations.REFERENCECAR + ':</span> ' 
-	                                     +  data.Session.ReferenceCar.ValueFormatted 
+	                                     +  (translations.REFERENCECAR|sraEncodeEntities) + ':</span> ' 
+	                                     +  (data.Session.ReferenceCar.ValueFormatted|sraEncodeEntities) 
 	                                     +  '</span>'"
 	        ></sra-data>
 	    </div>
 	    <table 
 	        class           = "SIMRacingApps-Widget-CarSelector-carstable">
 	        <colgroup>
-	            <col style  = "width: 14.285%" />
-	            <col style  = "width: 14.285%" />
-	            <col style  = "width: 14.285%" />
-	            <col style  = "width: 14.285%" />
-	            <col style  = "width: 14.285%" />
-	            <col style  = "width: 14.285%" />
-	            <col style  = "width: 14.285%" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
+	            <col class = "SIMRacingApps-Widget-CarSelector-car" />
 	        </colgroup>
 	        <tbody>
 	            <tr data-ng-repeat                   = "car in [1,8,15,22,29,36,43]">

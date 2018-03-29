@@ -39,19 +39,23 @@
 
 .SIMRacingApps-Widget-Standings-POS {
     text-align: center;
+    width: 6%;
 }
 
 .SIMRacingApps-Widget-Standings-POSClass {
     text-align: center;
+    width: 6%;
 }
 
 .SIMRacingApps-Widget-Standings-CarNumber {
+	width: 6%;
 }
 
 .SIMRacingApps-Widget-Standings-MfrLogo {
     background-repeat:   no-repeat;
     background-size:     contain;
     background-position: center;
+    width: 6%;
 }
 
 
@@ -63,6 +67,7 @@
     border-color: transparent;
     border-width: thin;
     border-style: inset;
+    width: 51%;
 }
 
 .SIMRacingApps-Widget-Standings-CarDriverName-Club {
@@ -75,6 +80,7 @@
     overflow: hidden;
     text-align: right;
     padding-right: 1%;
+    width: 25%;
 }
 
 .SIMRacingApps-Widget-Standings-Footer {

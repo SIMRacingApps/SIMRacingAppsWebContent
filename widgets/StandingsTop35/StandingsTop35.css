@@ -24,6 +24,21 @@
     text-align: right;
 }
 
+.SIMRacingApps-Widget-StandingsTop35-col-POS { width: 3%; }
+.SIMRacingApps-Widget-StandingsTop35-col-POSClass{ width: 3%; }
+.SIMRacingApps-Widget-StandingsTop35-col-POSQual{ width: 3%; }
+.SIMRacingApps-Widget-StandingsTop35-col-MfrLogo{ width: 3%; }
+.SIMRacingApps-Widget-StandingsTop35-col-CarNumber{ width: 4%; }
+.SIMRacingApps-Widget-StandingsTop35-col-CarDriverName{ width: 24.5%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Discontinuality{ width: 2.5%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Rating{ width: 12%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Pit{ width: 6%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Run{ width: 5%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Behind{ width: 10%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Best{ width: 10%; }
+.SIMRacingApps-Widget-StandingsTop35-col-Last{ width: 10%; }
+.SIMRacingApps-Widget-StandingsTop35-col-POSDiff{ width: 4%; }
+
 .SIMRacingApps-Widget-StandingsTop35-GridHeader {
     background-color: black;
     color: white;

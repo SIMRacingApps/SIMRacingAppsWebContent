@@ -1,4 +1,4 @@
 <div data-ng-class          = "'SIMRacingApps-Widget-Time SIMRacingApps-Widget-Time-with' + (showTZ ? '' : 'out') + '-TZ'"
      data-ng-style          = "{ height: height+'px' }"
-     data-ng-bind-html      = "(data.time.Value | date:format:tz) + (showTZ ? (' ' + (tz ? tz : (data.time.Value | date:'Z'))) : '')"
+     data-ng-bind           = "(data.time.Value | date:format:tz) + (showTZ ? (' ' + (tz ? tz : (data.time.Value | date:'Z'))) : '')"
 ></div>

@@ -1,33 +1,33 @@
 <table class = "SIMRacingApps-Widget-StandingsTop43"
        data-ng-style = "{ width: '100%', height: height+'px', tableLayout: 'fixed' }">
     <colgroup>
-        <col style="width: 3%" />
-        <col style="width: 3%" />
-        <col style="width: 3%" />
-        <col style="width: 3%"   />
-        <col style="width: 4%"   />
-        <col style="width: 24.5%"  />
-        <col style="width: 2.5%" />
-        <col style="width: 12%"  />
-        <col style="width: 6%"   />
-        <col style="width: 5%"   />
-        <col style="width: 10%"  />
-        <col style="width: 10%"  />
-        <col style="width: 10%"  />
-        <col style="width: 4%"  />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-POS" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-POSClass" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-POSQual" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-MfrLogo" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-CarNumber" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-CarDriverName" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Discontinuality" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Rating" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Pit" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Run" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Behind" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Best" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-Last" />
+        <col class = "SIMRacingApps-Widget-StandingsTop43-POSDiff" />
     </colgroup>
     <thead>
         <tr>
             <td class                  = "SIMRacingApps-Widget-StandingsTop43-Title"
                 data-sra-data          = "Session/Type"
                 data-sra-args-interval = "{{defaultInterval}}"
-                data-ng-bind-html      = "translations.STANDINGSTOP43+' - '+data.Session.Type.ValueFormatted"
+                data-ng-bind           = "translations.STANDINGSTOP43+' - '+data.Session.Type.ValueFormatted"
                 colspan                = "7"
             ></td>
             <td class                  = "SIMRacingApps-Widget-StandingsTop43-SOF"
                 data-sra-data          = "Session/StrengthOfField;Session/Cars;Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining"
                 data-sra-args-interval = "{{defaultInterval}}"
-                data-ng-bind-html      = "translations.SOF+': '
+                data-ng-bind           = "translations.SOF+': '
                                        +  data.Session.StrengthOfField.ValueFormatted
                                        +  ' ' + translations.OF + ' '
                                        +  data.Session.Cars.ValueFormatted
@@ -96,30 +96,30 @@
             <td  data-ng-class     = "'SIMRacingApps-Widget-StandingsTop43-CarDriverName' 
                                    + ' SIMRacingApps-Widget-StandingsTop43-BelowMinimumSpeed-' + (data.Car[position].IsBelowMinimumSpeed.Value?'Y':'N')"
                  data-sra-data     = "Car/{{position}}/DriverName;Car/{{position}}/TeamName;Car/{{position}}/DriverClubName;Car/{{position}}/IsBelowMinimumSpeed"
-                 data-ng-bind-html = "data.Car[position].DriverName.Value
+                 data-ng-bind-html = "(data.Car[position].DriverName.Value|sraEncodeEntities)
                                    + '<span class=SIMRacingApps-Widget-StandingsTop43-CarDriverName-Club>'
-                                   + ' (' + (data.Car[position].TeamName.Value ? data.Car[position].TeamName.Value : data.Car[position].DriverClubName.Value) + ')'
+                                   + ' (' + ((data.Car[position].TeamName.Value ? data.Car[position].TeamName.Value : data.Car[position].DriverClubName.Value)|sraEncodeEntities) + ')'
                                    + '</span>'
                                    ">
             </td>
             <td  class             = "SIMRacingApps-Widget-StandingsTop43-Discontinuality"
                  data-sra-data     = "Car/{{position}}/Discontinuality"
-                 data-ng-bind-html = "data.Car[position].Discontinuality.Value > 0 ? data.Car[position].Discontinuality.ValueFormatted : '&nbsp;'">
+                 data-ng-bind      = "data.Car[position].Discontinuality.Value > 0 ? data.Car[position].Discontinuality.ValueFormatted : ' '">
             </td>
             <td  class             = "SIMRacingApps-Widget-StandingsTop43-Rating"
                  data-sra-data     = "Car/{{position}}/DriverRating;Car/{{position}}/DriverLicenseColor;Car/{{position}}/DriverLicenseColorText"
                  data-ng-style     = "{ backgroundColor: (data.Car[position].DriverLicenseColor|sraRGB),
                                         color:           (data.Car[position].DriverLicenseColorText|sraRGB)
                                       }"
-                 data-ng-bind-html = "data.Car[position].DriverRating.ValueFormatted">
+                 data-ng-bind      = "data.Car[position].DriverRating.ValueFormatted">
             </td>
             <td  class             = "SIMRacingApps-Widget-StandingsTop43-Pit"
                  data-sra-data     = "Car/{{position}}/PitTime"
-                 data-ng-bind-html = "data.Car[position].PitTime|sraNumber:1:true">
+                 data-ng-bind      = "data.Car[position].PitTime|sraNumber:1:true">
             </td>
             <td  class             = "SIMRacingApps-Widget-StandingsTop43-Run"
                  data-sra-data     = "Car/{{position}}/Lap/SincePitting"
-                 data-ng-bind-html = "data.Car[position].Lap.SincePitting.Value">
+                 data-ng-bind      = "data.Car[position].Lap.SincePitting.Value">
             </td>
             <td  class             = "SIMRacingApps-Widget-StandingsTop43-Behind"
                  data-sra-data     = "Session/DiffCars/{{position}};Session/NumberOfCarClasses;Car/{{position}}/ClassColor"
@@ -127,17 +127,17 @@
                                         color: (data.Session.NumberOfCarClasses.Value > 1 ? 'black' : ''),
                                         backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? (data.Car[position].ClassColor | sraRGB) : '') 
                                       }"
-                 data-ng-bind-html = "data.Session.DiffCars[position]|sraDuration:3:false:true">
+                 data-ng-bind      = "data.Session.DiffCars[position]|sraDuration:3:false:true">
             </td>
             <td  data-ng-class     = "'SIMRacingApps-Widget-StandingsTop43-Best'
                                    + ' SIMRacingApps-Widget-StandingsTop43-Best-' + (data.Car[position].IsEqual.BEST.Value?'Y':'N')"
                  data-sra-data     = "Car/{{position}}/LapTime/SessionBest;Car/{{position}}/IsEqual/BEST"
-                 data-ng-bind-html = "data.Car[position].LapTime.SessionBest.Value|sraDuration:3:false:true">
+                 data-ng-bind      = "data.Car[position].LapTime.SessionBest.Value|sraDuration:3:false:true">
             </td>
             <td  data-ng-class     = "'SIMRacingApps-Widget-StandingsTop43-Last' 
                                    + ' SIMRacingApps-Widget-StandingsTop43-Fastest-' + (data.Car[position].IsEqual.FASTEST.Value?'Y':'N')"
                  data-sra-data     = "Car/{{position}}/LapTime/SessionLast;Car/{{position}}/IsEqual/FASTEST"
-                 data-ng-bind-html = "data.Car[position].LapTime.SessionLast.Value|sraDuration:3:false:true">
+                 data-ng-bind      = "data.Car[position].LapTime.SessionLast.Value|sraDuration:3:false:true">
             </td>
             <td  class             = "SIMRacingApps-Widget-StandingsTop43-POSDiff"
                  data-sra-data     = "Car/{{position}}/PositionClassDelta"

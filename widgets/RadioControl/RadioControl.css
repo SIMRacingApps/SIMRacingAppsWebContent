@@ -66,18 +66,21 @@
     border-color: black;
     border-width: thin;
     border-style: outset;
+    width:        55%;
 }
 .SIMRacingApps-Widget-RadioControl-mute {
     text-align:    center;
 	border-color: black;
     border-width: thin;
     border-style: outset;
+    width:        20%;
 }
 .SIMRacingApps-Widget-RadioControl-delete {
     text-align:    center;
 	border-color: black;
     border-width: thin;
     border-style: outset;
+    width:        25%;
 }
 
 .SIMRacingApps-Widget-RadioControl-GridRowBackground-clicked {

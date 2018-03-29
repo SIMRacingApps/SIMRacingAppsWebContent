@@ -51,26 +51,27 @@
 }
 
 .SIMRacingApps-Widget-StandingsTop10-POS {
-    width: 6%;
+    width: 3%;
     text-align: center;
 }
 .SIMRacingApps-Widget-StandingsTop10-POSClass {
-    width: 6%;
+    width: 3%;
     text-align: center;
 }
 .SIMRacingApps-Widget-StandingsTop10-POSQual {
-    width: 6%;
+    width: 3%;
     text-align: center;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-CarNumber {
-    width: 6%;
+    width: 4%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-MfrLogo {
     background-repeat:   no-repeat;
     background-size:     contain;
     background-position: center;
+    width:               3%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-CarDriverName {
@@ -81,6 +82,7 @@
     border-color: transparent;
     border-width: thin;
     border-style: inset;
+    width: 24.5%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-CarDriverName-Club {
@@ -96,12 +98,14 @@
     overflow: hidden;
     text-align: right;
     padding-right: .5%;
+    width:     2.5%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-Rating {
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
+    width: 12%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-Lap {
@@ -114,12 +118,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
+    width: 5%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-Pit {
     white-space: nowrap;
     overflow: hidden;
     text-align: right;
+    width: 6%;
 }
 
 
@@ -127,6 +133,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-align: right;
+    width: 10%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-Best {
@@ -136,6 +143,7 @@
     border-color: transparent;
     border-width: thin;
     border-style: inset;
+    width: 10%;
 }
 
 .SIMRacingApps-Widget-StandingsTop10-Last {
@@ -146,9 +154,10 @@
     border-color: transparent;
     border-width: thin;
     border-style: inset;
+    width: 10%;
 }
 .SIMRacingApps-Widget-StandingsTop10-POSDiff {
-    width: 6%;
+    width: 4%;
     text-align: center;
 }
 

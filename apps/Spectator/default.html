@@ -55,9 +55,9 @@
             class                               = "SIMRacingApps-App-Spectator-lapinfo"
             data-sra-args-data                  = "Session/Lap;Session/Laps;Session/LapsToGo;Session/Cautions;Session/CautionLaps"
             data-sra-args-row-names             = "lap;togo;cautions"
-            data-sra-args-row-lap               = "data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted"
-            data-sra-args-row-togo              = "(data.Session.LapsToGo|sraNumber:0:null:null:null:true)+' '+translations.TOGO"
-            data-sra-args-row-cautions          = "data.Session.Cautions.ValueFormatted+' '+translations.CAUTIONS+', '+(data.Session.CautionLaps|sraNumber:0)"
+            data-sra-args-row-lap               = "(data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted)|sraEncodeEntities"
+            data-sra-args-row-togo              = "((data.Session.LapsToGo|sraNumber:0:null:null:null:true)+' '+translations.TOGO)|sraEncodeEntities"
+            data-sra-args-row-cautions          = "(data.Session.Cautions.ValueFormatted+' '+translations.CAUTIONS+', '+(data.Session.CautionLaps|sraNumber:0))|sraEncodeEntities"
         ></sra-data-table>
         
         <div id="FPS" class="FPS" data-ng-bind="data.FPS.Value"></div>

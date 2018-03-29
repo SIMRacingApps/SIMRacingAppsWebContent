@@ -38,19 +38,23 @@
 
 .SIMRacingApps-Widget-Relative-POS {
     text-align: center;
+    width: 6%;
 }
 
 .SIMRacingApps-Widget-Relative-POSClass {
     text-align: center;
+    width: 6%;
 }
 
 .SIMRacingApps-Widget-Relative-CarNumber {
+    width: 6%;
 }
 
 .SIMRacingApps-Widget-Relative-MfrLogo {
     background-repeat:   no-repeat;
     background-size:     contain;
     background-position: center;
+    width: 6%;
 }
 
 .SIMRacingApps-Widget-Relative-CarDriverName {
@@ -61,6 +65,7 @@
     border-color: transparent;
     border-width: thin;
     border-style: inset;
+    width: 46%;
 }
 
 .SIMRacingApps-Widget-Relative-CarDriverName-Club {
@@ -73,6 +78,7 @@
     overflow: hidden;
     text-align: right;
     padding-right: 1%;
+    width: 15%;
 }
 
 .SIMRacingApps-Widget-Relative-CarBehind {
@@ -80,6 +86,7 @@
     overflow: hidden;
     text-align: right;
     padding-right: 1%;
+    width: 15%;
 }
 
 .SIMRacingApps-Widget-Relative-Footer {

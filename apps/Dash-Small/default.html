@@ -46,13 +46,13 @@
 
         <div class="SIMRacingApps-App-Dash-Small-Time"
              data-sra-data="time"
-             data-ng-bind-html="data.time.ValueFormatted">
+             data-ng-bind="data.time.ValueFormatted">
         </div>
         <sra-data
             class="SIMRacingApps-App-Dash-Small-MyRadioChannel"
             data-sra-args-data="Car/REFERENCE/RadioChannelName"
             data-sra-args-interval="100"
-            data-ng-bind-html="'@'+data.Car.REFERENCE.RadioChannelName.ValueFormatted"
+            data-ng-bind="'@'+data.Car.REFERENCE.RadioChannelName.ValueFormatted"
         ></sra-data>
         
         <sra-shift-lights class             = "SIMRacingApps-App-Dash-Small-ShiftLights"></sra-shift-lights>

@@ -20,8 +20,8 @@
  *                 Defaults to PITSTALL and all cars in the session.
  *                 URL argument is TRACKMAPCARS.
  * @param {String} data-sra-args-car-text-type Passed down to the {@link sra-track-map-car TrackMap/Car} widget.
- * @param {String} data-sra-args-map-layer The type of map to show, "sat", "map", "osm", "mapquest". 
- *                 Defaults to "sat".
+ * @param {String} data-sra-args-map-layer The type of map to show, "map", "osm", "mapquest". 
+ *                 Defaults to "map".
  * @param {boolean} data-sra-args-show-flags false turns the flags on/off. Defaults to true.
  * @param {boolean} data-sra-args-show-wind-gauge false turns on/off the wind gauge. Defaults to true
  * @param {boolean} data-sra-args-show-weather false turns on/off the weather information box. Defaults to true.

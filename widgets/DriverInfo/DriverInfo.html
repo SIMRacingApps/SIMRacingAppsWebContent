@@ -6,23 +6,23 @@
 	    data-sra-args-data             = "Car/{{value}}/Id;Car/{{value}}/IsEqual/TRANSMITTING;Session/DiffCarsRelative/REFERENCE/{{value}};Car/{{value}}/PositionClass;Session/DiffCars/{{value}};Car/{{value}}/StatusClass;Car/{{value}}/DriverName;Car/{{value}}/TeamName;Car/{{value}}/DriverClubName;Car/{{value}}/Discontinuality;Car/{{value}}/DriverRating;Car/{{value}}/DriverLicenseColor;Car/{{value}}/DriverLicenseColorText;Car/{{value}}/Lap/Current;Car/{{value}}/Lap/SincePitting;Car/{{value}}/PitTime;Car/TRANSMITTING/RadioChannelName;Car/{{value}}/ManufacturerLogo;Car/{{value}}/DriverDivisionName;Car/{{value}}/Lap/SessionBest;Car/{{value}}/LapTime/SessionBest;Car/{{value}}/LapTime/SessionLast;Session/NumberOfCarClasses;Car/{{value}}/ClassColor;Car/{{value}}/IsBelowMinimumSpeed;Session/IncidentLimit;Car/{{value}}/Incidents;Car/{{value}}/IncidentsTeam"
         data-sra-args-row-names        = "dname;division;club;rating;laptimes;lapinfo"
 	    data-sra-args-class            = "'SIMRacingApps-Widget-DriverInfo-transmitting-'+data.Car[value].IsEqual.TRANSMITTING.Value"
-	    data-sra-args-header           = "(sraTitle|limitTo:9)+': '
-	                                   + (data.Session.DiffCarsRelative.REFERENCE[value].Value|number:1)+data.Session.DiffCarsRelative.REFERENCE[value].UOMAbbr
+	    data-sra-args-header           = "((sraTitle|limitTo:9)+': '
+	                                   + (data.Session.DiffCarsRelative.REFERENCE[value].Value|number:1)+(data.Session.DiffCarsRelative.REFERENCE[value].UOMAbbr)
 	                                   + ' (PC'+data.Car[value].PositionClass.ValueFormatted+')'
-	                                   + ' '+(data.Session.DiffCars[value]|sraDuration:1)
+	                                   + ' '+(data.Session.DiffCars[value]|sraDuration:1))|sraEncodeEntities
 	                                   "
 	    data-sra-args-header-class     = "'SIMRacingAppsCarStatusClassBackground-'+data.Car[value].StatusClass.Value"
         data-sra-args-body-class       = "data.Car[value].Id.Value == -1 ? 'SIMRacingApps-Widget-DriverInfo-hidden' : ''"
-	    data-sra-args-row-dname        = "data.Car[value].DriverName.ValueFormatted + ' ('+data.Car[value].Discontinuality.ValueFormatted+' '+translations.BLINKS+')'"
+	    data-sra-args-row-dname        = "(data.Car[value].DriverName.ValueFormatted|sraEncodeEntities) + ' ('+data.Car[value].Discontinuality.ValueFormatted+' '+(translations.BLINKS|sraEncodeEntities)+')'"
         data-sra-args-row-dname-value-class = "'SIMRacingApps-Widget-DriverInfo-BelowMinimumSpeed-' + data.Car[value].IsBelowMinimumSpeed.Value"
         data-sra-args-row-division     = "'<span class=&quot;SIMRacingApps-Widget-DriverInfo-mfrlogo&quot; style=&quot;background-image: url(/SIMRacingApps/' + data.Car[value].ManufacturerLogo.Value + ');background-color: ' + (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[value].ClassColor.Value | sraHex:6) : 'transparent') + '&quot;>&nbsp;</span> '
-                                       + data.Car[value].DriverDivisionName.ValueFormatted
+                                       + (data.Car[value].DriverDivisionName.ValueFormatted|sraEncodeEntities)
                                        + ' <span class=&quot;SIMRacingApps-Widget-DriverInfo-rating&quot; style=&quot;background-color: ' + (data.Car[value].DriverLicenseColor|sraRGB) + ';color: ' + (data.Car[value].DriverLicenseColorText|sraRGB) + ';&quot;>'
-                                       + data.Car[value].DriverRating.ValueFormatted
+                                       + (data.Car[value].DriverRating.ValueFormatted|sraEncodeEntities)
                                        + '</span>'
                                          "
         data-sra-args-row-club         = "'<span class=&quot;SIMRacingApps-Widget-DriverInfo-club&quot;>('
-                                       + (data.Car[value].TeamName.Value ? data.Car[value].TeamName.Value : data.Car[value].DriverClubName.ValueFormatted)
+                                       + ((data.Car[value].TeamName.Value ? data.Car[value].TeamName.Value : data.Car[value].DriverClubName.ValueFormatted)|sraEncodeEntities)
                                        + ')'
                                        + (data.Car[value].Incidents.State == 'NOTAVAILABLE'
                                        ? '' 
@@ -33,17 +33,17 @@
                                        + '</span> '
                                        "
         data-sra-args-row-laptimes     = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                       + translations.BEST + ':</span> <span class=&quot;SIMRacingApps-Widget-DriverInfo-time&quot;>'
+                                       + (translations.BEST|sraEncodeEntities) + ':</span> <span class=&quot;SIMRacingApps-Widget-DriverInfo-time&quot;>'
                                        + data.Car[value].Lap.SessionBest.ValueFormatted
                                        + ' / ' + (data.Car[value].LapTime.SessionBest.Value|sraDuration:3:false:true)
                                        + '</span> '
                                        + '<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                       + translations.LAST + ':</span> <span class=&quot;SIMRacingApps-Widget-DriverInfo-time&quot;>'
+                                       + (translations.LAST|sraEncodeEntities) + ':</span> <span class=&quot;SIMRacingApps-Widget-DriverInfo-time&quot;>'
                                        + (data.Car[value].LapTime.SessionLast.Value|sraDuration:3:false:true)
                                        + '</span> '
                                        "
         data-sra-args-row-lapinfo      = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                       + translations.LAP + ':</span> <span class=&quot;SIMRacingApps-Widget-DriverInfo-laps&quot;>'
+                                       + (translations.LAP|sraEncodeEntities) + ':</span> <span class=&quot;SIMRacingApps-Widget-DriverInfo-laps&quot;>'
                                        + data.Car[value].Lap.Current.ValueFormatted
                                        + '</span> '
                                        + '<span class=&quot;SIMRacingAppsLabel&quot;>'
@@ -51,7 +51,7 @@
                                        + data.Car[value].Lap.SincePitting.ValueFormatted
                                        + '</span> '
                                        + '<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                       + translations.PIT + ':</span> '
+                                       + (translations.PIT|sraEncodeEntities) + ':</span> '
                                        + '<span class=&quot;SIMRacingApps-Widget-DriverInfo-time&quot;>'
                                        + (data.Car[value].PitTime|sraDuration:1)
                                        + '</span>'

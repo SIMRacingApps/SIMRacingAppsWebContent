@@ -50,12 +50,12 @@
             <div 
                 class="SIMRacingApps-App-Dash-StockCars-DigitalOverlay-CarDescription"
                 data-sra-data="Car/REFERENCE/Description"
-                data-ng-bind-html="data.Car.REFERENCE.Description.ValueFormatted">
+                data-ng-bind="data.Car.REFERENCE.Description.ValueFormatted">
             </div>
 
             <div class="SIMRacingApps-App-Dash-StockCars-DigitalOverlay-Time"
                  data-sra-data="time"
-                 data-ng-bind-html="data.time.ValueFormatted">
+                 data-ng-bind="data.time.ValueFormatted">
             </div>
 
             <sra-car-controls class="SIMRacingApps-App-Dash-StockCars-DigitalOverlay-car-controls" data-ng-style="{ height: height+'px' }"></sra-car-controls>
@@ -72,15 +72,15 @@
                     class                        = "SIMRacingApps-App-Dash-StockCars-DigitalOverlay-Position"
                     data-sra-args-row-names      = "pos;last;best"
                     data-sra-args-data           = "Car/REFERENCE/Lap;Car/REFERENCE/Lap/SincePitting;Car/REFERENCE/PositionClass;Car/REFERENCE/PositionClassDelta;Session/DiffCars;Car/REFERENCE/LapTime/SessionLast;Car/REFERENCE/Lap/SessionBest;Car/REFERENCE/LapTime/SessionBest"
-                    data-sra-args-row-lap-label  = "translations['LAP/RUN']+':'"
+                    data-sra-args-row-lap-label  = "(translations['LAP/RUN']+':')|sraEncodeEntities"
                     data-sra-args-row-lap        = "'<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot;>' + data.Car.REFERENCE.Lap.Value + ' / ' + data.Car.REFERENCE.Lap.SincePitting.Value + '</span>'"
-                    data-sra-args-row-pos-label  = "translations.CLASSPOS+':'"
+                    data-sra-args-row-pos-label  = "(translations.CLASSPOS+':')|sraEncodeEntities"
                     data-sra-args-row-pos        = "data.Car.REFERENCE.PositionClass.ValueFormatted
                                                  + (data.Car.REFERENCE.PositionClassDelta.Value == 0 ? '' : ' ' + (data.Car.REFERENCE.PositionClassDelta.Value | sraNumber:0:true:true)) 
                                                  + ' / ' + (data.Session.DiffCars|sraDuration:1)"
-                    data-sra-args-row-last-label = "translations.LAST+':'"
+                    data-sra-args-row-last-label = "(translations.LAST+':')|sraEncodeEntities"
                     data-sra-args-row-last       = "data.Car.REFERENCE.LapTime.SessionLast.Value|sraDuration:3:false:true"
-                    data-sra-args-row-best-label = "translations.BEST+':'"
+                    data-sra-args-row-best-label = "(translations.BEST+':')|sraEncodeEntities"
                     data-sra-args-row-best       = "'<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot;>' + data.Car.REFERENCE.Lap.SessionBest.Value + '</span> / ' + (data.Car.REFERENCE.LapTime.SessionBest.Value|sraDuration:3)"
                 ></sra-data-table>
 
@@ -94,10 +94,10 @@
                     class                              = "SIMRacingApps-App-Dash-StockCars-DigitalOverlay-SessionTimes"
                     data-sra-args-row-names            = "remaining"
                     data-sra-args-data                 = "Session/TimeRemaining;Session/TimeElapsed"
-	                data-sra-args-row-remaining-label  = "(data.Session.TimeRemaining.Value > 0 
+	                data-sra-args-row-remaining-label  = "((data.Session.TimeRemaining.Value > 0 
 	                                                   ?  translations.REMAINING 
 	                                                   :  translations.ELAPSED)
-	                                                   +  ':'"
+	                                                   +  ':')|sraEncodeEntities"
 	                data-sra-args-row-remaining        = "(data.Session.TimeRemaining.Value > 0 
 	                                                       ? data.Session.TimeRemaining
 	                                                       :data.Session.TimeElapsed
@@ -107,7 +107,7 @@
                 <sra-data class                 = "SIMRacingApps-App-Dash-StockCars-DigitalOverlay-incidents"
                      data-sra-args-data         = "Session/IncidentLimit;Car/REFERENCE/Incidents;Car/REFERENCE/IncidentsTeam"
                      data-ng-style              = "{ display: data.Car.REFERENCE.Incidents.State != 'NOTAVAILABLE' ? 'inherit' : 'none' }"
-                     data-ng-bind-html          = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
+                     data-ng-bind               = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
                                                 ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                                 :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                                 "
@@ -119,7 +119,7 @@
                 class="SIMRacingApps-App-Dash-StockCars-DigitalOverlay-MyRadioChannel"
                 data-sra-args-data="Car/REFERENCE/RadioChannelName"
                 data-sra-args-interval="100"
-                data-ng-bind-html="'@'+data.Car.REFERENCE.RadioChannelName.ValueFormatted"
+                data-ng-bind="'@'+data.Car.REFERENCE.RadioChannelName.ValueFormatted"
             ></sra-data>
 
             <sra-team-speak-talking
@@ -135,15 +135,15 @@
                 class                              = "SIMRacingApps-App-Dash-StockCars-DigitalOverlay-Lapinfo"
                 data-sra-args-row-names            = "racelaps;laprun;cautions;togo"
                 data-sra-args-data                 = "Session/Type;Session/Lap;Session/Laps;Car/REFERENCE/Lap;Car/REFERENCE/Lap/SincePitting;Session/Cautions;Session/CautionLaps;Session/LapsToGo"
-                data-sra-args-row-racelaps-label   = "data.Session.Type.ValueFormatted+':'"
-                data-sra-args-row-racelaps         = "data.Session.Lap.Value+' '+translations.OF+' '+((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? (data.Car.REFERENCE.Lap.Value+data.Session.LapsToGo.Value-1|sraNumber:0:true)+'~' : data.Session.Laps.Value)"
-                data-sra-args-row-laprun-label     = "translations['LAP/RUN']+':'"
+                data-sra-args-row-racelaps-label   = "(data.Session.Type.ValueFormatted+':')|sraEncodeEntities"
+                data-sra-args-row-racelaps         = "(data.Session.Lap.Value+' '+translations.OF+' '+((data.Session.LapsToGo.UOM|limitTo:1) == '~' ? (data.Car.REFERENCE.Lap.Value+data.Session.LapsToGo.Value-1|sraNumber:0:true)+'~' : data.Session.Laps.Value))|sraEncodeEntities"
+                data-sra-args-row-laprun-label     = "(translations['LAP/RUN']+':')|sraEncodeEntities"
                 data-sra-args-row-laprun           = "'<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot>'
                                                    + data.Car.REFERENCE.Lap.Value+' / '+data.Car.REFERENCE.Lap.SincePitting.Value
                                                    + '</span>'"
-                data-sra-args-row-cautions-label   = "translations['CAUTIONS/LAPS']+':'"
+                data-sra-args-row-cautions-label   = "(translations['CAUTIONS/LAPS']+':')|sraEncodeEntities"
                 data-sra-args-row-cautions         = "data.Session.Cautions.Value+' / '+data.Session.CautionLaps.Value"
-                data-sra-args-row-togo-label       = "translations.TOGO+':'"
+                data-sra-args-row-togo-label       = "(translations.TOGO+':')|sraEncodeEntities"
                 data-sra-args-row-togo             = "'<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot>'
                                                    + (data.Session.LapsToGo|sraNumber:0:null:null:null:true)
                                                    + '</span>'"
@@ -153,22 +153,22 @@
                 class                              = "SIMRacingApps-App-Dash-StockCars-DigitalOverlay-Fuelinfo"
                 data-sra-args-row-names            = "fuellaps;fuellapsalt;fuellapsmax;fuelusage"
                 data-sra-args-data                 = "Car/REFERENCE/Gauge/FuelLevel/ValueCurrent;Car/REFERENCE/FuelLaps/{{sraArgsLAPSTOAVERAGE}};Car/REFERENCE/FuelLaps/{{sraArgsALTLAPSTOAVERAGE}};Car/REFERENCE/Gauge/FuelLevel/CapacityMaximum;Car/REFERENCE/FuelLapsMaximum/{{sraArgsLAPSTOAVERAGE}};Car/REFERENCE/FuelLevelPerLap/{{sraArgsLAPSTOAVERAGE}}"
-                data-sra-args-row-fuellaps-label   = "translations['FUEL/LAPS']+'-'+sraArgsLAPSTOAVERAGE+':'"
+                data-sra-args-row-fuellaps-label   = "(translations['FUEL/LAPS']+'-'+sraArgsLAPSTOAVERAGE+':')|sraEncodeEntities"
                 data-sra-args-row-fuellaps         = "(data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value|sraNumber:1)+' = '
                                                    + '<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot>'
                                                    + (data.Car.REFERENCE.FuelLaps[sraArgsLAPSTOAVERAGE].Value|sraNumber:0)
                                                    + '</span>'"
-                data-sra-args-row-fuellapsalt-label= "translations['FUEL/LAPS']+'-'+sraArgsALTLAPSTOAVERAGE+':'"
+                data-sra-args-row-fuellapsalt-label= "(translations['FUEL/LAPS']+'-'+sraArgsALTLAPSTOAVERAGE+':')|sraEncodeEntities"
                 data-sra-args-row-fuellapsalt      = "(data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value|sraNumber:1)+' = '
                                                    + '<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot>'
                                                    + (data.Car.REFERENCE.FuelLaps[sraArgsALTLAPSTOAVERAGE].Value|sraNumber:0)
                                                    + '</span>'"
-                data-sra-args-row-fuellapsmax-label= "translations['FUEL/RUN']+'-'+sraArgsLAPSTOAVERAGE+':'"
+                data-sra-args-row-fuellapsmax-label= "(translations['FUEL/RUN']+'-'+sraArgsLAPSTOAVERAGE+':')|sraEncodeEntities"
                 data-sra-args-row-fuellapsmax      = "(data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum.Value|sraNumber:1)+' = '
                                                    + '<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-laps&quot>'
                                                    + (data.Car.REFERENCE.FuelLapsMaximum[sraArgsLAPSTOAVERAGE].Value|sraNumber:0)
                                                    + '</span>'"
-                data-sra-args-row-fuelusage-label  = "translations.FUELPERLAP+'-'+sraArgsLAPSTOAVERAGE+':'"
+                data-sra-args-row-fuelusage-label  = "(translations.FUELPERLAP+'-'+sraArgsLAPSTOAVERAGE+':')|sraEncodeEntities"
                 data-sra-args-row-fuelusage        = "data.Car.REFERENCE.FuelLevelPerLap[sraArgsLAPSTOAVERAGE]|sraNumber:3"
             ></sra-data-table>
 
@@ -229,38 +229,38 @@
                                                      ;Car/REFERENCE/Gauge/FastRepairs/ChangeFlag"
                 data-sra-args-row-fuel-label       = "translations.FUEL+':'"
                 data-sra-args-row-fuel             = "(data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent|sraNumber:1)"
-                data-sra-args-row-fuelneeded-label = "translations.FUELNEEDED+'-'+sraArgsLAPSTOAVERAGE+':'"
+                data-sra-args-row-fuelneeded-label = "(translations.FUELNEEDED+'-'+sraArgsLAPSTOAVERAGE+':')|sraEncodeEntities"
                 data-sra-args-row-fuelneeded       = "(data.Car.REFERENCE.FuelLevelNeeded|sraNumber:1)"
-                data-sra-args-row-fueltoadd-label  = "translations.FUELTOADD+':'"
+                data-sra-args-row-fueltoadd-label  = "(translations.FUELTOADD+':')|sraEncodeEntities"
                 data-sra-args-row-fueltoadd        = "(!data.Car.REFERENCE.Gauge.FuelLevel.ChangeFlag.Value ? 0.0 : data.Car.REFERENCE.Gauge.FuelLevel.ValueNext)|sraNumber:1"
 
                 data-sra-args-row-tape-class       = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.Tape.ValueNext.State"
-                data-sra-args-row-tape-label       = "translations.TAPE+':'"
+                data-sra-args-row-tape-label       = "(translations.TAPE+':')|sraEncodeEntities"
                 data-sra-args-row-tape             = "data.Car.REFERENCE.Gauge.Tape.ValueNext|sraNumber:0"
                 data-sra-args-row-tape-value-class = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.Tape.IsDirty.Value"
 
                 data-sra-args-row-brake-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext.State"
-                data-sra-args-row-brake-label      = "translations.BRAKEBIASADJ+':'"
+                data-sra-args-row-brake-label      = "(translations.BRAKEBIASADJ+':')|sraEncodeEntities"
                 data-sra-args-row-brake            = "data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext|sraNumber:2"
                 data-sra-args-row-brake-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.IsDirty.Value"
 
                 data-sra-args-row-powersteering-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.PowerSteeringAssist.ValueNext.State"
-                data-sra-args-row-powersteering-label      = "translations.POWERSTEERINGASSIST+':'"
+                data-sra-args-row-powersteering-label      = "(translations.POWERSTEERINGASSIST+':')|sraEncodeEntities"
                 data-sra-args-row-powersteering            = "data.Car.REFERENCE.Gauge.PowerSteeringAssist.ValueNext|sraNumber:0"
                 data-sra-args-row-powersteering-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.PowerSteeringAssist.IsDirty.Value"
 
 	            data-sra-args-row-engine-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.EnginePower.ValueNext.State"
-	            data-sra-args-row-engine-label      = "translations.ENGINEPOWER+':'"
+	            data-sra-args-row-engine-label      = "(translations.ENGINEPOWER+':')|sraEncodeEntities"
 	            data-sra-args-row-engine            = "data.Car.REFERENCE.Gauge.EnginePower.ValueNext|sraNumber:0"
 	            data-sra-args-row-engine-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.EnginePower.IsDirty.Value"
 	
 	            data-sra-args-row-enginebraking-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.EngineBraking.ValueNext.State"
-	            data-sra-args-row-enginebraking-label      = "translations.ENGINEBRAKING+':'"
+	            data-sra-args-row-enginebraking-label      = "(translations.ENGINEBRAKING+':')|sraEncodeEntities"
 	            data-sra-args-row-enginebraking            = "data.Car.REFERENCE.Gauge.EngineBraking.ValueNext|sraNumber:0"
 	            data-sra-args-row-enginebraking-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.EngineBraking.IsDirty.Value"
 	
 	            data-sra-args-row-diff-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.DiffEntry.ValueNext.State"
-	            data-sra-args-row-diff-label      = "translations.DIFF+':'"
+	            data-sra-args-row-diff-label      = "(translations.DIFF+':')|sraEncodeEntities"
 	            data-sra-args-row-diff            = "'<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.DiffEntry.IsDirty.Value+'&quot;>'
 	                                              +  (data.Car.REFERENCE.Gauge.DiffEntry.ValueNext|sraNumber:0) + '</span> / '
 	                                              +  '<span class=&quot;SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.DiffMiddle.IsDirty.Value+'&quot;>'
@@ -269,77 +269,77 @@
 	                                              +  (data.Car.REFERENCE.Gauge.DiffExit.ValueNext|sraNumber:0) + '</span>'"
 	
                 data-sra-args-row-rrwedge-class    = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ValueNext.State"
-                data-sra-args-row-rrwedge-label    = "translations.RRWEDGEADJ+':'"
+                data-sra-args-row-rrwedge-label    = "(translations.RRWEDGEADJ+':')|sraEncodeEntities"
                 data-sra-args-row-rrwedge          = "data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ValueNext|sraNumber:3"
                 data-sra-args-row-rrwedge-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.RRWedgeAdjustment.IsDirty.Value"
 
                 data-sra-args-row-lrwedge-class    = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.LRWedgeAdjustment.ValueNext.State"
-                data-sra-args-row-lrwedge-label    = "translations.LRWEDGEADJ+':'"
+                data-sra-args-row-lrwedge-label    = "(translations.LRWEDGEADJ+':')|sraEncodeEntities"
                 data-sra-args-row-lrwedge          = "data.Car.REFERENCE.Gauge.LRWedgeAdjustment.ValueNext|sraNumber:3"
                 data-sra-args-row-lrwedge-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.LRWedgeAdjustment.IsDirty.Value"
 
                 data-sra-args-row-fflap-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.FrontFlap.ValueNext.State"
-                data-sra-args-row-fflap-label      = "translations.FRONTFLAP+':'"
+                data-sra-args-row-fflap-label      = "(translations.FRONTFLAP+':')|sraEncodeEntities"
                 data-sra-args-row-fflap            = "data.Car.REFERENCE.Gauge.FrontFlap.ValueNext|sraNumber:0"
                 data-sra-args-row-fflap-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.FrontFlap.IsDirty.Value"
 
                 data-sra-args-row-fwing-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.FrontWing.ValueNext.State"
-                data-sra-args-row-fwing-label      = "translations.FRONTWING+':'"
+                data-sra-args-row-fwing-label      = "(translations.FRONTWING+':')|sraEncodeEntities"
                 data-sra-args-row-fwing            = "data.Car.REFERENCE.Gauge.FrontWing.ValueNext|sraNumber:2"
                 data-sra-args-row-fwing-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.FrontWing.IsDirty.Value"
 
                 data-sra-args-row-rwing-class      = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.RearWing.ValueNext.State"
-                data-sra-args-row-rwing-label      = "translations.REARWING+':'"
+                data-sra-args-row-rwing-label      = "(translations.REARWING+':')|sraEncodeEntities"
                 data-sra-args-row-rwing            = "data.Car.REFERENCE.Gauge.RearWing.ValueNext|sraNumber:2"
                 data-sra-args-row-rwing-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.RearWing.IsDirty.Value"
 
                 data-sra-args-row-fantiroll-class  = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.AntiRollFront.ValueNext.State"
-                data-sra-args-row-fantiroll-label  = "translations.ANTIROLLFRONT+':'"
+                data-sra-args-row-fantiroll-label  = "(translations.ANTIROLLFRONT+':')|sraEncodeEntities"
                 data-sra-args-row-fantiroll        = "data.Car.REFERENCE.Gauge.AntiRollFront.ValueNext|sraNumber:0"
                 data-sra-args-row-fantiroll-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.AntiRollFront.IsDirty.Value"
 
                 data-sra-args-row-rantiroll-class  = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.AntiRollRear.ValueNext.State"
-                data-sra-args-row-rantiroll-label  = "translations.ANTIROLLREAR+':'"
+                data-sra-args-row-rantiroll-label  = "(translations.ANTIROLLREAR+':')|sraEncodeEntities"
                 data-sra-args-row-rantiroll        = "data.Car.REFERENCE.Gauge.AntiRollRear.ValueNext|sraNumber:0"
                 data-sra-args-row-rantiroll-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.AntiRollRear.IsDirty.Value"
 
                 data-sra-args-row-fuelmixture-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.FuelMixture.ValueNext.State"
-                data-sra-args-row-fuelmixture-label= "translations.FUELMIXTURE+':'"
+                data-sra-args-row-fuelmixture-label= "(translations.FUELMIXTURE+':')|sraEncodeEntities"
                 data-sra-args-row-fuelmixture      = "data.Car.REFERENCE.Gauge.FuelMixture.ValueNext|sraNumber:0"
                 data-sra-args-row-fuelmixture-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.FuelMixture.IsDirty.Value"
 
                 data-sra-args-row-throttleshape-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.ThrottleShape.ValueNext.State"
-                data-sra-args-row-throttleshape-label= "translations.THROTTLESHAPE+':'"
+                data-sra-args-row-throttleshape-label= "(translations.THROTTLESHAPE+':')|sraEncodeEntities"
                 data-sra-args-row-throttleshape      = "data.Car.REFERENCE.Gauge.ThrottleShape.ValueNext|sraNumber:0"
                 data-sra-args-row-throttleshape-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.ThrottleShape.IsDirty.Value"
 
                 data-sra-args-row-lwgtjacker-class = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.WeightJackerLeft.ValueNext.State"
-                data-sra-args-row-lwgtjacker-label = "translations.WEIGHTJACKERLEFT+':'"
+                data-sra-args-row-lwgtjacker-label = "(translations.WEIGHTJACKERLEFT+':')|sraEncodeEntities"
                 data-sra-args-row-lwgtjacker       = "data.Car.REFERENCE.Gauge.WeightJackerLeft.ValueNext|sraNumber:0"
                 data-sra-args-row-lwgtjacker-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.WeightJackerLeft.IsDirty.Value"
 
                 data-sra-args-row-rwgtjacker-class = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.WeightJackerRight.ValueNext.State"
-                data-sra-args-row-rwgtjacker-label = "translations.WEIGHTJACKERRIGHT+':'"
+                data-sra-args-row-rwgtjacker-label = "(translations.WEIGHTJACKERRIGHT+':')|sraEncodeEntities"
                 data-sra-args-row-rwgtjacker       = "data.Car.REFERENCE.Gauge.WeightJackerRight.ValueNext|sraNumber:0"
                 data-sra-args-row-rwgtjacker-value-class= "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.WeightJackerRight.IsDirty.Value"
 
                 data-sra-args-row-abs-class        = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.ABS.ValueNext.State"
-                data-sra-args-row-abs-label        = "translations.ABS+':'"
+                data-sra-args-row-abs-label        = "(translations.ABS+':')|sraEncodeEntities"
                 data-sra-args-row-abs              = "data.Car.REFERENCE.Gauge.ABS.ValueNext|sraNumber:0"
                 data-sra-args-row-abs-value-class  = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.ABS.IsDirty.Value"
 
                 data-sra-args-row-tc-class         = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.TractionControl.ValueNext.State"
-                data-sra-args-row-tc-label         = "translations.TRACTIONCONTROL+':'"
+                data-sra-args-row-tc-label         = "(translations.TRACTIONCONTROL+':')|sraEncodeEntities"
                 data-sra-args-row-tc               = "data.Car.REFERENCE.Gauge.TractionControl.ValueNext|sraNumber:0"
                 data-sra-args-row-tc-value-class   = "'SIMRacingApps-App-Dash-StockCars-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.TractionControl.IsDirty.Value"
 
-                data-sra-args-row-pitlap-label     = "translations.PITLAPTIME+':'"
+                data-sra-args-row-pitlap-label     = "(translations.PITLAPTIME+':')|sraEncodeEntities"
                 data-sra-args-row-pitlap           = "(data.Car.REFERENCE.Lap.Pitted.Value)+' / '+(data.Car.REFERENCE.PitTime|sraDuration:1:false:true)"
 
-	            data-sra-args-row-repair-label     = "translations.REPAIROPT+':'"
+	            data-sra-args-row-repair-label     = "(translations.REPAIROPT+':')|sraEncodeEntities"
 	            data-sra-args-row-repair           = "(data.Car.REFERENCE.RepairTime|sraDuration:0:false:true)+' ('+(data.Car.REFERENCE.RepairTimeOptional|sraDuration:0:false:true)+')'"
 
-                data-sra-args-row-fastrepair-label = "translations.FASTREPAIRS+':'"
+                data-sra-args-row-fastrepair-label = "(translations.FASTREPAIRS+':')|sraEncodeEntities"
                 data-sra-args-row-fastrepair       = "(data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value ? translations.Y : translations.N) 
                                                    +  ' ' + (data.Car.REFERENCE.Gauge.FastRepairs.ValueCurrent|sraDuration:0:false:true)"
             ></sra-data-table>

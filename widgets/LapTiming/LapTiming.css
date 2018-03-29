@@ -51,6 +51,7 @@
     line-height: 150%;
     overflow: hidden;
     white-space: nowrap;
+    width: 25%;
 }
 
 .SIMRacingApps-Widget-LapTiming-leftside-data {
@@ -59,6 +60,7 @@
     line-height: 150%;
     overflow: hidden;
     white-space: nowrap;
+    width: 25%;
 }
 
 .SIMRacingApps-Widget-LapTiming-rightside-label {
@@ -67,6 +69,7 @@
     line-height: 150%;
     overflow: hidden;
     white-space: nowrap;
+    width: 25%;
 }
 
 .SIMRacingApps-Widget-LapTiming-rightside-data {
@@ -75,6 +78,7 @@
     line-height: 150%;
     overflow: hidden;
     white-space: nowrap;
+    width: 25%;
 }
 
 .SIMRacingApps-Widget-LapTiming-footer {
@@ -87,10 +91,16 @@
     line-height: 150%;
     overflow: hidden;
     white-space: nowrap;
+    width: 20%;
+}
+
+.SIMRacingApps-Widget-LapTiming-carnumber {
+	width: 10%;
 }
 
 .SIMRacingApps-Widget-LapTiming-drivername {
     white-space: nowrap;
+    width: 47%;
 }
 
 .SIMRacingApps-Widget-LapTiming-time {
@@ -99,6 +109,7 @@
     line-height: 150%;
     overflow: hidden;
     white-space: nowrap;
+    width: 23%;
 }
 
 .SIMRacingApps-Widget-LapTiming-data-togo {

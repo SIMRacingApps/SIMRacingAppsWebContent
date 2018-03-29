@@ -11,15 +11,15 @@
      ></sra-car-number>
      <div
         class                       = "SIMRacingApps-Widget-CarTelemetry-DriverName"
-        data-ng-bind-html           = "data.Car[value].DriverName.ValueFormatted"
+        data-ng-bind                = "data.Car[value].DriverName.ValueFormatted"
      ></div>
      <div 
         class                       = "SIMRacingApps-Widget-CarTelemetry-Throttle-text"
-        data-ng-bind-html           = "translations.THROTTLE"
+        data-ng-bind                = "translations.THROTTLE"
      ></div>
      <div 
         class                       = "SIMRacingApps-Widget-CarTelemetry-Brake-text"
-        data-ng-bind-html           = "translations.BRAKE"
+        data-ng-bind                = "translations.BRAKE"
      ></div>
      <div
         class                       = "SIMRacingApps-Widget-CarTelemetry-Throttle"
@@ -36,18 +36,18 @@
      ></div>
      <div
         class                       = "SIMRacingApps-Widget-CarTelemetry-MPH"
-        data-ng-bind-html           = "(data.Car[value].Gauge.Speedometer.ValueCurrent.Value | sraNumber:0)"
+        data-ng-bind                = "(data.Car[value].Gauge.Speedometer.ValueCurrent.Value | sraNumber:0)"
      ></div>
      <div
         class                       = "SIMRacingApps-Widget-CarTelemetry-MPH-UOM"
-        data-ng-bind-html           = "data.Car[value].Gauge.Speedometer.ValueCurrent.UOMAbbr | sraUpperCase"
+        data-ng-bind                = "data.Car[value].Gauge.Speedometer.ValueCurrent.UOMAbbr | sraUpperCase"
      ></div>
      <div
         class                       = "SIMRacingApps-Widget-CarTelemetry-RPM"
-        data-ng-bind-html           = "(data.Car[value].Gauge.Tachometer.ValueCurrent.Value | sraNumber:-2)+'00'"
+        data-ng-bind                = "(data.Car[value].Gauge.Tachometer.ValueCurrent.Value | sraNumber:-2)+'00'"
      ></div>
      <div
         class                       = "SIMRacingApps-Widget-CarTelemetry-RPM-UOM"
-        data-ng-bind-html           = "data.Car[value].Gauge.Tachometer.ValueCurrent.UOMAbbr | sraUpperCase"
+        data-ng-bind                = "data.Car[value].Gauge.Tachometer.ValueCurrent.UOMAbbr | sraUpperCase"
      ></div>
 </div>

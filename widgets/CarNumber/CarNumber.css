@@ -7,9 +7,14 @@
 
 .SIMRacingApps-Widgets-CarNumber-svg {
     z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
 }
 .SIMRacingApps-Widget-CarNumber-background {
-    opacity:    .8;
+    /* opacity:    .8; */
 }
 .SIMRacingApps-Widget-CarNumber-text {
 }
@@ -30,5 +35,5 @@
     background-size:    cover;
     background-repeat:  no-repeat;
     background-position: center;
-    border-radius:  15% 15% / 20% 20%;
+    border-radius:  25% 25% / 35% 35%;
 }

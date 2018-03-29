@@ -7,7 +7,7 @@
                  data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.Tape.ValueNext.State == 'NOTAVAILABLE'
                                                        ? 'none' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.TAPE
+                                         + (translations.TAPE|sraEncodeEntities)
                                          + '</span> '
                                          + (data.Car.REFERENCE.Gauge.Tape.ValueNext | sraNumber:0)"
             ></div>
@@ -16,7 +16,7 @@
                  data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FrontWing.ValueNext.State == 'NOTAVAILABLE'
                                                        ? 'none' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.FRONTWING
+                                         + (translations.FRONTWING|sraEncodeEntities)
                                          + '</span> '
                                          + (data.Car.REFERENCE.Gauge.FrontWing.ValueNext | sraNumber:2)"
             ></div>
@@ -25,7 +25,7 @@
                  data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FrontFlap.ValueNext.State == 'NOTAVAILABLE'
                                                        ? 'none' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.FRONTFLAP
+                                         + (translations.FRONTFLAP|sraEncodeEntities)
                                          + '</span> '
                                          + (data.Car.REFERENCE.Gauge.FrontFlap.ValueNext | sraNumber:0)"
             ></div>
@@ -44,7 +44,7 @@
             <div class                   = "SIMRacingApps-Widget-PitCommander-repairs"
                  data-ng-style           = "{ visibility: data.Car.REFERENCE.RepairTime.Value <= 0 && data.Car.REFERENCE.RepairTimeOptional.Value <= 0 ? 'hidden' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.REPAIRS
+                                         + (translations.REPAIRS|sraEncodeEntities)
                                          + '</span><br />'
                                          + (data.Car.REFERENCE.RepairTime | sraDuration:0:false:true)
                                          + '('+(data.Car.REFERENCE.RepairTimeOptional | sraDuration:0)+')'"
@@ -54,7 +54,7 @@
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+windshield+'-'+controller"
                  data-xng-class           = "'SIMRacingApps-Widget-PitCommander-windshield-'+data.Car.REFERENCE.Gauge.WindshieldTearoff.ChangeFlag.Value"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.WINDSHIELD
+                                         + (translations.WINDSHIELD|sraEncodeEntities)
                                          + '</span> '
                                          + (data.Car.REFERENCE.Gauge.WindshieldTearoff.ChangeFlag.Value ? translations.Y : translations.N)"
             ></div>
@@ -62,7 +62,7 @@
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+fastrepairs+'-'+controller"
                  data-xng-class           = "'SIMRacingApps-Widget-PitCommander-fastrepairs-'+data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.FASTREPAIRS
+                                         + (translations.FASTREPAIRS|sraEncodeEntities)
                                          + '</span> '
                                          + (data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value ? translations.Y : translations.N)"
             ></div>
@@ -71,7 +71,7 @@
                                                           ? 'hidden' : 'inherit'
                                             }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.BRAKEBIASADJ
+                                         + (translations.BRAKEBIASADJ|sraEncodeEntities)
                                          + '</span><br />'
                                          + (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext > 10.0
                                          ?  (data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext | sraNumber:1)
@@ -80,37 +80,37 @@
             ></div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+lefts+'-'+controller"
-                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
-                 data-ng-bind-html       = "translations.LEFTS">
+                 data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "(translations.LEFTS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts-gas"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+leftsgas+'-'+controller"
-                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
-                 data-ng-bind-html       = "translations.LEFTSGAS">
+                 data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "(translations.LEFTSGAS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-rights"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rights+'-'+controller"
-                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
-                 data-ng-bind-html       = "translations.RIGHTS">
+                 data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "(translations.RIGHTS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-rights-gas"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rightsgas+'-'+controller"
-                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
-                 data-ng-bind-html       = "translations.RIGHTSGAS">
+                 data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "(translations.RIGHTSGAS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-tires4"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4+'-'+controller"
-                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
-                 data-ng-bind-html       = "translations.TIRES4">
+                 data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "(translations.TIRES4|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-tires4-gas"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4gas+'-'+controller"
-                 data-xng-style           = "{ visibility: controller ? 'inherit' : 'hidden' }"
-                 data-ng-bind-html       = "translations.TIRES4GAS">
+                 data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
+                 data-ng-bind-html       = "(translations.TIRES4GAS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-incidents"
                  data-ng-style           = "{ display: data.Car.REFERENCE.Incidents.State != 'NOTAVAILABLE' ? 'inherit' : 'none' }"
-                 data-ng-bind-html       = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
+                 data-ng-bind            = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
                                          ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                          :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
                                            "
@@ -121,7 +121,7 @@
                  data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.RRWedgeAdjustment.ValueNext.State == 'NOTAVAILABLE'
                                                        ? 'none' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.WEDGEADJ
+                                         + (translations.WEDGEADJ|sraEncodeEntities)
                                          + '</span> '
                                          + '<span class=&quot;SIMRacingApps-Widget-PitCommander-different-' + data.Car.REFERENCE.Gauge.LRWedgeAdjustment.ChangeFlag.Value + '&quot;>'
                                          + (data.Car.REFERENCE.Gauge.LRWedgeAdjustment.ValueNext | sraNumber:3)
@@ -136,7 +136,7 @@
                  data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.RearWing.ValueNext.State == 'NOTAVAILABLE'
                                                        ? 'none' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-                                         + translations.REARWING
+                                         + (translations.REARWING|sraEncodeEntities)
                                          + '</span> '
                                          + (data.Car.REFERENCE.Gauge.RearWing.ValueNext | sraNumber:2)"
             ></div>

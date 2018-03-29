@@ -37,11 +37,11 @@
         data-sra-vertical-align     = "top"
         data-sra-args-interval      = "1000"
         data-sra-args-data          = "Track/Description;Track/Configuration;Track/City;Track/Country;Track/PitSpeedLimit;Track/Category;Track/Length;Session/Lap;Session/Laps;Session/LapsToGo"
-        data-sra-args-header        = "data.Track.Description.ValueFormatted"
+        data-sra-args-header        = "data.Track.Description.ValueFormatted|sraEncodeEntities"
         data-sra-args-row-names     = ""
-        data-sra-args-row-trackloc  = "data.Track.Configuration.ValueFormatted + ': ' + data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted"
-        data-sra-args-row-trackinfo = "(data.Track.Length.Value|number:'2')+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted+', '+translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit.Value|number:'0')+' '+data.Track.PitSpeedLimit.UOMAbbr"
-        data-sra-args-row-laps      = "translations.LAP+' '+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted+' --- '+data.Session.LapsToGo.ValueFormatted+' '+translations.TOGO"
+        data-sra-args-row-trackloc  = "(data.Track.Configuration.ValueFormatted + ': ' + data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted)|sraEncodeEntities"
+        data-sra-args-row-trackinfo = "((data.Track.Length.Value|number:'2')+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted+', '+translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit.Value|number:'0')+' '+data.Track.PitSpeedLimit.UOMAbbr)|sraEncodeEntities"
+        data-sra-args-row-laps      = "(translations.LAP+' '+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted+' --- '+data.Session.LapsToGo.ValueFormatted+' '+translations.TOGO)|sraEncodeEntities"
     ></sra-data-table>
 
     <sra-data-table
@@ -53,14 +53,14 @@
         data-sra-args-interval      = "1000"
         data-sra-args-data          = "Track/Configuration;Track/City;Track/Country;Track/PitSpeedLimit;Track/Category;Track/Length;Session/Lap;Session/Laps;Session/LapsToGo;Session/TimeRemaining;Session/Cautions;Session/CautionLaps"
         data-sra-args-row-names     = "trackconf;trackloc;trackinfo;pitinfo;laps;cautions;remaining"
-        data-sra-args-row-trackconf = "data.Track.Configuration.ValueFormatted"
-        data-sra-args-row-trackloc  = "data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted"
-        data-sra-args-row-trackinfo = "(data.Track.Length.Value|number:'2')+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted"
-        data-sra-args-row-pitinfo   = "translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit.Value|number:'0')+' '+data.Track.PitSpeedLimit.UOMAbbr"
-        data-sra-args-row-laps      = "data.Session.LapsToGo.Value < (data.Session.Laps.Value * .5)
+        data-sra-args-row-trackconf = "data.Track.Configuration.ValueFormatted|sraEncodeEntities"
+        data-sra-args-row-trackloc  = "(data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted)|sraEncodeEntities"
+        data-sra-args-row-trackinfo = "((data.Track.Length.Value|number:'2')+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted)|sraEncodeEntities"
+        data-sra-args-row-pitinfo   = "(translations.PITROADSPEEDLIMIT+': '+(data.Track.PitSpeedLimit.Value|number:'0')+' '+data.Track.PitSpeedLimit.UOMAbbr)|sraEncodeEntities"
+        data-sra-args-row-laps      = "(data.Session.LapsToGo.Value < (data.Session.Laps.Value * .5)
                                     ?  (data.Session.LapsToGo|sraNumber:0:null:null:null:true)+' '+translations.TOGO
-                                    :  translations.LAP+' '+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted"
-        data-sra-args-row-cautions  = "data.Session.Cautions.ValueFormatted+' '+translations.CAUTIONS+', '+(data.Session.CautionLaps|sraNumber:0)"
+                                    :  translations.LAP+' '+data.Session.Lap.ValueFormatted+' '+translations.OF+' '+data.Session.Laps.ValueFormatted)|sraEncodeEntities"
+        data-sra-args-row-cautions  = "(data.Session.Cautions.ValueFormatted+' '+translations.CAUTIONS+', '+(data.Session.CautionLaps|sraNumber:0))|sraEncodeEntities"
         data-sra-args-row-remaining = "data.Session.TimeRemaining|sraDuration:0:false:true:true:true"
     ></sra-data-table>
     

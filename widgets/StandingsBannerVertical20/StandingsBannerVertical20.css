@@ -122,17 +122,20 @@
     text-align:     right;
     padding-top:    2%;
     padding-right:  2%;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    text-shadow:    1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    width:          10%;
 }
 
 .SIMRacingApps-Widget-StandingsBannerVertical20-green-box-number {
+	width:          13%;
 }
 
 .SIMRacingApps-Widget-StandingsBannerVertical20-green-box-name {
     text-align:     left;
     padding-top:    2%;
-    padding-left:  2%;
+    padding-left:   2%;
     overflow:       hidden;
+    width:          50%;
 }
 
 .SIMRacingApps-Widget-StandingsBannerVertical20-green-box-behind {
@@ -140,4 +143,5 @@
     padding-top:    2%;
     padding-right:  2%;
     overflow:       hidden;
+    width:          27%;
 }

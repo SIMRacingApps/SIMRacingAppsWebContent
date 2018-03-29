@@ -5,7 +5,7 @@
         <div class                      = "SIMRacingApps-Widget-FuelTank-tank"
              data-ng-class              = "'SIMRacingApps-Widget-FuelTank-tank-'+controller">
             <div class                  = "SIMRacingApps-Widget-FuelTank-fueltitle SIMRacingAppsLabel"
-                 data-ng-bind-html      = "translations.FUELTANK"
+                 data-ng-bind           = "translations.FUELTANK"
             ></div>
             <div class                  = "SIMRacingApps-Widget-FuelTank-levelneeded"
                  data-ng-style          = "{
@@ -28,21 +28,21 @@
             <table class                = "SIMRacingApps-Widget-FuelTank-statstable"
                    data-ng-if           = "showTable && (showToGoLaps || showInTankLaps || showPerTankLaps || showToFinish || showInTank || showNeeded || showAdding || showPitStops)">
 			    <colgroup>
-			        <col style="width: 39%" />
-                    <col style="width: 5%"  />
-                    <col style="width: 23%" />
-                    <col style="width: 23%" />
+			        <col class = "SIMRacingApps-Widget-FuelTank-togo" />
+                    <col class = "SIMRacingApps-Widget-FuelTank-sign" />
+                    <col class = "SIMRacingApps-Widget-FuelTank-number"  />
+                    <col class = "SIMRacingApps-Widget-FuelTank-uom" />
 			    </colgroup>
                 <thead>
                     <tr>
                         <td></td>
                         <td></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-header SIMRacingAppsLabel"
-                            data-ng-bind-html    = "lapsToAverage == 0 ? translations.WORST : (lapsToAverage + ' ' + translations.LAPS)"
+                            data-ng-bind         = "lapsToAverage == 0 ? translations.WORST : (lapsToAverage + ' ' + translations.LAPS)"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-header SIMRacingAppsLabel"
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "altLapsToAverage == 0 ? translations.WORST : (altLapsToAverage + ' ' + translations.LAPS)"
+                            data-ng-bind         = "altLapsToAverage == 0 ? translations.WORST : (altLapsToAverage + ' ' + translations.LAPS)"
                         ></td>
                         <td></td>
                     </tr>
@@ -51,57 +51,57 @@
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-togo"
                         data-ng-if               = "showToGoLaps">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel" 
-                            data-ng-bind-html    = "translations.TOGO"
+                            data-ng-bind         = "translations.TOGO"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
-                            data-ng-bind-html    = "lapsToGo | sraNumber:1:true"
+                            data-ng-bind         = "lapsToGo | sraNumber:1:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "lapsToGo | sraNumber:1:true" 
+                            data-ng-bind         = "lapsToGo | sraNumber:1:true" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "((lapsToGoUOM|limitTo:1) == '~' ? '~' : '') + translations.LAPS"
+                            data-ng-bind         = "((lapsToGoUOM|limitTo:1) == '~' ? '~' : '') + translations.LAPS"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-lapsintank"
                         data-ng-if               = "showInTankLaps">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel" 
-                            data-ng-bind-html    = "translations.INTANK"
+                            data-ng-bind         = "translations.INTANK"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-class        = "classIsEnough" 
-                            data-ng-bind-html    = "lapsInTank | sraNumber:1:true"
+                            data-ng-bind         = "lapsInTank | sraNumber:1:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
                             data-ng-class        = "classIsAltEnough" 
-                            data-ng-bind-html    = "altLapsInTank | sraNumber:1:true" 
+                            data-ng-bind         = "altLapsInTank | sraNumber:1:true" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "'~'+translations.LAPS"
+                            data-ng-bind         = "'~'+translations.LAPS"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-lapspertank"
                         data-ng-if               = "showPerTankLaps">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel" 
-                            data-ng-bind-html    = "translations.PERTANK"
+                            data-ng-bind         = "translations.PERTANK"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
-                            data-ng-bind-html    = "lapsPerTank | sraNumber:1:true"
+                            data-ng-bind         = "lapsPerTank | sraNumber:1:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "altLapsPerTank | sraNumber:1:true" 
+                            data-ng-bind         = "altLapsPerTank | sraNumber:1:true" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "'~'+translations.LAPS"
+                            data-ng-bind         = "'~'+translations.LAPS"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-spacer"
@@ -115,37 +115,37 @@
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-tofinish"
                         data-ng-if               = "showToFinish">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel" 
-                            data-ng-bind-html    = "translations.TOFINISH"
+                            data-ng-bind         = "translations.TOFINISH"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
-                            data-ng-bind-html    = "fuelLevelToFinish | sraNumber:1:true"
+                            data-ng-bind         = "fuelLevelToFinish | sraNumber:1:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "altFuelLevelToFinish | sraNumber:1:true" 
+                            data-ng-bind         = "altFuelLevelToFinish | sraNumber:1:true" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "'~'+data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
+                            data-ng-bind         = "'~'+data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-intank"
                         data-ng-if               = "showInTank">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel" 
-                            data-ng-bind-html    = "translations.INTANK"
+                            data-ng-bind         = "translations.INTANK"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         >-</td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
-                            data-ng-bind-html    = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1"
+                            data-ng-bind         = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1" 
+                            data-ng-bind         = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
+                            data-ng-bind         = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-equals"
@@ -159,21 +159,21 @@
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-needed"
                         data-ng-if               = "showNeeded">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label" 
-                            data-ng-bind-html    = "translations.NEEDED"
+                            data-ng-bind         = "translations.NEEDED"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         >=</td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-class        = "classIsEnoughAdding"
-                            data-ng-bind-html    = "fuelLevelNeeded | sraNumber:1:true"
+                            data-ng-bind         = "fuelLevelNeeded | sraNumber:1:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
                             data-ng-class        = "classIsAltEnoughAdding"
-                            data-ng-bind-html    = "altFuelLevelNeeded | sraNumber:1:true" 
+                            data-ng-bind         = "altFuelLevelNeeded | sraNumber:1:true" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "'~'+data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
+                            data-ng-bind         = "'~'+data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-equals"
@@ -187,45 +187,45 @@
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-adding"
                         data-ng-if               = "showAdding">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label" 
-                            data-ng-bind-html    = "translations.ADDING"
+                            data-ng-bind         = "translations.ADDING"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-class        = "classIsEnoughAdding" 
-                            data-ng-bind-html    = "fuelLevelAdding | sraNumber:1:true"
+                            data-ng-bind         = "fuelLevelAdding | sraNumber:1:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-class        = "classIsAltEnoughAdding" 
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "fuelLevelAdding | sraNumber:1:true" 
+                            data-ng-bind         = "fuelLevelAdding | sraNumber:1:true" 
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
+                            data-ng-bind         = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"
                         ></td>
                     </tr>
                     <tr class                    = "SIMRacingApps-Widget-FuelTank-stops"
                         data-ng-if               = "showPitStops">
                         <td class                = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel" 
-                            data-ng-bind-html    = "translations.PITSTOPS"
+                            data-ng-bind         = "translations.PITSTOPS"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-sign"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
-                            data-ng-bind-html    = "data.Car.REFERENCE.PitStopsRemaining[lapsToAverage].Value | sraNumber:0:true"
+                            data-ng-bind         = "data.Car.REFERENCE.PitStopsRemaining[lapsToAverage].Value | sraNumber:0:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-number" 
                             data-ng-if           = "showAltLapsToAverage" 
-                            data-ng-bind-html    = "data.Car.REFERENCE.PitStopsRemaining[altLapsToAverage].Value | sraNumber:0:true"
+                            data-ng-bind         = "data.Car.REFERENCE.PitStopsRemaining[altLapsToAverage].Value | sraNumber:0:true"
                         ></td>
                         <td class                = "SIMRacingApps-Widget-FuelTank-uom" 
-                            data-ng-bind-html    = "'~'"
+                            data-ng-bind         = "'~'"
                         ></td>
                     </tr>
                 </tbody>
             </table>
             <div class                = "SIMRacingApps-Widget-FuelTank-fuel"
-                 data-ng-bind-html    = "(data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1) + ' / ' + (data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum | sraNumber:1)"
+                 data-ng-bind         = "(data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1) + ' / ' + (data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum | sraNumber:1)"
             ></div>
         </div>
     </div>

@@ -18,7 +18,7 @@
          <div class             = "SIMRacingApps-Widget-TimingDelta-delta"
               data-ng-style     = "{ fontWeight: fontWeight, color: fontColor }"
               data-ng-bind-html = "(delta|sraDuration:3:'+')
-                                + '<br /><span class=&quot;SIMRacingApps-Widget-TimingDelta-reference&quot>' + translations[value] + '</span>'">
+                                + '<br /><span class=&quot;SIMRacingApps-Widget-TimingDelta-reference&quot>' + (translations[value]|sraEncodeEntities) + '</span>'">
          </div>
      </div>
 </div>

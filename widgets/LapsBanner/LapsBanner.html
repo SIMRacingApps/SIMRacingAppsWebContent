@@ -21,11 +21,11 @@
          data-ng-class      = "'SIMRacingApps-Widget-LapsBanner-status-'+flag">
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-title"
           data-ng-style     = "{ fontSize: titleFontSize }"
-          data-ng-bind-html = "title || data.Session.Type.ValueFormatted"
+          data-ng-bind      = "title || data.Session.Type.ValueFormatted"
         ></div>
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
           data-ng-if        = "!byClass"
-          data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
+          data-ng-bind      = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
                             ? translations.ONELAPTOGREEN
                             : data.Session.IsCrossedFlag.Value
                               ? translations.CROSSED
@@ -41,7 +41,7 @@
         ></div>
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
           data-ng-if        = "byClass && data.Session.Type.Value == 'RACE'"
-          data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
+          data-ng-bind      = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
                             ? translations.ONELAPTOGREEN
                             : data.Session.IsCrossedFlag.Value
                               ? translations.CROSSED
@@ -57,7 +57,7 @@
         ></div>
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
           data-ng-if        = "byClass && data.Session.Type.Value != 'RACE'"
-          data-ng-bind-html = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
+          data-ng-bind      = "data.Session.Messages.Value.indexOf(';ONELAPTOGREEN;') >= 0
                             ? translations.ONELAPTOGREEN
                             : data.Session.IsCrossedFlag.Value
                               ? translations.CROSSED

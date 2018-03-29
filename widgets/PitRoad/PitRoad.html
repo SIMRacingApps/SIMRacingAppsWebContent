@@ -12,7 +12,7 @@
                                          ">
 	     <sra-data-table
 	        class                        = "SIMRacingApps-Widget-PitRoad-table"
-	        data-sra-args-header         = "translations.PITROAD"
+	        data-sra-args-header         = "translations.PITROAD|sraEncodeEntities"
 	        data-sra-args-body-class     = "'SIMRacingApps-Widget-PitRoad-'
 	                                     +  data.Car.REFERENCE.Status.Value
 	                                     +  '-'+data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.State
@@ -20,12 +20,12 @@
 	                                     "
 	        data-sra-args-row-names      = "speedlimit;speed;uom"
 	        data-sra-args-row-speedlimit = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
-	                                     +  translations.SPEEDLIMIT+':</span> '
+	                                     +  (translations.SPEEDLIMIT|sraEncodeEntities)+':</span> '
 	                                     +  (data.Car.REFERENCE.PitSpeedLimit.Value|number:1)
-	                                     +  ' ' + data.Car.REFERENCE.PitSpeedLimit.UOMAbbr
+	                                     +  ' ' + (data.Car.REFERENCE.PitSpeedLimit.UOMAbbr|sraEncodeEntities)
 	                                     "
 	        data-sra-args-row-speed      = "data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.Value|number:1"
-	        data-sra-args-row-uom        = "data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.UOMAbbr"
+	        data-sra-args-row-uom        = "data.Car.REFERENCE.Gauge.Speedometer.ValueCurrent.UOMAbbr|sraEncodeEntities"
 	        data-sra-args-footer         = "(data.Session.DiffCars.REFERENCE.PITSTALL.Value|sraRound) <= sraPitCountdown
 	                                     && (data.Session.DiffCars.REFERENCE.PITSTALL.Value|sraRound) > 0
 	                                        ? (data.Session.DiffCars.REFERENCE.PITSTALL.Value|sraRound|sraNumber:0)

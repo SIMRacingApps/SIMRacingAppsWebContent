@@ -6,8 +6,8 @@
 	    ng-attr-style            = "height: {{height}}px;"
 	    data-sra-args-header     = "'@TeamSpeak'"
 	    data-sra-args-row-names  = "talk;whisper"
-	    data-sra-args-row-talk   = "data.TeamSpeak.Talker.ValueFormatted || '&nbsp;'"
-	    data-sra-args-row-whisper= "translations[data.TeamSpeak.Whispering.Value] || '&nbsp;'"
+	    data-sra-args-row-talk   = "(data.TeamSpeak.Talker.ValueFormatted|sraEncodeEntities) || '&nbsp;'"
+	    data-sra-args-row-whisper= "(translations[data.TeamSpeak.Whispering.Value]|sraEncodeEntities) || '&nbsp;'"
 	    data-sra-args-row-whisper-class = "'SIMRacingApps-Widget-TeamSpeakTalking-'+data.TeamSpeak.Whispering.Value+'-true'"
 	    data-sra-args-interval   = {{sraInterval}}
 	></sra-data-table>

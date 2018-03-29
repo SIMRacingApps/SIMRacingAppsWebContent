@@ -15,7 +15,7 @@
 }
 
 .SIMRacingApps-App-RaceAdministrator-commands {
-    width: 100%;
+    width: 47%;
     height: 100%;
 }
 
@@ -60,10 +60,11 @@
     border-color: black;
     border-width: medium;
     border-style: outset;
+    width: 25%;
 }
 
 .SIMRacingApps-App-RaceAdministrator-cars {
-    width: 100%;
+    width: 53%;
     font-size: 90%;
 }
 
