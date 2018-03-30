@@ -3,29 +3,29 @@
  * <p>
  * Example:
  * <p><b>
- * &lt;sra-camera-selector30&gt;&lt;/sra-camera-selector30&gt;<br />
+ * &lt;sra-camera-selector-Vertical30&gt;&lt;/sra-camera-selector-Vertical30&gt;<br />
  * </b>
- * <img src="../widgets/CameraSelector30/icon.png" alt="Image goes here"/>
+ * <img src="../widgets/CameraSelectorVertical30/icon.png" alt="Image goes here"/>
  * @ngdoc directive
- * @name sra-camera-selector30
+ * @name sra-camera-selector-vertical30
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 300.
  * @author Jeffrey Gilliam
- * @since 1.6
+ * @since 1.7
  * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps'
-        ,'css!widgets/CameraSelector30/CameraSelector30'
+        ,'css!widgets/CameraSelectorVertical30/CameraSelectorVertical30'
         ,'widgets/CarSelector64/CarSelector64'
         ,'widgets/ReplayControl/ReplayControl'],
 function(SIMRacingApps) {
 
     var self = {
-        name:            "sraCameraSelector30",
-        url:             'CameraSelector30',
-        template:        'CameraSelector30.html',
-        defaultWidth:    1000,
-        defaultHeight:   580,
+        name:            "sraCameraSelectorVertical30",
+        url:             'CameraSelectorVertical30',
+        template:        'CameraSelectorVertical30.html',
+        defaultWidth:    480,
+        defaultHeight:   880,
         defaultInterval: 300   //initialize with the default interval
     };
 

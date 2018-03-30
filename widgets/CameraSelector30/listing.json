@@ -2,7 +2,7 @@
 "name":        "CameraSelector30",
 "description": "Selects a camera with replay controls. Up to 30 Cameras available",
 "description-de": "Kamera-Auswahl mit Replay-Kontrolle/Bedienung. F\u00fcge bis zu 30 Kameras in der Sim hinzu (Strg+F12)",
-"doc":         "JavaScriptDoc/sra-camera-selector-custom.html",
+"doc":         "JavaScriptDoc/sra-camera-selector30.html",
 "url":         "apps/WidgetLoader?widget=CameraSelector30&",
 "icon":        "widgets/CameraSelector30/icon.png",
 "width":       1000,

@@ -1,0 +1,42 @@
+<div class                  = "SIMRacingApps-Widget-CameraSelectorVertical30"
+     data-ng-style          = "{ height: height+'px' }"
+>
+   <div class                           = "SIMRacingApps-Widget-CameraSelectorVertical30-column"
+       data-ng-repeat                   = "col in cols"
+       data-ng-class                    = "'SIMRacingApps-Widget-CameraSelectorVertical30-col' + col">
+       <div style="position: relative; width: 100%; height: 100%;">
+           <sra-data class              = "SIMRacingApps-Widget-CameraSelectorVertical30-button"
+               data-ng-repeat           = "row in rows"
+               data-ng-class            = "'SIMRacingApps-Widget-CameraSelectorVertical30-clicked-' + clickedStatus 
+                                        + ' SIMRacingApps-Widget-CameraSelectorVertical30-row' + row
+                                        + ' SIMRacingApps-Widget-CameraSelectorVertical30-row' + row + '-col'+col
+                                        + ' SIMRacingApps-Widget-CameraSelectorVertical30-button-' + (sraButtons['row'+row+'-col'+col].camera == currentCamera ? 'current' : 'notcurrent')
+                                        + ' SIMRacingApps-Widget-CameraSelectorVertical30-button-visible-' + (sraButtons['row'+row+'-col'+col].camera ? 'Y' : 'N')
+                                        "
+               data-sra-args-on-click   = "onButtonClick"
+               data-sra-args-on-click-arg="row{{row}}-col{{col}}"   
+           >
+              <div
+                 class                  = "SIMRacingApps-Widget-CameraSelectorVertical30-button-text-wrapper">
+                 <div
+	                 class              = "SIMRacingApps-Widget-CameraSelectorVertical30-button-text-table">
+		             <div 
+		                class           = "SIMRacingApps-Widget-CameraSelectorVertical30-button-text"
+		                data-ng-bind    = "sraButtons['row'+row+'-col'+col].text"
+		             ></div>
+		         </div>
+	          </div>
+           </sra-data>
+       </div>
+   </div>
+   <div class                       = "SIMRacingApps-Widget-CameraSelectorVertical30-horizontal SIMRacingApps-Widget-CameraSelectorVertical30-horizontal1"></div>
+   <sra-replay-control 
+       class                        = "SIMRacingApps-Widget-CameraSelectorVertical30-replaycontrol" 
+   ></sra-replay-control>
+   <div class                       = "SIMRacingApps-Widget-CameraSelectorVertical30-horizontal SIMRacingApps-Widget-CameraSelectorVertical30-horizontal2"></div>
+   <sra-car-selector64 
+       class                        = "SIMRacingApps-Widget-CameraSelectorVertical30-carselector" 
+       data-sra-args-on-click       = "onClickCarSelector"
+       data-sra-args-change-focus   = "true"
+   ></sra-car-selector64>
+</div>

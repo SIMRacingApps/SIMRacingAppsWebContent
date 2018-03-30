@@ -1,0 +1,148 @@
+.SIMRacingApps-Widget-CameraSelectorVertical30 {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    /* background: dimgray; */
+    z-index:-1;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-carselector {
+    position:   absolute;
+    width:      63%;
+    left:       18%;
+    top:        62%;
+    font-size:  60%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-horizontal {
+    position:   absolute;
+    width:      100%;
+    height:     1%;
+    background-color: black;
+    left:       1%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-horizontal1 {
+    top:        40%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-horizontal2 {
+    top:        61.5%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-replaycontrol {
+    position:   absolute;
+    width:      100%;
+    left:       0%;
+    top:        41%;
+    font-size:  60%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-button {
+    position:   absolute;
+    width:      100%;
+    height:     3%;
+    display:    inline-table;
+    overflow:   hidden;
+    border-radius: 3% 3% / 20% 20%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-button-notcurrent {
+    background: green;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-button-current {
+    background: black;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-button-visible-N {
+    display:    none;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-button-text-wrapper {
+	position:   absolute;
+    width:      100%;
+    height:     100%;
+    max-width:  100%;
+    max-height: 100%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-button-text-table {
+    display:    inline-table;
+    width:      100%;
+    height:     100%;
+    overflow:   hidden;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-button-text {
+    display:    table-cell;
+    vertical-align: middle;
+    text-align: center;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-column {
+    position:   absolute;
+    width:      30%;
+    top:        0%;
+    height:     100%;
+    font-size:  70%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-col1 {
+    left:       1%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-col2 {
+    left:       34%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-col3 {
+    left:       67%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row1 {
+    top:        0%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row2 {
+    top:        4%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row3 {
+    top:        8%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row4 {
+    top:        12%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row5 {
+    top:        16%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row6 {
+    top:        20%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row7 {
+    top:        24%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row8 {
+    top:        28%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row9 {
+    top:        32%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row10 {
+    top:        36%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row11 {
+    top:        50%;
+}
+.SIMRacingApps-Widget-CameraSelectorVertical30-row12 {
+    top:        54%;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-clicked-Y {
+    border-width:   medium;
+    border-color:   red;
+    border-style:   ridge;
+}
+
+.SIMRacingApps-Widget-CameraSelectorVertical30-clicked-N {
+    border-width:   medium;
+    border-color:   gold;
+    border-style:   ridge;
+}
