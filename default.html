@@ -22,6 +22,18 @@
             padding-bottom:   10px;
             white-space:      nowrap;
         }
+        .items-header {
+            background-color: blue;
+            color:            white;
+            width:            100%;
+            clear:            both;
+            font-size:        70px;
+            text-align:       center;
+            padding-bottom:   10px;
+            white-space:      nowrap;
+            border-top: 8px solid white;
+            border-left: 3px solid white;
+        }
         #sratitle {
             color:            white;
         }
@@ -55,6 +67,9 @@
             padding-bottom:   10px;
             white-space:      nowrap;
         }
+        .table-items {
+            border-collapse: collapse;
+        }
         .item {
             width: 100%;
             height: 120px;
@@ -67,6 +82,21 @@
             max-height: 120px;
             text-align: center;
             cursor: pointer;
+            border-top: 8px solid white;
+            border-left: 3px solid white;
+        }
+        .image {
+            max-width:  200px;
+            max-height: 120px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .help {
+            border-top: 8px solid white;
+            border-left: 3px solid white;
+        }
+        .help a {
+            text-decoration: none;
         }
         .name {
             text-align: center;
@@ -153,20 +183,20 @@
 		    </td></tr>
 		    </table>
 		</div>    
-		<table width="100%" data-ng-repeat="header in headers">
+		<table class="table-items" width="100%" data-ng-repeat="header in headers">
 		    <colgroup>
 		        <col style="width: 200px"  />
 		        <col style="width: 100%"  />
 		    </colgroup>
 		    <thead data-ng-show="listings[header].length > 0">
 		        <tr>
-		            <td class="header" colspan="2">{{translations[header] || header}}</td>
+		            <td class="items-header" colspan="2">{{translations[header] || header}}</td>
 		        </tr>
 		    </thead>
 		    <tbody>
 		        <tr class="item" data-ng-repeat="item in listings[header]">
-		            <td class="icon"><a data-ng-click="launch(item.url,item.width,item.height)" target="_blank"><img class="icon" data-ng-src="{{item.icon}}"></a></td>
-		            <td><a data-ng-click="launch(item.doc,1000,700)" target="_blank"><div class="itemtext">{{item.name}}<br /></div><div class="itemdesc">{{item.description}}</div></a></td>
+		            <td class="icon"><a data-ng-click="launch(item.url,item.width,item.height)" target="_blank"><img class="image" data-ng-src="{{item.icon}}"></a></td>
+		            <td class="help"><a data-ng-click="launch(item.doc,1000,700)" target="_blank"><div class="itemtext">{{item.name}}<br /></div><div class="itemdesc">{{item.description}}</div></a></td>
 		        </tr>
 		    </tbody>
 		</table>
