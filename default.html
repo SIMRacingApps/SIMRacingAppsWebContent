@@ -156,6 +156,17 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     
       ga('create', 'UA-72478308-1', 'auto');
+      function checkupload()
+      {
+          var f = document.forms["uploadform"].elements;
+          var cansubmit = true;
+
+          for (var i = 0; i < f.length; i++) {
+              if (f[i].value.length == 0) cansubmit = false;
+          }
+
+          document.getElementById('upload').disabled = !cansubmit;
+      }
     </script>
 </head>
 <body data-ng-controller = "SIMRacingApps-Controller">
@@ -202,10 +213,10 @@
 		</table>
     </td></tr>
     <tr><td>
-        <form class="upload" method="POST" action="/SIMRacingApps/upload" enctype="multipart/form-data">
+        <form id="uploadform" class="upload" method="POST" action="/SIMRacingApps/upload" enctype="multipart/form-data">
             {{translations.installbefore}}, ({{version.userpath}}), {{translations.installafter}}<br />
-            <input type="file" value="" name="file" id="file" accept=".sra"/>
-            <input type="submit" value="{{translations.UPLOAD || 'Upload'}}" name="upload" id="upload" />
+            <input type="file" value="" name="file" id="file" accept=".sra" onchange="checkupload()"/>
+            <input type="submit" value="{{translations.UPLOAD || 'Upload'}}" name="upload" id="upload" disabled=true/>
         </form>
     </td></tr>
 </table>
