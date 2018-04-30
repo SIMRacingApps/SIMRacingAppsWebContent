@@ -3,6 +3,7 @@
     font-size: 250%;
     overflow:hidden;
     /*background-color: dimgray;*/
+    background-color: rgba(0,0,0,.7);
     color: white;
     padding: 0;
     overflow: hidden;

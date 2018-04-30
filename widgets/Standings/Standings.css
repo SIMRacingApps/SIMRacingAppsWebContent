@@ -8,6 +8,11 @@
     padding: 0;
 }
 
+
+.SIMRacingApps-Widget-Standings-TitleHeader {
+    background-color: rgba(0,0,0,.7);
+}
+
 .SIMRacingApps-Widget-Standings-Title {
     font-size: 300%;
     font-weight: bold;
