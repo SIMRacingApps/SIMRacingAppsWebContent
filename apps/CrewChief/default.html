@@ -54,10 +54,10 @@
 
             <sra-data-table
                 class                               = "SIMRacingApps-App-CrewChief-Stats"
-                data-sra-args-data                  = "Car/REFERENCE/Lap;Car/REFERENCE/PositionClass;Car/REFERENCE/Position;Session/DiffCars;Car/REFERENCE/LapTime/SessionLast;Car/REFERENCE/LapTime/SessionBest;Car/REFERENCE/Lap/SessionBest;Car/REFERENCE/Lap/Pitted;Car/REFERENCE/PitTime;Session/TimeRemaining;Session/TimeElapsed"
+                data-sra-args-data                  = "Car/REFERENCE/Lap;Car/REFERENCE/Lap/SincePitting;Car/REFERENCE/PositionClass;Car/REFERENCE/Position;Session/DiffCars;Car/REFERENCE/LapTime/SessionLast;Car/REFERENCE/LapTime/SessionBest;Car/REFERENCE/Lap/SessionBest;Car/REFERENCE/Lap/Pitted;Car/REFERENCE/PitTime;Session/TimeRemaining;Session/TimeElapsed"
                 data-sra-args-row-names             = "lap;pos;classpos;behind;last;best;pit;time"
-                data-sra-args-row-lap-label         = "(translations.LAP+':')|sraEncodeEntities"
-                data-sra-args-row-lap               = "'<span class=&quot;SIMRacingApps-App-CrewChief-lap&quot>'+(data.Car.REFERENCE.Lap.ValueFormatted|sraEncodeEntities)+'</span>'"
+                data-sra-args-row-lap-label         = "(translations.LAPRUN+':')|sraEncodeEntities"
+                data-sra-args-row-lap               = "'<span class=&quot;SIMRacingApps-App-CrewChief-lap&quot>'+(data.Car.REFERENCE.Lap.ValueFormatted|sraEncodeEntities)+'/'+(data.Car.REFERENCE.Lap.SincePitting.ValueFormatted|sraEncodeEntities)+'</span>'"
                 data-sra-args-row-pos-label         = "(translations.POSITIONCLASS+':')|sraEncodeEntities"
                 data-sra-args-row-pos               = "(data.Car.REFERENCE.Position.ValueFormatted+' / '+data.Car.REFERENCE.PositionClass.ValueFormatted)|sraEncodeEntities"
                 data-sra-args-row-behind-label      = "(translations.BEHIND+':')|sraEncodeEntities"
