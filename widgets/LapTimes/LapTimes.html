@@ -1,0 +1,59 @@
+<sra-data-table
+    class                                    = "SIMRacingApps-Widget-LapTimes"
+    ng-attr-style                            = "height: {{height}}px;"
+    data-sra-args-data                       = "Car/REFERENCE/Number;Car/REFERENCE/DriverName
+                                               ;Car/REFERENCE/Lap/CURRENT;Car/REFERENCE/LapTime/CURRENT
+                                               ;Car/REFERENCE/Lap/SESSIONLAST;Car/REFERENCE/LapTime/SESSIONLAST
+                                               ;Car/REFERENCE/Lap/SESSIONBEST;Car/REFERENCE/LapTime/SESSIONBEST
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING/5;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING/5
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING/10;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING/10
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING/15;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING/15
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING/20;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING/20
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING/30;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING/30
+                                               ;Car/REFERENCE/Lap/RUNNINGAVERAGESINCEPITTING/40;Car/REFERENCE/LapTime/RUNNINGAVERAGESINCEPITTING/40
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING;Car/REFERENCE/LapTime/AVERAGESINCEPITTING
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING/5;Car/REFERENCE/LapTime/AVERAGESINCEPITTING/5
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING/10;Car/REFERENCE/LapTime/AVERAGESINCEPITTING/10
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING/15;Car/REFERENCE/LapTime/AVERAGESINCEPITTING/15
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING/20;Car/REFERENCE/LapTime/AVERAGESINCEPITTING/20
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING/30;Car/REFERENCE/LapTime/AVERAGESINCEPITTING/30
+                                               ;Car/REFERENCE/Lap/AVERAGESINCEPITTING/40;Car/REFERENCE/LapTime/AVERAGESINCEPITTING/40
+                                               "
+    data-sra-args-row-names                  = "current;last;best;sincepitting;sincepitting5;sincepitting10;sincepitting15;sincepitting20;sincepitting30;sincepitting40;runningaverage5;runningaverage10;runningaverage15;runningaverage20;runningaverage30;runningaverage40"
+    data-sra-args-header                     = "(translations.LAPTIMES|sraEncodeEntities) + '<br />' + (translations.NUMBER|sraEncodeEntities) + data.Car.REFERENCE.Number.ValueFormatted + ', ' + (data.Car.REFERENCE.DriverName.ValueFormatted|sraEncodeEntities)"
+    data-sra-args-header-class               = "'SIMRacingApps-Widget-LapTimes-header'"
+    data-sra-args-row-current-label          = "(translations.CURRENT|sraEncodeEntities) + ' ' + (data.Car.REFERENCE.Lap.CURRENT.Value|sraNumber:0|sraLPad:2:'0')"
+    data-sra-args-row-current                = "data.Car.REFERENCE.LapTime.CURRENT.Value|sraDuration:3"
+    data-sra-args-row-last-label             = "(translations.LAST|sraEncodeEntities) + ' ' + (data.Car.REFERENCE.Lap.SESSIONLAST.Value|sraNumber:0|sraLPad:2:'0')"
+    data-sra-args-row-last                   = "data.Car.REFERENCE.LapTime.SESSIONLAST.Value|sraDuration:3"
+    data-sra-args-row-best-label             = "(translations.BEST|sraEncodeEntities) + ' ' + (data.Car.REFERENCE.Lap.SESSIONBEST.Value|sraNumber:0|sraLPad:2:'0')"
+    data-sra-args-row-best                   = "data.Car.REFERENCE.LapTime.SESSIONBEST.Value|sraDuration:3"
+    data-sra-args-row-sincepitting-label     = "(translations.SINCEPITTING|sraEncodeEntities) + ' ' + (data.Car.REFERENCE.Lap.AVERAGESINCEPITTING.Value|sraNumber:0|sraLPad:2:'0')"
+    data-sra-args-row-sincepitting           = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING.Value|sraDuration:3"
+    data-sra-args-row-sincepitting5-label    = "(translations.SINCEPITTING + ' 05')|sraEncodeEntities"
+    data-sra-args-row-sincepitting5          = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING[5].Value|sraDuration:3"
+    data-sra-args-row-sincepitting10-label   = "(translations.SINCEPITTING+' 10')|sraEncodeEntities"
+    data-sra-args-row-sincepitting10         = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING[10].Value|sraDuration:3"
+    data-sra-args-row-sincepitting15-label   = "(translations.SINCEPITTING + ' 15')|sraEncodeEntities"
+    data-sra-args-row-sincepitting15         = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING[15].Value|sraDuration:3"
+    data-sra-args-row-sincepitting20-label   = "(translations.SINCEPITTING+' 20')|sraEncodeEntities"
+    data-sra-args-row-sincepitting20         = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING[20].Value|sraDuration:3"
+    data-sra-args-row-sincepitting30-label   = "(translations.SINCEPITTING+' 30')|sraEncodeEntities"
+    data-sra-args-row-sincepitting30         = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING[30].Value|sraDuration:3"
+    data-sra-args-row-sincepitting40-label   = "(translations.SINCEPITTING+' 40')|sraEncodeEntities"
+    data-sra-args-row-sincepitting40         = "data.Car.REFERENCE.LapTime.AVERAGESINCEPITTING[40].Value|sraDuration:3"
+    data-sra-args-row-runningaverage5-label  = "(translations.RUNNINGAVERAGE+' 05')|sraEncodeEntities"
+    data-sra-args-row-runningaverage5        = "data.Car.REFERENCE.LapTime.RUNNINGAVERAGESINCEPITTING[5].Value|sraDuration:3"
+    data-sra-args-row-runningaverage10-label = "(translations.RUNNINGAVERAGE+' 10')|sraEncodeEntities"
+    data-sra-args-row-runningaverage10       = "data.Car.REFERENCE.LapTime.RUNNINGAVERAGESINCEPITTING[10].Value|sraDuration:3"
+    data-sra-args-row-runningaverage15-label = "(translations.RUNNINGAVERAGE+' 15')|sraEncodeEntities"
+    data-sra-args-row-runningaverage15       = "data.Car.REFERENCE.LapTime.RUNNINGAVERAGESINCEPITTING[15].Value|sraDuration:3"
+    data-sra-args-row-runningaverage20-label = "(translations.RUNNINGAVERAGE+' 20')|sraEncodeEntities"
+    data-sra-args-row-runningaverage20       = "data.Car.REFERENCE.LapTime.RUNNINGAVERAGESINCEPITTING[20].Value|sraDuration:3"
+    data-sra-args-row-runningaverage30-label = "(translations.RUNNINGAVERAGE+' 30')|sraEncodeEntities"
+    data-sra-args-row-runningaverage30       = "data.Car.REFERENCE.LapTime.RUNNINGAVERAGESINCEPITTING[30].Value|sraDuration:3"
+    data-sra-args-row-runningaverage40-label = "(translations.RUNNINGAVERAGE+' 40')|sraEncodeEntities"
+    data-sra-args-row-runningaverage40       = "data.Car.REFERENCE.LapTime.RUNNINGAVERAGESINCEPITTING[40].Value|sraDuration:3"
+    data-sra-args-interval                   = {{sraInterval}}
+></sra-data-table>

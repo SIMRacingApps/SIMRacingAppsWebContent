@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-lap-times.html",
+"name": "LapTimes",
+"description": "Displays Current Lap Times", 
+"description-de": "Displays Current Lap Times", 
+"url": "apps/WidgetLoader?widget=LapTimes&",
+"icon": "widgets/LapTimes/icon.png",
+"width": 420,
+"height": 380,
+"args": ""
+}

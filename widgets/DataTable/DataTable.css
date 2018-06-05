@@ -7,6 +7,14 @@
     overflow:           hidden;
 }
 
+.SIMRacingApps-Widget-DataTable-data-column {
+}
+.SIMRacingApps-Widget-DataTable-spacer-column {
+    width:             2%;
+}
+.SIMRacingApps-Widget-DataTable-value-column {
+}
+
 /*we're doing our own padding in the tables, null this out */
 .SIMRacingApps-Widget-DataTable .SIMRacingAppsLabel {
     padding-right:      0px;
@@ -26,20 +34,17 @@
 .SIMRacingApps-Widget-DataTable-row-even {
 }
 .SIMRacingApps-Widget-DataTable-label {
-    width:              49%;
     text-align:         right;
     vertical-align:     middle;
     white-space:        nowrap;
     overflow:           hidden;
 }
 .SIMRacingApps-Widget-DataTable-spacer {
-    width:              2%;
     text-align:         right;
     vertical-align:     middle;
     white-space:        nowrap;
 }
 .SIMRacingApps-Widget-DataTable-data {
-    width:              49%;
     text-align:         left;
     vertical-align:     middle;
     white-space:        nowrap;

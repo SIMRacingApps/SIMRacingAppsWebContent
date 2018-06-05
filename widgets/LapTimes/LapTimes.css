@@ -1,0 +1,14 @@
+
+.SIMRacingApps-Widget-LapTimes {
+    font-size: 100%;
+}
+
+.SIMRacingApps-Widget-LapTimes-header {
+    background-color: black;
+}
+
+.SIMRacingApps-Widget-LapTimes
+.SIMRacingApps-Widget-DataTable
+.SIMRacingApps-Widget-DataTable-data-column {
+    width: 75%;
+}
