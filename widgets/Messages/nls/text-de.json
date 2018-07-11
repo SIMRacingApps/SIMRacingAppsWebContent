@@ -19,5 +19,6 @@
     "STARTREADY":     "Ready",
     "STARTSET":       "Set",
     "STARTGO":        "Go",
-    "PITSPEEDLIMITER":"PitSpeed-Limiter"
+    "PITSPEEDLIMITER":"PitSpeed-Limiter",
+    "TOWING":         "Abschleppen"
 }

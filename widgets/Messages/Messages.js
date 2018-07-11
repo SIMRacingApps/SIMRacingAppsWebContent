@@ -84,7 +84,15 @@ function(SIMRacingApps) {
                     var messages = value.split(";");
                     for (var i = 0; i < messages.length; i++) {
                         if (messages[i]) {
-                            $scope.messages.push($scope.translations && $scope.translations[messages[i]] ? $scope.translations[messages[i]] : messages[i]);
+                            //translate TOWING without the time, then add it back
+                            if (messages[i].match(/^TOWING/)) {
+                                $scope.messages.push($scope.translations && $scope.translations.TOWING 
+                                                   ? $scope.translations.TOWING + ' ' + messages[i].substring(7)
+                                                   : messages[i]);
+                            }
+                            else {
+                                $scope.messages.push($scope.translations && $scope.translations[messages[i]] ? $scope.translations[messages[i]] : messages[i]);
+                            }
                         }
                     }
                 };
