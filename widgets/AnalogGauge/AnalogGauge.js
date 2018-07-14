@@ -194,26 +194,51 @@ function(SIMRacingApps) {
                     var Maximum        = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].Maximum[$scope.argsUOM].Value        || 100;
                     var MajorIncrement = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].MajorIncrement[$scope.argsUOM].Value || 10;
                     var MinorIncrement = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].MinorIncrement[$scope.argsUOM].Value || 10;
+                    var range          = ($scope.endAngle - $scope.startAngle);
 
+                    //changed on 7/11/2018 to track the floored min and only create it once
                     if (Minimum !== "" && Maximum !== "" && MajorIncrement !== "") {
-                        //console.log('AnalogGauge.buildScales.major('+Minimum+','+Maximum+','+MajorIncrement+')');
+                        //console.log($scope.sraAnalogGauge + ': AnalogGauge.buildScales.major('+Minimum+','+Maximum+','+MajorIncrement+')');
                         $scope.majorScale  = [];
 
-                        var angle = $scope.startAngle;
-                        var inc   = ($scope.endAngle - $scope.startAngle) / ((Maximum - Minimum) / MajorIncrement);
-                        for (var min = Minimum; min <= Maximum; min += MajorIncrement) {
-                            $scope.majorScale.push({angle: angle, text: Math.floor(min)});
-                            angle += inc;
+                        var angle          = $scope.startAngle;
+                        var inc   = range / ((Maximum - Minimum) / MajorIncrement);
+                        var minFloored = -1;
+                        for (var min = Minimum; MajorIncrement > 0 && min <= Maximum; min += MajorIncrement) {
+                            if (minFloored != Math.floor(min)) {
+                                minFloored = Math.floor(min);
+                                
+                                //calculate the angle based on the floored value, else needle will not be accurate.
+                                var v = minFloored;
+            
+                                if (v <= Minimum)
+                                    angle = $scope.startAngle;
+                                else
+                                if (v >= Maximum)
+                                    angle = $scope.endAngle;
+                                else {
+                                    var percentage = (v - Minimum) / (Maximum - Minimum);
+                                    angle = $scope.startAngle + (percentage * range);
+                                }
+                                $scope.majorScale.push({angle: angle, text: minFloored});
+                            }
+                            //angle += inc;
                         }
                     }
 
                     if (Minimum !== "" && Maximum !== "" && MinorIncrement !== "") {
-                        //console.log('AnalogGauge.buildScales.minor('+Minimum+','+Maximum+','+MinorIncrement+')');
+                        //console.log($scope.sraAnalogGauge + ': AnalogGauge.buildScales.minor('+Minimum+','+Maximum+','+MinorIncrement+')');
                         $scope.minorScale  = [];
 
-                        var angle = $scope.startAngle;
-                        var inc   = ($scope.endAngle - $scope.startAngle) / ((Maximum - Minimum) / MinorIncrement);
-                        for (var min = Minimum; min <= Maximum; min += MinorIncrement) {
+                        //recalculate this, so when the UOM changes, it still the same number of marks between the majors
+                        MinorIncrement = 1 / (((Maximum - Minimum) / MinorIncrement) / (Math.floor(Maximum) - Math.floor(Minimum)));
+                        var inc   = range / ((Maximum - Minimum) / MinorIncrement);
+                        //now only draw between the floors.
+                        Minimum = Math.floor(Minimum);
+                        Maximum = Math.floor(Maximum);
+                        
+                        var angle          = $scope.startAngle;
+                        for (var min = Minimum; MinorIncrement > 0 && min <= Maximum; min += MinorIncrement) {
                             $scope.minorScale.push(angle);
                             angle += inc;
                         }
@@ -226,23 +251,26 @@ function(SIMRacingApps) {
                     var value          = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].Value    || 0;
                     var uom            = $scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].ValueCurrent[$scope.argsUOM].UOMAbbr  || "";
 
-                    var range          = ($scope.endAngle - $scope.startAngle);
-
-                    var v = value * ($scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].Multiplier.Value || 1.0);
-
-                    if (v <= Minimum)
-                        $scope.needleAngle = $scope.startAngle;
-                    else
-                    if (v >= Maximum)
-                        $scope.needleAngle = $scope.endAngle;
-                    else {
-                        var percentage = (v - Minimum) / (Maximum - Minimum);
-                        $scope.needleAngle = $scope.startAngle + (percentage * range);
+                    if (value !== "" && Minimum !== "" && Maximum !== "") {
+                        //console.log($scope.sraAnalogGauge + ': AnalogGauge.buildScales.major('+Minimum+','+Maximum+','+value+' '+uom+')');
+                        var range          = ($scope.endAngle - $scope.startAngle);
+    
+                        var v = value * ($scope.data.Car.REFERENCE.Gauge[$scope.sraAnalogGauge].Multiplier.Value || 1.0);
+    
+                        if (v <= Minimum)
+                            $scope.needleAngle = $scope.startAngle;
+                        else
+                        if (v >= Maximum)
+                            $scope.needleAngle = $scope.endAngle;
+                        else {
+                            var percentage = (v - Minimum) / (Maximum - Minimum);
+                            $scope.needleAngle = $scope.startAngle + (percentage * range);
+                        }
+    
+                        $scope.value = $filter('number')(Math.floor((value+($scope.roundTo/2))/$scope.roundTo) * $scope.roundTo,$scope.decimals);
+                        $scope.value = $scope.value.toString().replace($scope.thousandsSeparator,'');
+                        $scope.uom   = uom.toUpperCase();
                     }
-
-                    $scope.value = $filter('number')(Math.floor((value+($scope.roundTo/2))/$scope.roundTo) * $scope.roundTo,$scope.decimals);
-                    $scope.value = $scope.value.toString().replace($scope.thousandsSeparator,'');
-                    $scope.uom   = uom.toUpperCase();
                 };
 
                 $scope.updateLabels = function() {
