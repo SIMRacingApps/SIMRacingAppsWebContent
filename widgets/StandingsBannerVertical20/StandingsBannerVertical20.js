@@ -106,7 +106,7 @@ define(['SIMRacingApps'
                 
                 $scope.updateGreenPages = function() {
                     $scope.prevPage = $scope.currentPage;
-$scope.data.Session.Cars.Value = 20;                    
+//$scope.data.Session.Cars.Value = 20;                    
                     //go to the next page
                     if (++$scope.currentPage >= ($scope.numberOfGreenPages * $scope.numberOfGreenBoxes) )
                         $scope.currentPage = 0;
