@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-h-y-s-charge.html",
+"name": "BarGauge-HYSCharge",
+"description": "Bar Gauge HYS Charge",
+"description-de": "Balken-Anzeige - HYS Charge",
+"url": "apps/WidgetLoader?widget=BarGauge/HYSCharge&",
+"icon": "widgets/BarGauge/HYSCharge/icon.png",
+"width": 800,
+"height": 280,
+"args": ""
+}

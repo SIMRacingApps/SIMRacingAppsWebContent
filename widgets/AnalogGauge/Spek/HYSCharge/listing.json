@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-bar-gauge-h-y-s-charge.html",
+"name": "AnalogGauge-Spek-HYSCharge",
+"description": "AnalogGauge Spek HYS Charge",
+"description-de": "Analoge Rundinstrument-Anzeige - HYS Charge",
+"url": "apps/WidgetLoader?widget=AnalogGauge/Spek/HYSCharge&",
+"icon": "widgets/AnalogGauge/Spek/HYSCharge/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}
