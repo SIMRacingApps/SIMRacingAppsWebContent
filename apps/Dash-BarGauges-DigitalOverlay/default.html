@@ -235,8 +235,8 @@
                                                  ;Car/REFERENCE/Gauge/WeightJackerRight/IsDirty
                                                  ;Car/REFERENCE/Gauge/ABS/ValueNext
                                                  ;Car/REFERENCE/Gauge/ABS/IsDirty
-                                                 ;Car/REFERENCE/Gauge/TractionControl/ValueNext
-                                                 ;Car/REFERENCE/Gauge/TractionControl/IsDirty
+                                                 ;Car/REFERENCE/Gauge/RearTractionControl/ValueNext
+                                                 ;Car/REFERENCE/Gauge/RearTractionControl/IsDirty
                                                  ;Car/REFERENCE/Lap/Pitted
                                                  ;Car/REFERENCE/PitTime
                                                  ;Car/REFERENCE/RepairTime
@@ -344,10 +344,10 @@
             data-sra-args-row-abs              = "data.Car.REFERENCE.Gauge.ABS.ValueNext|sraNumber:0"
             data-sra-args-row-abs-value-class  = "'SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.ABS.IsDirty.Value"
 
-            data-sra-args-row-tc-class         = "'SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.TractionControl.ValueNext.State"
+            data-sra-args-row-tc-class         = "'SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-gauge-state-'+data.Car.REFERENCE.Gauge.RearTractionControl.ValueNext.State"
             data-sra-args-row-tc-label         = "(translations.TRACTIONCONTROL+':')|sraEncodeEntities"
-            data-sra-args-row-tc               = "data.Car.REFERENCE.Gauge.TractionControl.ValueNext|sraNumber:0"
-            data-sra-args-row-tc-value-class   = "'SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.TractionControl.IsDirty.Value"
+            data-sra-args-row-tc               = "data.Car.REFERENCE.Gauge.RearTractionControl.ValueNext|sraNumber:0"
+            data-sra-args-row-tc-value-class   = "'SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-dirtygauge-'+data.Car.REFERENCE.Gauge.RearTractionControl.IsDirty.Value"
 
             data-sra-args-row-pitlap-label     = "(translations.PITLAPTIME+':')|sraEncodeEntities"
             data-sra-args-row-pitlap           = "(data.Car.REFERENCE.Lap.Pitted.Value)+' / '+(data.Car.REFERENCE.PitTime|sraDuration:1:false:true)"

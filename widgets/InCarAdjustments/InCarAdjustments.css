@@ -1,0 +1,40 @@
+
+.SIMRacingApps-Widget-InCarAdjustments {
+    line-height: 300%;
+	font-size: 60%;
+    overflow:hidden;
+    /* background: dimgray; */
+    color: white;
+    padding: 0;
+}
+
+.SIMRacingApps-Widget-InCarAdjustments-Title {
+    font-size: 300%;
+    font-weight: bold;
+    color: gold;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    white-space: nowrap;
+    background-color: rgba(0,0,0,.7);
+    text-align: center;
+}
+
+.SIMRacingApps-Widget-InCarAdjustments-GridBody {
+    font-size: 170%;
+    line-height: 120%; /* this controls the height of the entire table at the given font and padding*/
+}
+
+.SIMRacingApps-Widget-InCarAdjustments-GridRow {
+}
+
+.SIMRacingApps-Widget-InCarAdjustments-Label {
+    text-align: right;
+    width: 50%;
+    padding-right: 1%;
+}
+
+.SIMRacingApps-Widget-InCarAdjustments-Value {
+    text-align: left;
+    width: 50%;
+    padding-left: 1%;
+}

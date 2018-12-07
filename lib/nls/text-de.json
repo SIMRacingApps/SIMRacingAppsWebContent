@@ -3,10 +3,14 @@
         "COMMENT1": "This level is the Data.Basename. They must all be in upper case",
         "COMMENT2": "The second level is the actual Value from SIMRacingApps API calls. Left = value from iRacing. Right Translation",
         "COMMON": {
+            "ON":               "An",
+            "OFF":              "Aus",
             "Y":                "J",
             "N":                "N",
             "true":             "wahr",
-            "false":            "falsch"
+            "false":            "falsch",
+            "AUTOMATIC":        "Automatisch",
+            "MANUAL":           "Handbuch"
         },
         "CAR": {
             "BRAKE":            "Bremse",

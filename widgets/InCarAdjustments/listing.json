@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-in-car-adjustments.html",
+"name": "InCarAdjustments",
+"description": "In-Car Adjustments",
+"description-de": "Anpassungen im Auto",
+"url": "apps/WidgetLoader?widget=InCarAdjustments&",
+"icon": "widgets/InCarAdjustments/icon.png",
+"width":  580,
+"height": 410,
+"args": ""
+}

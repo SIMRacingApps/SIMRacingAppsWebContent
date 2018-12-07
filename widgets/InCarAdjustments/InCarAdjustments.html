@@ -1,0 +1,31 @@
+<table class = "SIMRacingApps-Widget-InCarAdjustments"
+       data-ng-style = "{ width: '100%', height: height+'px', tableLayout: 'fixed' }">
+    <colgroup>
+        <col class = "SIMRacingApps-Widget-InCarAdjustments-Label" />
+        <col class = "SIMRacingApps-Widget-InCarAdjustments-Value" />
+    </colgroup>
+
+    <thead>
+        <tr>
+            <td class                  = "SIMRacingApps-Widget-InCarAdjustments-Title"
+                data-sra-args-interval = "{{defaultInterval}}"
+                data-ng-bind           = "translations.InCarAdjustments"
+                colspan                = "2"
+            ></td>
+        </tr>
+    </thead>
+
+    <tbody class="SIMRacingApps-Widget-InCarAdjustments-GridBody">
+        <tr class              = "SIMRacingApps-Widget-InCarAdjustments-GridRow"
+            data-ng-repeat     = "gauge in gauges"
+            data-ng-class-odd  = "'SIMRacingAppsGridRow-odd'"
+            data-ng-class-even = "'SIMRacingAppsGridRow-even'">
+            <td  class         = "SIMRacingAppsLabel SIMRacingApps-Widget-InCarAdjustments-Label"
+                 data-ng-bind  = "data.Car[sraCar].Gauge[gauge].Name.ValueFormatted + ' (' + data.Car[sraCar].Gauge[gauge].TypeName.ValueFormatted + '):'">
+            </td>
+            <td  class         = "SIMRacingAppsData SIMRacingApps-Widget-InCarAdjustments-Value"
+                 data-ng-bind  = "(data.Car[sraCar].Gauge[gauge].ValueCurrent|sraNumber)">
+            </td>
+        </tr>
+    </tbody>
+</table> <!-- END of <table class = "SIMRacingApps-Widget-InCarAdjustments"> -->

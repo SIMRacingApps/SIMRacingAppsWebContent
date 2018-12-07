@@ -52,6 +52,8 @@
  * </b></pre>
  * @ngdoc directive
  * @name sra-data-table
+ * @param data-sra-args-font-size The size of the font as a percentage. Default is to inherit from the CSS file. @since 1.8
+ * @param data-sra-args-line-height The line height of the line as a percentage. Defatul is to inherit from the CSS file. @since 1.8
  * @param data-sra-args-data The list of semicolon separated paths to the SIM data.
  * @param data-sra-args-table-class The class to be assigned to the &lt;table&gt; element
  * @param data-sra-args-header The HTML to be assigned to the &lt;thead.tr.td&gt; element
@@ -96,6 +98,10 @@ function(SIMRacingApps) {
                 $scope.defaultHeight   = self.defaultHeight;
                 $scope.defaultInterval = self.defaultInterval;
 
+                sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
+                    $scope.translations = sraDispatcher.getTranslation(path);
+                });
+                
                 /** your code goes here **/
                 $scope.rows        = [];
                 $scope.rowNames    = [];
@@ -136,7 +142,11 @@ function(SIMRacingApps) {
                 //$scope.value = $scope[self.name] = $attrs[self.name] || $attrs.sraArgsValue || "DefaultValue";
 
                 /** your code goes here **/
-
+                var fontSize =  $scope.sraArgsFONTSIZE || $attrs.sraArgsFontSize;
+                $scope.sraFontSize = fontSize ? fontSize + '%' : 'inherit';
+                var lineHeight =  $scope.sraArgsLINEHEIGHT || $attrs.sraArgsLineHeight;
+                $scope.sraLineHeight = lineHeight ? lineHeight + '%' : 'inherit';
+                
                 $scope.rowNames = ($scope.sraArgsROWNAMES || $attrs.sraArgsRowNames || "").split(/[;, ]/);
 
                 for (var row=0; row < $scope.rowNames.length; row++) {
@@ -155,7 +165,7 @@ function(SIMRacingApps) {
                     
                     watchexp = $scope['sraArgsROW'+rowName.toUpperCase()+'LABEL'];
                     if (watchexp) {
-                        watchexp = "'" + watchexp + "'";
+                        //watchexp = "'" + watchexp + "'";
                     }
                     else
                         watchexp = $attrs['sraArgsRow'+rowName+'Label'];

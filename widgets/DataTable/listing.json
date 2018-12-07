@@ -1,0 +1,11 @@
+{
+"name":        ["MessagesRaw"],
+"description": ["Messages Raw"],
+"description-de": ["Messages Raw"],
+"doc":         "JavaScriptDoc/sra-data-table.html",
+"url":         "apps/WidgetLoader?widget=DataTable&",
+"icon":        ["widgets/DataTable/MessagesRaw.png"],
+"width":       800,
+"height":      130,
+"args":        ["rownames=messagesraw&data=/Session/Messages&row-messagesraw-label=translations.Messages%2B':'&row-messagesraw=data.Session.Messages.ValueFormatted&fontsize=250&lineheight=300"]
+}
