@@ -98,9 +98,10 @@ function(SIMRacingApps) {
                 $scope.defaultHeight   = self.defaultHeight;
                 $scope.defaultInterval = self.defaultInterval;
 
-                sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
-                    $scope.translations = sraDispatcher.getTranslation(path);
-                });
+//cannot do this here because it will hide the tranlations of the caller.                
+//                sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
+//                    $scope.translations = sraDispatcher.getTranslation(path);
+//                });
                 
                 /** your code goes here **/
                 $scope.rows        = [];

@@ -98,9 +98,9 @@ function(SIMRacingApps) {
             , link: function($scope,$element,$attrs) {
                 $scope.sraCar = sraDispatcher.getTruthy($scope.sraArgsCAR, $attrs.sraArgsCar, $scope.sraCar);
 
-                //everytime the Id changes, update the gauges available
-                $attrs.sraArgsData = "Car/"+$scope.sraCar+"/Id";
-                $scope.$watch("data.Car['"+$scope.sraCar+"'].Id.Value", $scope.update);
+                //everytime the Status changes, update the gauges available
+                $attrs.sraArgsData = "Car/"+$scope.sraCar+"/Status";
+                $scope.$watch("data.Car['"+$scope.sraCar+"'].Status.Value", $scope.update);
                 
                 for (var i in $scope.gaugeList) {
                     var gauge = $scope.gaugeList[i];
