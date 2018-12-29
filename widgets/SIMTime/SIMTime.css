@@ -1,0 +1,19 @@
+.SIMRacingApps-Widget-SIMTime {
+    width:         100%;
+    height:        100%;
+    text-align:    center;
+    overflow:      hidden;
+    background-color: rgba(0,0,0,.5);
+}
+
+.SIMRacingApps-Widget-SIMTime-with-TZ {
+    font-size:     325%;
+    line-height:   150%;
+    color:         chartreuse;
+}
+
+.SIMRacingApps-Widget-SIMTime-without-TZ {
+    font-size:     350%;
+    line-height:   150%;
+    color:         chartreuse;
+}

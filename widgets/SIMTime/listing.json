@@ -1,0 +1,14 @@
+{
+"name":        ["SIMTime","SIMTime-TIMEZONE"],
+"description": ["Displays the Local Time of the SIM",
+                "Displays the Local Time of the SIM with Time Zone of the track"],
+"description-de": ["Displays the Local Time of the SIM",
+                   "Displays the Local Time of the SIM with Time Zone of the track"],
+"doc":         "JavaScriptDoc/sra-s-i-m-time.html",
+"url":         "apps/WidgetLoader?widget=SIMTime&",
+"icon":        ["widgets/SIMTime/icon.png",
+                "widgets/SIMTime/icontz.png"],
+"width":       800,
+"height":      230,
+"args":        ["SHOWTZ=N",""]
+}

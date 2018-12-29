@@ -27,8 +27,8 @@
         </div>
 
         <div class="SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-Time"
-             data-sra-data="time"
-             data-ng-bind="data.time.ValueFormatted">
+             data-sra-data="Session/Time"
+             data-ng-bind="((data.Session.Time.Value*1000)|sraDate:'mediumTime':data.Session.Time.State) + ' ' + data.Session.Time.State">
         </div>
         
         <sra-shift-lights class             = "SIMRacingApps-App-Dash-BarGauges-DigitalOverlay-ShiftLights"></sra-shift-lights>

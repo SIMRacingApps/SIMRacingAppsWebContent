@@ -48,12 +48,29 @@ function(SIMRacingApps) {
                 sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
                     $scope.translations = sraDispatcher.getTranslation(path);
                 });
+                
+                $scope.format = 'mediumTime';
+                $scope.tz = '';
+                $scope.time = 0;
+                $scope.showSIMTime = true;
+                
             }]
             , link: function($scope,$element,$attrs) {
 
+                $scope.showSIMTime = sraDispatcher.getBoolean($attrs.sraArgsSHOWSIMTIME, $scope.sraArgsShowSIMTime, $scope.showSIMTime);
+
+                /** your code goes here **/
+                $attrs.sraArgsData = "Session/Time";
+                
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));
 
                 $scope.names = sraDispatcher.subscribe($scope,$attrs,self.defaultInterval); //register subscriptions and options to the dispatcher
+                
+                $scope.$watch("data.Session.Time.Value",function(value,oldvalue) {
+                    $scope.time = new Date();
+                    $scope.time.setTime((value*1000));
+                    $scope.tz = $scope.data.Session.Time.State;
+                });
             }
         };
     }]);

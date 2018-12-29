@@ -24,7 +24,7 @@
                  data-ng-bind  = "data.Car[sraCar].Gauge[gauge].Name.ValueFormatted + ' (' + data.Car[sraCar].Gauge[gauge].TypeName.ValueFormatted + '):'">
             </td>
             <td  class         = "SIMRacingAppsData SIMRacingApps-Widget-InCarAdjustments-Value"
-                 data-ng-bind  = "(data.Car[sraCar].Gauge[gauge].ValueCurrent|sraNumber)">
+                 data-ng-bind-html  = "(data.Car[sraCar].Gauge[gauge].ValueCurrent|sraNumber)">
             </td>
         </tr>
     </tbody>

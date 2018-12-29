@@ -54,8 +54,8 @@
             </div>
 
             <div class="SIMRacingApps-App-Dash-StockCars-DigitalOverlay-Time"
-                 data-sra-data="time"
-                 data-ng-bind="data.time.ValueFormatted">
+	             data-sra-data="Session/Time"
+	             data-ng-bind="((data.Session.Time.Value*1000)|sraDate:'mediumTime':data.Session.Time.State) + ' ' + data.Session.Time.State">
             </div>
 
             <sra-car-controls class="SIMRacingApps-App-Dash-StockCars-DigitalOverlay-car-controls" data-ng-style="{ height: height+'px' }"></sra-car-controls>

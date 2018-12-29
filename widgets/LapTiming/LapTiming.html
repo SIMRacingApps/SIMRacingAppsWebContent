@@ -8,8 +8,13 @@
             <td class    = "SIMRacingApps-Widget-LapTiming-header-title"
                 data-ng-bind      = "(translations.LAPTIMING+' - '+data.Session.Type.ValueFormatted) | limitTo:23"
             ></td>
-            <td class    = "SIMRacingApps-Widget-LapTiming-header-time"
-                data-ng-bind      = "data.time.ValueFormatted"
+            <td class        = "SIMRacingApps-Widget-LapTiming-header-time"
+                data-ng-if   = "showSIMTime"
+                data-ng-bind = "time|sraDate:format:tz"
+            ></td>
+            <td class        = "SIMRacingApps-Widget-LapTiming-header-time"
+                data-ng-if   = "!showSIMTime"
+                data-ng-bind = "data.time.ValueFormatted"
             ></td>
         </tr>
     </table>

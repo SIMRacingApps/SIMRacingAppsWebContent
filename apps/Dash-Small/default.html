@@ -45,8 +45,8 @@
 		></sra-bar-gauge>
 
         <div class="SIMRacingApps-App-Dash-Small-Time"
-             data-sra-data="time"
-             data-ng-bind="data.time.ValueFormatted">
+             data-sra-data="Session/Time"
+             data-ng-bind="((data.Session.Time.Value*1000)|sraDate:'mediumTime':data.Session.Time.State) + ' ' + data.Session.Time.State">
         </div>
         <sra-data
             class="SIMRacingApps-App-Dash-Small-MyRadioChannel"

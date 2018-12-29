@@ -8,9 +8,11 @@
 .SIMRacingApps-Widget-Time-with-TZ {
     font-size:     575%;
     line-height:   150%;
+    color:         orange;
 }
 
 .SIMRacingApps-Widget-Time-without-TZ {
     font-size:     750%;
     line-height:   107%;
+    color:         orange;
 }

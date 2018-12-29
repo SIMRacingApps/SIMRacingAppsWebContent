@@ -73,12 +73,12 @@ function(SIMRacingApps) {
                                            ,"BrakeConnectedRF"
 //                                           ,"Starter"
                                            ,"ThrottleShape"
+                                           ,"TopWing"
                                            ,"TractionControl"
                                            ,"TractionControlFront"
                                            ,"TractionControlRear"
                                            ,"WeightJackerRight"
                                            ,"WeightJackerLeft"
-                                           ,"WingRear"
                                            ];
                 
                 $scope.update = function() {
