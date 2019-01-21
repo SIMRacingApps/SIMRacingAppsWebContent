@@ -28,7 +28,7 @@
  * @param {int} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 1000.
  * @author Jeffrey Gilliam
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2018 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2019 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','css!widgets/CarSelector/CarSelector','widgets/CarNumberExtended/CarNumberExtended'],

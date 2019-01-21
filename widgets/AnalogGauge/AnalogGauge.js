@@ -86,7 +86,7 @@
  *          (NOTE: As of version 1.0, the json files have not been updated and the default is 3950.)
  * @author Jeffrey Gilliam
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2017 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2019 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','css!widgets/AnalogGauge/AnalogGauge'],
