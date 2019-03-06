@@ -93,6 +93,11 @@ function(SIMRacingApps,ol) {
                 
                 $scope.map           = null;
                 
+                $scope.dateformat = 'shortDate';
+                $scope.format = 'mediumTime';
+                $scope.tz = '';
+                $scope.time = 0;
+                
                 $scope.createMap = function($element) {
                     var _lat        = $scope.data.Track.Latitude.Value;
                     var _lng        = $scope.data.Track.Longitude.Value;
@@ -315,12 +320,17 @@ function(SIMRacingApps,ol) {
                 }
 
                 //now watch for track changes and move the finish line                
-                $attrs.sraArgsData += ";Track/Latitude;Track/Longitude;Track/Resolution;Track/North;Track/Image/"+$scope.sraMapLayer;
+                $attrs.sraArgsData += ";Session/Time;Track/Latitude;Track/Longitude;Track/Resolution;Track/North;Track/Image/"+$scope.sraMapLayer;
                 
                 $scope.$watch('data.Track.Latitude.Value',   function() {$scope.createMap($element);});
                 $scope.$watch('data.Track.Longitude.Value',  function() {$scope.createMap($element);});
                 $scope.$watch('data.Track.North.Value',      function() {$scope.createMap($element);});
                 $scope.$watch('data.Track.Resolution.Value', function() {$scope.createMap($element);});
+                $scope.$watch("data.Session.Time.Value",function(value,oldvalue) {
+                    $scope.time = new Date();
+                    $scope.time.setTime((value*1000));
+                    $scope.tz = $scope.data.Session.Time.State;
+                });
                 
                 $scope.$watch('data.Track.Image["'+$scope.sraMapLayer+'"].Value',function(image) {
                     if (image) {

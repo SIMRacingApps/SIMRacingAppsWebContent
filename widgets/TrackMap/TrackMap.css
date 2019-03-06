@@ -85,6 +85,9 @@
     width:             auto;
 }
 
+.SIMRacingApps-Widget-TrackMap-trackname .SIMRacingApps-Widget-DataTable-row-time .SIMRacingAppsData {
+    color:             chartreuse;
+}
 
 .SIMRacingApps-Widget-TrackMap-trackinfo {
     position:          absolute;
