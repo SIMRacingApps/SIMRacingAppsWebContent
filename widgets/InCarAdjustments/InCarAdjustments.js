@@ -48,6 +48,7 @@ function(SIMRacingApps) {
                 $scope.gaugeList       = [  "ABS"
                                            ,"AntiRollFront"
                                            ,"AntiRollRear"
+                                           ,"BoostLevel"
                                            ,"BrakeBiasAdjustment"
                                            ,"DiffEntry"
                                            ,"DiffExit"
