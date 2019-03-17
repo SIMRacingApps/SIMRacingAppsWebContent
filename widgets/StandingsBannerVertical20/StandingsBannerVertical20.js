@@ -112,7 +112,7 @@ define(['SIMRacingApps'
                         $scope.currentPage = 0;
                     
                     //but only if there are drivers on that page
-                    if ((($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/) > $scope.data.Session.Cars.Value
+                    if ((($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 10/*NumLeaders*/) > $scope.data.Session.Cars.Value
                     ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/)]
                     ||  !$scope.data.Car['P'+(($scope.currentPage * $scope.numberOfGreenLines * $scope.numberOfGreenBoxes) + 1 + 3/*NumLeaders*/)].Number.Value
                     )
