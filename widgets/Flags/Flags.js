@@ -61,7 +61,7 @@ function(SIMRacingApps) {
                     //process the flag in importance order. Only the first 2 will get displayed.
                     if ($scope.data.Session.IsRedFlag.Value) {
                         flags.push("red");
-                        flags.push("red");
+                        //flags.push("red");
                     }
                     if ($scope.data.Car.REFERENCE.IsBlackFlag.Value) {
                         flags.push("black");

@@ -20,5 +20,12 @@
     "STARTSET":       "Set",
     "STARTGO":        "Go",
     "PITSPEEDLIMITER":"PitSpeed-Limiter",
-    "TOWING":         "Abschleppen"
+    "TOWING":         "Abschleppen",
+    "PITSERVICEINPROGRESS": "Pit Service in Bearbeitung",
+    "STRAIGHTENUP":   "Aufrichten",
+    "TOOFARBACK":     "Zu weit zur\u00fcck",
+    "TOOFARFORWARD":  "Zu weit vorw\u00e4rts",
+    "TOOFARLEFT":     "Zu weit links",
+    "TOOFARRIGHT":    "Zu weit rechts",
+    "TOOMUCHDAMAGE":  "Zu viel Damaage"
 }

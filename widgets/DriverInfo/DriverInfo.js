@@ -12,7 +12,7 @@
  * @name sra-driver-info
  * @param {carIdentifier} data-sra-args-car The <a href="../JavaDoc/com/SIMRacingApps/Session.html#getCar-java.lang.String-" target="_blank">Car Identifier</a> to get the number from.
  * @param {string} data-sra-args-title The title to show in the header. Defaults to Car or Radio Channel if car is TRANSMITTING. Can be overridden in the URL as &TITLE=something.
- * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 500.
+ * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 50.
  * @author Jeffrey Gilliam
  * @since 1.0
  * @copyright Copyright (C) 2015 - 2019 Jeffrey Gilliam
@@ -30,7 +30,7 @@ function(SIMRacingApps) {
         template:        'DriverInfo.html',
         defaultWidth:    800,
         defaultHeight:   480,
-        defaultInterval: 500   //initialize with the default interval
+        defaultInterval: 50   //initialize with the default interval
     };
 
     self.module = angular.module('SIMRacingApps'); //get the main module
