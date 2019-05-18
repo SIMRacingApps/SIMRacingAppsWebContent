@@ -1,0 +1,22 @@
+<div class="SIMRacingApps-Widget-TextGauge SIMRacingApps-Widget-TextGauge-{{sraTextGauge}}" ng-attr-style="height: {{height}}px;">
+    <svg version="1.1" viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet">
+        <text class             = "SIMRacingApps-Widget-TextGauge-label SIMRacingApps-Widget-BarGauge-{{sraTextGauge}}-Label SIMRacingAppsLabel"
+              ng-attr-x         = "{{xLabel}}"
+              ng-attr-y         = "{{yLabel}}"
+              ng-attr-style     = "font-size: {{fontSizeLabel}}px; text-anchor: {{anchorLabel}}; visibility: {{showLabel ? 'inherit' : 'hidden'}}">
+              {{sraLabel}}
+        </text>
+        <text class             = " {{stateClass}} SIMRacingApps-Widget-TextGauge-value SIMRacingApps-Widget-TextGauge-{{sraTextGauge}}-value SIMRacingAppsData"
+              ng-attr-x         = "{{xValue}}"
+              ng-attr-y         = "{{yValue}}"
+              ng-attr-style     = "font-size: {{fontSizeValue}}px; text-anchor: {{anchorValue}}; visibility: {{showUOM ? 'inherit' : 'hidden'}}">
+              {{sraValue}} {{uom}}
+        </text>
+        <text class             = " {{stateClass}} SIMRacingApps-Widget-TextGauge-value SIMRacingApps-Widget-TextGauge-{{sraTextGauge}}-value SIMRacingAppsData"
+              ng-attr-x         = "{{xValue}}"
+              ng-attr-y         = "{{yValue}}"
+              ng-attr-style     = "font-size: {{fontSizeValue}}px; text-anchor: {{anchorValue}}; visibility: {{showUOM ? 'hidden' : 'inherit'}}">
+              {{sraValue}}
+        </text>
+    </svg>
+</div>

@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-water-pressure.html",
+"name": "TextGauge-WaterPressure",
+"description": "Text Gauge Water Pressure",
+"description-de": "Textanzeige - Wasserdruck",
+"url": "apps/WidgetLoader?widget=TextGauge/WaterPressure&",
+"icon": "widgets/TextGauge/WaterPressure/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

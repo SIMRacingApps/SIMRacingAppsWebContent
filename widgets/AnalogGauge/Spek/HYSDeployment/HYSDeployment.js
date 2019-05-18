@@ -4,7 +4,7 @@
  * <p>
  * Example:
  * <p><b>
- * &lt;sra-analog-gauge-spek-h-y-s-deployment data-sra-args-show-digital-value="false"&gt;&lt;/sra-analog-gauge-spek-h-y-s-charge&gt;
+ * &lt;sra-analog-gauge-spek-h-y-s-deployment data-sra-args-show-digital-value="false"&gt;&lt;/sra-analog-gauge-spek-h-y-s-deployment&gt;
  * </b>
  * <img src="../widgets/AnalogGauge/Spek/HYSDeployment/icon.png" />
  * @ngdoc directive

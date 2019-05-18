@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-water-temp.html",
+"name": "TextGauge-WaterTemp",
+"description": "Text Gauge Water Temperature",
+"description-de": "Textanzeige - Wassertemperatur",
+"url": "apps/WidgetLoader?widget=TextGauge/WaterTemp&",
+"icon": "widgets/TextGauge/WaterTemp/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

@@ -1,0 +1,97 @@
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-body {
+    background: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash {
+    position: relative;
+	width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-Shift-Lights {
+    position:   absolute;
+    width:      50%;
+    left:       25%;
+    top:        1%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-Tachometer {
+    position:   absolute;
+    width:      50%;
+    left:       25%;
+    top:        15%;
+}
+
+.SIMRacingApps-Widget-BarGauge-bar {
+    fill:       yellow !important;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-WaterTemp {
+    position:   absolute;
+    width:      20%;
+    left:       5%;
+    top:        15%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-WaterPressure {
+    position:   absolute;
+    width:      20%;
+    left:       5%;
+    top:        35%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-OilTemp {
+    position:   absolute;
+    width:      20%;
+    left:       80%;
+    top:        15%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-OilPressure {
+    position:   absolute;
+    width:      20%;
+    left:       80%;
+    top:        35%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-Voltage {
+    position:   absolute;
+    width:      20%;
+    left:       5%;
+    top:        75%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-FuelLevel {
+    position:   absolute;
+    width:      20%;
+    left:       80%;
+    top:        75%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-LapTimeText {
+    position:   absolute;
+    width:      20%;
+    left:       25%;
+    top:        75%;
+    font-weight:bold;
+    font-size:  160%;
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-LapTime {
+    position:   absolute;
+    width:      20%;
+    left:       25%;
+    top:        79%;
+    font-weight:bold;
+    font-size:  350%;
+    color:      skyblue;      
+}
+
+.SIMRacingApps-App-NASCAR-Digital-Dash-Gear {
+    position:   absolute;
+    left:       60%;
+    top:        75%;
+    font-size:  15%;
+}

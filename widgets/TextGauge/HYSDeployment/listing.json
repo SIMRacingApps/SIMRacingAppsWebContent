@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-h-y-s-deployment.html",
+"name": "TextGauge-HYS Deployment",
+"description": "Text Gauge HYS Deployment Available",
+"description-de": "Textanzeige - HYS Deployment Available",
+"url": "apps/WidgetLoader?widget=TextGauge/HYSDeployment&",
+"icon": "widgets/TextGauge/HYSDeployment/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

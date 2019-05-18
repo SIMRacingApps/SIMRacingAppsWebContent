@@ -1,0 +1,26 @@
+.SIMRacingApps-Widget-TextGauge {
+    width:         100%;
+    height:        100%;
+    color:         white;
+    fill:          white;
+    font-weight:   bold;
+}
+
+.SIMRacingApps-Widget-TextGauge-Label {
+}
+
+.SIMRacingApps-Widget-TextGauge-Value {
+}
+
+.SIMRacingApps-Widget-TextGauge-state-NORMAL {
+}
+
+.SIMRacingApps-Widget-TextGauge-state-CRITICAL {
+	color: red;
+	fill:  red;
+}
+
+.SIMRacingApps-Widget-TextGauge-state-WARNING {
+	color: yellow;
+	fill:  yellow;
+}

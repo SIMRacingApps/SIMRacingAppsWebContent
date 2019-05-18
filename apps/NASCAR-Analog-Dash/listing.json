@@ -1,0 +1,15 @@
+{
+"doc": "JavaScriptDoc/NASCAR-Analog-Dash.html",
+"name": "NASCAR-Analog-Dash",
+"description": [
+    "NASCAR Analog Dash"
+],
+"description-de": [
+    "NASCAR Analog Dash"
+],
+"url": "apps/NASCAR-Analog-Dash?",
+"icon": "apps/NASCAR-Analog-Dash/icon.png",
+"width": 1280,
+"height": 480,
+"args": ""
+}

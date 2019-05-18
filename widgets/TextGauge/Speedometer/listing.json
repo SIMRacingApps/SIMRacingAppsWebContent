@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-speedometer.html",
+"name": "TextGauge-Speedometer",
+"description": "Text Gauge Speedometer",
+"description-de": "Textanzeige - Geschwindigkeit",
+"url": "apps/WidgetLoader?widget=TextGauge/Speedometer&",
+"icon": "widgets/TextGauge/Speedometer/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-fuel-pressure.html",
+"name": "TextGauge-Fuel Pressure",
+"description": "Text Gauge Fuel Pressure",
+"description-de": "Textanzeige - Benzindruck",
+"url": "apps/WidgetLoader?widget=TextGauge/FuelPressure&",
+"icon": "widgets/TextGauge/FuelPressure/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

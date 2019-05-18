@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-brake-pressure.html",
+"name": "TextGauge-Brake Pressure",
+"description": "Text Gauge Brake Pressure",
+"description-de": "Textanzeige - Bremsdruck",
+"url": "apps/WidgetLoader?widget=TextGauge/BrakePressure&",
+"icon": "widgets/TextGauge/BrakePressure/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

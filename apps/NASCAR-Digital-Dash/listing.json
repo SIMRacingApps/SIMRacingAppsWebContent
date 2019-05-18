@@ -1,0 +1,15 @@
+{
+"doc": "JavaScriptDoc/NASCAR-Digital-Dash.html",
+"name": "NASCAR-Digital-Dash",
+"description": [
+    "NASCAR Digital Dash"
+],
+"description-de": [
+    "NASCAR Digital Dash"
+],
+"url": "apps/NASCAR-Digital-Dash?",
+"icon": "apps/NASCAR-Digital-Dash/icon.png",
+"width": 1280,
+"height": 480,
+"args": ""
+}

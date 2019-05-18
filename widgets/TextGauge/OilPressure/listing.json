@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-Oil-pressure.html",
+"name": "TextGauge-Oil Pressure",
+"description": "Text Gauge Oil Pressure",
+"description-de": "Textanzeige - \u00d6ldruck",
+"url": "apps/WidgetLoader?widget=TextGauge/OilPressure&",
+"icon": "widgets/TextGauge/OilPressure/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

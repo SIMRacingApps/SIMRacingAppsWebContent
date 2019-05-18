@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-tachometer.html",
+"name": "TextGauge-Tachometer",
+"description": "Text Gauge Tachometer",
+"description-de": "Textanzeige - Drehzahlmesser",
+"url": "apps/WidgetLoader?widget=TextGauge/Tachometer&",
+"icon": "widgets/TextGauge/Tachometer/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}

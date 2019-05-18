@@ -4,7 +4,7 @@
  * <p>
  * Example:
  * <p><b>
- * &lt;sra-bar-gauge-h-y-s-deployment data-sra-args-show-digital-value="false"&gt;&lt;/sra-bar-gauge-h-y-s-charge&gt;
+ * &lt;sra-bar-gauge-h-y-s-deployment data-sra-args-show-digital-value="false"&gt;&lt;/sra-bar-gauge-h-y-s-deployment&gt;
  * </b>
  * <img src="../widgets/BarGauge/HYSDeployment/icon.png" />
  * @ngdoc directive

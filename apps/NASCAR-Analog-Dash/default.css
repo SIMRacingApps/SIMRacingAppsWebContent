@@ -1,0 +1,131 @@
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-body {
+    background: url(Black-Background-Metal-800x480.png);
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash {
+    position: fixed;
+	width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-Tach {
+    z-index:    10;
+    width:      37.5%;
+    position:   absolute;
+    left:       31.27%;
+    top:        0%;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-small-gauge {
+    position:   absolute;
+    width:      16%;
+    z-index:    5;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-medium-gauge {
+    position:   absolute;
+    width:      21%;
+    z-index:    5;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-WaterTemp {
+    left:       11%;
+    top:        0%;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-OilTemp {
+    left:       68%;
+    top:        0%;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-WaterPressure {
+    left:       17%;
+    top:        57%;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-OilPressure {
+    right:      0%;
+    top:        57%;
+}
+.SIMRacingApps-App-NASCAR-Analog-Dash-Volt {
+    left:       0%;
+    top:        57%
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-FuelLevel {
+    left:       67%;
+    top:        57%;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-LapTimeText {
+    position:   absolute;
+    width:      20%;
+    left:       1%;
+    top:        44%;
+    font-weight:bold;
+    font-size:  160%;
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-LapTime {
+    position:   absolute;
+    width:      20%;
+    left:       1%;
+    top:        49%;
+    font-weight:bold;
+    font-size:  240%;
+    color:      skyblue;      
+}
+
+.SIMRacingApps-App-NASCAR-Analog-Dash-Gear {
+    position:   absolute;
+    left:       89.5%;
+    top:        41%;
+    font-size:  15%;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-ShiftLights-middle {
+    fill: gold !important;
+}
+
+.SIMRacingApps-Widget-AnalogGauge-background {
+    fill: white !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-value {
+    fill: black !important;
+    stroke: black !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-value2 {
+    fill: black !important;
+    stroke: black !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-uom {
+    fill: black !important;
+    stroke: black !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-NORMAL {
+    fill: black !important;
+    stroke: black !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-WARNING {
+    fill: black !important;
+    stroke: gold !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-CRITICAL {
+    fill: black !important;
+    stroke: red !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-APPROACHINGLIMIT {
+    fill: black !important;
+    stroke: gold !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-WAYOVERLIMIT {
+    fill: black !important;
+    stroke: black !important;
+}
+.SIMRacingApps-Widget-AnalogGauge-state-SHIFTLIGHTS {
+    fill: black !important;
+    stroke: black !important;
+}
+

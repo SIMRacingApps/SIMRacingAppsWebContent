@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-text-gauge-voltage.html",
+"name": "TextGauge-Voltage",
+"description": "Text Gauge Voltage",
+"description-de": "Textanzeige - Batteriespannung / Volt",
+"url": "apps/WidgetLoader?widget=TextGauge/Voltage&",
+"icon": "widgets/TextGauge/Voltage/icon.png",
+"width": 380,
+"height": 120,
+"args": ""
+}
