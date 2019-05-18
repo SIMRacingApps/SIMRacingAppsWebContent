@@ -1,0 +1,53 @@
+.SIMRacingApps-Widget-GForce {
+    width:            100%;
+    height:           100%;
+}
+
+.SIMRacingApps-Widget-GForce-background {
+    stroke: none;
+    fill:   rgb(21,21,21);
+}
+
+.SIMRacingApps-Widget-GForce-dot {
+    fill: red;
+}
+
+.SIMRacingApps-Widget-GForce-longitude-top-label {
+    position:       absolute;
+    width:          25%;
+    top:            2%;
+    left:           45%;
+    z-index:        3;
+	font-size:      225%;
+	background-color: transparent;
+}
+
+.SIMRacingApps-Widget-GForce-longitude-bottom-label {
+    position:       absolute;
+    width:          25%;
+    top:            88%;
+    left:           45%;
+    z-index:        3;
+	font-size:      225%;
+	background-color: transparent;
+}
+
+.SIMRacingApps-Widget-GForce-latitude-left-label {
+    position:       absolute;
+    width:          25%;
+    top:            45%;
+    left:           1%;
+    z-index:        3;
+	font-size:      225%;
+	background-color: transparent;
+}
+
+.SIMRacingApps-Widget-GForce-latitude-right-label {
+    position:       absolute;
+    width:          25%;
+    top:            45%;
+    left:           88.5%;
+    z-index:        3;
+	font-size:      225%;
+	background-color: transparent;
+}

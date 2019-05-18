@@ -1,0 +1,11 @@
+{
+"doc": "JavaScriptDoc/sra-gforce.html",
+"name": "GForce",
+"description": "Shows your G Forces",
+"description-de": "Zeigt deine G-Kr\u00E4fte",
+"url": "apps/WidgetLoader?widget=GForce&",
+"icon": "widgets/GForce/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

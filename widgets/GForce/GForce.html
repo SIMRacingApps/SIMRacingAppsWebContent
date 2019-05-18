@@ -1,0 +1,16 @@
+<div class = "SIMRacingApps-Widget-GForce"  
+     data-ng-attr-style = "height: {{height}}px;">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	    viewBox="0 0 480 480">	
+		<circle class="SIMRacingApps-Widget-GForce-background" cx=240 cy=240 r=240 /> <!-- background circle -->
+		<circle cx=240 cy=240 r=160 style="stroke:rgb(255,255,255); stroke-width:4"></circle> <!-- outer ring -->
+		<circle cx=240 cy=240 r=80 style="stroke:rgb(255,255,255); stroke-width:4"></circle> <!-- inner ring -->
+		<line x1="240" y1="60" x2="240" y2="420" style="stroke:rgb(255,255,255); stroke-width:4" /> <!-- vertical line -->
+		<line x1="60" y1="240" x2="420" y2="240" style="stroke:rgb(255,255,255); stroke-width:4" /> <!-- horizontal line -->
+		<g><circle class="SIMRacingApps-Widget-GForce-dot" cx={{CX}} cy={{CY}} r=13></circle></g> <!-- move the dot -->   
+	</svg>    	
+	<div class="SIMRacingApps-Widget-GForce-longitude-bottom-label">{{LongGpos}}</div> <!-- throttle = dot moves down -->
+	<div class="SIMRacingApps-Widget-GForce-longitude-top-label">{{LongGneg}}</div>	<!-- brake = dot moves up -->	 
+	<div class="SIMRacingApps-Widget-GForce-latitude-right-label">{{LatGpos}}</div> <!-- turn left = dot moves right -->
+    <div class="SIMRacingApps-Widget-GForce-latitude-left-label">{{LatGneg}}</div> <!-- turn right = dot moves left --> 
+</div>
