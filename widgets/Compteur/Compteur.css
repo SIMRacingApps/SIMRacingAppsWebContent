@@ -1,0 +1,312 @@
+.SIMRacingApps-Widget-Compteur {
+    width:            100%;
+    height:           100%;
+}
+
+/* GForce */
+
+.SIMRacingApps-Widget-Compteur-GForce-dot {
+    fill: red;
+}
+
+.SIMRacingApps-Widget-Compteur-Gforce-F1-label {
+	width:          25%;
+    top:            92%;
+    left:           44%;
+    position:       absolute;
+    z-index:        3;
+	color:          orange;
+	font-size:      120%;
+	font-style:     oblique;	
+	background-color: transparent;	
+}
+
+.SIMRacingApps-Widget-Compteur-Gforce-label {
+    position:       absolute;
+    z-index:        3;
+	fill:           #ffffff;
+	font-size:      16px;
+	font-style:     oblique;	
+	background-color: transparent;
+}
+
+/* RPM */
+
+.SIMRacingApps-Widget-Compteur-RPM-number {
+    position:       absolute;
+    width:          25%;
+    top:            42%;
+    left:           55%;
+    z-index:        3;
+	font-size:      300%;
+	background-color: transparent;
+}
+
+.SIMRacingApps-Widget-Compteur-RPM-label {
+    position:       absolute;
+    width:          25%;
+    top:            52%;
+    left:           57%;
+    z-index:        3;
+	font-size:      100%;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+.SIMRacingApps-Widget-Compteur-RPM-x1000-label {
+    position:       absolute;
+    z-index:        3;
+	fill:           #ffffff;
+	font-size:      18px;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+/* Speed */
+
+.SIMRacingApps-Widget-Compteur-Speed-number {
+    position:       absolute;
+    width:          25%;
+    top:            42%;
+    left:           27%;
+    z-index:        3;
+	font-size:      300%;
+	background-color: transparent;
+}
+
+.SIMRacingApps-Widget-Compteur-Speed-label {
+    position:       absolute;
+    width:          25%;
+    top:            52%;
+    left:           29%;
+    z-index:        3;
+	font-size:      100%;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+/* Gear */
+
+.SIMRacingApps-Widget-Compteur-Gear-number {
+    position:       absolute;
+    width:          25%;
+    top:            18%;
+    left:           44%; 
+    z-index:        3;
+	font-size:      625%;
+	background-color: transparent;
+}
+
+/* Car Image */
+
+.SIMRacingApps-Widget-Compteur-Car-image {
+    position:            absolute;
+    width:               44%; 
+    height:              44%; 
+    background-size:     100%;
+    background-repeat:   no-repeat;
+    background-position: center;
+    top:                 47%; 
+    left:                26%;  
+    z-index:             3;
+    filter:              drop-shadow(0px 0px 4px rgba(255,255,255,0.6)); /*(offset-x offset-y blur-radius spread-radius color)*/
+	background-color:    transparent;
+}
+
+/* Steering Wheel Tape */
+
+.SIMRacingApps-Widget-Compteur-Steering-Wheel-tape {
+    stroke:           orange;
+    stroke-width:     28px;
+    fill:             rgba(0,0,0,0);
+}
+
+/* Clutch arc */
+
+.SIMRacingApps-Widget-Compteur-Clutch-label {
+    position:       absolute;
+    z-index:        3;
+	fill:           #ffffff;
+	font-size:      16px;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+/* Throttle arc */
+
+.SIMRacingApps-Widget-Compteur-Throttle-label {
+    position:       absolute;
+    z-index:        3;
+	fill:           #ffffff;
+	font-size:      16px;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+/* Brake arc */
+
+.SIMRacingApps-Widget-Compteur-Brake-label {
+    position:       absolute;
+    z-index:        3;
+	fill:           #ffffff;
+	font-size:      16px;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+/* Lap Time */
+
+.SIMRacingApps-Widget-Compteur-Lap-Time-label {
+    position:       absolute;
+    z-index:        3;
+	fill:           #ffffff;
+	font-size:      18px;
+	font-style:     oblique;
+	background-color: transparent;
+}
+
+/* RPM Ticks & Numbers */
+
+.SIMRacingApps-Widget-Compteur-majorTicks {
+    stroke-width: 5;
+	stroke: white;
+}
+
+.SIMRacingApps-Widget-Compteur-majorText {
+    fill: #ffffff;
+    font-family: "Arial";
+    font-weight: normal;
+}
+
+/* Throttle for F1 Compteur */
+
+.SIMRacingApps-Widget-Compteur-Throttle-container {
+    width: 35%;
+    height: 6%;
+    left: 32.3%;    
+	position: absolute;
+	opacity: 0.0; 
+}
+
+.SIMRacingApps-Widget-Compteur-Throttle-text {
+	width: 100%;
+	height: 100%;
+	margin-left: 15%;
+    margin-top: 5%;
+	position: absolute;
+	color: #ffffff;
+	font-size: 100%;
+	font-style: oblique;	
+	background-color: transparent;
+	opacity: 0.55;
+}
+
+.SIMRacingApps-Widget-Compteur-Throttle-bkgd {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    background: Green;
+	float: left;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,1);   
+    box-shadow: 0px 0px 8px 5px rgba(255,255,255,0.2);
+}
+
+.SIMRacingApps-Widget-Compteur-Throttle-fill {
+	height: 100%;
+	margin-left: 1px;
+    margin-top: 1px;
+	position: absolute;
+    background: Green;
+    float: left;
+    border-radius: 4px;
+}
+
+/* Brake for F1 Compteur */
+
+.SIMRacingApps-Widget-Compteur-Brake-container {
+    width: 35%;
+    height: 6%;
+    left: 32.3%;
+	position: absolute;
+	opacity: 0.0;
+}
+
+.SIMRacingApps-Widget-Compteur-Brake-text {
+	width: 100%;
+	height: 100%;
+	margin-left: 27%;
+    margin-top: 5%;
+	position: absolute;
+	color: #ffffff;
+	font-size: 100%;
+	font-style: oblique;	
+	background-color: transparent;
+	opacity: 0.55;
+}
+
+.SIMRacingApps-Widget-Compteur-Brake-bkgd {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    background: Red;
+	float: left;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,1);   
+    box-shadow: 0px 0px 8px 5px rgba(255,255,255,0.2);
+}
+
+.SIMRacingApps-Widget-Compteur-Brake-fill {
+	height: 100%;
+	margin-left: 1px;
+    margin-top: 1px;
+	position: absolute;
+    background: Red;
+    float: left;
+    border-radius: 4px;
+}
+
+/* Clutch for F1 Compteur */
+
+.SIMRacingApps-Widget-Compteur-Clutch-container {
+    width: 35%;
+    height: 6%;    
+    top: 76%;	
+    left: 32.3%;
+	position: absolute;
+	opacity: 0.0;
+}
+
+.SIMRacingApps-Widget-Compteur-Clutch-text {
+	width: 100%;
+	height: 100%;
+	margin-left: 25%;
+    margin-top: 5%;
+	position: absolute;
+	color: #ffffff;
+	font-size: 100%;
+	font-style: oblique;	
+	background-color: transparent;
+	opacity: 0.55;
+}
+
+.SIMRacingApps-Widget-Compteur-Clutch-bkgd {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    background: Blue;
+	float: left;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,1);   
+    box-shadow: 0px 0px 8px 5px rgba(255,255,255,0.2);
+}
+
+.SIMRacingApps-Widget-Compteur-Clutch-fill {
+	height: 100%;
+	margin-left: 1px;
+    margin-top: 1px;
+	position: absolute;
+    background: Blue;
+    float: left;
+    border-radius: 4px;
+}

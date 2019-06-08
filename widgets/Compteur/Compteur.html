@@ -1,0 +1,152 @@
+<div class = "SIMRacingApps-Widget-Compteur"  
+    data-ng-attr-style = "height: {{height}}px;">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"	     
+	     viewBox="0 0 480 480">
+		
+		<!-- background circle -->
+		<circle cx=240 cy=240 r=240 opacity="0.85" />
+		
+		<!-- GForce -->
+		<circle cx=240 cy=240 r=160 style="stroke:rgb(255,255,255); stroke-width:4" ng-attr-opacity="{{gforceLineOpacity}}"></circle> <!-- outer ring -->
+		<circle cx=240 cy=240 r=80 style="stroke:rgb(255,255,255); stroke-width:4" ng-attr-opacity="{{gforceLineOpacity}}"></circle> <!-- inner ring -->
+		<line x1="240" y1="85" x2="240" y2="395" style="stroke:rgb(255,255,255); stroke-width:4" ng-attr-opacity="{{gforceLineOpacity}}" /> <!-- vertical line -->
+		<line x1="85" y1="240" x2="395" y2="240" style="stroke:rgb(255,255,255); stroke-width:4" ng-attr-opacity="{{gforceLineOpacity}}" /> <!-- horizontal line -->
+		<g><circle class="SIMRacingApps-Widget-Compteur-GForce-dot" ng-attr-cx={{CX}} ng-attr-cy={{CY}} r=13 ng-attr-opacity="{{gforceDotOpacity}}"></circle></g> <!-- move the dot -->		
+		
+		<!-- RPM ticks and numbers -->
+        <g transform="translate(0,0)">
+            
+			<!-- Major ticks-->
+			<line ng-repeat         = "m in majorScale"
+                  class             = "SIMRacingApps-Widget-Compteur-majorTicks"
+                  ng-attr-x1        = {{480-ringSizeTicks-majorBufferTicks-majorSizeTicks}}
+                  y1                = 240
+                  ng-attr-x2        = {{480-ringSizeTicks-majorBufferTicks}}
+                  y2                = 240
+                  ng-attr-transform = "{{'rotate('+m.angle+' 240,240)'}}"
+				  opacity="{{tickOpacity}}"
+            />
+			
+			<!-- Major numbers-->
+            <g    ng-repeat         = "t in majorScale"
+                  class             = "SIMRacingApps-Widget-Compteur-majorText"
+                  ng-attr-transform = "{{'rotate('+t.angle+' 240,240)'}}"
+				  opacity="{{tickNumberOpacity}}">
+                  <text ng-attr-x         = {{480-ringSize-majorSize-majorBuffer-majorTextBuffer}}
+                        ng-attr-y         = {{240+(majorFontSize*.4)}}
+                        ng-attr-transform = "{{'rotate('+(-t.angle)+' '+(480-ringSize-majorSize-majorBuffer-majorTextBuffer)+',240)'}}"
+                        ng-attr-style     = "font-size: {{majorFontSize}}px; text-anchor: middle;">
+                        {{t.text}}
+                  </text>
+            </g>
+        </g>
+        
+		<!-- RPM arcs -->
+		<g><path data-ng-attr-d="{{rpmPathStroke}}" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"></path></g>
+        <!--<circle cx=240 cy=240 r=193 fill="none" stroke="#ffffff" stroke-width="4" opacity="0.15"></circle>-->		
+        <g><path data-ng-attr-d="{{rpmPathFillBkgd}}" fill="none" stroke="#ffffff" stroke-width="15" opacity="0.15"></path></g>       		
+		<g><path class="myRPMPathFill" data-ng-attr-d="{{rpmPathFill}}" fill="none" data-ng-attr-stroke="{{RPMColor}}" stroke-width="15"
+		       data-ng-attr-stroke-dasharray="{{rpmDasharray}}" data-ng-attr-stroke-dashoffset="{{RPMPct}}" opacity="0.55"></path></g>
+
+        <!-- x1000 RPM label -->
+        <path id="rpmCurve{{$id}}" fill="transparent" data-ng-attr-d="{{rpmPathx1000}}"/>
+		<text class="SIMRacingApps-Widget-Compteur-RPM-x1000-label" style="opacity:0.55;">
+		    <textPath ng-attr-href="{{rpmx1000url}}">x1000 RPM</textPath>
+		</text>
+		
+		<!-- Steering Wheel Tape -->
+		<g ng-attr-transform="{{'rotate('+SteeringAngle+' 240,240)'}}">
+            <path class="SIMRacingApps-Widget-Compteur-Steering-Wheel-tape" data-ng-attr-d="{{tapepath}}" 
+			             opacity="{{steeringTapeOpacity}}"></path></g>
+		
+	    <!-- Hide elements for F1 style compteur -->
+		<g opacity="{{F1StyleOpacity}}">
+		
+			<!-- Lap Time Label -->
+			<path id="lapTimeCurve{{$id}}" fill="transparent" data-ng-attr-d="{{lapTimePath}}"/>
+			<text class="SIMRacingApps-Widget-Compteur-Lap-Time-label" style="opacity:{{lapTimeOpacity}};">
+			    <textPath ng-attr-href="{{laptimeurl}}">{{lapTime | sraDuration:3:false:false:true:false}}</textPath>
+			</text>
+			
+			<!-- Pedals outer full circle -->
+			<circle cx=240 cy=240 r=230 fill="none" stroke="#ffffff" stroke-width="4" opacity="0.1"></circle>
+				
+			<!-- Clutch arc and label -->
+			<g><path data-ng-attr-d="{{clutchPathFillBkgd}}" fill="none" stroke="blue" stroke-width="30" opacity="0.15"></path></g>
+			<g><path class="myClutchPathFill" data-ng-attr-d="{{clutchPathFill}}" fill="none" stroke="blue" stroke-width="30"
+				   data-ng-attr-stroke-dasharray="{{clutchDasharray}}" data-ng-attr-stroke-dashoffset="{{clutchPct}}" opacity="0.75"></path></g>
+			<path id="clutchCurve{{$id}}" fill="transparent" data-ng-attr-d="{{clutchPathNumber}}"/>
+			<text class="SIMRacingApps-Widget-Compteur-Clutch-label" style="opacity:{{clutchTextOpacity}};">
+			    <textPath ng-attr-href="{{clutchurl}}">{{translations.CLUTCH}}&nbsp;&nbsp;{{clutchNumber|sraRound:0}}</textPath>
+			</text>
+			
+			<!-- Throttle arc and label -->
+			<g><path data-ng-attr-d="{{throttlePathFillBkgd}}" fill="none" stroke="green" stroke-width="30" opacity="0.3"></path></g>
+			<g><path class="myThrottlePathFill" data-ng-attr-d="{{throttlePathFill}}" fill="none" stroke="green" stroke-width="30"
+				   data-ng-attr-stroke-dasharray="{{throttleDasharray}}" data-ng-attr-stroke-dashoffset="{{throttlePct}}" opacity="0.99"></path></g>
+			<path id="throttleCurve{{$id}}" fill="transparent" data-ng-attr-d="{{throttlePathNumber}}"/>
+			<text class="SIMRacingApps-Widget-Compteur-Throttle-label" style="opacity:{{throttleTextOpacity}};">
+			    <textPath ng-attr-href="{{throttleurl}}">{{translations.THROTTLE}}&nbsp;&nbsp;{{throttleNumber|sraRound:0}}</textPath>
+			</text>
+			
+			<!-- Brake arc and label -->
+			<g><path data-ng-attr-d="{{brakePathFillBkgd}}" fill="none" stroke="red" stroke-width="30" opacity="0.2"></path></g>
+			<g><path class="myBrakePathFill" data-ng-attr-d="{{brakePathFill}}" fill="none" stroke="red" stroke-width="30"
+				   data-ng-attr-stroke-dasharray="{{brakeDasharray}}" data-ng-attr-stroke-dashoffset="{{brakePct}}" opacity="0.6"></path></g>
+			<path id="brakeCurve{{$id}}" fill="transparent" data-ng-attr-d="{{brakePathNumber}}"/>
+			<text class="SIMRacingApps-Widget-Compteur-Brake-label" style="opacity:{{brakeTextOpacity}};">
+			    <textPath ng-attr-href="{{brakeurl}}">{{translations.BRAKE}}&nbsp;&nbsp;{{brakeNumber|sraRound:0}}</textPath>
+			</text>
+			
+			<!-- Gforce arc and label -->
+			<g><path data-ng-attr-d="{{gforcePathFillBkgd}}" fill="none" stroke="orange" stroke-width="30" opacity="0.3"></path></g>
+			<g><path class="myGforcePathFill" data-ng-attr-d="{{gforcePathFill}}" fill="none" stroke="orange" stroke-width="30"
+				   data-ng-attr-stroke-dasharray="{{gforceDasharray}}" data-ng-attr-stroke-dashoffset="{{gforcePct}}" opacity="0.45"></path></g>
+			<path id="gforceCurve{{$id}}" fill="transparent" data-ng-attr-d="{{gforcePathNumber}}"/>
+			<text class="SIMRacingApps-Widget-Compteur-Gforce-label" data-ng-attr-opacity="{{gforceTextOpacity}}">
+			    <textPath ng-attr-href="{{gforceurl}}">{{translations.GFORCE}}&nbsp;&nbsp;{{gforceNumber|sraRound:1}}</textPath>
+			</text>
+		</g>
+		
+	</svg>
+	
+	<!-- RPM -->
+	<div class="SIMRacingApps-Widget-Compteur-RPM-number" style="color:#f4f4f4; opacity:0.85;">{{RPMNumber|sraRound:0}}</div>
+	<div class="SIMRacingApps-Widget-Compteur-RPM-label" style="color:#f4f4f4; opacity:0.85;">rpm</div>
+	
+	<!-- Speed -->
+	<div class="SIMRacingApps-Widget-Compteur-Speed-number" style="color:#f4f4f4; opacity:0.85;">{{SpeedNumber|sraRound:0}}</div>
+	<div class="SIMRacingApps-Widget-Compteur-Speed-label" style="color:#f4f4f4; opacity:0.85;">{{SpeedLabel}}</div>
+	
+	<!-- Gear -->
+	<div class="SIMRacingApps-Widget-Compteur-Gear-number" style="color:yellow; opacity:0.7;">{{GearNumber}}</div>
+	
+	<!-- Car Image --> 
+	<div class="SIMRacingApps-Widget-Compteur-Car-image" style="opacity:{{carImageOpacity}}" 
+	     data-ng-style = "{ backgroundImage: 'url(/SIMRacingApps/'+data.Car.REFERENCE.ImageUrl.Value+')' }"></div>
+		 
+	<!-- Gforce labelF1 Compteur -->
+	<div class="SIMRacingApps-Widget-Compteur-Gforce-F1-label" style="opacity:{{GforceLabelOpacityF1}};">G&nbsp;&nbsp;{{GforceNumberF1|sraRound:1}}</div>
+		 
+    <!-- Throttle for F1 Compteur -->
+	<div class="SIMRacingApps-Widget-Compteur-Throttle-container" style="opacity:{{throttleOpacityContF1}}; top:{{throttleTopF1}}%;">	    
+		<div class="SIMRacingApps-Widget-Compteur-Throttle-bkgd" style="opacity:{{throttleOpacityBkgdF1}};"></div>
+        <div class="SIMRacingApps-Widget-Compteur-Throttle-fill" style="opacity:{{throttleOpacityFillF1}}; width:{{throttlePctF1}}%;"></div>		
+	    <div class="SIMRacingApps-Widget-Compteur-Throttle-text" style="opacity:{{throttleTextOpacityF1}};">THROTTLE&nbsp;&nbsp;{{throttleNumberF1|sraRound:0}}</div>
+	</div>
+	
+	<!-- Brake for F1 Compteur -->
+	<div class="SIMRacingApps-Widget-Compteur-Brake-container" style="opacity:{{brakeOpacityContF1}}; top:{{brakeTopF1}}%;">
+	    <div class="SIMRacingApps-Widget-Compteur-Brake-bkgd" style="opacity:{{brakeOpacityBkgdF1}};"></div>
+		<div class="SIMRacingApps-Widget-Compteur-Brake-fill" style="opacity:{{brakeOpacityFillF1}}; width:{{brakePctF1}}%;"></div>
+		<div class="SIMRacingApps-Widget-Compteur-Brake-text" style="opacity:{{brakeTextOpacityF1}};">BRAKE&nbsp;&nbsp;{{brakeNumberF1|sraRound:0}}</div>
+	</div>	
+	
+	<!-- Clutch for F1 Compteur -->
+	<div class="SIMRacingApps-Widget-Compteur-Clutch-container" style="opacity:{{clutchOpacityContF1}};">
+	    <div class="SIMRacingApps-Widget-Compteur-Clutch-bkgd" style="opacity:{{clutchOpacityBkgdF1}};"></div>
+		<div class="SIMRacingApps-Widget-Compteur-Clutch-fill" style="opacity:{{clutchOpacityFillF1}}; width:{{clutchPctF1}}%;"></div>
+        <div class="SIMRacingApps-Widget-Compteur-Clutch-text" style="opacity:{{clutchTextOpacityF1}};">CLUTCH&nbsp;&nbsp;{{clutchNumberF1|sraRound:0}}</div>		
+	</div>
+	
+</div>
