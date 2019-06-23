@@ -1,8 +1,8 @@
 {
 "name":        "LapsBanner;LapsBanner-BYCLASS",
 "description": ["Shows Laps, Custom Title and Rotating Sponsor Images","Shows Laps (Based on Class), Custom Title and Rotating Sponsor Images"],
-"description-de": ["Zeigt Runden (Based on Class), \u00dcberschrift/Titel kann ge\u00e4ndert werden, wechselnde Sponsor-Bilder",
-                   "Zeigt Runden (Based on Class), \u00dcberschrift/Titel kann ge\u00e4ndert werden, wechselnde Sponsor-Bilder"
+"description-de": ["Zeigt Runden, \u00dcberschrift/Titel, wechselnde Sponsor-Bilder, kann ver\u00e4ndert werden - klicke hier f\u00fcr mehr Infos",
+                   "Zeigt Runden (nach Klasse), \u00dcberschrift/Titel, wechselnde Sponsor-Bilder, kann ver\u00e4ndert werden - klicke hier f\u00fcr mehr Infos"
                   ],
 "doc":         "JavaScriptDoc/sra-laps-banner.html",
 "url":         "apps/WidgetLoader?widget=LapsBanner&",

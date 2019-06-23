@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-lap-times.html",
 "name": "LapTimes",
 "description": "Displays Current Lap Times", 
-"description-de": "Displays Current Lap Times", 
+"description-de": "Rundenzeiten", 
 "url": "apps/WidgetLoader?widget=LapTimes&",
 "icon": "widgets/LapTimes/icon.png",
 "width": 420,

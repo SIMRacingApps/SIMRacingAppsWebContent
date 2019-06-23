@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-analog-gauge-spek-h-y-s-deployment.html",
 "name": "AnalogGauge-Spek-HYSDeployment",
 "description": "Analog Gauge Spek HYS Deployment Available",
-"description-de": "Analoge Rundinstrument-Anzeige - HYS Deployment Available",
+"description-de": "Analoge Rundinstrument-Anzeige - HYS Einsatz verf\u00fcgbar",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/HYSDeployment&",
 "icon": "widgets/AnalogGauge/Spek/HYSDeployment/icon.png",
 "width": 480,

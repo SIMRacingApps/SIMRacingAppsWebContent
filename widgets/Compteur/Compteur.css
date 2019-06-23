@@ -189,16 +189,25 @@
 }
 
 .SIMRacingApps-Widget-Compteur-Throttle-text {
-	width: 100%;
-	height: 100%;
-	margin-left: 15%;
-    margin-top: 5%;
-	position: absolute;
-	color: #ffffff;
-	font-size: 100%;
-	font-style: oblique;	
-	background-color: transparent;
-	opacity: 0.55;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    font-style: oblique;    
+    background-color: transparent;
+    opacity: 0.55;
+    text-align: right;
+}
+
+.SIMRacingApps-Widget-Compteur-Throttle-value {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    font-style: oblique;    
+    background-color: transparent;
+    opacity: 0.55;
+    text-align: left;
 }
 
 .SIMRacingApps-Widget-Compteur-Throttle-bkgd {
@@ -233,16 +242,25 @@
 }
 
 .SIMRacingApps-Widget-Compteur-Brake-text {
-	width: 100%;
-	height: 100%;
-	margin-left: 27%;
-    margin-top: 5%;
-	position: absolute;
-	color: #ffffff;
-	font-size: 100%;
-	font-style: oblique;	
-	background-color: transparent;
-	opacity: 0.55;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    font-style: oblique;    
+    background-color: transparent;
+    opacity: 0.55;
+    text-align: right;
+}
+
+.SIMRacingApps-Widget-Compteur-Brake-value {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    font-style: oblique;    
+    background-color: transparent;
+    opacity: 0.55;
+    text-align: left;
 }
 
 .SIMRacingApps-Widget-Compteur-Brake-bkgd {
@@ -278,16 +296,25 @@
 }
 
 .SIMRacingApps-Widget-Compteur-Clutch-text {
-	width: 100%;
-	height: 100%;
-	margin-left: 25%;
-    margin-top: 5%;
-	position: absolute;
-	color: #ffffff;
-	font-size: 100%;
-	font-style: oblique;	
-	background-color: transparent;
-	opacity: 0.55;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    font-style: oblique;    
+    background-color: transparent;
+    opacity: 0.55;
+    text-align: right;
+}
+
+.SIMRacingApps-Widget-Compteur-Clutch-value {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-size: 100%;
+    font-style: oblique;    
+    background-color: transparent;
+    opacity: 0.55;
+    text-align: left;
 }
 
 .SIMRacingApps-Widget-Compteur-Clutch-bkgd {

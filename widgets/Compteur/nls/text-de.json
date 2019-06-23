@@ -1,6 +1,6 @@
 {
-    "THROTTLE": "DROSSELN",
+    "THROTTLE": "GAS",
     "BRAKE": "BREMSE",
-    "GFORCE": "GKRAFTE",
+    "GFORCE": "G-KR\u00c4FTE",
     "CLUTCH": "KUPPLUNG"
 }

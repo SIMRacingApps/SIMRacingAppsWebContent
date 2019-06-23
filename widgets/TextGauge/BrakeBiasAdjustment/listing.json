@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-text-gauge-brake-bias-adjustment.html",
 "name": "TextGauge-Brake Bias Adjustment",
 "description": "Text Gauge Brake Bias Adjustment",
-"description-de": "Textanzeige - Einstellung der Bremsenverzerrung",
+"description-de": "Textanzeige - Einstellung der Bremskraftverteilung",
 "url": "apps/WidgetLoader?widget=TextGauge/BrakeBiasAdjustment&",
 "icon": "widgets/TextGauge/BrakeBiasAdjustment/icon.png",
 "width": 380,

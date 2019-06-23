@@ -1,7 +1,7 @@
 {
 "name":        "RadioTransmitting",
 "description": "Display who is transmitting on the radio. Contributed by Ricky Thompson.",
-"description-de": "Zeigt an, wer im Spiel \u00fcbertr\u00e4gt / spricht. Von Ricky Thompson.",
+"description-de": "Zeigt an, wer in der SIM \u00fcbertr\u00e4gt / spricht. Von Ricky Thompson.",
 "doc":         "JavaScriptDoc/sra-radio-transmitting.html",
 "url":         "apps/WidgetLoader?widget=RadioTransmitting&",
 "icon":        "widgets/RadioTransmitting/icon.png",

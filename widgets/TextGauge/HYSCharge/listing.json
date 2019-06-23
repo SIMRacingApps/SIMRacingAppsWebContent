@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-text-gauge-h-y-s-charge.html",
 "name": "TextGauge-HYS Charge",
 "description": "Text Gauge HYS Charge",
-"description-de": "Textanzeige - HYS Charge",
+"description-de": "Textanzeige - HYS Ladung",
 "url": "apps/WidgetLoader?widget=TextGauge/HYSCharge&",
 "icon": "widgets/TextGauge/HYSCharge/icon.png",
 "width": 380,

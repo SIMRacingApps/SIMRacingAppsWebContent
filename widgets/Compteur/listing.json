@@ -3,8 +3,8 @@
 "description": ["Display various driver inputs",
                 "Display various driver inputs, F1 version"
 ],
-"description-de": ["Verschiedene Treibereingaben anzeigen",
-                   "Verschiedene Treibereingaben anzeigen, F1-Version"
+"description-de": ["Zeigt Fahrereingaben an",
+                   "Zeigt Fahrereingaben an, F1-Version"
 ],
 "url": "apps/WidgetLoader?widget=Compteur&",
 "doc": "JavaScriptDoc/sra-compteur.html",

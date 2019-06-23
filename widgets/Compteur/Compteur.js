@@ -10,6 +10,7 @@
  * @ngdoc directive
  * @name sra-compteur
  * @param {boolean} data-sra-args-show-f1-compteur Show the F1 version of Compteur. Defaults to false.
+ * @param {boolean} data-sra-args-show-clutch-f1-compteur Show the clutch on the F1 version of Compteur. Defaults to false.
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 1000.
  * @author Gary Prince
  * @since 1.0
@@ -161,25 +162,29 @@ function(SIMRacingApps) {
 				// -------------------------------------------------------------
 				
 				// move the dot and update the labels
-				$scope.MoveDotAndUpdateLabels = function() { 		
-	                var myLongG, myLatG, myLongGReplayPaused, myLatGReplayPaused, replayState;
+                $scope.myLongG=null;
+                $scope.myLatG=null;
+                $scope.myLongGReplayPaused=null;
+                $scope.myLatGReplayPaused=null;
+                $scope.replayState=null;
+				$scope.MoveDotAndUpdateLabels = function() { 	                
 		            
-					replayState = $scope.data.Session.Replay.Value;
-					if (replayState != "||") { 
+				    $scope.replayState = $scope.data.Session.Replay.Value;
+					if ($scope.replayState != "||") { 
 						
 						// get current Gs
-						myLongG = $scope.data.Car.REFERENCE.LongitudeAcceleration.GF.Value;
-						myLatG = $scope.data.Car.REFERENCE.LatitudeAcceleration.GF.Value;
+					    $scope.myLongG = $scope.data.Car.REFERENCE.LongitudeAcceleration.GF.Value;
+					    $scope.myLatG = $scope.data.Car.REFERENCE.LatitudeAcceleration.GF.Value;
 						
 						// save Gs for when replay is paused					
-						myLongGReplayPaused = myLongG;
-						myLatGReplayPaused = myLatG;
+					    $scope.myLongGReplayPaused = $scope.myLongG;
+					    $scope.myLatGReplayPaused = $scope.myLatG;
 					}
 					
 					// set Gs to the previous frame's Gforce data
-				    if (replayState == "||") {
-						myLongG	= myLongGReplayPaused;				
-						myLatG = myLatGReplayPaused;
+				    if ($scope.replayState == "||") {
+				        $scope.myLongG	= $scope.myLongGReplayPaused;				
+				        $scope.myLatG = $scope.myLatGReplayPaused;
 					}
 					
 					// check gforceMax
@@ -196,8 +201,8 @@ function(SIMRacingApps) {
 						if (myXY < 80) { myXY = 80; }
 						return myXY;
 					}
-					$scope.CY = moveDot(myLongG);
-					$scope.CX = moveDot(myLatG);
+					$scope.CY = moveDot($scope.myLongG);
+					$scope.CX = moveDot($scope.myLatG);
 					
 					// get gforce path length and set dasharray
 					var myGforcePath = $scope.myGforcePathS;
@@ -205,7 +210,7 @@ function(SIMRacingApps) {
 					$scope.gforceDasharray = gforceDasharrayPathLength;
 
                     // GForce arc and label --> display strongest gforce					
-					var myGforce = Math.max(Math.abs(myLongG), Math.abs(myLatG));
+					var myGforce = Math.max(Math.abs($scope.myLongG), Math.abs($scope.myLatG));
 					var myGforceMin = Math.min(myGforce, $scope.gforceMax); // keep arc fill from spilling into brake
 					$scope.gforcePct = gforceDasharrayPathLength - ((myGforceMin / $scope.gforceMax) * gforceDasharrayPathLength);						 
 					$scope.gforceTextOpacity = 0.0;
@@ -455,8 +460,9 @@ function(SIMRacingApps) {
 				*/
 				
 				// update lap time
-				$scope.updateLapTime = function() {
-	                var myNextLap = 0, lapStartTime;                
+				$scope.myNextLap = 0;
+				$scope.lapStartTime=null;
+				$scope.updateLapTime = function() {	                                
 					
 					var myLapTime = $scope.data.Car.REFERENCE.LapTime.Current.Value;
 					var myIsReplay = $scope.data.Session.IsReplay.Value;					
@@ -468,24 +474,24 @@ function(SIMRacingApps) {
 						var myReplaySessionTime = $scope.data.Session.TimeElapsed.Value;
 						
 						// check next lap -- if replay jumps a few laps, reset myNextLap
-						if (myNextLap < myCurrentLap || myNextLap > myCurrentLap + 1) {
-							myNextLap = myCurrentLap;
+						if ($scope.myNextLap < myCurrentLap || $scope.myNextLap > myCurrentLap + 1) {
+						    $scope.myNextLap = myCurrentLap;
 						}
 						
 						// these two vars will be equal at start of new lap 
-						if (myCurrentLap == myNextLap) { 
+						if (myCurrentLap == $scope.myNextLap) { 
 							
 							// reset lap start time
-							lapStartTime = myReplaySessionTime;
+						    $scope.lapStartTime = myReplaySessionTime;
 							
 							// increment next lap
-							myNextLap = myCurrentLap + 1;	
+						    $scope.myNextLap = myCurrentLap + 1;	
 						}
 						
 						//show lap time						
 						if ($scope.showLapTime) {
 							$scope.lapTimeOpacity = 0.65;	
-                            $scope.lapTime = myReplaySessionTime - lapStartTime;							
+                            $scope.lapTime = myReplaySessionTime - $scope.lapStartTime;							
 						}
 					}
                     else {
@@ -578,10 +584,12 @@ function(SIMRacingApps) {
 				    $scope.showRPMLines = true;
 				    $scope.showPedalText = true;
 				    $scope.showLapTime = true;
-				    $scope.showCarImage = false;
-				    $scope.showClutchF1Compteur = true;
+				    $scope.showCarImage = true;
+				    $scope.showClutchF1Compteur = false;
 				}
 
+                $scope.showClutchF1Compteur = sraDispatcher.getBoolean($scope.sraArgsSHOWCLUTCHF1COMPTEUR, $attrs.sraArgsShowClutchF1Compteur, $scope.showClutchF1Compteur);
+				
                 /** your code goes here **/					
 				
 		        // add sim telemetry				
@@ -693,7 +701,7 @@ function(SIMRacingApps) {
                 // calculate the clutch arc paths
                 $scope.clutchPathFillBkgd = $scope.describeArc(240,240,212,120,160);
                 $scope.clutchPathFill = $scope.describeArc(240,240,212,120,160);
-                $scope.clutchPathNumber = $scope.describeArc(240,240,217,112,152);
+                $scope.clutchPathNumber = $scope.describeArc(240,240,217,112,152,0,1);
                 
                 
                 // -------------------------------------------------------------
@@ -713,13 +721,15 @@ function(SIMRacingApps) {
                     $scope.gforceurl = "http://" + document.location.hostname + "/SIMRacingApps/apps/WidgetLoader?widget=Compteur#gforceCurve"+$scope.$id;
                     $scope.throttleurl = "http://" + document.location.hostname + "/SIMRacingApps/apps/WidgetLoader?widget=Compteur#throttleCurve"+$scope.$id;
                     $scope.brakeurl = "http://" + document.location.hostname + "/SIMRacingApps/apps/WidgetLoader?widget=Compteur#brakeCurve"+$scope.$id;
-                    $scope.laptimeurl = "http://" + document.location.hostname + "/SIMRacingApps/apps/WidgetLoader?widget=Compteur#lapTimeCurve"+$scope.$id;
+                    $scope.clutchurl = "http://" + document.location.hostname + "/SIMRacingApps/apps/WidgetLoader?widget=Compteur#clutchCurve"+$scope.$id;
+					$scope.laptimeurl = "http://" + document.location.hostname + "/SIMRacingApps/apps/WidgetLoader?widget=Compteur#lapTimeCurve"+$scope.$id;
                 }
                 else {
                     $scope.rpmx1000url = '#rpmCurve'+$scope.$id;
                     $scope.gforceurl = '#gforceCurve'+$scope.$id;
                     $scope.throttleurl = '#throttleCurve'+$scope.$id;
                     $scope.brakeurl = '#brakeCurve'+$scope.$id;
+					$scope.clutchurl = '#clutchCurve'+$scope.$id;
                     $scope.laptimeurl = '#lapTimeCurve'+$scope.$id;
                 }               
 

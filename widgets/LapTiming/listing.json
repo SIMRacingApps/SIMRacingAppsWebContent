@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-lap-timing.html",
 "name": "LapTiming",
 "description": "Lap Timing",
-"description-de": "Rundenzeiten",
+"description-de": "kleine Renninfo",
 "url": "apps/WidgetLoader?widget=LapTiming&",
 "icon": "widgets/LapTiming/icon.png",
 "width": 800,

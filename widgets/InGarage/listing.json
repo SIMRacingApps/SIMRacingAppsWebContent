@@ -2,7 +2,7 @@
 "doc": "JavaScriptDoc/sra-in-garage.html",
 "name": "InGarage",
 "description": "Screen to show when the Car is in the garage.",
-"description-de": "Fzg in der Garage, zB Setup verbergen",
+"description-de": "Einblendung wenn Fzg. in der Garage ist, zB Setup verbergen - klicke hier f\u00fcr mehr Infos",
 "url": "apps/WidgetLoader?widget=InGarage&",
 "icon": "widgets/InGarage/icon.png",
 "width": 1920,

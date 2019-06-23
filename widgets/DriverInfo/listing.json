@@ -28,7 +28,7 @@
     "Info \u00fcber das Fzg. HINTER dir / relativ",
     "Info \u00fcber das Fzg. VOR dir / Klasse",
     "Info \u00fcber das Fzg. HINTER dir / Klasse",
-    "Info \u00fcber den Fahrer der SENDET/ redet"
+    "Info \u00fcber den Fahrer der SENDET/ spricht"
 ],
 "url": "apps/WidgetLoader?widget=DriverInfo&",
 "icon": "widgets/DriverInfo/icon.png",

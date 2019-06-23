@@ -130,23 +130,68 @@
 		 
     <!-- Throttle for F1 Compteur -->
 	<div class="SIMRacingApps-Widget-Compteur-Throttle-container" style="opacity:{{throttleOpacityContF1}}; top:{{throttleTopF1}}%;">	    
-		<div class="SIMRacingApps-Widget-Compteur-Throttle-bkgd" style="opacity:{{throttleOpacityBkgdF1}};"></div>
-        <div class="SIMRacingApps-Widget-Compteur-Throttle-fill" style="opacity:{{throttleOpacityFillF1}}; width:{{throttlePctF1}}%;"></div>		
-	    <div class="SIMRacingApps-Widget-Compteur-Throttle-text" style="opacity:{{throttleTextOpacityF1}};">THROTTLE&nbsp;&nbsp;{{throttleNumberF1|sraRound:0}}</div>
+	    <div class="SIMRacingApps-Widget-Compteur-Throttle-bkgd" style="opacity:{{throttleOpacityBkgdF1}};"></div>
+	    <div class="SIMRacingApps-Widget-Compteur-Throttle-fill" style="opacity:{{throttleOpacityFillF1}}; width:{{throttlePctF1}}%;"></div>        
+	    <table style="width: 100%;height: 100%;padding-top: 5%">
+	    <colgroup>
+	    <col style="width: 75%">
+	    <col style="width: 25%">
+	    </colgroup>
+	    <tbody>
+	    <tr>
+	    <td>
+		    <div class="SIMRacingApps-Widget-Compteur-Throttle-text" style="opacity:{{throttleTextOpacityF1}};">{{translations.THROTTLE}}&nbsp;&nbsp;</div>
+		</td>
+		<td>
+	        <div class="SIMRacingApps-Widget-Compteur-Throttle-value" style="opacity:{{throttleTextOpacityF1}};">{{throttleNumberF1|sraRound:0}}</div>
+	    </td>
+	    </tr>
+	    </tbody>
+	    </table>
 	</div>
 	
 	<!-- Brake for F1 Compteur -->
 	<div class="SIMRacingApps-Widget-Compteur-Brake-container" style="opacity:{{brakeOpacityContF1}}; top:{{brakeTopF1}}%;">
 	    <div class="SIMRacingApps-Widget-Compteur-Brake-bkgd" style="opacity:{{brakeOpacityBkgdF1}};"></div>
-		<div class="SIMRacingApps-Widget-Compteur-Brake-fill" style="opacity:{{brakeOpacityFillF1}}; width:{{brakePctF1}}%;"></div>
-		<div class="SIMRacingApps-Widget-Compteur-Brake-text" style="opacity:{{brakeTextOpacityF1}};">BRAKE&nbsp;&nbsp;{{brakeNumberF1|sraRound:0}}</div>
+	    <div class="SIMRacingApps-Widget-Compteur-Brake-fill" style="opacity:{{brakeOpacityFillF1}}; width:{{brakePctF1}}%;"></div>
+	    <table style="width: 100%;height: 100%;padding-top: 5%;">
+	    <colgroup>
+	    <col style="width: 75%">
+	    <col style="width: 25%">
+	    </colgroup>
+	    <tbody>
+	    <tr>
+	    <td>
+			<div class="SIMRacingApps-Widget-Compteur-Brake-text" style="opacity:{{brakeTextOpacityF1}};">{{translations.BRAKE}}&nbsp;&nbsp;</div>
+	    </td>
+	    <td>
+	        <div class="SIMRacingApps-Widget-Compteur-Brake-value" style="opacity:{{brakeTextOpacityF1}};">{{brakeNumberF1|sraRound:0}}</div>
+	    </td>
+	    </tr>
+	    </tbody>
+	    </table>
 	</div>	
 	
 	<!-- Clutch for F1 Compteur -->
 	<div class="SIMRacingApps-Widget-Compteur-Clutch-container" style="opacity:{{clutchOpacityContF1}};">
 	    <div class="SIMRacingApps-Widget-Compteur-Clutch-bkgd" style="opacity:{{clutchOpacityBkgdF1}};"></div>
 		<div class="SIMRacingApps-Widget-Compteur-Clutch-fill" style="opacity:{{clutchOpacityFillF1}}; width:{{clutchPctF1}}%;"></div>
-        <div class="SIMRacingApps-Widget-Compteur-Clutch-text" style="opacity:{{clutchTextOpacityF1}};">CLUTCH&nbsp;&nbsp;{{clutchNumberF1|sraRound:0}}</div>		
+        <table style="width: 100%;height: 100%;padding-top: 5%;">
+        <colgroup>
+        <col style="width: 75%">
+        <col style="width: 25%">
+        </colgroup>
+        <tbody>
+        <tr>
+        <td>
+            <div class="SIMRacingApps-Widget-Compteur-Clutch-text" style="opacity:{{clutchTextOpacityF1}};">{{translations.CLUTCH}}&nbsp;&nbsp;</div>		
+        </td>
+        <td>
+            <div class="SIMRacingApps-Widget-Compteur-Clutch-value" style="opacity:{{clutchTextOpacityF1}};">{{clutchNumberF1|sraRound:0}}</div>      
+        </td>
+        </tr>
+        </tbody>
+        </table>
 	</div>
 	
 </div>

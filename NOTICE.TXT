@@ -15,8 +15,11 @@ OpenStreetMap
     The cartography in our map tiles, and our documentation, are licensed 
     under the Creative Commons Attribution-ShareAlike 2.0 license (CC BY-SA).
     
-MapQuest
-    Use Attribution, Tiles Courtesy of MapQuest.com
-    
 Graphics
     Gary Whitson - Logos
+    Brad Lawson - Flags
+
+Apps/Widgets
+    Ricky Thompson
+    Gary Prince
+            
