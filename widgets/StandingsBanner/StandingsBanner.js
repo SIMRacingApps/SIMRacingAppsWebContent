@@ -219,6 +219,10 @@ if ($scope.data.Car.REFERENCE.Messages.Value.indexOf(";REPAIR;") >= 0) {
     $scope.data.Session.IsCautionFlag.Value = true;
 }
 /**/
+                    if ($scope.data.Session.IsGreenFlag.Value) {
+                    	$scope.startGreenPages();
+                    }
+                    else
                     if ($scope.data.Session.IsCautionFlag.Value) {
                         $scope.startYellowPages();
                     }

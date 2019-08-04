@@ -1,6 +1,8 @@
 <div class                  = "SIMRacingApps-Widget-StandingsBannerVertical20"
      data-ng-style          = "{ height: height+'px' }"
      data-sra-data          = "Session/Cars
+                              ;Session/Type
+                              ;Car/LEADER/Lap/COMPLETED
                               ;Session/NumberOfCarClasses
                               ;Session/IsCheckeredFlag
                               ;Session/IsCautionFlag
@@ -36,7 +38,7 @@
             </tr>
             <tr class       = "SIMRacingApps-Widget-StandingsBannerVertical20-green-box-row"
                 data-ng-repeat = "position in ['P1','P2','P3','P4','P5','P6','P7','P8','P9','P10']"
-                data-sra-data  = "Car/{{position}}/Position;Car/{{position}}/DriverName;Car/{{position}}/DriverNameShort;Car/{{position}}/TeamName;Session/NumberOfCarClasses;Car/{{position}}/ClassColor;Session/DiffCars/{{position}}">
+                data-sra-data  = "Car/{{position}}/Position;Car/{{position}}/DriverName;Car/{{position}}/DriverNameShort;Car/{{position}}/TeamName;Session/NumberOfCarClasses;Car/{{position}}/ClassColor;Session/DiffCars/{{position}};Car/{{position}}/Status">
                 <td class   = "SIMRacingApps-Widget-StandingsBannerVertical20-green-box-position"
                     data-ng-bind      = "data.Car[position].Position.Value | sraNumber:0:true"
                     data-ng-style = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? (data.Car[position].ClassColor | sraRGB) : '') }"
@@ -50,9 +52,16 @@
                                       : (showShortName ? data.Car[position].DriverNameShort.ValueFormatted : data.Car[position].DriverName.ValueFormatted)"
                 ></td>
                 <td class   = "SIMRacingApps-Widget-StandingsBannerVertical20-green-box-behind"
-                    data-ng-bind      = "(data.Session.DiffCars[position].UOM == 'lap' 
+                    data-ng-bind      = "(data.Session.Type.Value == 'RACE' && data.Car.LEADER.Lap.COMPLETED.Value > 0 && data.Car[position].Status.Value.match('PIT') != null)
+                                      ?  (translations.PIT)
+                                      :  (data.Session.Type.Value == 'RACE' && data.Car.LEADER.Lap.COMPLETED.Value > 0 && data.Car[position].Status.Value == 'INGARAGE')
+                                      ?  (translations.GARAGE)
+                                      :  (data.Session.Type.Value == 'RACE' && data.Car.LEADER.Lap.COMPLETED.Value > 0 && data.Car[position].Status.Value == 'INVALID' && data.Car[position].Position.Value > 0)
+                                      ?  (translations.OUT)
+                                      :  (data.Session.DiffCars[position].UOM == 'lap') 
                                       ?  (data.Session.DiffCars[position] | sraDuration:0) 
-                                      :  (data.Session.DiffCars[position].Value | sraDuration:2:null:true))"
+                                      :  (data.Session.DiffCars[position].Value | sraDuration:2:null:true)
+                                      "
                 ></td>
             </tr>
         </table>
@@ -69,7 +78,7 @@
             </colgroup>
             <tr class       = "SIMRacingApps-Widget-StandingsBannerVertical20-green-box-row"
                 data-ng-repeat = "position in ['P'+((box*10)+11),'P'+((box*10)+12),'P'+((box*10)+13),'P'+((box*10)+14),'P'+((box*10)+15),'P'+((box*10)+16),'P'+((box*10)+17),'P'+((box*10)+18),'P'+((box*10)+19),'P'+((box*10)+20)]"
-                data-sra-data  = "Car/{{position}}/Position;Car/{{position}}/DriverName;Car/{{position}}/DriverNameShort;Car/{{position}}/TeamName;Session/NumberOfCarClasses;Car/{{position}}/ClassColor;Session/DiffCars/{{position}}">
+                data-sra-data  = "Car/{{position}}/Position;Car/{{position}}/DriverName;Car/{{position}}/DriverNameShort;Car/{{position}}/TeamName;Session/NumberOfCarClasses;Car/{{position}}/ClassColor;Session/DiffCars/{{position}};Car/{{position}}/Status">
                 <td class   = "SIMRacingApps-Widget-StandingsBannerVertical20-green-box-position"
                     data-ng-bind      = "data.Car[position].Position.Value | sraNumber:0:true"
                     data-ng-style = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? (data.Car[position].ClassColor | sraRGB) : '') }"
@@ -83,9 +92,16 @@
                                       : (showShortName ? data.Car[position].DriverNameShort.ValueFormatted : data.Car[position].DriverName.ValueFormatted)"
                 ></td>
                 <td class   = "SIMRacingApps-Widget-StandingsBannerVertical20-green-box-behind"
-                    data-ng-bind      = "(data.Session.DiffCars[position].UOM == 'lap' 
+                    data-ng-bind      = "(data.Session.Type.Value == 'RACE' && data.Car.LEADER.Lap.COMPLETED.Value > 0 && data.Car[position].Status.Value.match('PIT') != null)
+                                      ?  (translations.PIT)
+                                      :  (data.Session.Type.Value == 'RACE' && data.Car.LEADER.Lap.COMPLETED.Value > 0 && data.Car[position].Status.Value == 'INGARAGE')
+                                      ?  (translations.GARAGE)
+                                      :  (data.Session.Type.Value == 'RACE' && data.Car.LEADER.Lap.COMPLETED.Value > 0 && data.Car[position].Status.Value == 'INVALID' && data.Car[position].Position.Value > 0)
+                                      ?  (translations.OUT)
+                                      :  (data.Session.DiffCars[position].UOM == 'lap') 
                                       ?  (data.Session.DiffCars[position] | sraDuration:0) 
-                                      :  (data.Session.DiffCars[position].Value | sraDuration:2:null:true))"
+                                      :  (data.Session.DiffCars[position].Value | sraDuration:2:null:true)
+                                      "
                 ></td>
             </tr>
         </table>

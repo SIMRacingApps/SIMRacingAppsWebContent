@@ -1,4 +1,7 @@
 {
     "BEHIND":           "BEHIND",
-    "LEADERS":          "LEADERS"
+    "LEADERS":          "LEADERS",
+    "PIT":              "PIT",
+    "OUT":              "OUT",
+    "GARAGE":           "GARAGE"
 }

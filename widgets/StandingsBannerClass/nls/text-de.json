@@ -1,4 +1,7 @@
 {
     "BEHIND":           "Abstand",
-    "LEADERS":          "Reihenfolge"
+    "LEADERS":          "Reihenfolge",
+    "PIT":              "GRUBE",
+    "OUT":              "AUS",
+    "GARAGE":           "GARAGE"
 }
