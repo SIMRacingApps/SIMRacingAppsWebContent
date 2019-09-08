@@ -68,6 +68,7 @@ function(SIMRacingApps) {
                                            ,"HYSDeployTrim"
                                            ,"HYSRegenGain"
                                            ,"InLapMode"
+                                           ,"LaunchRPM"
                                            ,"LowFuelAccept"
                                            ,"PeakBrakeBias"
 //                                           ,"PitSpeedLimiter"
