@@ -40,6 +40,7 @@ define(['SIMRacingApps',
         'css!widgets/TrackMap/TrackMap',
         'widgets/TrackMap/Car/Car',
         'widgets/TrackMap/FinishLine/FinishLine',
+        'widgets/TrackMap/MergePoint/MergePoint',
         'widgets/DataTable/DataTable',
         'widgets/Flags/Flags',
         'widgets/WeatherInfo/WeatherInfo',
@@ -90,6 +91,9 @@ function(SIMRacingApps,ol) {
                 $scope.finishLeft    = -10000;
                 $scope.finishTop     = -10000;
                 $scope.finishDegrees = '0';
+
+                $scope.mergePointLeft= -10000;
+                $scope.mergePointTop = -10000;
                 
                 $scope.map           = null;
                 
@@ -207,6 +211,18 @@ function(SIMRacingApps,ol) {
                             $scope.carsQueue.push({ carid: carid, scope: scope});
                         }
 
+                        //draw the merge point
+                        if (scope.data.Car.REFERENCE.MergePointLatitude) {
+                            latitude         = scope.data.Car.REFERENCE.MergePointLatitude.Value;
+                            longitude        = scope.data.Car.REFERENCE.MergePointLongitude.Value;
+                            location         = scope.getLocation(longitude,latitude,scope);
+                        }
+                            
+                        if (location) {
+                            scope.mergePointLeft    = location[0];
+                            scope.mergePointTop     = location[1];
+                        }
+                        
                         //move the finish line and Pit Stall every time because we can't get the coordinates until the map renders
                         //TODO: Try and do this only when needed.
                         if (scope.data.Car.PITSTALL) {
@@ -342,6 +358,7 @@ function(SIMRacingApps,ol) {
                 });
                 
                 $attrs.sraArgsData += ";Track/FinishLineRotation;Track/Latitude/ONTRACK/0.0;Track/Longitude/ONTRACK/0.0";
+                $attrs.sraArgsData += ";Car/REFERENCE/MergePointLatitude;Car/REFERENCE/MergePointLongitude";
 
                 //register with the dispatcher
                 $scope.names = sraDispatcher.subscribe($scope,$attrs,self.defaultInterval); //register subscriptions and options to the dispatcher

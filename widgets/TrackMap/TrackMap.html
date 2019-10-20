@@ -114,6 +114,15 @@
         }"
     ></sra-track-map-finish-line>
 
+    <sra-track-map-merge-point
+        class              = "SIMRacingApps-Widget-TrackMap-MergePointContainer"
+        data-ng-style      = "{
+            left:                ((mergePointLeft | sraRound) - ((width/2)  | sraRound))+'px',
+            top:                 ((mergePointTop  | sraRound) - ((height/2) | sraRound))+'px',
+            zIndex:              9
+        }"
+    ></sra-track-map-merge-point>
+    
     <sra-track-map-car
          data-ng-repeat         = "carid in cars"
          class                  = "SIMRacingApps-Widget-TrackMap-CarContainer"
