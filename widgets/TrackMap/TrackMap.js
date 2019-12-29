@@ -238,8 +238,8 @@ function(SIMRacingApps,ol) {
                         
                         //note: the pixel location returned is the center of the finish line
                         //we will set the Left/Top location to the center in the scope and then move it with CSS to center it.
-                        latitude         = scope.data.Track.Latitude.ONTRACK['0.0'].Value;
-                        longitude        = scope.data.Track.Longitude.ONTRACK['0.0'].Value;
+                        latitude         = scope.data.Track.Latitude.ONTRACK['100.0'].Value;
+                        longitude        = scope.data.Track.Longitude.ONTRACK['100.0'].Value;
                         location         = scope.getLocation(longitude,latitude,scope);
                         if (location) {
                             var rotate          = scope.data.Track.FinishLineRotation.Value;
@@ -357,7 +357,7 @@ function(SIMRacingApps,ol) {
                     }
                 });
                 
-                $attrs.sraArgsData += ";Track/FinishLineRotation;Track/Latitude/ONTRACK/0.0;Track/Longitude/ONTRACK/0.0";
+                $attrs.sraArgsData += ";Track/FinishLineRotation;Track/Latitude/ONTRACK/100.0;Track/Longitude/ONTRACK/100.0";
                 $attrs.sraArgsData += ";Car/REFERENCE/MergePointLatitude;Car/REFERENCE/MergePointLongitude";
 
                 //register with the dispatcher

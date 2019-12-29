@@ -240,7 +240,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 //TODO: Get some help from the server on if this gauge is in-car(real-time) or next pit
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/BrakeBiasAdjustment/ValueNext;Car/REFERENCE/Gauge/BrakeBiasAdjustment/IsFixed";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/WindshieldTearoff/ChangeFlag";
-                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FastRepairs/ChangeFlag;Car/REFERENCE/Gauge/FastRepairs/ValueCurrent";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FastRepairs/ChangeFlag;Car/REFERENCE/Gauge/FastRepairs/ValueCurrent;Car/REFERENCE/Gauge/FastRepairs/Maximum";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureLF/ChangeFlag;Car/REFERENCE/Gauge/TirePressureLR/ChangeFlag";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureRF/ChangeFlag;Car/REFERENCE/Gauge/TirePressureRR/ChangeFlag";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FuelLevel/ChangeFlag;Car/REFERENCE/Gauge/FuelLevel/CapacityMaximum";

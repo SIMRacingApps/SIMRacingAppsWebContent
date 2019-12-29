@@ -61,10 +61,11 @@
             <div class                   = "SIMRacingApps-Widget-PitCommander-fastrepairs"
                  data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+fastrepairs+'-'+controller"
                  data-xng-class           = "'SIMRacingApps-Widget-PitCommander-fastrepairs-'+data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FastRepairs.Maximum.Value > 0 ? 'inherit' : 'none' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
                                          + (translations.FASTREPAIRS|sraEncodeEntities)
                                          + '</span> '
-                                         + (data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value ? translations.Y : translations.N)"
+                                         + (data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value ? translations.Y : translations.N) + ' (' + data.Car.REFERENCE.Gauge.FastRepairs.ValueCurrent.Value + ')'"
             ></div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-brakebias"
                  data-ng-style           = "{ visibility: data.Car.REFERENCE.Gauge.BrakeBiasAdjustment.ValueNext.State == 'NOTAVAILABLE'
