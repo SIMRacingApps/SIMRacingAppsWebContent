@@ -91,7 +91,13 @@
             "LONE QUALIFY":     "Einzel-Quali.",
             "QUALIFYING":       "Qualifikation",
             "OFFLINE":          "Offline",
-            "OFFLINE TESTING":  "OfflineTest"
+            "OFFLINE TESTING":  "OfflineTest",
+            "UNKNOWN":          "Unbekannt",
+            "ENGINES_STARTED":  "Motoren liefen an",
+            "GREEN":            "Gr\u00fcn",
+            "CAUTION":          "Vorsicht",
+            "RED":              "Rot",
+            "FINISHED":         "Fertig"
         },
         "TRACK": {
             "Clear":            "klar",

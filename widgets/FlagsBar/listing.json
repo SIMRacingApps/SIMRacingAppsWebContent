@@ -1,0 +1,25 @@
+{
+"doc": "JavaScriptDoc/sra-flags-bar.html",
+"name": ["FlagsBar-Left","FlagsBar-Right","FlagsBar-Left-NoGreen","FlagsBar-Right-NoGreen"],
+"description": [
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair for Left side",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair for Right side",
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair for Left side, no always green",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair for Right side, no always green"
+],
+"description-de": [
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Left side",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Right side",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Left side, no always green",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Right side, no always green"
+],
+"url": "apps/WidgetLoader?widget=FlagsBar&",
+"icon": "widgets/FlagsBar/icon.png",
+"width": 48,
+"height": 468,
+"args": ["DISPLAYLEFT=true&DISPLAYGREEN=true",
+         "DISPLAYLEFT=false&DISPLAYGREEN=true",
+         "DISPLAYLEFT=true&DISPLAYGREEN=false",
+         "DISPLAYLEFT=false&DISPLAYGREEN=false"
+        ]
+}

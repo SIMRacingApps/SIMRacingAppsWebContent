@@ -91,7 +91,13 @@
             "LONE QUALIFY":     "Lone Qualify",
             "QUALIFYING":       "Qualifying",
             "OFFLINE":          "Offline",
-            "OFFLINE TESTING":  "Offline Testing"
+            "OFFLINE TESTING":  "Offline Testing",
+            "UNKNOWN":          "Unknown",
+            "ENGINES_STARTED":  "Engines Started",
+            "GREEN":            "Green",
+            "CAUTION":          "Caution",
+            "RED":              "Red",
+            "FINISHED":         "Finished"
         },
         "TRACK": {
             "Clear":            "Clear",

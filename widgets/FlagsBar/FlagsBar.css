@@ -1,0 +1,104 @@
+.SIMRacingApps-Widget-FlagsBar {
+    color: white;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.SIMRacingApps-Widgets-FlagsBar-images {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.SIMRacingApps-Widget-FlagsBar-image-left {
+    position:          absolute;
+    top:               0px;
+    left:              0px;
+    width:             100%;
+    height:            100%;
+    z-index:           1;
+    background-repeat: no-repeat;
+    background-size:   contain;
+    background-position-x: left;
+/* background: url("flag-yellow-left.png");  for testing only */
+}
+
+.SIMRacingApps-Widget-FlagsBar-image-right {
+    position:          absolute;
+    top:               0px;
+    left:              0px;
+    width:             100%;
+    height:            100%;
+    z-index:           1;
+    background-repeat: no-repeat;
+    background-size:   contain;
+    background-position-x: right;
+/* background: url("flag-yellow-left.png");  for testing only */
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-black {
+	background-image: url("flag-black-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-black {
+	background-image: url("flag-black-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-blue {
+    background-image: url("flag-blue-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-blue {
+    background-image: url("flag-blue-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-checkered {
+    background-image: url("flag-checkered-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-checkered {
+    background-image: url("flag-checkered-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-green {
+    background-image: url("flag-green-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-green {
+    background-image: url("flag-green-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-red {
+    background-image: url("flag-red-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-red {
+    background-image: url("flag-red-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-repair {
+    background-image: url("flag-repair-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-repair {
+    background-image: url("flag-repair-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-white {
+    background-image: url("flag-white-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-white {
+    background-image: url("flag-white-right.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-left-yellow {
+    background-image: url("flag-yellow-left.png");
+}
+
+.SIMRacingApps-Widget-FlagsBar-right-yellow {
+    background-image: url("flag-yellow-right.png");
+}
