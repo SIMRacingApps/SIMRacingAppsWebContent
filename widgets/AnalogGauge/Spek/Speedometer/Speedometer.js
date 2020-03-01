@@ -27,7 +27,7 @@
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 16.
  * @author Jeffrey Gilliam
  * @since 1.6
- * @copyright Copyright (C) 2015 - 2019 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','widgets/AnalogGauge/AnalogGauge','css!widgets/AnalogGauge/Spek/Speedometer/Speedometer'],
