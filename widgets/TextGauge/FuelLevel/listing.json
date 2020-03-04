@@ -3,6 +3,7 @@
 "name": "TextGauge-Fuel Level",
 "description": "Text Gauge Fuel Level",
 "description-de": "Textanzeige - Benzinmenge",
+"description-es": "Text Gauge Fuel Level",
 "url": "apps/WidgetLoader?widget=TextGauge/FuelLevel&",
 "icon": "widgets/TextGauge/FuelLevel/icon.png",
 "width": 380,

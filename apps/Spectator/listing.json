@@ -7,6 +7,9 @@
 "description-de": [
     "Nur Zuschauer-Ansicht, Wenn dir jemand zuschaut. Referenz-Fzg. kann nicht ver\u00e4ndert werden. F\u00fcr 43 Fzg."
 ],
+"description-es": [
+    "Spectator View Only When someone else is watching you. Reference Car cannot be changed"
+],
 "url": "apps/Spectator?",
 "icon": "apps/Spectator/icon.png",
 "width": 1280,

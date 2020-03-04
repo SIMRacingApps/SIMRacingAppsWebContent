@@ -9,6 +9,10 @@
     "LED-Leiste mit Anzeige des Schaltzeitpunktes/Drehzahl und Boxengassen-Geschwindigkeit",
     "LED-Leiste mit Anzeige des Schaltzeitpunktes/Drehzahl"
 ],
+"description-es": [
+    "Row of Lights Leading Up to the Shift Point or Pit Road Speed",
+    "Row of Lights Leading Up to the Shift Point"
+],
 "url": "apps/WidgetLoader?widget=ShiftLights&",
 "icon": "widgets/ShiftLights/icon.png",
 "width": 800,

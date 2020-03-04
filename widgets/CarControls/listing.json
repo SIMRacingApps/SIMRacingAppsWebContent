@@ -3,6 +3,7 @@
 "name": "CarControls",
 "description": "Gear / Speed / Clutch / Brake / Throttle / Steering",
 "description-de": "Gang / Geschwindigkeit / Kupplung / Bremse / Gas / Lenkung",
+"description-es": "Gear / Speed / Clutch / Brake / Throttle / Steering",
 "url": "apps/WidgetLoader?widget=CarControls&",
 "icon": "widgets/CarControls/icon.png",
 "width": 800,

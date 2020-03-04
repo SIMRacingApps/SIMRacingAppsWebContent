@@ -3,6 +3,7 @@
 "name": "TextGauge-HYS Charge",
 "description": "Text Gauge HYS Charge",
 "description-de": "Textanzeige - HYS Ladung",
+"description-es": "Text Gauge HYS Charge",
 "url": "apps/WidgetLoader?widget=TextGauge/HYSCharge&",
 "icon": "widgets/TextGauge/HYSCharge/icon.png",
 "width": 380,

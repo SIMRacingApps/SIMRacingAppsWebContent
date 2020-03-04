@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-WaterPressure",
 "description": "Analog Gauge Spek Water Pressure",
 "description-de": "Analoge Rundinstrument-Anzeige - Wasserdruck",
+"description-es": "Analog Gauge Spek Water Pressure",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/WaterPressure&",
 "icon": "widgets/AnalogGauge/Spek/WaterPressure/icon.png",
 "width": 480,

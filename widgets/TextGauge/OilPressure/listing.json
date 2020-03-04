@@ -3,6 +3,7 @@
 "name": "TextGauge-Oil Pressure",
 "description": "Text Gauge Oil Pressure",
 "description-de": "Textanzeige - \u00d6ldruck",
+"description-es": "Text Gauge Oil Pressure",
 "url": "apps/WidgetLoader?widget=TextGauge/OilPressure&",
 "icon": "widgets/TextGauge/OilPressure/icon.png",
 "width": 380,

@@ -3,6 +3,7 @@
 "name": "TextGauge-Oil Level",
 "description": "Text Gauge Oil Level",
 "description-de": "Textanzeige - \u00d6lmenge",
+"description-es": "Text Gauge Oil Level",
 "url": "apps/WidgetLoader?widget=TextGauge/OilLevel&",
 "icon": "widgets/TextGauge/OilLevel/icon.png",
 "width": 380,

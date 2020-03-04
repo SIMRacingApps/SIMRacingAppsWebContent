@@ -9,6 +9,10 @@
     "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur",
     "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur - keine Nachrichten"
 ],
+"description-es": [
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair - No Messages"
+],
 "url": "apps/WidgetLoader?widget=Flags&",
 "icon": "widgets/Flags/icon.png",
 "width": 800,

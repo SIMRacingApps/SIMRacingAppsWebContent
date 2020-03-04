@@ -13,6 +13,12 @@
     "Live TrackMap / Streckenkarte - ohne Hintergrund",
     "Live TrackMap / Streckenkarte - nur Referenz-Fahrzeug und F\u00fchrender"
 ],
+"description-es": [
+    "Track Map - Static Image",
+    "Track Map - Open Street Maps - Real-time",
+    "Track Map - No background",
+    "Track Map - Reference Car and Leader Only"
+],
 "url": "apps/WidgetLoader?widget=TrackMap&",
 "icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-nobackground.png;widgets/TrackMap/icon-reference.png",
 "width": 800,

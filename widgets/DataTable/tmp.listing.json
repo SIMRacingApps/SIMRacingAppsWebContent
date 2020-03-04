@@ -2,6 +2,7 @@
 "name":        ["MessagesRaw"],
 "description": ["Messages Raw"],
 "description-de": ["Messages Raw"],
+"description-es": ["Messages Raw"],
 "doc":         "JavaScriptDoc/sra-data-table.html",
 "url":         "apps/WidgetLoader?widget=DataTable&",
 "icon":        ["widgets/DataTable/MessagesRaw.png"],

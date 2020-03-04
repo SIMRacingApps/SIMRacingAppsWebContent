@@ -9,6 +9,10 @@
     "Schaltblitz/ Geschwindigkeitswarnung, leuchtet auf wenn man schalten sollte oder man zu schnell in der Boxengasse ist",
     "Nur Schaltblitz, leuchtet auf wenn man schalten sollte"
 ],
+"description-es": [
+    "Lights Up When it is Time to Shift and When Speeding on Pit Road",
+    "Lights Up When it is Time to Shift, Only"
+],
 "url": "apps/WidgetLoader?widget=ShiftLight&",
 "icon": "widgets/ShiftLight/icon.png",
 "width": 480,

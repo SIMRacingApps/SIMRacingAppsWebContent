@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-FuelPressure",
 "description": "Analog Gauge Spek Fuel Pressure",
 "description-de": "Analoge Rundinstrument-Anzeige - Benzindruck",
+"description-es": "Analog Gauge Spek Fuel Pressure",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/FuelPressure&",
 "icon": "widgets/AnalogGauge/Spek/FuelPressure/icon.png",
 "width": 480,

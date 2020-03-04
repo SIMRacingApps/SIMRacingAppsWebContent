@@ -3,6 +3,7 @@
 "name": "TextGauge-Speedometer",
 "description": "Text Gauge Speedometer",
 "description-de": "Textanzeige - Geschwindigkeit",
+"description-es": "Text Gauge Speedometer",
 "url": "apps/WidgetLoader?widget=TextGauge/Speedometer&",
 "icon": "widgets/TextGauge/Speedometer/icon.png",
 "width": 380,

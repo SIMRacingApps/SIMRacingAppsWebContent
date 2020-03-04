@@ -3,6 +3,7 @@
 "name": "TextGauge-Tachometer",
 "description": "Text Gauge Tachometer",
 "description-de": "Textanzeige - Drehzahlmesser",
+"description-es": "Text Gauge Tachometer",
 "url": "apps/WidgetLoader?widget=TextGauge/Tachometer&",
 "icon": "widgets/TextGauge/Tachometer/icon.png",
 "width": 380,

@@ -3,6 +3,7 @@
 "name": "BarGauge-WaterTemp",
 "description": "Bar Gauge Water Temperature",
 "description-de": "Balken-Anzeige - Wassertemperatur",
+"description-es": "Bar Gauge Water Temperature",
 "url": "apps/WidgetLoader?widget=BarGauge/WaterTemp&",
 "icon": "widgets/BarGauge/WaterTemp/icon.png",
 "width": 800,

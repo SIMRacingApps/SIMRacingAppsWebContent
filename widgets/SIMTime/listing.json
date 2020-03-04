@@ -4,6 +4,8 @@
                 "Displays the Local Time of the SIM with Time Zone of the track"],
 "description-de": ["Lokale Zeit in der SIM",
                    "Lokale Zeit in der SIM mit Zeitzone der Strecke"],
+"description-es": ["Displays the Local Time of the SIM",
+                "Displays the Local Time of the SIM with Time Zone of the track"],
 "doc":         "JavaScriptDoc/sra-s-i-m-time.html",
 "url":         "apps/WidgetLoader?widget=SIMTime&",
 "icon":        ["widgets/SIMTime/icon.png",

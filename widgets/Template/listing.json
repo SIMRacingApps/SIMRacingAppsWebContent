@@ -2,6 +2,7 @@
 "name":        "Template",
 "description": "Template",
 "description-de": "Vorlage/Muster",
+"description-es": "Modelo",
 "doc":         "widgets/Template/doc.html",
 "url":         "apps/WidgetLoader?widget=Template&",
 "icon":        "widgets/Template/icon.png",

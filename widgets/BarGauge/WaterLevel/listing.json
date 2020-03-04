@@ -3,6 +3,7 @@
 "name": "BarGauge-WaterLevel",
 "description": "Bar Gauge Water Level",
 "description-de": "Balken-Anzeige - Wassermenge",
+"description-es": "Bar Gauge Water Level",
 "url": "apps/WidgetLoader?widget=BarGauge/WaterLevel&",
 "icon": "widgets/BarGauge/WaterLevel/icon.png",
 "width": 800,

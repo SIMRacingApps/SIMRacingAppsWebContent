@@ -3,6 +3,7 @@
 "name": "TextGauge-WaterPressure",
 "description": "Text Gauge Water Pressure",
 "description-de": "Textanzeige - Wasserdruck",
+"description-es": "Text Gauge Water Pressure",
 "url": "apps/WidgetLoader?widget=TextGauge/WaterPressure&",
 "icon": "widgets/TextGauge/WaterPressure/icon.png",
 "width": 380,

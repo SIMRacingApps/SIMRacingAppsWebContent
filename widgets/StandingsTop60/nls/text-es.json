@@ -1,0 +1,20 @@
+{
+    "STANDINGSTOP60": "STANDINGS-TOP60",
+    "SOF":            "SOF",
+    "OF":             "of",
+    "LAP":            "Lap",
+    "POS":            "P",
+    "POSCLASS":       "C",
+    "POSQUAL":        "Q",
+    "#":              "#",
+    "NAME":           "NAME",
+    "BLINK":          "Blk",
+    "RATING":         "RATING",
+    "LAP":            "LAP",
+    "BEHIND":         "BEHIND",
+    "BEST":           "BEST",
+    "LAST":           "LAST",
+    "POSDIFF":        "C\u0394",
+    "PIT":            "PIT",
+    "RUN":            "RUN"
+}

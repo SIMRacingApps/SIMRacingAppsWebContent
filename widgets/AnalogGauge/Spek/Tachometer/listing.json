@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-Tachometer",
 "description": "Analog Gauge Spek Tachometer",
 "description-de": "Analoge Rundinstrument-Anzeige - Drehzahlmesser",
+"description-es": "Analog Gauge Spek Tachometer",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/Tachometer&",
 "icon": "widgets/AnalogGauge/Spek/Tachometer/icon.png",
 "width": 480,

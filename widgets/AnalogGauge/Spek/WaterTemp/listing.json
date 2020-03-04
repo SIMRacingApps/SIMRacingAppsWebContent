@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-WaterTemp",
 "description": "Analog Gauge Spek Water Temperature",
 "description-de": "Analoge Rundinstrument-Anzeige - Wassertemperatur",
+"description-es": "Analog Gauge Spek Water Temperature",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/WaterTemp&",
 "icon": "widgets/AnalogGauge/Spek/WaterTemp/icon.png",
 "width": 480,

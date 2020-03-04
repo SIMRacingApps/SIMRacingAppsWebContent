@@ -3,6 +3,7 @@
 "name": "BarGauge-Speedometer",
 "description": "Bar Gauge Speedometer",
 "description-de": "Balken-Anzeige - Geschwindigkeit",
+"description-es": "Bar Gauge Speedometer",
 "url": "apps/WidgetLoader?widget=BarGauge/Speedometer&",
 "icon": "widgets/BarGauge/Speedometer/icon.png",
 "width": 800,

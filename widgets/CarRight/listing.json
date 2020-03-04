@@ -3,6 +3,7 @@
 "name": "CarRight;CarRight2",
 "description": "Indicator for car(s) to the right of you;Second Indicator for car(s) to the right of you",
 "description-de": "Anzeige f\u00fcr Fahrzeug rechts;Zweite Anzeige f\u00fcr Fahrzeug rechts",
+"description-es": "Indicator for car(s) to the right of you;Second Indicator for car(s) to the right of you",
 "url": "apps/WidgetLoader?widget=CarRight&;apps/WidgetLoader?widget=CarRight&",
 "icon": "widgets/CarRight/icon.png",
 "width": 300,

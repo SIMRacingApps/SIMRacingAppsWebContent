@@ -3,6 +3,7 @@
 "name": "TextGauge-Brake Pressure",
 "description": "Text Gauge Brake Pressure",
 "description-de": "Textanzeige - Bremsdruck",
+"description-es": "Text Gauge Brake Pressure",
 "url": "apps/WidgetLoader?widget=TextGauge/BrakePressure&",
 "icon": "widgets/TextGauge/BrakePressure/icon.png",
 "width": 380,

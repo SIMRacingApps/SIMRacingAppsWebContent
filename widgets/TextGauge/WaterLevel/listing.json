@@ -3,6 +3,7 @@
 "name": "TextGauge-Water Level",
 "description": "Text Gauge Water Level",
 "description-de": "Textanzeige - Wassermenge",
+"description-es": "Text Gauge Water Level",
 "url": "apps/WidgetLoader?widget=TextGauge/WaterLevel&",
 "icon": "widgets/TextGauge/WaterLevel/icon.png",
 "width": 380,

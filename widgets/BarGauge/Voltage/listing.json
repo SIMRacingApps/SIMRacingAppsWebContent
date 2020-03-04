@@ -3,6 +3,7 @@
 "name": "BarGauge-Voltage",
 "description": "Bar Gauge Voltage",
 "description-de": "Balken-Anzeige - Batteriespannung / Volt",
+"description-es": "Bar Gauge Voltage",
 "url": "apps/WidgetLoader?widget=BarGauge/Voltage&",
 "icon": "widgets/BarGauge/Voltage/icon.png",
 "width": 800,

@@ -9,6 +9,10 @@
     "CrewChief - Gro\u00df, keine Boxen-Befehle",
     "CrewChief - Gro\u00df, sendet Boxen-Befehle an die SIM"
 ],
+"description-es": [
+    "CrewChief-Large View Only, No Pit Commands",
+    "Will Send Pit Commands to the SIM"
+],
 "url": "apps/CrewChief-Large?",
 "icon": "apps/CrewChief-Large/icon.png;apps/CrewChief-Large/icon.png",
 "width": 1280,

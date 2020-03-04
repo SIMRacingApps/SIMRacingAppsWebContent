@@ -3,6 +3,7 @@
 "name": "StreamingOverlay",
 "description": "Streaming Overlay 1920x1080. Client must support transparency.",
 "description-de": "Streaming-Anzeige/Overlay 1920x1080. Client muss transparenz unterst\u00fctzen.",
+"description-es": "Streaming Overlay 1920x1080. Client must support transparency.",
 "url": "apps/StreamingOverlay?",
 "icon": "apps/StreamingOverlay/icon.png",
 "width": 1920,

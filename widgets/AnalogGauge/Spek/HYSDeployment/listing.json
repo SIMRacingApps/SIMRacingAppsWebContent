@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-HYSDeployment",
 "description": "Analog Gauge Spek HYS Deployment Available",
 "description-de": "Analoge Rundinstrument-Anzeige - HYS Einsatz verf\u00fcgbar",
+"description-es": "Analog Gauge Spek HYS Deployment Available",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/HYSDeployment&",
 "icon": "widgets/AnalogGauge/Spek/HYSDeployment/icon.png",
 "width": 480,

@@ -3,6 +3,7 @@
 "name": "BarGauge-FuelLevel",
 "description": "Bar Gauge Fuel Level",
 "description-de": "Balken-Anzeige - Benzinmenge",
+"description-es": "Bar Gauge Fuel Level",
 "url": "apps/WidgetLoader?widget=BarGauge/FuelLevel&",
 "icon": "widgets/BarGauge/FuelLevel/icon.png",
 "width": 800,

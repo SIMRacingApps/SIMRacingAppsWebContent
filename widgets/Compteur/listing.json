@@ -6,6 +6,9 @@
 "description-de": ["Zeigt Fahrereingaben an",
                    "Zeigt Fahrereingaben an, F1-Version"
 ],
+"description-es": ["Display various driver inputs",
+                "Display various driver inputs, F1 version"
+],
 "url": "apps/WidgetLoader?widget=Compteur&",
 "doc": "JavaScriptDoc/sra-compteur.html",
 "icon": ["widgets/Compteur/icon.png","widgets/Compteur/iconF1.png"],

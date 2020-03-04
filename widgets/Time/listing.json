@@ -10,6 +10,11 @@
     "Lokale Uhrzeit mit Zeitzone",
     "Uhrzeit in GMT/UTC"
 ],
+"description-es": [
+    "Displays the Current Local Time",
+    "Displays the Current Local Time with TimeZone",
+    "Displays the Time in GMT/UTC"
+],
 "doc":         "JavaScriptDoc/sra-time.html",
 "url":         "apps/WidgetLoader?widget=Time&",
 "icon":        ["widgets/Time/icon.png","widgets/Time/icon-TZ.png","widgets/Time/icon-GMT.png"],

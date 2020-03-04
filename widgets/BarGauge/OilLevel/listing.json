@@ -3,6 +3,7 @@
 "name": "BarGauge-OilLevel",
 "description": "Bar Gauge Oil Level",
 "description-de": "Balken-Anzeige - \u00d6lmenge",
+"description-es": "Bar Gauge Oil Level",
 "url": "apps/WidgetLoader?widget=BarGauge/OilLevel&",
 "icon": "widgets/BarGauge/OilLevel/icon.png",
 "width": 800,

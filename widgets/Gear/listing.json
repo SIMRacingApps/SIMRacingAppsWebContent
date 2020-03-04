@@ -3,6 +3,7 @@
 "name": "Gear",
 "description": "Gear",
 "description-de": "Ganganzeige",
+"description-es": "Gear",
 "url": "apps/WidgetLoader?widget=Gear&",
 "icon": "widgets/Gear/icon.png",
 "width": 480,

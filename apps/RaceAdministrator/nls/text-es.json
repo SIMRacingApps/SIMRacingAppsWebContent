@@ -1,0 +1,21 @@
+{
+    "SESSIONCOMMANDS":          "Session Commands",
+    "ADVANCE":                  "Advance Session",
+    "ALLCHATON":                "All Chat On",
+    "ALLCHATOFF":               "All Chat Off",
+    "CAUTION":                  "Caution",
+    "DRIVERCOMMANDS":           "Driver Commands",
+    "DRIVERADMINON":            "Admin On",
+    "DRIVERADMINOFF":           "Admin Off",
+    "DRIVERCHATON":             "Chat On",
+    "DRIVERCHATOFF":            "Chat Off",
+    "DRIVERREMOVE":             "Remove",
+    "DRIVERWAVEAROUND":         "Wave Around",
+    "DRIVERBLACK0":             "Black Flag Stop/Go",
+    "DRIVERBLACK15":            "Black Flag 15 Sec",
+    "DRIVERBLACKLAP":           "Black Flag 1 Lap",
+    "DRIVERDQ":                 "Disqualify",
+    "DRIVEREOL":                "End of Line",            
+    "DRIVERCLEARALLPENALTIES":  "Clear All Penalties",
+    "SENTCOMMANDS":             "Sent Commands"
+}

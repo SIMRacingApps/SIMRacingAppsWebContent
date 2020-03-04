@@ -1,0 +1,19 @@
+{
+    "BEHIND":              "Behind",
+    "BEST":                "Best",
+    "CAUTIONS":            "Caution(s)",
+    "ELAPSED":             "Elapsed",
+    "FUELLAPS":            "Fuel Laps",
+    "FUELRUN":             "Fuel Run",
+    "FUELPERLAP":          "FuelPerLap",
+    "LAP":                 "Lap",
+    "LAPRUN":              "Lap/Run",
+    "OF":                  "of",
+    "LAST":                "Last",
+    "PITLAPTIME":          "Pit Lap/Time",
+    "POSITIONCLASS":       "Position/Class",
+    "PITROADSPEEDLIMIT":   "Pit Road Speed Limit",
+    "REMAINING":           "Remaining",
+    "TOGO":                "To Go",
+    "TRACKTEMP":           "Track Temp"
+}

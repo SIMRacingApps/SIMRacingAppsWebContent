@@ -1,0 +1,19 @@
+{
+	"TIRES4":              "4<br />TIRES",
+	"BRAKEBIASADJ":        "Brake Bias Adj:",
+	"TIRES4GAS":           "FUEL &<br />4 TIRES",
+	"LEFTS":               "<br />LEFTS",
+    "LEFTSGAS":            "FUEL &<br />LEFTS",
+    "REPAIRS":             "Repairs (opt)",
+    "RIGHTS":              "<br />RIGHTS",
+    "RIGHTSGAS":           "FUEL &<br />RIGHTS",
+    "TAPE":                "Tape:",
+    "WEDGEADJ":            "Wedge Adj LR/RR:",
+    "FRONTWING":           "Front Wing:",
+    "FRONTFLAP":           "Front Flap:",
+    "REARWING":            "Rear Wing:",
+    "WINDSHIELD":          "Windshield Tearoff:",
+    "FASTREPAIRS":         "Fast Repairs:",
+    "Y":                   "Y",
+    "N":                   "N"
+}

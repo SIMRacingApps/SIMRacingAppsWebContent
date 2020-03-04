@@ -3,6 +3,7 @@
 "name": "CarNumber",
 "description": "Car Number using Colors from the SIM",
 "description-de": "Fahrzeug-Nummer mit Farben aus der SIM",
+"description-es": "Car Number using Colors from the SIM",
 "url": "apps/WidgetLoader?widget=CarNumber&",
 "icon": "widgets/CarNumber/icon.png",
 "width": 800,

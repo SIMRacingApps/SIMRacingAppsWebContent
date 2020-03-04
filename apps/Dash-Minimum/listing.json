@@ -9,6 +9,10 @@
     "Kleines Armaturenbrett f\u00fcr Tablets/Handys, keine Boxen-Befehle",
     "Kleines Armaturenbrett f\u00fcr Tablets/Handys, mit Boxen-Befehlen"
 ],
+"description-es": [
+    "Minimum Dash for Phones, No Pit Commands",
+    "Minimum Dash for Phones, With Pit Commands"
+],
 "url": "apps/Dash-Minimum?",
 "icon": "apps/Dash-Minimum/icon.png;apps/Dash-Minimum/icon.png",
 "width": 960,

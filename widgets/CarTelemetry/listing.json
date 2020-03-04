@@ -11,6 +11,10 @@
                 "Zeigt die Nummer des Referenz-Fzg, Fahrer-Name, Gas, Bremse, Geschwindigkeit, Drehzahl",    
                 "Zeigt die Nummer des F\u00fchrenden, Fahrer-Name, Gas, Bremse, Geschwindigkeit, Drehzahl"    
                ],
+"description-es": [
+                "Shows the Reference Car's Number, Drivers Name, Throttle, Brake, MPH, RPM",    
+                "Shows the Leader's Number, Drivers Name, Throttle, Brake, MPH, RPM"    
+               ],
 "doc":         "JavaScriptDoc/sra-car-telemetry.html",
 "url":         "apps/WidgetLoader?widget=CarTelemetry&",
 "icon":        "widgets/CarTelemetry/icon.png",

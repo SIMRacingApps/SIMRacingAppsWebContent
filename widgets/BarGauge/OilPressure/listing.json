@@ -3,6 +3,7 @@
 "name": "BarGauge-OilPressure",
 "description": "Bar Gauge Oil Pressure",
 "description-de": "Balken-Anzeige - \u00d6ldruck",
+"description-es": "Bar Gauge Oil Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/OilPressure&",
 "icon": "widgets/BarGauge/OilPressure/icon.png",
 "width": 800,

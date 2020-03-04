@@ -3,6 +3,7 @@
 "name": "BarGauge-Tachometer",
 "description": "Bar Gauge Tachometer",
 "description-de": "Balken-Anzeige - Drehzahlmesser",
+"description-es": "Bar Gauge Tachometer",
 "url": "apps/WidgetLoader?widget=BarGauge/Tachometer&",
 "icon": "widgets/BarGauge/Tachometer/icon.png",
 "width": 800,

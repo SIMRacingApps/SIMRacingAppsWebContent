@@ -1,7 +1,9 @@
 {
 "doc": "JavaScriptDoc/sra-s-r-a-logo-u-r-l.html",
 "name": "SRALogoURL",
-"description": "Das SIMRacingApps Logo mit URL",
+"description": "SIMRacingApps Logo with URL",
+"description-de": "Das SIMRacingApps Logo mit URL",
+"description-es": "SIMRacingApps Logo with URL",
 "url": "apps/WidgetLoader?widget=SRALogoURL&",
 "icon": "widgets/SRALogoURL/icon.png",
 "width": 869,

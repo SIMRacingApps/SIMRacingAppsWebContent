@@ -8,6 +8,10 @@
     "Kleine Anzeige der Reihenfolge deiner Klasse",
     "Kleine Anzeige der Reihenfolge deiner Klasse, mit kurzen Namen"
 ],
+"description-es": [
+    "Standings Banner of your class like seen on TV",
+    "Standings Banner of your class like seen on TV with Shortened Name"
+],
 "doc":         "JavaScriptDoc/sra-standings-banner-class.html",
 "url":         "apps/WidgetLoader?widget=StandingsBannerClass&",
 "icon":        "widgets/StandingsBannerClass/icon.png",

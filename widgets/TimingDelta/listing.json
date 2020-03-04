@@ -3,6 +3,7 @@
 "name": "TimingDelta",
 "description": "Shows Timing Relative to Best Lap in the Session",
 "description-de": "Zeigt Differenz/Delta zur besten Runde der Session",
+"description-es": "Shows Timing Relative to Best Lap in the Session",
 "url": "apps/WidgetLoader?widget=TimingDelta&",
 "icon": "widgets/TimingDelta/icon.png",
 "width": 800,

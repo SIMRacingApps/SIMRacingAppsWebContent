@@ -3,6 +3,7 @@
 "name": "TextGauge-Fuel Pressure",
 "description": "Text Gauge Fuel Pressure",
 "description-de": "Textanzeige - Benzindruck",
+"description-es": "Text Gauge Fuel Pressure",
 "url": "apps/WidgetLoader?widget=TextGauge/FuelPressure&",
 "icon": "widgets/TextGauge/FuelPressure/icon.png",
 "width": 380,

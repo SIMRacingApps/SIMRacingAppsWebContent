@@ -8,6 +8,10 @@
     "Kleine Anzeige der Reihenfolge wie im TV",
     "Kleine Anzeige der Reihenfolge wie im TV, mit kurzen Namen"
 ],
+"description-es": [
+    "Standings Banner like seen on TV",
+    "Standings Banner like seen on TV with Shortened Name"
+],
 "doc":         "JavaScriptDoc/sra-standings-banner.html",
 "url":         "apps/WidgetLoader?widget=StandingsBanner&",
 "icon":        "widgets/StandingsBanner/icon.png",

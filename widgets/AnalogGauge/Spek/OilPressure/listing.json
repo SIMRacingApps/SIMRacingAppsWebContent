@@ -3,6 +3,7 @@
 "name": "AnalogGauge/Spek/OilPressure",
 "description": "Analog Gauge Spek Oil Pressure",
 "description-de": "Analoge Rundinstrument-Anzeige - \u00d6ldruck",
+"description-es": "Analog Gauge Spek Oil Pressure",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/OilPressure&",
 "icon": "widgets/AnalogGauge/Spek/OilPressure/icon.png",
 "width": 480,

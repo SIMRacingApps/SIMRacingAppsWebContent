@@ -2,6 +2,7 @@
 "name":        "ReplayControl",
 "description": "Controls the replay. Play, Pause, Fast Forward, Rewind, etc.",
 "description-de": "Replay-Bedienung/Kontrolle. Play, Pause, schnell vor, Runde zur\u00fcck, etc.",
+"description-es": "Controls the replay. Play, Pause, Fast Forward, Rewind, etc.",
 "doc":         "JavaScriptDoc/sra-replay-control.html",
 "url":         "apps/WidgetLoader?widget=ReplayControl&",
 "icon":        "widgets/ReplayControl/icon.png",

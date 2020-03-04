@@ -3,6 +3,7 @@
 "name": "BarGauge-FuelPressure",
 "description": "Bar Gauge Fuel Pressure",
 "description-de": "Balken-Anzeige - Benzindruck",
+"description-es": "Bar Gauge Fuel Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/FuelPressure&",
 "icon": "widgets/BarGauge/FuelPressure/icon.png",
 "width": 800,

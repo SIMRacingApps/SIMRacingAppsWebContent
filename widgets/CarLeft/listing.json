@@ -3,6 +3,7 @@
 "name": "CarLeft;CarLeft2",
 "description": "Indicator for car(s) to the left of you;Second Indicator for car(s) to the left of you",
 "description-de": "Anzeige f\u00fcr Fahrzeug links;Zweite Anzeige f\u00fcr Fahrzeug links",
+"description-es": "Indicator for car(s) to the left of you;Second Indicator for car(s) to the left of you",
 "url": "apps/WidgetLoader?widget=CarLeft&;apps/WidgetLoader?widget=CarLeft&",
 "icon": "widgets/CarLeft/icon.png",
 "width": 300,

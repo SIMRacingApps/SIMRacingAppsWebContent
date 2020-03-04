@@ -8,6 +8,10 @@
     "Kleine Anzeige der Reihenfolge vertikal/senkrecht deiner Klasse",
     "Kleine Anzeige der Reihenfolge vertikal/senkrecht deiner Klasse, mit kurzen Namen"
 ],
+"description-es": [
+    "Standings Banner Vertical for your class like seen on TV",
+    "Standings Banner Vertical for your class like seen on TV with Shortened Name"
+],
 "doc":         "JavaScriptDoc/sra-standings-banner-class-vertical.html",
 "url":         "apps/WidgetLoader?widget=StandingsBannerClassVertical&",
 "icon":        "widgets/StandingsBannerClassVertical/icon.png",

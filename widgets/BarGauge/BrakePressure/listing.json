@@ -3,6 +3,7 @@
 "name": "BarGauge-BrakePressure",
 "description": "Bar Gauge Brake Pressure",
 "description-de": "Balken-Anzeige - Bremsdruck",
+"description-es": "Bar Gauge Brake Pressure",
 "url": "apps/WidgetLoader?widget=BarGauge/BrakePressure&",
 "icon": "widgets/BarGauge/BrakePressure/icon.png",
 "width": 800,

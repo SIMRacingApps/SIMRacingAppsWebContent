@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-FuelLevel",
 "description": "Analog Gauge Spek Fuel Level",
 "description-de": "Analoge Rundinstrument-Anzeige - Benzinmenge",
+"description-es": "Analog Gauge Spek Fuel Level",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/FuelLevel&",
 "icon": "widgets/AnalogGauge/Spek/FuelLevel/icon.png",
 "width": 480,

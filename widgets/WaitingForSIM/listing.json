@@ -3,6 +3,7 @@
 "name": "WaitingForSIM",
 "description": "Waiting For SIM to Start",
 "description-de": "Warte auf Start der SIM-Einblendung - klicke hier f\u00fcr mehr Infos",
+"description-es": "Waiting For SIM to Start",
 "url": "apps/WidgetLoader?widget=WaitingForSIM&",
 "icon": "widgets/WaitingForSIM/icon.png",
 "width": 1920,

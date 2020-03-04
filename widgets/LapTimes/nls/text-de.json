@@ -1,0 +1,10 @@
+{
+    "BEST":            "Best Lap",
+    "CURRENT":         "Current Lap",
+    "LAST":            "Last Lap",
+    "RUNNINGAVERAGE":  "Running Average Since Pitting Lap(s)",
+    "SINCEPITTING":    "Average Since Pitting Lap(s)",
+    "LAPTIMES":        "Lap Times",
+    "NUMBER":          "#",
+    "LAPS":            "Lap(s)"
+}

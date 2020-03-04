@@ -3,6 +3,7 @@
 "name": "TextGauge-HYS Deployment",
 "description": "Text Gauge - HYS Deployment Available",
 "description-de": "Textanzeige HYS Einsatz verf\u00fcgbar",
+"description-es": "Text Gauge - HYS Deployment Available",
 "url": "apps/WidgetLoader?widget=TextGauge/HYSDeployment&",
 "icon": "widgets/TextGauge/HYSDeployment/icon.png",
 "width": 380,

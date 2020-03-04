@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-BrakePressure",
 "description": "Analog Gauge Spek Brake Pressure",
 "description-de": "Analoge Rundinstrument-Anzeige - Bremsdruck",
+"description-es": "Analog Gauge Spek Brake Pressure",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/BrakePressure&",
 "icon": "widgets/AnalogGauge/Spek/BrakePressure/icon.png",
 "width": 480,

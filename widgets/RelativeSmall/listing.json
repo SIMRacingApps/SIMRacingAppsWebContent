@@ -9,6 +9,10 @@
     "Zeigt Fahrer in der N\u00e4he, kleine Anzeige",
     "Zeigt Fahrer in der N\u00e4he, ausgehend von deiner Position (auf der Strecke und Boxengasse), kleine Anzeige"
 ],
+"description-es": [
+    "Shows Drivers Nearby for a small screen",
+    "Shows Drivers Nearby for a small screen based on your location (On Track or Pit Road)"
+],
 "url": "apps/WidgetLoader?widget=RelativeSmall&",
 "icon": "widgets/Relative/icon.png",
 "width": 800,

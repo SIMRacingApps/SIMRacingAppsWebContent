@@ -12,6 +12,10 @@
     "Nur CrewChief Ansicht, keine Boxen-Befehle",
     "CrewChief, sendet Boxen-Befehle an die SIM"
 ],
+"description-es": [
+    "CrewChief View Only, No Pit Commands",
+    "CrewChief Will Send Pit Commands to the SIM"
+],
 "url": "apps/CrewChief?",
 "icon": [
     "apps/CrewChief/icon.png",

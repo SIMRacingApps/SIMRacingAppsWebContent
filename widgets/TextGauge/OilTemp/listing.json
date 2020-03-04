@@ -3,6 +3,7 @@
 "name": "TextGauge-Oil Temperature",
 "description": "Text Gauge Oil Temperature",
 "description-de": "Textanzeige - \u00d6ltemperatur",
+"description-es": "Text Gauge Oil Temperature",
 "url": "apps/WidgetLoader?widget=TextGauge/OilTemp&",
 "icon": "widgets/TextGauge/OilTemp/icon.png",
 "width": 380,

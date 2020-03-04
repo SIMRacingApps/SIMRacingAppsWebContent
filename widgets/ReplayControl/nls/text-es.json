@@ -1,0 +1,14 @@
+{
+    "PREVFRAME":        "Previous Frame",
+    "NEXTFRAME":        "Next Frame",
+    "PREVLAP":          "Prev Lap",
+    "NEXTLAP":          "Next Lap",
+    "PREVCRASH":        "Previous Crash",
+    "NEXTCRASH":        "Next Crash",
+    "START":            "Start of Session",
+    "END":              "End of Session",
+    "PREVSESSION":      "Previous Session",
+    "NEXTSESSION":      "Next Session",
+    "SKIPBACKWARDS":    "Skip Backwards",
+    "SKIPFORWARDS":     "Skip Forwards"
+}

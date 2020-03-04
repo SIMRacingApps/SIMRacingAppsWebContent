@@ -3,6 +3,7 @@
 "name": "CarImage",
 "description": "The image of your car from the SIM",
 "description-de": "Bild von deinem Fahrzeug in der SIM",
+"description-es": "The image of your car from the SIM",
 "url": "apps/WidgetLoader?widget=CarImage&",
 "icon": "widgets/CarImage/icon.png",
 "width": 800,

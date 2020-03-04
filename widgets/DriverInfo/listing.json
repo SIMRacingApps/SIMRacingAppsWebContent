@@ -30,6 +30,16 @@
     "Info \u00fcber das Fzg. HINTER dir / Klasse",
     "Info \u00fcber den Fahrer der SENDET/ spricht"
 ],
+"description-es": [
+    "Info on the Current REFERENCE Car",
+    "Info on ME",
+    "Info on the LEADER",
+    "Info on the Car AHEAD Relative to your Location",
+    "Info on the car BEHIND Relative to your Location",
+    "Info on the Car AHEAD by Position in Class",
+    "Info on the car BEHIND by Position in Class",
+    "Info on the Driver TRANSMITTING"
+],
 "url": "apps/WidgetLoader?widget=DriverInfo&",
 "icon": "widgets/DriverInfo/icon.png",
 "width": 800,

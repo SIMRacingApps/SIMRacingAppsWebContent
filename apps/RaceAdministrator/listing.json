@@ -3,6 +3,7 @@
 "name": "RaceAdministrator",
 "description": "Race Administrator For Issuing Admin Commands with a Click of a Button",
 "description-de": "Renn-Administrator, f\u00fcr ein schnelles und einfaches senden von Admin-Befehlen",
+"description-es": "Race Administrator For Issuing Admin Commands with a Click of a Button",
 "url": "apps/RaceAdministrator?",
 "icon": "apps/RaceAdministrator/icon.png",
 "width": 800,

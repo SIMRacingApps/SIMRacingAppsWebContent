@@ -19,6 +19,12 @@
     "Rechter Vorderreifen - Info",
     "Rechter Hinterreifen - Info"
 ],
+"description-es": [
+    "Left Front Tire Measurements",
+    "Left Rear Tire Measurements",
+    "Right Front Tire Measurements",
+    "Right Rear Tire Measurements"
+],
 "url": "apps/WidgetLoader?widget=TireMeasurements&",
 "icon": "widgets/TireMeasurements/icon.png",
 "width": 800,

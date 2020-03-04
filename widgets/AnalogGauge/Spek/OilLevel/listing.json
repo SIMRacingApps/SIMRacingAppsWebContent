@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-OilLevel",
 "description": "Analog Gauge Spek Oil Level",
 "description-de": "Analoge Rundinstrument-Anzeige - \u00d6lmenge",
+"description-es": "Analog Gauge Spek Oil Level",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/OilLevel&",
 "icon": "widgets/AnalogGauge/Spek/OilLevel/icon.png",
 "width": 480,

@@ -3,6 +3,7 @@
 "name": "LapTimes",
 "description": "Displays Current Lap Times", 
 "description-de": "Rundenzeiten", 
+"description-es": "Displays Current Lap Times", 
 "url": "apps/WidgetLoader?widget=LapTimes&",
 "icon": "widgets/LapTimes/icon.png",
 "width": 420,

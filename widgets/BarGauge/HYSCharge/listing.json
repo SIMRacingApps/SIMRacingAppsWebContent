@@ -3,6 +3,7 @@
 "name": "BarGauge-HYSCharge",
 "description": "Bar Gauge HYS Charge",
 "description-de": "Balken-Anzeige - HYS Ladung",
+"description-es": "Bar Gauge HYS Charge",
 "url": "apps/WidgetLoader?widget=BarGauge/HYSCharge&",
 "icon": "widgets/BarGauge/HYSCharge/icon.png",
 "width": 800,

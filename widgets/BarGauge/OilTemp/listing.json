@@ -3,6 +3,7 @@
 "name": "BarGauge-OilTemp",
 "description": "Bar Gauge Oil Temperature",
 "description-de": "Balken-Anzeige - \u00d6ltemperatur",
+"description-es": "Bar Gauge Oil Temperature",
 "url": "apps/WidgetLoader?widget=BarGauge/OilTemp&",
 "icon": "widgets/BarGauge/OilTemp/icon.png",
 "width": 800,

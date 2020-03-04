@@ -3,6 +3,7 @@
 "name": "GForce",
 "description": "Shows your G Forces",
 "description-de": "Zeigt deine G-Kr\u00E4fte",
+"description-es": "Shows your G Forces",
 "url": "apps/WidgetLoader?widget=GForce&",
 "icon": "widgets/GForce/icon.png",
 "width": 480,

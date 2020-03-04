@@ -3,6 +3,7 @@
 "name": "RadioControl",
 "description": "Change Channels, Delete Channels, Control Radio",
 "description-de": "\u00c4ndere Kan\u00e4le, l\u00f6sche Kan\u00e4le, Radio/Funk-Steuerung",
+"description-es": "Change Channels, Delete Channels, Control Radio",
 "url": "apps/WidgetLoader?widget=RadioControl&",
 "icon": "widgets/RadioControl/icon.png",
 "width": 480,

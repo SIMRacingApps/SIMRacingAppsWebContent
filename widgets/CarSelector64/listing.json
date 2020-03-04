@@ -9,6 +9,10 @@
     "Mache ein Fahrzeug zum Referenz-Fzg. 64 Fahrzeuge ausw\u00e4hlbar.",
     "Mache ein Fahrzeug zum Referenz-Fzg und fokussiere die Kamera darauf. 64 Fzg ausw\u00e4hlbar."
 ],
+"description-es": [
+    "Makes Any Car the Reference Car. 64 Cars Selectable.",
+    "Makes Any Car the Reference Car and changes the Camera to focus on that car. 64 Cars Selectable."
+],
 "url": "apps/WidgetLoader?widget=CarSelector64&",
 "icon": "widgets/CarSelector64/icon.png",
 "width": 490,

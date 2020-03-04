@@ -3,6 +3,7 @@
 "name": "SteeringWheel",
 "description": "Steering Wheel",
 "description-de": "Lenkrad",
+"description-es": "Steering Wheel",
 "url": "apps/WidgetLoader?widget=SteeringWheel&",
 "icon": "widgets/SteeringWheel/icon.png",
 "width": 480,

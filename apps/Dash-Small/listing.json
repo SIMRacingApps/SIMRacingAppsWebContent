@@ -9,6 +9,10 @@
     "Armaturenbrett, keine Boxen-Befehle",
     "Armaturenbrett, mit Boxen-Befehlen"
 ],
+"description-es": [
+    "Smaller Dash for Phones, No Pit Commands",
+    "Smaller Dash for Phones, With Pit Commands"
+],
 "url": "apps/Dash-Small?",
 "icon": "apps/Dash-Small/icon.png;apps/Dash-Small/icon.png",
 "width": 1280,

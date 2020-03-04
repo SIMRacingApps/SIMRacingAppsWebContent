@@ -3,6 +3,7 @@
 "name": "Pedals",
 "description": "Clutch / Brake / Throttle",
 "description-de": "Kupplung / Bremse / Gas",
+"description-es": "Clutch / Brake / Throttle",
 "url": "apps/WidgetLoader?widget=Pedals&",
 "icon": "widgets/Pedals/icon.png",
 "width": 480,

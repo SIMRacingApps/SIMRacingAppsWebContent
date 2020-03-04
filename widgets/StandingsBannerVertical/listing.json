@@ -8,6 +8,10 @@
     "Kleine Anzeige der Reihenfolge vertikal/senkrecht",
     "Kleine Anzeige der Reihenfolge vertikal/senkrecht, mit kurzen Namen"
 ],
+"description-es": [
+    "Standings Banner Vertical like seen on TV",
+    "Standings Banner Vertical like seen on TV with Shortened Name"
+],
 "doc":         "JavaScriptDoc/sra-standings-banner-vertical.html",
 "url":         "apps/WidgetLoader?widget=StandingsBannerVertical&",
 "icon":        "widgets/StandingsBannerVertical/icon.png",

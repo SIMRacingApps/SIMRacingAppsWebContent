@@ -3,6 +3,7 @@
 "name": "InCarAdjustments",
 "description": "In-Car Adjustments",
 "description-de": "Einstellungen im Fahrzeug",
+"description-es": "In-Car Adjustments",
 "url": "apps/WidgetLoader?widget=InCarAdjustments&",
 "icon": "widgets/InCarAdjustments/icon.png",
 "width":  580,

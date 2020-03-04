@@ -2,6 +2,7 @@
 "name":        "CameraSelector",
 "description": "Selects a camera with replay controls",
 "description-de": "Kamera-Auswahl mit Replay-Kontrolle/Bedienung",
+"description-es": "Selects a camera with replay controls",
 "doc":         "JavaScriptDoc/sra-camera-selector.html",
 "url":         "apps/WidgetLoader?widget=CameraSelector&",
 "icon":        "widgets/CameraSelector/icon.png",

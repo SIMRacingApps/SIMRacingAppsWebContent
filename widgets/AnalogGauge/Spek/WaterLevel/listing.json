@@ -3,6 +3,7 @@
 "name": "AnalogGauge-Spek-WaterLevel",
 "description": "Analog Gauge Spek Water Level",
 "description-de": "Analoge Rundinstrument-Anzeige - Wassermenge",
+"description-es": "Analog Gauge Spek Water Level",
 "url": "apps/WidgetLoader?widget=AnalogGauge/Spek/WaterLevel&",
 "icon": "widgets/AnalogGauge/Spek/WaterLevel/icon.png",
 "width": 480,

@@ -3,6 +3,7 @@
 "name": "StandingsTop35",
 "description": "Top 35 Positions, Pit Time, Run Length, Lap Times",
 "description-de": "Top 35 Positionen, BoxenStop-Zeit, L\u00e4nge des Stints, Rundenzeiten",
+"description-es": "Top 35 Positions, Pit Time, Run Length, Lap Times",
 "url": "apps/WidgetLoader?widget=StandingsTop35&",
 "icon": "widgets/StandingsTop35/icon.png",
 "width": 800,

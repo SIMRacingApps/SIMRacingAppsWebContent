@@ -3,6 +3,7 @@
 "name": "BarGauge-HYSDeployment",
 "description": "Bar Gauge HYS Deployment Available",
 "description-de": "Balken-Anzeige - HYS Einsatz verf\u00fcgbar",
+"description-es": "Bar Gauge HYS Deployment Available",
 "url": "apps/WidgetLoader?widget=BarGauge/HYSDeployment&",
 "icon": "widgets/BarGauge/HYSDeployment/icon.png",
 "width": 800,

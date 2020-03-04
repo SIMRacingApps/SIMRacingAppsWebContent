@@ -7,6 +7,9 @@
 "description-de": [
     "Wenn du jemandem zuschaust, spottest oder \u00fcbertr\u00e4gst/streamst. Mit Kamera- und Replay-Bedienung/Kontrolle. F\u00fcr 60 Fzg."
 ],
+"description-es": [
+    "When you are Spotting or Broadcasting for someone else with Camera and Replay controls."
+],
 "url": "apps/Spotter60?",
 "icon": "apps/Spotter60/icon.png",
 "width": 1280,

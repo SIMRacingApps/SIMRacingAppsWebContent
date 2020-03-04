@@ -3,6 +3,7 @@
 "name": "WeatherInfo",
 "description": "Temperature (Ambient and Track), Wind Speed and Direction, etc.", 
 "description-de": "Temperatur (Umgebung und Strecke), Windgeschwindigkeit und Richtung, etc.", 
+"description-es": "Temperature (Ambient and Track), Wind Speed and Direction, etc.", 
 "url": "apps/WidgetLoader?widget=WeatherInfo&",
 "icon": "widgets/WeatherInfo/icon.png",
 "width": 800,
