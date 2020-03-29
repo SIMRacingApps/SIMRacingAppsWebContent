@@ -1,0 +1,31 @@
+{
+"doc": "JavaScriptDoc/sra-flags-bar-horizontal.html",
+"name": ["FlagsBarHorizontal-Top","FlagsBarHorizontal-Bottom","FlagsBarHorizontal-Top-NoGreen","FlagsBarHorizontal-Bottom-NoGreen"],
+"description": [
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair for Top",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair for Bottom",
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair for Top, no always green",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair for Bottom, no always green"
+],
+"description-de": [
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Top",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Bottom",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Top, no always green",
+    "Fahnen, Rot / Gr\u00fcn / Gelb / Blau / Schwarz / Reparatur for Bottom, no always green"
+],
+"description-es": [
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair for Top",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair for Bottom",
+    "Flags, Red / Green / Yellow/ Blue/ Black / Repair for Top, no always green",
+    "Flags, Red / Green / Yellow / Blue / Black / Repair for Bottom, no always green"
+],
+"url": "apps/WidgetLoader?widget=FlagsBarHorizontal&",
+"icon": "widgets/FlagsBarHorizontal/icon.png",
+"width": 468,
+"height": 48,
+"args": ["DISPLAYTOP=true&DISPLAYGREEN=true",
+         "DISPLAYTOP=false&DISPLAYGREEN=true",
+         "DISPLAYTOP=true&DISPLAYGREEN=false",
+         "DISPLAYTOP=false&DISPLAYGREEN=false"
+        ]
+}
