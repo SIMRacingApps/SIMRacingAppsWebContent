@@ -14,7 +14,7 @@
  * @name sra-timing-delta
  * @param {String} data-sra-args-value Basis for the relative delta calculation. Defaults to SESSIONBEST. 
  *                 Must be one of the following: SESSIONBEST, SESSIONOPTIMAL, SESSIONLAST, BEST, OPTIMAL.
- * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 100.
+ * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 16.
  * @author Jeffrey Gilliam
  * @since 1.0
  * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
@@ -29,7 +29,7 @@ function(SIMRacingApps) {
         template:        'TimingDelta.html',
         defaultWidth:    800,
         defaultHeight:   480,
-        defaultInterval: 100   //initialize with the default interval
+        defaultInterval: 16   //initialize with the default interval
     };
 
     self.module = angular.module('SIMRacingApps'); //get the main module
@@ -141,6 +141,10 @@ function(SIMRacingApps) {
 
                 };
 
+                $scope.updateProjected = function() {
+                    $scope.projected = $scope.data.Car.REFERENCE.LapTime.SESSIONLAST.Value;
+                };
+                
                 $scope.values = ['SESSIONBEST','SESSIONOPTIMAL','SESSIONLAST','BEST','OPTIMAL'];
 
                 $scope.onClick = function(event) {
@@ -164,6 +168,7 @@ function(SIMRacingApps) {
                     $attrs.sraArgsData += ";Car/REFERENCE/LapTimeDelta/"+$scope.values[i];
                     $attrs.sraArgsData += ";Car/REFERENCE/LapTimeDeltaPercent/"+$scope.values[i];
                     $attrs.sraArgsData += ";Car/REFERENCE/LapTimeDeltaReference/"+$scope.values[i];
+                    $attrs.sraArgsData += ";Car/REFERENCE/LapTime/SESSIONLAST";
                 }
 
                 $attrs.sraArgsData += ";Car/REFERENCE/Lap/CompletedPercent";
@@ -177,6 +182,7 @@ function(SIMRacingApps) {
 
                 //let session best drive all the updates
                 $scope.$watch("data.Car.REFERENCE.LapTimeDelta.SESSIONBEST.Value",$scope.update);
+                $scope.$watch("data.Car.REFERENCE.LapTime.SESSIONLAST.Value",$scope.updateProjected);
 
                 sraDispatcher.onClick($scope,$element,$scope.onClick);
 
