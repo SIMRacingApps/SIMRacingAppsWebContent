@@ -10,7 +10,7 @@
  * <img src="../widgets/RadioControl/icon.png" />
  * @ngdoc directive
  * @name sra-radio-control
- * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 100.
+ * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 50.
  * @author Jeffrey Gilliam
  * @since 1.0
  * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
@@ -26,7 +26,7 @@ define(['SIMRacingApps'
         template:        'RadioControl.html',
         defaultWidth:    480,
         defaultHeight:   480,
-        defaultInterval: 100   //initialize with the default interval
+        defaultInterval: 50   //initialize with the default interval
     };
 
     self.module = angular.module('SIMRacingApps'); //get the main module

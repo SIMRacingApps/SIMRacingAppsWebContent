@@ -48,7 +48,7 @@
                <td class               = "SIMRacingApps-Widget-RadioControl-talking"
                    colspan             = "3"
                    data-ng-bind        = "(data.Car.TRANSMITTING.DriverName.ValueFormatted 
-                                          ?   '[@' + data.Car.TRANSMITTING.RadioChannelName.ValueFormatted + ']#'
+                                          ?   '[' + data.Car.TRANSMITTING.RadioChannelName.ValueFormatted + ']#'
                                             + data.Car.TRANSMITTING.Number.ValueFormatted
                                             + ' ' + data.Car.TRANSMITTING.DriverName.ValueFormatted
                                           : ' '
@@ -67,7 +67,7 @@
 	               data-sra-data     = "Session/RadioChannelName/{{channel}}"
                    data-sra-args-on-click = "channelClicked"
                    data-sra-args-on-click-arg = "{{channel}}"
-	               data-ng-bind      = "data.Session.RadioChannelName[channel].Value ? '@'+data.Session.RadioChannelName[channel].ValueFormatted : ' '"></td>
+	               data-ng-bind      = "data.Session.RadioChannelName[channel].Value ? data.Session.RadioChannelName[channel].ValueFormatted : ' '"></td>
                <td class             = "SIMRacingApps-Widget-RadioControl-mute"
                    data-sra-data     = "Session/RadioChannelIsMutable/{{channel}};Session/RadioChannelIsMuted/{{channel}}"
                    data-sra-args-on-click = "muteClicked"
