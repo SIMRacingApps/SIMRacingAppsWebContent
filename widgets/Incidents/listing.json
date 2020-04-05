@@ -1,0 +1,12 @@
+{
+"name":        "Incidents",
+"description": "Incidents",
+"description-de": "Vorf\u00E4lle",
+"description-es": "Incidentes",
+"doc":         "JavaScriptDoc/sra-incidents.html",
+"url":         "apps/WidgetLoader?widget=Incidents&",
+"icon":        "widgets/Incidents/icon.png",
+"width":       800,
+"height":      280,
+"args":        ""
+}

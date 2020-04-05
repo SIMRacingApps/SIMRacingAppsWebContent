@@ -142,7 +142,9 @@ function(SIMRacingApps) {
                 };
 
                 $scope.updateProjected = function() {
-                    $scope.projected = $scope.data.Car.REFERENCE.LapTime.SESSIONLAST.Value;
+                    if ($scope.data.Car.REFERENCE.Lap.CompletedPercent.Value < 15) {
+                        $scope.projected = $scope.data.Car.REFERENCE.LapTime.SESSIONLAST.Value;
+                    }
                 };
                 
                 $scope.values = ['SESSIONBEST','SESSIONOPTIMAL','SESSIONLAST','BEST','OPTIMAL'];
