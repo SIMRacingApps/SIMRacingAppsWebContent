@@ -29,6 +29,13 @@
 	            data-ng-bind             = "translations.ME"
 	            data-sra-args-on-click   = "meClicked"
 	        ></sra-data>
+            <sra-data 
+                data-ng-style            = "{ display: sraShowPaceCar && data.Car.PACECAR.Id.State == 'NORMAL' ? 'inherit' : 'none' }"          
+                data-ng-class            = "'SIMRacingApps-Widget-CarSelector64-button SIMRacingApps-Widget-CarSelector64-pacecar SIMRacingApps-Widget-CarSelector64-clickedstate-' + getClickedState()"
+                data-ng-bind             = "translations.PACECAR"
+                data-sra-args-on-click   = "pacecarClicked"
+                data-sra-args-data       = "Car/PACECAR/Id"
+            ></sra-data>
 	        <sra-data 
 	            data-ng-style            = "{ display: sraShowAheadBehind ? 'inherit' : 'none' }"          
 	            data-ng-class            = "'SIMRacingApps-Widget-CarSelector64-button SIMRacingApps-Widget-CarSelector64-ahead SIMRacingApps-Widget-CarSelector64-clickedstate-' + getClickedState()"

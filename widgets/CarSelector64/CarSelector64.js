@@ -70,6 +70,7 @@ function(SIMRacingApps) {
                 $scope.sraShowClickToSelect = true;
                 $scope.sraShowReference     = true;
                 $scope.sraShowLeader        = true;
+                $scope.sraShowPaceCar       = true;
                 $scope.sraShowMe            = true;
                 $scope.sraShowButtons       = true;
                 $scope.sraShowAheadBehind   = false;
@@ -92,7 +93,7 @@ function(SIMRacingApps) {
                         }
                         else {
                             $clickedScope.setClickedState('clicked');
-                            if (car != "ALL")
+                            if (car != "ALL" && car != "PACECAR")
                                 sraDispatcher.sendCommand("Session/setReferenceCar/"+car);
                         }
 
@@ -116,6 +117,9 @@ function(SIMRacingApps) {
                 };
                 $scope.leaderClicked = function($clickedScope) {
                     $scope.carClicked($clickedScope,"LEADERCLASS");
+                };
+                $scope.pacecarClicked = function($clickedScope) {
+                    $scope.carClicked($clickedScope,"PACECAR");
                 };
                 $scope.meClicked = function($clickedScope) {
                     $scope.carClicked($clickedScope,"ME");
@@ -170,6 +174,7 @@ function(SIMRacingApps) {
                 $scope.sraShowAll           = sraDispatcher.getBoolean($scope.sraArgsSHOWALL,         $attrs.sraArgsShowAll,          $scope.sraShowAll);
                 $scope.sraShowClickToSelect = sraDispatcher.getBoolean($scope.sraArgsSHOWCLICKTOSELECT,$attrs.sraArgsShowClickToSelect,$scope.sraShowClickToSelect);
                 $scope.sraShowLeader        = sraDispatcher.getBoolean($scope.sraArgsSHOWLEADER,      $attrs.sraArgsShowLeader,       $scope.sraShowLeader);
+                $scope.sraShowPaceCar       = sraDispatcher.getBoolean($scope.sraArgsSHOWPACECAR,     $attrs.sraArgsShowPaceCar,      $scope.sraShowPaceCar);
                 $scope.sraShowMe            = sraDispatcher.getBoolean($scope.sraArgsSHOWME,          $attrs.sraArgsShowMe,           $scope.sraShowMe);
                 $scope.sraShowButtons       = sraDispatcher.getBoolean($scope.sraArgsSHOWBUTTONS,     $attrs.sraArgsShowButtons,      $scope.sraShowButtons);
                 $scope.sraShowAheadBehind   = sraDispatcher.getBoolean($scope.sraArgsSHOWAHEADBEHIND, $attrs.sraArgsShowAheadBehind,  $scope.sraShowAheadBehind);
