@@ -1,0 +1,12 @@
+{
+"name":        "DriverRating",
+"description": "Driver Rating",
+"description-de": "Fahrerbewertung",
+"description-es": "Calificaci\u00f3n del conductor",
+"doc":         "JavaScriptDoc/sra-driver-rating.html",
+"url":         "apps/WidgetLoader?widget=DriverRating&",
+"icon":        "widgets/DriverRating/icon.png",
+"width":       800,
+"height":      180,
+"args":        ""
+}

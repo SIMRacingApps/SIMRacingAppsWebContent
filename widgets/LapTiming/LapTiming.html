@@ -156,11 +156,14 @@
 	    </tbody>
 	</table>
     <sra-data class              = "SIMRacingApps-Widget-LapTiming-incidents"
-         data-sra-args-data      = "Session/IncidentLimit;Car/REFERENCE/Incidents;Car/REFERENCE/IncidentsTeam"
-         data-ng-style           = "{ display: data.Car.REFERENCE.Incidents.State != 'NOTAVAILABLE' ? 'inherit' : 'none' }"
-         data-ng-bind            = "data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
-                                 ?  data.Car.REFERENCE.Incidents.Value + '/' + data.Car.REFERENCE.IncidentsTeam.Value + '/' + (data.Session.IncidentLimit | sraNumber)
-                                 :  data.Car.REFERENCE.Incidents.Value + '/' + (data.Session.IncidentLimit | sraNumber)
+         data-sra-args-data      = "Car/REFERENCE/DriverRating;Session/IncidentLimit;Car/REFERENCE/Incidents;Car/REFERENCE/IncidentsTeam"
+         data-ng-bind            = "data.Car.REFERENCE.DriverRating.ValueFormatted + ' - ' 
+                                 +  (data.Car.REFERENCE.Incidents.State != 'NOTAVAILABLE'
+                                 ?  (data.Car.REFERENCE.IncidentsTeam.State == 'NORMAL'
+                                    ? data.Car.REFERENCE.Incidents.ValueFormatted + '/' + data.Car.REFERENCE.IncidentsTeam.ValueFormatted + '/' + (data.Session.IncidentLimit | sraNumber)
+                                    : data.Car.REFERENCE.Incidents.ValueFormatted + '/' + (data.Session.IncidentLimit | sraNumber)
+                                    )
+                                 :  '')
                                    "
     ></sra-data>
 </div>
