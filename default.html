@@ -3,7 +3,6 @@
     <style>
         body {
             width:     100%;
-            font-size: 30px;
         }
         .logo {
             float: left;
@@ -15,10 +14,10 @@
         .header {
             background-color: blue;
             color:            white;
-            width:            100%;
+/*            width:            100%;*/
             clear:            both;
-            font-size:        70px;
-            text-align:       center;
+            font-size:        150%;
+            text-align:       left;
             padding-bottom:   10px;
             white-space:      nowrap;
         }
@@ -27,8 +26,8 @@
             color:            white;
             width:            100%;
             clear:            both;
-            font-size:        70px;
-            text-align:       center;
+            font-size:        200%;
+            text-align:       left;
             padding-bottom:   10px;
             white-space:      nowrap;
             border-top: 8px solid white;
@@ -36,33 +35,34 @@
         }
         #sratitle {
             color:            white;
+            font-size:        100%;
         }
         #update {
             color:            chartreuse;
-            font-size:        20px;
+            font-size:        100%;
         }
         .copyright {
             color:            white;
-            font-size:        20px;
+            font-size:        100%;
         }
         .license {
             color:            white;
-            font-size:        20px;
+            font-size:        100%;
         }
         .notice {
             color:            white;
-            font-size:        20px;
+            font-size:        100%;
         }
         .releasenotes {
             color:            white;
-            font-size:        25px;
+            font-size:        100%;
         }
         .version {
             background-color: blue;
             color:            white;
             width:            100%;
             clear:            both;
-            font-size:        30px;
+            font-size:        100%;
             text-align:       center;
             padding-bottom:   10px;
             white-space:      nowrap;
@@ -72,22 +72,22 @@
         }
         .item {
             width: 100%;
-            height: 120px;
+            height: 60px;
             background-color: dimgray;
             margin-bottom: 3px;
             margin-top: 3px;
         }
         .icon {
-            max-width:  200px;
-            max-height: 120px;
+            max-width:  100px;
+            max-height: 60px;
             text-align: center;
             cursor: pointer;
             border-top: 8px solid white;
             border-left: 3px solid white;
         }
         .image {
-            max-width:  200px;
-            max-height: 120px;
+            max-width:  100px;
+            max-height: 60px;
             text-align: center;
             cursor: pointer;
         }
@@ -103,22 +103,21 @@
         }
         .settings {
             color: white;
-            font-size: 25px;
-            float: right;
-            text-align: right;
+            font-size: 100%;
+            text-align: left;
             white-space: nowrap;
             margin-right: 5%;
             cursor: pointer;
         }
         .settings-image {
             width: 3%;
-            float: right;
+            float: left;
             margin-right: 5%;
             cursor: pointer;
         }
         .itemtext {
             height: 100%;
-            font-size: 30px;
+            font-size: 100%;
             text-align: left;
             white-space: nowrap;
             color: white;
@@ -126,10 +125,18 @@
         }
         .itemdesc {
             height: 100%;
-            font-size: 20px;
+            font-size: 100%;
             text-align: left;
             color: white;
             cursor: pointer;
+        }
+        .itemurl {
+            height: 100%;
+            font-size: 100%;
+            text-align: left;
+            color: gold;
+            cursor: pointer;
+            white-space: nowrap;
         }
         .upload {
             font-size: 25px;
@@ -173,25 +180,27 @@
 <table>
 	<tr><td width='100%'>
 		<div class="header">
-		    <table width='100%'><tr>
-		    <td>
+		    <table width='100%'>
+            <colgroup>
+                <col style="width: 200px"  />
+                <col style="width: 100%"  />
+            </colgroup>
+		    <tr>
+		    <td class="header">
                 <a onclick="javascript:location.href='/SIMRacingApps/icons-only.html'">
                     <img class="logoimg" src="/SRA-Logo.png" /><br />
                 </a>
-		    </td>
-		    <td class="header">
+            </td><td>
 	            <a id="sratitle" target="_blank" href="http://SIMRacingApps.com">SIMRacingApps.com</a><br />
 				<span id="version" class="version">{{versionString}}</span><br />
 				<a id='update' target='_blank' href='http://github.com/SIMRacingApps/SIMRacingApps/releases/latest' data-ng-bind-html="updateString ? updateString + '<br />' : ''"></a>
 				<a class="copyright" data-ng-href="{{version.copyrightUrl}}" target="_blank">{{translations.COPYRIGHT}}</a><br />
 				<a class="license" data-ng-href="{{version.licenseUrl}}" target="_blank">{{translations.LICENSE}}</a><br />
 				<a class="notice" data-ng-href="{{version.noticeUrl}}" target="_blank">{{translations.NOTICE}}</a><br />
-			    <a class="releasenotes" data-ng-href="{{version.releasenotes}}" target="_blank">{{translations.RELEASENOTES}}</a>
+			    <a class="releasenotes" data-ng-href="{{version.releasenotes}}" target="_blank">{{translations.RELEASENOTES}}</a><br />
+                <a class="settings" data-ng-click="launch('/SIMRacingApps/settings.html',800,800)" target="_blank">{{translations.SETTINGS}}</a>
 		    </td>
 		    </tr>
-		    <tr><td colspan="2">
-		        <a class="settings" data-ng-click="launch('/SIMRacingApps/settings.html',800,800)" target="_blank">{{translations.SETTINGS}}<img class="settings-image" src="/SIMRacingApps/settings-icon.png" alt="Settings"></a>
-		    </td></tr>
 		    </table>
 		</div>    
 		<table class="table-items" width="100%" data-ng-repeat="header in headers">
@@ -207,7 +216,9 @@
 		    <tbody>
 		        <tr class="item" data-ng-repeat="item in listings[header]">
 		            <td class="icon"><a data-ng-click="launch(item.url,item.width,item.height)" target="_blank"><img class="image" data-ng-src="{{item.icon}}"></a></td>
-		            <td class="help"><a data-ng-click="launch(item.doc,1000,700)" target="_blank"><div class="itemtext">{{item.name}}<br /></div><div class="itemdesc">{{item.description}}</div></a></td>
+		            <td class="help"><a data-ng-click="launch(item.doc,1000,700)" target="_blank"><div class="itemtext">{{item.name}}<br /></div><div class="itemdesc">{{item.description}}</div></a>
+		            <a class="itemurl" data-ng-src="url(item.url)" data-ng-click="launch(item.url,item.width,item.height)" target="_blank">{{url(item.url)}}</a>
+		            </td>
 		        </tr>
 		    </tbody>
 		</table>

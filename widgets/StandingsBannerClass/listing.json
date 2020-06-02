@@ -17,5 +17,5 @@
 "icon":        "widgets/StandingsBannerClass/icon.png",
 "width":       800,
 "height":      106,
-"args":        ["&SHOWSHORTNAME=N","&SHOWSHORTNAME=Y"]
+"args":        ["SHOWSHORTNAME=N","SHOWSHORTNAME=Y"]
 }

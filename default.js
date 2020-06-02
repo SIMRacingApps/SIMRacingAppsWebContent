@@ -69,16 +69,30 @@ function( angular,angularSanitize ) {
 //                $scope.translations = sraDispatcher.getTranslation(path,"auto");
 //            });
             
+            $scope.url = function(url) {
+                //if the url doesn't have any parameters, then make our first parameter a question mark
+                if (url.indexOf('?') < 0 && $scope.args)
+                    $scope.args = "?" + $scope.args.substring(1);
+                var rUrl;
+                if (url.match(/^http/)) {
+                	rUrl = url + $scope.args; 
+                }
+                else {
+                    rUrl = (document.location+"").substring(0,(document.location+"").length-14) + url + $scope.args;
+                }
+                if (rUrl.length >= 2 && rUrl.substring(rUrl.length-1) == "&")
+                	rUrl = rUrl.substring(0,rUrl.length-1);
+                if (rUrl.length >= 2 && rUrl.substring(rUrl.length-1) == "?")
+                	rUrl = rUrl.substring(0,rUrl.length-1);
+                return rUrl;
+            };
+            
             $scope.launch = function(url,width,height) {
                     var useWidth  = width  || 800;
                     var useHeight = height || 480;
                     
-                    //if the url doesn't have any parameters, then make our first parameter a question mark
-                    if (url.indexOf('?') < 0 && $scope.args)
-                        $scope.args = "?" + $scope.args.substring(1);
-
-                    console.log('launch('+url+$scope.args+')');
-                    var eventWin  = $window.open(url + $scope.args, "_blank", 'width=' + useWidth + ', height=' + useHeight + ', resizable=1, scrollbars=1, status=0, toolbar=0, location=0, menubar=0');
+                    console.log('launch('+$scope.url(url)+')');
+                    var eventWin  = $window.open($scope.url(url), "_blank", 'width=' + useWidth + ', height=' + useHeight + ', resizable=1, scrollbars=1, status=0, toolbar=0, location=0, menubar=0');
                     //var eventWin  = $window.open(url + $scope.args, url + $scope.args, 'width=' + useWidth + ', height=' + useHeight + ', resizable=1, scrollbars=1, status=0, toolbar=0, location=0, menubar=0');
                     eventWin.focus();
             };

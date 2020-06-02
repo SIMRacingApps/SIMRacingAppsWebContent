@@ -17,5 +17,5 @@
 "icon": "widgets/CarSelector/icon.png",
 "width": 430,
 "height": 480,
-"args": "&CHANGECAMERA=false;&CHANGECAMERA=true"
+"args": "CHANGECAMERA=false;CHANGECAMERA=true"
 }
