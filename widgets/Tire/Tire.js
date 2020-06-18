@@ -62,6 +62,13 @@ function(SIMRacingApps) {
 
                 /** your code goes here **/
                 $scope.updateBackground = function() {
+                    if (  $scope.data.Car.REFERENCE.Gauge['TirePressure'+$scope.value].MaxCount.State == 'NORMAL'
+                    && $scope.data.Car.REFERENCE.Gauge['TirePressure'+$scope.value].Count.Value >= $scope.data.Car.REFERENCE.Gauge['TirePressure'+$scope.value].MaxCount.Value
+                    )
+                        $scope.controller = false;
+                    else
+                        $scope.controller = ($scope.data.Car.REFERENCE.HasAutomaticPitCommands.Value && $scope.canControl);
+                     
                     if ($scope.data.Car.REFERENCE.Gauge['TirePressure'+$scope.value].ChangeFlag.Value) {
                         $scope.Lcolor = 'rgb(255,0,0)';
                         $scope.Mcolor = 'rgb(255,0,0)';
@@ -145,7 +152,7 @@ function(SIMRacingApps) {
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/IsFixed";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/ChangeFlag";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/Count";
-                $attrs.sraArgsData += ";Car/REFERENCE/MaxTires";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressure"+$scope.value+"/MaxCount";
 
                 /**standard code that should be in every directive **/
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));
@@ -178,7 +185,7 @@ function(SIMRacingApps) {
                 $scope.$watch("data.Car.REFERENCE.Gauge['TireTemp"+$scope.value+"R'].ValueHistorical.Value",$scope.updateBackground);
                 $scope.$watch("data.Car.REFERENCE.Gauge['TirePressure"+$scope.value+"'].ValueNext.Value",$scope.updateBackground);
                 $scope.$watch("data.Car.REFERENCE.Gauge['TirePressure"+$scope.value+"'].ChangeFlag.Value",$scope.updateBackground);
-
+                $scope.$watch("data.Car.REFERENCE.Gauge['TirePressure"+$scope.value+"'].Count.Value",$scope.updateBackground);
             }
         };
     }]);

@@ -24,7 +24,7 @@
         <div class                                  = "SIMRacingApps-App-CrewChief-Info">
             <sra-data-table
                 class                               = "SIMRacingApps-App-CrewChief-CarTrack"
-                data-sra-args-data                  = "time;Session/Time;Car/REFERENCE/RadioChannelName;Car/REFERENCE/DriverName;Car/REFERENCE/Number;Car/REFERENCE/DriverRating;Session/Type;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Configuration;Track/City;Track/Country;Track/Length;Track/Category;Car/REFERENCE/PitSpeedLimit;Track/Temp"
+                data-sra-args-data                  = "time;Session/Time;Car/REFERENCE/RadioChannelName;Car/REFERENCE/DriverName;Car/REFERENCE/Number;Car/REFERENCE/DriverRating;Session/Name;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Configuration;Track/City;Track/Country;Track/Length;Track/Category;Car/REFERENCE/PitSpeedLimit;Track/Temp"
                 data-sra-args-interval              = "100"
                 data-sra-args-row-names             = "time;radio;drivername;rating;session;cardesc;trackdesc;trackconf;trackloc;trackinfo;tracktemp;pitinfo"
                 data-sra-args-row-xtime              = "data.time.ValueFormatted|sraEncodeEntities"
@@ -32,7 +32,7 @@
                 data-sra-args-row-radio             = "('@'+data.Car.REFERENCE.RadioChannelName.ValueFormatted)|sraEncodeEntities"
                 data-sra-args-row-drivername        = "(data.Car.REFERENCE.DriverName.ValueFormatted)|sraEncodeEntities"
                 data-sra-args-row-rating            = "(data.Car.REFERENCE.DriverRating.ValueFormatted+' #'+data.Car.REFERENCE.Number.ValueFormatted)|sraEncodeEntities"
-                data-sra-args-row-session           = "(data.Session.Type.ValueFormatted+' - '+data.Car.REFERENCE.Status.ValueFormatted)|sraEncodeEntities"
+                data-sra-args-row-session           = "(data.Session.Name.ValueFormatted+' - '+data.Car.REFERENCE.Status.ValueFormatted)|sraEncodeEntities"
                 data-sra-args-row-cardesc           = "data.Car.REFERENCE.Description.ValueFormatted|sraEncodeEntities"
                 data-sra-args-row-trackconf         = "data.Track.Configuration.ValueFormatted|sraEncodeEntities"
                 data-sra-args-row-trackloc          = "(data.Track.City.ValueFormatted + ', ' + data.Track.Country.ValueFormatted)|sraEncodeEntities"

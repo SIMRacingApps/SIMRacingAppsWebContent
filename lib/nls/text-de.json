@@ -97,7 +97,18 @@
             "GREEN":            "Gr\u00fcn",
             "CAUTION":          "Vorsicht",
             "RED":              "Rot",
-            "FINISHED":         "Fertig"
+            "FINISHED":         "Fertig",
+            "B-MAIN":           "B-Main",
+            "C-MAIN":           "C-Main",
+            "HEAT 1":           "Heat 1",
+            "HEAT 2":           "Heat 2",
+            "HEAT 3":           "Heat 3",
+            "HEAT 4":           "Heat 4",
+            "QUALIFY":          "Qualify",
+            "TESTING":          "Testing",
+            "TIME ATTACK":      "Time Attack",
+            "TIME TRIAL":       "Time Trial",
+            "WARMUP":           "Warmup"
         },
         "TRACK": {
             "Clear":            "klar",

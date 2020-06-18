@@ -16,12 +16,13 @@
                               ;Car/LEADERCLASS/LapsToGo
                               ;Car/REFERENCE/Lap
                               ;Car/REFERENCE/LapsToGo
-                              ;Session/Type">
+                              ;Session/Type
+                              ;Session/Name">
     <div class              = "SIMRacingApps-Widget-LapsBanner-status"
          data-ng-class      = "'SIMRacingApps-Widget-LapsBanner-status-'+flag">
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-title"
           data-ng-style     = "{ fontSize: titleFontSize }"
-          data-ng-bind      = "title || data.Session.Type.ValueFormatted"
+          data-ng-bind      = "title || data.Session.Name.ValueFormatted"
         ></div>
         <div class          = "SIMRacingApps-Widget-LapsBanner-status-laps"
           data-ng-if        = "!byClass"

@@ -59,9 +59,9 @@
                                          + (data.Car.REFERENCE.Gauge.WindshieldTearoff.ChangeFlag.Value ? translations.Y : translations.N)"
             ></div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-fastrepairs"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+fastrepairs+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+fastrepairs+'-'+controllerFR"
                  data-xng-class           = "'SIMRacingApps-Widget-PitCommander-fastrepairs-'+data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value"
-                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FastRepairs.Maximum.Value > 0 ? 'inherit' : 'none' }"
+                 data-ng-style           = "{ display: data.Car.REFERENCE.Gauge.FastRepairs.MaxCount.Value > 0 ? 'inherit' : 'none' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
                                          + (translations.FASTREPAIRS|sraEncodeEntities)
                                          + '</span> '
@@ -80,32 +80,32 @@
                                            )"
             ></div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+lefts+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+lefts+'-'+controllerL"
                  data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
                  data-ng-bind-html       = "(translations.LEFTS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-lefts-gas"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+leftsgas+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+leftsgas+'-'+controllerL"
                  data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
                  data-ng-bind-html       = "(translations.LEFTSGAS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-rights"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rights+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rights+'-'+controllerR"
                  data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
                  data-ng-bind-html       = "(translations.RIGHTS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-rights-gas"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rightsgas+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+rightsgas+'-'+controllerR"
                  data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
                  data-ng-bind-html       = "(translations.RIGHTSGAS|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-tires4"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4+'-'+controller4"
                  data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
                  data-ng-bind-html       = "(translations.TIRES4|sraEncodeEntities:true)">
             </div>
             <div class                   = "SIMRacingApps-Widget-PitCommander-button-tires4-gas"
-                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4gas+'-'+controller"
+                 data-ng-class           = "'SIMRacingApps-Widget-PitCommander-button-background-'+tires4gas+'-'+controller4"
                  data-xng-style          = "{ visibility: controller ? 'inherit' : 'hidden' }"
                  data-ng-bind-html       = "(translations.TIRES4GAS|sraEncodeEntities:true)">
             </div>

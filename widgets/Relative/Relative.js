@@ -67,7 +67,7 @@ function(SIMRacingApps) {
                 
                 $scope.leader = "LEADER" + ($scope.classFilter ? $scope.sraRelativeCar : "");
                 
-                $attrs.sraArgsData = "Session/Type"
+                $attrs.sraArgsData = "Session/Name"
                                    + ";Session/Laps"
                                    + ";Session/TimeRemaining"
                                    + ";Car/"+$scope.sraRelativeCar+"/Lap"

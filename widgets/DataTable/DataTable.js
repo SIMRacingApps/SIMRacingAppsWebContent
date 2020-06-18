@@ -39,11 +39,11 @@
  * <pre><b>
  * &lt;sra-data-table
  *      id                                  = "SIMRacingApps-App-CrewChief-CarTrack"
- *      data-sra-args-data                  = "Car/REFERENCE/DriverName;Car/REFERENCE/Number;Car/REFERENCE/DriverRating;Session/Type;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Length;Track/Category;Track/PitSpeedLimit"
+ *      data-sra-args-data                  = "Car/REFERENCE/DriverName;Car/REFERENCE/Number;Car/REFERENCE/DriverRating;Session/Name;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Length;Track/Category;Track/PitSpeedLimit"
  *      data-sra-args-row-names             = "drivername;rating;session;cardesc;trackdesc;trackinfo;pitinfo"
  *      data-sra-args-row-drivername        = "(data.Car.REFERENCE.DriverName.ValueFormatted|sraEncodeEntities)"
  *      data-sra-args-row-rating            = "(data.Car.REFERENCE.DriverRating.ValueFormatted+' #'+data.Car.REFERENCE.Number.ValueFormatted)|sraEncodeEntities"
- *      data-sra-args-row-session           = "(data.Session.Type.ValueFormatted+' - '+data.Car.REFERENCE.Status.ValueFormatted)|sraEncodeEntities"
+ *      data-sra-args-row-session           = "(data.Session.Name.ValueFormatted+' - '+data.Car.REFERENCE.Status.ValueFormatted)|sraEncodeEntities"
  *      data-sra-args-row-cardesc           = "data.Car.REFERENCE.Description.ValueFormatted|sraEncodeEntities"
  *      data-sra-args-row-trackdesc         = "data.Track.Description.ValueFormatted|sraEncodeEntities"
  *      data-sra-args-row-trackinfo         = "((data.Track.Length.Value|sraNumber:1)+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted)|sraEncodeEntities"

@@ -43,9 +43,9 @@
                 data-ng-bind-html = "'<span class=&quot;SIMRacingAppsLabel&quot;>'
                                   +  (translations.TIRE|sraEncodeEntities)
                                   + '</span> '
-                                  + ((data.Car.REFERENCE.Gauge['TirePressure'+value].Count - 1)|sraNumber:0)
-                                  + (data.Car.REFERENCE.MaxTires.State == 'NORMAL'
-                                    ? '/' + (data.Car.REFERENCE.MaxTires|sraNumber:0)
+                                  + ((data.Car.REFERENCE.Gauge['TirePressure'+value].Count.Value - 1)|sraNumber:0)
+                                  + (data.Car.REFERENCE.Gauge['TirePressure'+value].MaxCount.State == 'NORMAL'
+                                    ? '/' + (data.Car.REFERENCE.Gauge['TirePressure'+value].MaxCount.Value|sraNumber:0)
                                     : ''
                                     )
                                   + ', <span class=&quot;SIMRacingAppsLabel&quot;>'

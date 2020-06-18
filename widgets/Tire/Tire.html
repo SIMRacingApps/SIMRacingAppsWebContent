@@ -21,9 +21,9 @@
                                   + '<span class=&quot;SIMRacingAppsLabel&quot;>'
                                   + (data.Car.REFERENCE.Gauge['TirePressure'+value].ValueNext.UOMAbbr|sraEncodeEntities)
                                   + '</span><br />'
-                                  + '#'+(data.Car.REFERENCE.Gauge['TirePressure'+value].Count|sraNumber:0)
-                                  + (data.Car.REFERENCE.MaxTires.State == 'NORMAL'
-                                    ? '/' + (data.Car.REFERENCE.MaxTires|sraNumber:0)
+                                  + '#'+(data.Car.REFERENCE.Gauge['TirePressure'+value].Count.Value|sraNumber:0)
+                                  + (data.Car.REFERENCE.Gauge['TirePressure'+value].MaxCount.State == 'NORMAL'
+                                    ? '/' + (data.Car.REFERENCE.Gauge['TirePressure'+value].MaxCount.Value|sraNumber:0)
                                     : ''
                                     )
                                   + '<span class=&quot;SIMRacingAppsLabel&quot;>'

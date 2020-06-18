@@ -1,12 +1,12 @@
 <div class = "SIMRacingApps-Widget-LapTiming"
      ng-attr-style          = "height: {{height}}px;"
-     data-sra-data          = "Session/Type;time"
+     data-sra-data          = "Session/Name;time"
      data-sra-args-interval = "{{sraInterval}}">
     <table 
         class            = "SIMRacingApps-Widget-LapTiming-header">
         <tr>
             <td class    = "SIMRacingApps-Widget-LapTiming-header-title"
-                data-ng-bind      = "(translations.LAPTIMING+' - '+data.Session.Type.ValueFormatted) | limitTo:23"
+                data-ng-bind      = "(translations.LAPTIMING+' - '+data.Session.Name.ValueFormatted) | limitTo:23"
             ></td>
             <td class        = "SIMRacingApps-Widget-LapTiming-header-time"
                 data-ng-if   = "showSIMTime"

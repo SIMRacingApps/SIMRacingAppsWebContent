@@ -85,7 +85,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 };
 
                 $scope.onClickFastRepairs = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controllerFR)
                         return;
                     if ($scope.data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value)
                         sraDispatcher.sendCommand("Car/REFERENCE/Gauge/FastRepairs/setChangeFlag/false");
@@ -104,6 +104,40 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                     $scope.FR = $scope.data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value;
 
                     $scope.lefts  = $scope.leftsgas = $scope.rights = $scope.rightsgas = $scope.tires4 = $scope.tires4gas = $scope.windshield = $scope.fastrepairs = "normal";
+
+                    $scope.controllerL = $scope.controllerR = $scope.controller4 = $scope.controllerFR = $scope.controller;
+                    
+                    if ( $scope.data.Car.REFERENCE.Gauge.TirePressureLF.MaxCount.State == 'NORMAL'
+                        &&   $scope.data.Car.REFERENCE.Gauge.TirePressureLF.Count.Value >= $scope.data.Car.REFERENCE.Gauge.TirePressureLF.MaxCount.Value
+                    ) {
+                        $scope.controllerL = false;
+                        $scope.controller4  = false;
+                    }
+                        
+                    if ( $scope.data.Car.REFERENCE.Gauge.TirePressureLR.MaxCount.State == 'NORMAL'
+                        &&   $scope.data.Car.REFERENCE.Gauge.TirePressureLR.Count.Value >= $scope.data.Car.REFERENCE.Gauge.TirePressureLR.MaxCount.Value
+                    ) {
+                        $scope.controllerL = false;
+                        $scope.controller4  = false;
+                    }
+                    
+                    if ( $scope.data.Car.REFERENCE.Gauge.TirePressureRF.MaxCount.State == 'NORMAL'
+                        &&   $scope.data.Car.REFERENCE.Gauge.TirePressureRF.Count.Value >= $scope.data.Car.REFERENCE.Gauge.TirePressureRF.MaxCount.Value
+                    ) {
+                        $scope.controllerR = false;
+                        $scope.controller4  = false;
+                    }
+                        
+                    if ( $scope.data.Car.REFERENCE.Gauge.TirePressureRR.MaxCount.State == 'NORMAL'
+                        &&   $scope.data.Car.REFERENCE.Gauge.TirePressureRR.Count.Value >= $scope.data.Car.REFERENCE.Gauge.TirePressureRR.MaxCount.Value
+                    ) {
+                        $scope.controllerR = false;
+                        $scope.controller4  = false;
+                    }
+
+                    if ( $scope.data.Car.REFERENCE.Gauge.FastRepairs.ValueCurrent.Value <= 0) {
+                        $scope.controllerFR = false;
+                    }
 
                     if ($scope.LF && $scope.LR) {
                         $scope.lefts = "selected";
@@ -129,7 +163,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 };
 
                 $scope.onClickLefts = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controller || !$scope.controllerL)
                         return;
                     var command;
                     if ($scope.lefts == "selected") {
@@ -144,7 +178,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                     $scope.lefts = "clicked";
                 };
                 $scope.onClickLeftsGas = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controller || !$scope.controllerL)
                         return;
                     var MAX= $scope.data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum.Value;
 
@@ -160,7 +194,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                     $scope.leftsgas = "clicked";
                 };
                 $scope.onClickRights = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controller || !$scope.controllerR)
                         return;
                     var command;
                     if ($scope.rights == "selected") {
@@ -174,7 +208,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                     $scope.rights = "clicked";
                 };
                 $scope.onClickRightsGas = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controller || !$scope.controllerR)
                         return;
                     var MAX= $scope.data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum.Value;
 
@@ -190,7 +224,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                     $scope.rightsgas = "clicked";
                 };
                 $scope.onClickTires4 = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controller || !$scope.controllerL  || !$scope.controllerR)
                         return;
                     var command;
                     if ($scope.tires4 == "selected") {
@@ -204,7 +238,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                     $scope.tires4 = "clicked";
                 };
                 $scope.onClickTires4Gas = function(event) {
-                    if (!$scope.controller)
+                    if (!$scope.controller || !$scope.controllerL || !$scope.controllerR)
                         return;
                     var MAX= $scope.data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum.Value;
 
@@ -226,10 +260,12 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 /** your code goes here **/
                 $scope.canControl = sraDispatcher.getBoolean($scope.sraArgsPITCOMMANDSSIMCONTROLLER,$attrs.sraArgsSIMController,$attrs.sraSIMController,false);
                 $scope.controller = false;
+                $scope.controllerL = $scope.controllerR = $scope.controller4 = $scope.controllerFR = false;
                 
                 if ($scope.canControl)
                     $attrs.sraArgsData += ";Car/REFERENCE/HasAutomaticPitCommands";
 
+                $attrs.sraArgsData += ";Session/Type";
                 $attrs.sraArgsData += ";Car/REFERENCE/RepairTime;Car/REFERENCE/RepairTimeOptional";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/Tape/ValueNext;Car/REFERENCE/Gauge/Tape/ChangeFlag;Car/REFERENCE/Gauge/Tape/IsFixed";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FrontWing/ValueNext;Car/REFERENCE/Gauge/FrontWing/ChangeFlag;Car/REFERENCE/Gauge/FrontWing/IsFixed";
@@ -240,11 +276,19 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 //TODO: Get some help from the server on if this gauge is in-car(real-time) or next pit
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/BrakeBiasAdjustment/ValueNext;Car/REFERENCE/Gauge/BrakeBiasAdjustment/IsFixed";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/WindshieldTearoff/ChangeFlag";
-                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FastRepairs/ChangeFlag;Car/REFERENCE/Gauge/FastRepairs/ValueCurrent;Car/REFERENCE/Gauge/FastRepairs/Maximum";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FastRepairs/ChangeFlag;Car/REFERENCE/Gauge/FastRepairs/ValueCurrent;Car/REFERENCE/Gauge/FastRepairs/MaxCount";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureLF/ChangeFlag;Car/REFERENCE/Gauge/TirePressureLR/ChangeFlag";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureRF/ChangeFlag;Car/REFERENCE/Gauge/TirePressureRR/ChangeFlag";
                 $attrs.sraArgsData += ";Car/REFERENCE/Gauge/FuelLevel/ChangeFlag;Car/REFERENCE/Gauge/FuelLevel/CapacityMaximum";
                 $attrs.sraArgsData += ";Session/IncidentLimit;Car/REFERENCE/Incidents;Car/REFERENCE/IncidentsTeam";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureRF/Count";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureRF/MaxCount";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureRR/Count";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureRR/MaxCount";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureLF/Count";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureLF/MaxCount";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureLR/Count";
+                $attrs.sraArgsData += ";Car/REFERENCE/Gauge/TirePressureLR/MaxCount";
                 
                 //TODO: As of the March 2015 build, iRacing doesn't let you control Tape, Wedge, Brake Bias from a client
 
@@ -277,13 +321,17 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
 
                 /** watches go here **/
                 $scope.$watch("data.Car.REFERENCE.HasAutomaticPitCommands.Value", function(value) {
-                    if (!value)
+                    if (!value) {
                         $scope.controller = false;
+                    }
                     else
-                    if (value && $scope.canControl)
+                    if (value && $scope.canControl) {
                         $scope.controller = true;
+                    }
+                    $scope.controllerL = $scope.controllerR = $scope.controller4 = $scope.controller;
                 });
 
+                $scope.$watch("data.Session.Type.Value",                                    $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLF.ChangeFlag.Value",   $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLR.ChangeFlag.Value",   $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRF.ChangeFlag.Value",   $scope.updateButtonStates);
@@ -291,6 +339,18 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 $scope.$watch("data.Car.REFERENCE.Gauge.FuelLevel.ChangeFlag.Value",        $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.WindshieldTearoff.ChangeFlag.Value",$scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.FastRepairs.ChangeFlag.Value",      $scope.updateButtonStates);
+
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRF.Count.Value",        $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRR.Count.Value",        $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLF.Count.Value",        $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLR.Count.Value",        $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.FastRepairs.Count.Value",           $scope.updateButtonStates);
+
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRF.MaxCount.Value",     $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRR.MaxCount.Value",     $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLF.MaxCount.Value",     $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLR.MaxCount.Value",     $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.FastRepairs.MaxCount.Value",        $scope.updateButtonStates);
             }
         };
     }]);
