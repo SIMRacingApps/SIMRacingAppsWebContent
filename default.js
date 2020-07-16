@@ -70,20 +70,23 @@ function( angular,angularSanitize ) {
 //            });
             
             $scope.url = function(url) {
-                //if the url doesn't have any parameters, then make our first parameter a question mark
-                if (url.indexOf('?') < 0 && $scope.args)
-                    $scope.args = "?" + $scope.args.substring(1);
                 var rUrl;
                 if (url.match(/^http/)) {
-                	rUrl = url + $scope.args; 
+                	rUrl = url; 
                 }
                 else {
-                    rUrl = (document.location+"").substring(0,(document.location+"").length-14) + url + $scope.args;
+                    rUrl = document.location.origin + url;
                 }
                 if (rUrl.length >= 2 && rUrl.substring(rUrl.length-1) == "&")
-                	rUrl = rUrl.substring(0,rUrl.length-1);
+                    rUrl = rUrl.substring(0,rUrl.length-1);
                 if (rUrl.length >= 2 && rUrl.substring(rUrl.length-1) == "?")
-                	rUrl = rUrl.substring(0,rUrl.length-1);
+                    rUrl = rUrl.substring(0,rUrl.length-1);
+                
+                if (rUrl.indexOf('?') < 0 && $scope.args)
+                    rUrl = rUrl + '?' + $scope.args.substring(1);
+                else
+                    rUrl = rUrl + $scope.args;
+                
                 return rUrl;
             };
             
