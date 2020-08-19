@@ -138,6 +138,12 @@ function( angular,  SIMRacingApps) {
                 console.log($scope.activeDriverButton+"_Clicked");
             };
             
+            $scope.DRIVERBLACKDRIVETHROUGH_Clicked = function($clickedScope) {
+                $scope.activeDriverButton = "DRIVERBLACKDRIVETHROUGH";
+                $scope.currentCarCommand  = "setBlackFlag/-1";
+                console.log($scope.activeDriverButton+"_Clicked");
+            };
+
             $scope.DRIVERBLACK0_Clicked = function($clickedScope) {
                 $scope.activeDriverButton = "DRIVERBLACK0";
                 $scope.currentCarCommand  = "setBlackFlag/0";

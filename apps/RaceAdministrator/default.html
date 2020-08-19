@@ -153,6 +153,16 @@
                                 <td
                                     data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
                                                                SIMRacingApps-App-RaceAdministrator-driver
+                                                               SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERBLACKDRIVETHROUGH' ? 'Y' : 'N') 
+                                                             +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.DRIVERBLACKDRIVETHROUGH"
+                                    data-sra-args-on-click = "DRIVERBLACKDRIVETHROUGH_Clicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-driver
                                                                SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERBLACK0' ? 'Y' : 'N') 
                                                              +' SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
                                                              "
@@ -170,7 +180,7 @@
                                     data-ng-bind           = "translations.DRIVERBLACK15"
                                     data-sra-args-on-click = "DRIVERBLACK15_Clicked"
                                 ></td>
-                                <td
+                                <!-- td
                                     data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
                                                                SIMRacingApps-App-RaceAdministrator-driver
                                                                SIMRacingApps-App-RaceAdministrator-driver-active-' + (activeDriverButton == 'DRIVERBLACKLAP' ? 'Y' : 'N') 
@@ -179,7 +189,7 @@
                                     data-sra-data          = ""
                                     data-ng-bind           = "translations.DRIVERBLACKLAP"
                                     data-sra-args-on-click = "DRIVERBLACKLAP_Clicked"
-                                ></td>
+                                ></td -->
                                 <td
                                     data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
                                                                SIMRacingApps-App-RaceAdministrator-driver
