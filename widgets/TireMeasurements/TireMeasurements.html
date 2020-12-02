@@ -48,6 +48,7 @@
                                     ? '/' + (data.Car.REFERENCE.Gauge['TirePressure'+value].MaxCount.Value|sraNumber:0)
                                     : ''
                                     )
+                                  + (data.Car.REFERENCE.Gauge.TireCompound.ValueHistorical.ValueFormatted)
                                   + ', <span class=&quot;SIMRacingAppsLabel&quot;>'
                                   +  (translations.LAPCHANGED|sraEncodeEntities)
                                   + '</span> '
