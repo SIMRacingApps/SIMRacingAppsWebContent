@@ -345,6 +345,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLF.Count.Value",        $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureLR.Count.Value",        $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.FastRepairs.Count.Value",           $scope.updateButtonStates);
+                $scope.$watch("data.Car.REFERENCE.Gauge.FastRepairs.ValueCurrent.Value",    $scope.updateButtonStates);
 
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRF.MaxCount.Value",     $scope.updateButtonStates);
                 $scope.$watch("data.Car.REFERENCE.Gauge.TirePressureRR.MaxCount.Value",     $scope.updateButtonStates);
