@@ -1,69 +1,38 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"
-    "http://www.w3.org/TR/html4/frameset.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
 <html>
 <head>
   <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
   <title>Slide 1</title>
-<script type="text/javascript">
-<!--
-var nCurrentPage = 0;
-var nPageCount = 10;
-
-function NavigateAbs( nPage )
-{
-  frames["show"].location.href = "img" + nPage + ".html";
-  //frames["notes"].location.href = "note" + nPage + ".html";
-  nCurrentPage = nPage;
-  if(nCurrentPage==0)
-  {
-    frames["navbar1"].location.href = "navbar0.html";
-  }
-  else if(nCurrentPage==nPageCount-1)
-  {
-    frames["navbar1"].location.href = "navbar2.html";
-  }
-  else
-  {
-    frames["navbar1"].location.href = "navbar1.html";
-  }
-}
-
-function NavigateRel( nDelta )
-{
-  var nPage = parseInt(nCurrentPage) + parseInt(nDelta);
-  if( (nPage >= 0) && (nPage < nPageCount) )
-  {
-    NavigateAbs( nPage );
-  }
-}
-
-function ExpandOutline()
-{
-  frames["navbar2"].location.href = "navbar4.html";
-  frames["outline"].location.href = "outline1.html";
-}
-
-function CollapseOutline()
-{
-  frames["navbar2"].location.href = "navbar3.html";
-  frames["outline"].location.href = "outline0.html";
-}
-
-// -->
-</script>
 </head>
-<frameset cols="*,816">
-  <frameset rows="42,*">
-    <frame src="navbar3.html" name="navbar2" marginwidth="4" marginheight="4" scrolling="no">
-    <frame src="outline0.html" name="outline">
-  </frameset>
-  <frameset rows="42,*">
-    <frame src="navbar0.html" name="navbar1" marginwidth="4" marginheight="4" scrolling="no">
-    <frame src="img0.html" name="show" marginwidth="4" marginheight="4">
-  </frameset>
-<noframes>
 <body text="#000000" bgcolor="#FFFFFF" link="#000080" vlink="#0000CC" alink="#000080">
-Unfortunately your browser does not support floating frames.
-</noframes>
-</frameset>
+<center>
+<h2><a href="img0.html">Click here to start</a></h2>
+</center>
+<center><table width="90%"><tr>
+<td valign="top" align="left" width="25%">
+<h3>Table of contents</h3><div align="left"><a href="img0.html">Slide 1</a></div>
+<div align="left"><a href="img1.html">The Widget</a></div>
+<div align="left"><a href="img2.html">{WidgetName}.html</a></div>
+<div align="left"><a href="img3.html">{WidgetName}.js</a></div>
+<div align="left"><a href="img4.html">{WidgetName}.js controller Function</a></div>
+<div align="left"><a href="img5.html">{WidgetName}.js link Function</a></div>
+<div align="left"><a href="img6.html">{WidgetName}.css</a></div>
+<div align="left"><a href="img7.html">Localization / Translations</a></div>
+<div align="left"><a href="img8.html">default.html</a></div>
+<div align="left"><a href="img9.html">icon.png</a></div>
+</td>
+<td valign="top" align="left" width="75%">
+<a href="img0.html"><img src="thumb0.png" width="256" height="192" alt="Slide 1"></a>
+<a href="img1.html"><img src="thumb1.png" width="256" height="192" alt="The Widget"></a>
+<a href="img2.html"><img src="thumb2.png" width="256" height="192" alt="{WidgetName}.html"></a>
+<a href="img3.html"><img src="thumb3.png" width="256" height="192" alt="{WidgetName}.js"></a>
+<a href="img4.html"><img src="thumb4.png" width="256" height="192" alt="{WidgetName}.js controller Function"></a>
+<a href="img5.html"><img src="thumb5.png" width="256" height="192" alt="{WidgetName}.js link Function"></a>
+<a href="img6.html"><img src="thumb6.png" width="256" height="192" alt="{WidgetName}.css"></a>
+<a href="img7.html"><img src="thumb7.png" width="256" height="192" alt="Localization / Translations"></a>
+<a href="img8.html"><img src="thumb8.png" width="256" height="192" alt="default.html"></a>
+<a href="img9.html"><img src="thumb9.png" width="256" height="192" alt="icon.png"></a>
+</td></tr></table></center>
+</body>
 </html>
