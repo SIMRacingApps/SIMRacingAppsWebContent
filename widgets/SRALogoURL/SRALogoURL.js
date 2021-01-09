@@ -13,7 +13,7 @@
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 1000.
  * @author Jeffrey Gilliam
  * @since 1.7
- * @copyright Copyright (C) 2015 - 2020 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2021 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','css!widgets/SRALogoURL/SRALogoURL'
