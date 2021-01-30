@@ -27,7 +27,9 @@
                                     : ''
                                     )
                                   + '<br />'
+                                  + '<span class=&quot;SIMRacingApps-Widget-Tire-dirty-' + (data.Car.REFERENCE.Gauge.TireCompound.IsDirty.Value?'Y':'N') +'&quot;>'
                                   + (data.Car.REFERENCE.Gauge.TireCompound.ValueNext.ValueFormatted)
+                                  + '</span>'
                                   + '<span class=&quot;SIMRacingAppsLabel&quot;>'
                                   + '<br />' + (translations.LAPS|sraEncodeEntities)
                                   + '</span><br />' + data.Car.REFERENCE.Gauge['TirePressure'+value].Laps.Value
