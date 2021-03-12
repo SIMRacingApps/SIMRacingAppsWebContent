@@ -101,10 +101,10 @@ function(SIMRacingApps) {
                         $scope.transform = "translate(80,0) skewX(-15)";
                     else
                     if ($scope.CarNumberSlant == "forward")
-                        $scope.transform = "translate(-80,0) skewX(15)";
+                        $scope.transform = "translate(80,0) skewX(-15)";
                     else
                     if ($scope.CarNumberSlant == "backwards")
-                        $scope.transform = "translate(80,0) skewX(-15)";
+                        $scope.transform = "translate(-80,0) skewX(15)";
                     else
                         $scope.transform = "";
                         
