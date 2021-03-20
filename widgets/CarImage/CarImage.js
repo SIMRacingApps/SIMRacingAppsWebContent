@@ -52,10 +52,10 @@ define(['SIMRacingApps','css!widgets/CarImage/CarImage'
                 //copy arguments to our scope. First if using attribute, second tag, else default to something.
                 $attrs.sraArgsData = $attrs.sraArgsData || "";
                 $scope.value = 
-                $scope[self.name] = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
-
+                $scope[self.name] = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "REFERENCE");
+                console.log("CarImage="+$scope.value);
                 /** your code goes here **/
-                $attrs.sraArgsData += ";Car/REFERENCE/ImageUrl";
+                $attrs.sraArgsData += ";Car/"+$scope.value+"/ImageUrl";
                 
                 /**standard code that should be in every directive **/
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));

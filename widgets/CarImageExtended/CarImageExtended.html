@@ -1,0 +1,20 @@
+<div class                               = "SIMRacingApps-Widget-CarImageExtended"
+     data-ng-style                       = "{ height: height+'px' }">
+    <div class                   = "SIMRacingApps-Widget-CarImageExtended-img" 
+         data-ng-style           = "{ backgroundImage: 'url(/SIMRacingApps/'+data.Car[sraCarImageExtended].ImageUrl.Value+')' }"
+    ></div>
+     <div
+         data-ng-class            = "'SIMRacingApps-Widget-CarImageExtended-name SIMRacingAppsCarStatusClassForeground-'+data.Car[sraCarImageExtended].StatusClass.Value"
+         data-xng-style            = "{ backgroundColor: (data.Session.NumberOfCarClasses.Value > 1 ? '#'+(data.Car[sraCarImageExtended].ClassColor.Value | sraHex:6) : 'transparent'),
+                                        color: (data.Session.NumberOfCarClasses.Value > 1 ? 'black' : 'inherit')
+                                      }"
+         data-ng-bind-html        = "(showShortName 
+                                      ? (data.Car[sraCarImageExtended].DriverNameShort.ValueFormatted|sraEncodeEntities) 
+                                      : (data.Car[sraCarImageExtended].DriverName.ValueFormatted|sraEncodeEntities)
+                                     )
+                                  + (data.Session.DiffCars.LEADER[sraCarImageExtended].UOM.toUpperCase() == 'LAP' 
+                                    ? ' ' + (data.Session.DiffCars.LEADER[sraCarImageExtended].Value|sraNumber:0) + 'L'
+                                    : '')
+                                    "
+     ></div>
+</div>

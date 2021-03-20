@@ -1,0 +1,12 @@
+{
+"doc": "JavaScriptDoc/sra-car-image-extended.html",
+"name": "CarImageExtended",
+"description": "The image of your car from the SIM with Driver Name",
+"description-de": "Bild von deinem Fahrzeug in der SIM with Driver Name",
+"description-es": "The image of your car from the SIM with Driver Name",
+"url": "apps/WidgetLoader?widget=CarImageExtended&",
+"icon": "widgets/CarImageExtended/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}

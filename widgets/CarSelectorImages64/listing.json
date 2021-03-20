@@ -1,0 +1,21 @@
+{
+"doc": "JavaScriptDoc/sra-car-selector-images64.html",
+"name": "CarSelectorImages64;CarSelectorImages64-CAMERA",
+"description": [
+    "Makes Any Car the Reference Car",
+    "Makes Any Car the Reference Car and changes the Camera to focus on that car."
+],
+"description-de": [
+    "Mache ein Fahrzeug zum Referenz-Fzg.",
+    "Mache ein Fahrzeug zum Referenz-Fzg und fokussiere die Kamera auf dieses Fzg."
+],
+"description-es": [
+    "Makes Any Car the Reference Car",
+    "Makes Any Car the Reference Car and changes the Camera to focus on that car."
+],
+"url": "apps/WidgetLoader?widget=CarSelectorImages64&",
+"icon": "widgets/CarSelectorImages64/icon.png",
+"width": 880,
+"height": 600,
+"args": "CHANGECAMERA=false;CHANGECAMERA=true"
+}
