@@ -1,0 +1,12 @@
+{
+"name":        "ChartTest",
+"description": "ChartTest",
+"description-de": "ChartTest",
+"description-es": "ChartTest",
+"doc":         "widgets/ChartTest/doc.html",
+"url":         "apps/WidgetLoader?widget=ChartTest&",
+"icon":        "widgets/ChartTest/icon.png",
+"width":       800,
+"height":      480,
+"args":        ""
+}

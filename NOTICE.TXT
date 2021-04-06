@@ -7,6 +7,16 @@ RequireJS
 AngularJS
     Copyright (c) 2010-2015 Google, Inc. http://angularjs.org
     Code licensed under the The MIT License. Documentation licensed under CC BY 3.0. 
+    
+Chart.js
+    https://github.com/chartjs/Chart.js/blob/master/LICENSE.md
+    The MIT License (MIT)
+    Copyright (c) 2014-2021 Chart.js Contributors
+
+angular-chart
+    https://github.com/jtblin/angular-chart.js/blob/master/LICENSE
+    The BSD License
+    Copyright (c) Jerome Touffe-Blin ("Author")
 
 OpenStreetMap
     http://www.openstreetmap.org/copyright

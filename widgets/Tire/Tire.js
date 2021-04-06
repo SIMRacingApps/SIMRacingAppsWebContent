@@ -67,7 +67,7 @@ function(SIMRacingApps) {
                     )
                         $scope.controller = false;
                     else
-                        $scope.controller = ($scope.data.Car.REFERENCE.HasAutomaticPitCommands.Value && $scope.canControl);
+                        $scope.controller = $scope.canControl ? $scope.data.Car.REFERENCE.HasAutomaticPitCommands.Value : false;
                      
                     if ($scope.data.Car.REFERENCE.Gauge['TirePressure'+$scope.value].ChangeFlag.Value) {
                         $scope.Lcolor = 'rgb(255,0,0)';
