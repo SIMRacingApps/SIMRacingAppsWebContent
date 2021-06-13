@@ -79,6 +79,7 @@
     border-radius:     15px;
     padding-left:      4%;
     padding-right:     4%;
+    width:             min-content;
 }
 
 .SIMRacingApps-Widget-TrackMap-trackname .SIMRacingApps-Widget-DataTable {
@@ -95,6 +96,7 @@
     border-radius:     15px;
     padding-left:      1%;
     padding-right:     1%;
+    width:             min-content;
 }
 
 .SIMRacingApps-Widget-TrackMap-trackinfo .SIMRacingApps-Widget-DataTable {
@@ -125,6 +127,7 @@
     padding-left:      2%;
     padding-right:     2%;
     font-size:         30%;
+    width:             min-content;
 }
 
 .SIMRacingApps-Widget-TrackMap-weatherinfo .SIMRacingApps-Widget-DataTable {
