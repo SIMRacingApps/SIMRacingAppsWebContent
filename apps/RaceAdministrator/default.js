@@ -102,6 +102,28 @@ function( angular,  SIMRacingApps) {
                 }, $scope.clickDelay);
             };
 
+            $scope.openPitRoadClicked = function($clickedScope) {
+                console.log("Open Pit Road Clicked");
+                $clickedScope.setClickedState('clicked');
+                $scope.sendCommand("Session/setChat/!pitOpen");
+
+                //delay a little, then clear the clicked state.
+                $timeout(function() {
+                    $clickedScope.setClickedState('none');
+                }, $scope.clickDelay);
+            };
+
+            $scope.closePitRoadClicked = function($clickedScope) {
+                console.log("Close Pit Road Clicked");
+                $clickedScope.setClickedState('clicked');
+                $scope.sendCommand("Session/setChat/!pitClose");
+
+                //delay a little, then clear the clicked state.
+                $timeout(function() {
+                    $clickedScope.setClickedState('none');
+                }, $scope.clickDelay);
+            };
+
             $scope.DRIVERADMINON_Clicked = function($clickedScope) {
                 $scope.activeDriverButton = "DRIVERADMINON";
                 $scope.currentCarCommand  = "setAdminFlag/Y";

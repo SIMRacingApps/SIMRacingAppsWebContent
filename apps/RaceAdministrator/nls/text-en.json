@@ -18,5 +18,7 @@
     "DRIVERDQ":                 "Disqualify",
     "DRIVEREOL":                "End of Line",            
     "DRIVERCLEARALLPENALTIES":  "Clear All Penalties",
-    "SENTCOMMANDS":             "Sent Commands"
+    "SENTCOMMANDS":             "Sent Commands",
+    "PITROADOPEN":              "Open Pit Road",
+    "PITROADCLOSED":            "Close Pit Road"
 }

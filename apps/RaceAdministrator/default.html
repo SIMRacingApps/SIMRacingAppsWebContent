@@ -39,10 +39,12 @@
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
+                            <col class = "SIMRacingApps-App-RaceAdministrator-button" />
+                            <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                         </colgroup>
                         <thead>
                             <tr><td 
-                                colspan           = 4
+                                colspan           = 6
                                 class             = "SIMRacingApps-App-RaceAdministrator-header"
                                 data-sra-data     = ""
                                 data-ng-bind      = "translations.SESSIONCOMMANDS"
@@ -85,6 +87,24 @@
                                     data-sra-data          = ""
                                     data-ng-bind           = "translations.CAUTION"
                                     data-sra-args-on-click = "cautionClicked"
+                                ></td>
+                                <td 
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-pitRoadOpen
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             " 
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.PITROADOPEN" 
+                                    data-sra-args-on-click = "openPitRoadClicked"
+                                ></td>
+                                <td
+                                     data-ng-class         = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                             SIMRacingApps-App-RaceAdministrator-pitRoadClosed 
+                                                             SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                           "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.PITROADCLOSED"
+                                    data-sra-args-on-click = "closePitRoadClicked"
                                 ></td>
                             </tr>
                         </tbody>
