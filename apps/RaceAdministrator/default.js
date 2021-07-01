@@ -105,7 +105,7 @@ function( angular,  SIMRacingApps) {
             $scope.openPitRoadClicked = function($clickedScope) {
                 console.log("Open Pit Road Clicked");
                 $clickedScope.setClickedState('clicked');
-                $scope.sendCommand("Session/setChat/!pitOpen");
+                $scope.sendCommand("Session/setPitOpen");
 
                 //delay a little, then clear the clicked state.
                 $timeout(function() {
@@ -116,7 +116,7 @@ function( angular,  SIMRacingApps) {
             $scope.closePitRoadClicked = function($clickedScope) {
                 console.log("Close Pit Road Clicked");
                 $clickedScope.setClickedState('clicked');
-                $scope.sendCommand("Session/setChat/!pitClose");
+                $scope.sendCommand("Session/setPitClose");
 
                 //delay a little, then clear the clicked state.
                 $timeout(function() {
