@@ -18,5 +18,7 @@
     "DRIVERDQ":                 "Disqualifizieren",
     "DRIVEREOL":                "ans Ende versetzen",            
     "DRIVERCLEARALLPENALTIES":  "l\u00f6sche alle Strafen",
-    "SENTCOMMANDS":             "sende Befehle"
+    "SENTCOMMANDS":             "sende Befehle",
+    "PITROADOPEN":              "Tagebaustra\u00dfe",
+    "PITROADCLOSED":            "Grubenstra\u00dfe schlie\u00dfen"
 }
