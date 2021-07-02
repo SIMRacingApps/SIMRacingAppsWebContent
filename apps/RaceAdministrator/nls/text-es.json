@@ -19,6 +19,9 @@
     "DRIVEREOL":                "End of Line",            
     "DRIVERCLEARALLPENALTIES":  "Clear All Penalties",
     "SENTCOMMANDS":             "Sent Commands",
-    "PITROADOPEN":              "Camino a cielo abierto",
-    "PITROADCLOSED":            "Cerrar Pit Road"
+    "PITROADOPEN":              "Open Pit Road",
+    "PITROADCLOSED":            "Close Pit Road",
+    "ADDCAUTIONLAP":            "Add Caution Lap",
+    "SUBTRACTCAUTIONLAP":       "Subtract Caution Lap",
+    "ONETOGREEN":               "One to Green"
 }

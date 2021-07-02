@@ -20,5 +20,8 @@
     "DRIVERCLEARALLPENALTIES":  "l\u00f6sche alle Strafen",
     "SENTCOMMANDS":             "sende Befehle",
     "PITROADOPEN":              "Tagebaustra\u00dfe",
-    "PITROADCLOSED":            "Grubenstra\u00dfe schlie\u00dfen"
+    "PITROADCLOSED":            "Grubenstra\u00dfe schlie\u00dfen",
+    "ADDCAUTIONLAP":            "Vorsichtsrunde hinzuf\u00fcgen",
+    "SUBTRACTCAUTIONLAP":       "Vorsichtsrunde abziehen",
+    "ONETOGREEN":               "Eins zu Gr\u00fcn"
 }

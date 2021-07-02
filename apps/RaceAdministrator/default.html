@@ -33,9 +33,8 @@
                 <td class = "SIMRacingApps-App-RaceAdministrator-commands">
                     <table 
                         class           = "SIMRacingApps-App-RaceAdministrator-commands-all"
-                        data-ng-style   = "{ width: '100%', height: '15%', tableLayout: 'fixed' }">
+                        data-ng-style   = "{ width: '100%', height: '25%', tableLayout: 'fixed' }">
                         <colgroup>
-                            <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
@@ -79,15 +78,6 @@
                                     data-ng-bind           = "translations.ALLCHATOFF"
                                     data-sra-args-on-click = "chatOffClicked"
                                 ></td>
-                                <td
-                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
-                                                               SIMRacingApps-App-RaceAdministrator-caution 
-                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
-                                                             "
-                                    data-sra-data          = ""
-                                    data-ng-bind           = "translations.CAUTION"
-                                    data-sra-args-on-click = "cautionClicked"
-                                ></td>
                                 <td 
                                     data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
                                                                SIMRacingApps-App-RaceAdministrator-pitRoadOpen
@@ -107,11 +97,49 @@
                                     data-sra-args-on-click = "closePitRoadClicked"
                                 ></td>
                             </tr>
+                            <tr>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-caution 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.CAUTION"
+                                    data-sra-args-on-click = "cautionClicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-addcautionlop 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.ADDCAUTIONLAP"
+                                    data-sra-args-on-click = "addcautionlapClicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-subtractcautionlop 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.SUBTRACTCAUTIONLAP"
+                                    data-sra-args-on-click = "subtractcautionlapClicked"
+                                ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-onetogreen 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "translations.ONETOGREEN"
+                                    data-sra-args-on-click = "onetogreenClicked"
+                                ></td>
+                            </tr>
                         </tbody>
                     </table>
                     <table 
                         class           = "SIMRacingApps-App-RaceAdministrator-commands-driver"
-                        data-ng-style   = "{ width: '100%', height: '45%', tableLayout: 'fixed' }">
+                        data-ng-style   = "{ width: '100%', height: '35%', tableLayout: 'fixed' }">
                         <colgroup>
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
                             <col class = "SIMRacingApps-App-RaceAdministrator-button" />
@@ -280,7 +308,7 @@
                                 <td
                                     class             = "SIMRacingApps-App-RaceAdministrator-senttext"
                                     data-sra-data     = ""
-                                    data-ng-bind      = "sentCommandsText[row]"
+                                    data-ng-bind      = "sentCommandsText[row] + '.'"
                                 ></td>
                             </tr>
                         </tbody>

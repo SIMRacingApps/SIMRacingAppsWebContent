@@ -60,6 +60,7 @@ function( angular,  SIMRacingApps) {
             };
            
             $scope.cautionClicked = function($clickedScope) {
+                console.log("Caution clicked");
                 $clickedScope.setClickedState('clicked');
                 $scope.sendCommand("Session/setCautionFlag");
                 
@@ -69,6 +70,39 @@ function( angular,  SIMRacingApps) {
                 }, $scope.clickDelay);
             };
             
+            $scope.addcautionlapClicked = function($clickedScope) {
+                console.log("Add Caution Lap clicked");
+                $clickedScope.setClickedState('clicked');
+                $scope.sendCommand("Session/setCautionLapsAdjust/1");
+                
+                //delay a little, then clear the clicked state.
+                $timeout(function () {
+                    $clickedScope.setClickedState('none');
+                }, $scope.clickDelay);
+            };
+
+            $scope.subtractcautionlapClicked = function($clickedScope) {
+                console.log("Subtract Caution Lap clicked");
+                $clickedScope.setClickedState('clicked');
+                $scope.sendCommand("Session/setCautionLapsAdjust/-1");
+                
+                //delay a little, then clear the clicked state.
+                $timeout(function () {
+                    $clickedScope.setClickedState('none');
+                }, $scope.clickDelay);
+            };
+
+            $scope.onetogreenClicked = function($clickedScope) {
+                console.log("One To Green clicked");
+                $clickedScope.setClickedState('clicked');
+                $scope.sendCommand("Session/setCautionLaps/1");
+                
+                //delay a little, then clear the clicked state.
+                $timeout(function () {
+                    $clickedScope.setClickedState('none');
+                }, $scope.clickDelay);
+            };
+
             $scope.chatOnClicked = function($clickedScope) {
                 console.log("Chat On Clicked");
                 $clickedScope.setClickedState('clicked');
