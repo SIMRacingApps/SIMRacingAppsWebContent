@@ -26,7 +26,7 @@ function(SIMRacingApps,TextGauge) {
         template:        'BrakeBiasAdjustment.html',
         defaultWidth:    380,
         defaultHeight:   120,
-        defaultInterval: 300   //initialize with the default interval
+        defaultInterval: 50   //initialize with the default interval
     };
 
     self.module = angular.module('SIMRacingApps'); //get the main module
@@ -50,8 +50,8 @@ function(SIMRacingApps,TextGauge) {
                 $scope[self.name]   = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
                 $scope.sraShowLabel = sraDispatcher.getBoolean($scope.sraArgsSHOWLABEL, $attrs.sraArgsShowLabel, $attrs.sraArgsShowLabel, true);
                 $scope.sraShowUOM   = sraDispatcher.getBoolean($scope.sraArgsSHOWUOM, $attrs.sraArgsShowUOM, $attrs.sraArgsShowUOM, true);
-                $scope.sraRoundTo   = sraDispatcher.getTruthy($scope.sraArgsTACHROUNDTO,$attrs.sraArgsRoundTo,2)*1;
-                $scope.sraDecimals  = sraDispatcher.getTruthy($scope.sraArgsDECIMALS,$attrs.sraArgsDecimals,2)*1;
+                $scope.sraRoundTo   = sraDispatcher.getTruthy($scope.sraArgsTACHROUNDTO,$attrs.sraArgsRoundTo,1)*1;
+                $scope.sraDecimals  = sraDispatcher.getTruthy($scope.sraArgsDECIMALS,$attrs.sraArgsDecimals,1)*1;
 
                 //register with the dispatcher
                 $scope.names = sraDispatcher.subscribe($scope,$attrs,self.defaultInterval); //register subscriptions and options to the dispatcher
