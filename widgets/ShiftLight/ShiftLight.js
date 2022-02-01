@@ -14,7 +14,7 @@
  * @param {boolean} data-sra-args-flash-on-critical Enable or disable the flash on critical. Defaults to true.
  * @author Jeffrey Gilliam
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2021 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2022 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','css!widgets/ShiftLight/ShiftLight'],
