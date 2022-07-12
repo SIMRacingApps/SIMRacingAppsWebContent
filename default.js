@@ -90,9 +90,15 @@ function( angular,angularSanitize ) {
                 return rUrl;
             };
             
-            $scope.launch = function(url,width,height) {
+            $scope.launch = function(url,width,height,name) {
                     var useWidth  = width  || 800;
                     var useHeight = height || 480;
+
+                    gtag('event', 'screen_view', {
+                        'app_name':    'SIMRacingApps',
+                        'screen_name': name,
+                        'app_version': $scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build
+                    });
                     
                     console.log('launch('+$scope.url(url)+')');
                     var eventWin  = $window.open($scope.url(url), "_blank", 'width=' + useWidth + ', height=' + useHeight + ', resizable=1, scrollbars=1, status=0, toolbar=0, location=0, menubar=0');
@@ -178,8 +184,15 @@ function( angular,angularSanitize ) {
                     $scope.headers = data.headers;
                     
                     $document[0].title = 'SIMRacingApps '+ $scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build + ' [' + $scope.locale + ']';
-                    ga('set','av',$scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build);
-                    ga('send', 'pageview', '/SIMRacingApps');
+
+                    //ga('set','av',$scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build);
+                    //ga('send', 'pageview', '/SIMRacingApps');
+
+                    gtag('event', 'screen_view', {
+                        'app_name':    'SIMRacingApps',
+                        'screen_name': 'Home',
+                        'app_version': $scope.version.major+'.'+$scope.version.minor+'_'+$scope.version.build
+                    });
 
                     $scope.checkVersion();
                     

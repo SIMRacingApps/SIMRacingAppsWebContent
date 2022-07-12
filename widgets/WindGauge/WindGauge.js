@@ -82,7 +82,7 @@ function(SIMRacingApps) {
                                 //bearing is the heading for which you are going relative to north
                                 //my guage has east at 90 degrees to the right. If the bearing is 90
                                 //then I want east at the top, so I rotate the gauge counter clockwise to the bearing.
-                                $scope.north = 'rotate('+(-newValue)+' 240,240)';
+                                $scope.north = 'rotate('+(270.0 - newValue)+' 240,240)';
                         });
                     }
                 }
