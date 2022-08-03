@@ -268,7 +268,7 @@ function( angular,  SIMRacingApps) {
 
             if (isEnabled) {
                 sraDispatcher.subscribe($scope,{
-                    sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag;Car/"+car_pitclose+"/Lap/COMPLETED;Session/IsPitOpen"
+                    sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag;Car/"+car_pitclose+"/Lap/COMPLETED;Session/IsPitRoadOpen"
                 },interval);
                 $scope.$watch('data.Car.'+car+'.Lap.COMPLETED.Value', function() {
                     if ($scope.data.Session.Type.Value == 'RACE' 
@@ -286,7 +286,7 @@ function( angular,  SIMRacingApps) {
                 });
                 $scope.$watch('data.Car.'+car_pitclose+'.Lap.COMPLETED.Value', function() {
                     if ($scope.data.Session.Type.Value == 'RACE' 
-                    &&  $scope.data.Session.IsPitOpen.Value
+                    &&  $scope.data.Session.IsPitRoadOpen.Value
                     ) {
                         for (var i=0; i < laps_pitclose.length; i++) {
                             if ($scope.data.Car[car_pitclose].Lap.COMPLETED.Value == laps[i]) {
