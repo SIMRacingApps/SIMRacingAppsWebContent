@@ -256,32 +256,48 @@ function( angular,  SIMRacingApps) {
                 }
             };
 
-            /**
             //TODO: Move this code to the server and add these to the settings
-            var car = 'P10';        //Car to watch
-            var delay = 0;          //amount to delay (milliseconds) before throwing the caution
-            var laps = [45,90];     //laps throw caution on. Add as many as you want
-            var interval = 100;     //polling frequency in milliseconds
-            
-            sraDispatcher.subscribe($scope,{
-                sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag"
-            },interval);
-            $scope.$watch('data.Car.'+car+'.Lap.COMPLETED.Value', function() {
-                if ($scope.data.Session.Type.Value == 'RACE' 
-                && !$scope.data.Session.IsCautionFlag.Value
-                && !$scope.data.Session.IsGreenFlag.Value   //if were under yellow and just going back green, do not throw another one
-                ) {
-                    for (var i=0; i < laps.length; i++) {
-                        if ($scope.data.Car[car].Lap.COMPLETED.Value == laps[i]) {
-                            $timeout(function () {
-                                $scope.sendCommand("Session/setCautionFlag");
-                            }, delay);
+            var isEnabled      = false;    //is this functionality enabled? Set to true or false
+            var car            = 'P10';    //Car to watch for throwing the caution
+            var delay          = 0;        //amount to delay (milliseconds) before throwing the caution
+            var laps           = [45,90];  //laps throw caution on. Add as many as you want
+            var interval       = 100;      //polling frequency in milliseconds
+            var car_pitclose   = 'P1';     //Car to watch for closing the pits
+            var delay_pitclose = 0;        //amount to delay (milliseconds) before closing the pits
+            var laps_pitclose  = [43,88];  //laps to close the pits based on when car_pitclose crosses the start/finish line
+
+            if (isEnabled) {
+                sraDispatcher.subscribe($scope,{
+                    sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag;Car/"+car_pitclose+"/Lap/COMPLETED;Session/IsPitOpen"
+                },interval);
+                $scope.$watch('data.Car.'+car+'.Lap.COMPLETED.Value', function() {
+                    if ($scope.data.Session.Type.Value == 'RACE' 
+                    && !$scope.data.Session.IsCautionFlag.Value
+                    && !$scope.data.Session.IsGreenFlag.Value   //if were under yellow and just going back green, do not throw another one
+                    ) {
+                        for (var i=0; i < laps.length; i++) {
+                            if ($scope.data.Car[car].Lap.COMPLETED.Value == laps[i]) {
+                                $timeout(function () {
+                                    $scope.sendCommand("Session/setCautionFlag");
+                                }, delay);
+                            }
                         }
                     }
-                }
-            });
-            /**/
-
+                });
+                $scope.$watch('data.Car.'+car_pitclose+'.Lap.COMPLETED.Value', function() {
+                    if ($scope.data.Session.Type.Value == 'RACE' 
+                    &&  $scope.data.Session.IsPitOpen.Value
+                    ) {
+                        for (var i=0; i < laps_pitclose.length; i++) {
+                            if ($scope.data.Car[car_pitclose].Lap.COMPLETED.Value == laps[i]) {
+                                $timeout(function () {
+                                    $scope.sendCommand("Session/setPitClose");
+                                }, delay);
+                            }
+                        }
+                    }
+                });
+            }
         }]);
 
         //now start the process by passing in the element where the SIMRacingsApps class is defined.

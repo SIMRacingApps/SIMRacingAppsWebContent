@@ -1,31 +1,51 @@
 {
 "doc": "JavaScriptDoc/sra-track-map.html",
-"name": "TrackMap-MAP;TrackMap-OSM;TrackMap-NOBACKGROUND;TrackMap-REFERENCE",
+"name": "TrackMap-MAP;TrackMap-MAP-Sectors; TrackMap-OSM;TrackMap-OSM-Sectors;TrackMap-NOBACKGROUND;TrackMap-NOBACKGROUND-Sectors; TrackMap-REFERENCE",
 "description": [
     "Track Map - Static Image",
+    "Track Map - Static Image - With Sectors",
     "Track Map - Open Street Maps - Real-time",
+    "Track Map - Open Street Maps - Real-time With Sectors",
     "Track Map - No background",
+    "Track Map - No background - With Sectors",
     "Track Map - Reference Car and Leader Only"
 ],
 "description-de": [
     "Live TrackMap / Streckenkarte - statischer/fester Hintergrund",
+    "Live TrackMap / Streckenkarte - statischer/fester Hintergrund - With Sectors",
     "Live TrackMap / Streckenkarte - Open Street Maps - Real-time",
+    "Live TrackMap / Streckenkarte - Open Street Maps - Real-time With Sectors",
     "Live TrackMap / Streckenkarte - ohne Hintergrund",
+    "Live TrackMap / Streckenkarte - ohne Hintergrund - With Sectors",
     "Live TrackMap / Streckenkarte - nur Referenz-Fahrzeug und F\u00fchrender"
 ],
 "description-es": [
     "Track Map - Static Image",
+    "Track Map - Static Image - With Sectors",
     "Track Map - Open Street Maps - Real-time",
+    "Track Map - Open Street Maps - Real-time With Secotrs",
     "Track Map - No background",
+    "Track Map - No background - With Sectors",
     "Track Map - Reference Car and Leader Only"
 ],
 "url": "apps/WidgetLoader?widget=TrackMap&",
-"icon": "widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-map.png;widgets/TrackMap/icon-nobackground.png;widgets/TrackMap/icon-reference.png",
+"icon": [
+    "widgets/TrackMap/icon-map.png",
+    "widgets/TrackMap/icon-map-sectors.png",
+    "widgets/TrackMap/icon-map.png",
+    "widgets/TrackMap/icon-map-sectors.png",
+    "widgets/TrackMap/icon-nobackground.png",
+    "widgets/TrackMap/icon-nobackground-sectors.png",
+    "widgets/TrackMap/icon-reference.png"
+],
 "width": 800,
 "height": 480,
 "args": [
     "MAPLAYER=map",
+    "MAPLAYER=map&SHOWSECTORS=true",
     "MAPLAYER=osm",
+    "MAPLAYER=osm&SHOWSECTORS=true",
     "MAPLAYER=none&SHOWMAP=false",
+    "MAPLAYER=none&SHOWMAP=false&SHOWSECTORS=true",
     "MAPLAYER=none&SHOWFLAGS=false&SHOWWINDGAUGE=false&SHOWWEATHER=false&SHOWTITLE=false&SHOWINFO=false&SHOWMAP=false&TRACKMAPCARS=REFERENCE%3BLEADERCLASS"
 ]}

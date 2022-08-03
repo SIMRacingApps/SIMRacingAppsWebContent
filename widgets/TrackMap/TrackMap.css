@@ -189,6 +189,14 @@
     font-size: 4.5%;
 }
 
+.SIMRacingApps-Widget-TrackMap-SectorContainer {
+    position:  absolute;
+    opacity:   1;
+    width:     3%;
+    height:    5%;
+    font-size: 4.5%;
+}
+
 .SIMRacingApps-Widget-TrackMap-MarkerContainer {
     position:  absolute;
 }

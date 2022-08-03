@@ -145,4 +145,15 @@
          }"
      ></sra-track-map-car>
 
+    <sra-track-map-sector
+         data-ng-repeat         = "sector in sectors"
+         class                  = "SIMRacingApps-Widget-TrackMap-SectorContainer"
+         data-sra-args-value    = "{{sector.number}}"
+         data-sra-interval      = "{{sraInterval}}"
+         data-ng-style          = "{
+                left:                ((sector.left | sraRound) - ((width/2)  | sraRound))+'px',
+                top:                 ((sector.top  | sraRound) - ((height/2) | sraRound))+'px',
+                zIndex:         11
+         }"
+     ></sra-track-map-sector>
 </div>

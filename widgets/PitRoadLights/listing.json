@@ -1,0 +1,12 @@
+{
+"doc": "JavaScriptDoc/sra-pit-road-lights.html",
+"name": "PitRoadLights",
+"description": "Pit Road Lights",
+"description-de": "Pit Road Lights",
+"description-es": "Pit Road Lights",
+"url": "apps/WidgetLoader?widget=PitRoadLights&",
+"icon": "widgets/PitRoadLights/icon.png",
+"width": 960,
+"height": 480,
+"args": ""
+}

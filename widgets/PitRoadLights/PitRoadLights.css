@@ -1,0 +1,34 @@
+.SIMRacingApps-Widget-PitRoadLights {
+    width:  100%;
+    height: 100%;
+}
+
+.SIMRacingApps-Widget-PitRoadLights-background {
+    stroke-width: 20;
+    stroke: black;
+    fill:   transparent;
+}
+
+.SIMRacingApps-Widget-PitRoadLights-closed {
+    stroke-width: 10;
+    stroke: black;
+    fill:   red;
+}
+
+.SIMRacingApps-Widget-PitRoadLights-open {
+    stroke-width: 10;
+    stroke: black;
+    fill:   green;
+}
+
+.SIMRacingApps-Widget-PitRoadLights-1 {
+    cx:     240;
+    cy:     240;
+    r:      200;
+}
+
+.SIMRacingApps-Widget-PitRoadLights-2 {
+    cx:     720;
+    cy:     240;
+    r:      200;
+}

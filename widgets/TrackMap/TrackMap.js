@@ -29,6 +29,7 @@
  * @param {boolean} data-sra-args-show-info false turns off the track information box. Defaults to true.
  * @param {boolean} data-sra-args-show-map true turns on/off the track layer. Defaults to true.
  * @param {boolean} data-sra-args-show-path true turns on/off the current track path. Defaults to true.
+ * @param {boolean} data-sra-args-show-sectors true turns on/off the sector dots. Defaults to true. Since 1.19.
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 100.
  * @author Jeffrey Gilliam
  * @since 1.0
@@ -41,6 +42,7 @@ define(['SIMRacingApps',
         'widgets/TrackMap/Car/Car',
         'widgets/TrackMap/FinishLine/FinishLine',
         'widgets/TrackMap/MergePoint/MergePoint',
+        'widgets/TrackMap/Sector/Sector',
         'widgets/DataTable/DataTable',
         'widgets/Flags/Flags',
         'widgets/WeatherInfo/WeatherInfo',
@@ -57,6 +59,7 @@ function(SIMRacingApps,ol) {
         defaultInterval: 100   //initialize with the default interval to how fast the cars will update
 
       , maxcars:         64
+      , maxsectors:      15     //nurburgring long has 14 sectors.
     };
 
     self.module = angular.module('SIMRacingApps'); //get the main module
@@ -79,6 +82,9 @@ function(SIMRacingApps,ol) {
                 sraDispatcher.loadTranslations(sraDispatcher.getWidgetUrl(self.url),'text',function(path) {
                     $scope.translations = sraDispatcher.getTranslation(path);
                 });
+                
+                $scope.pathCounter = 0;
+                $scope.sectorCounter = 0;
 
                 //initialize the $scope variables
                 $scope.imageUrl      = "";
@@ -95,12 +101,38 @@ function(SIMRacingApps,ol) {
                 $scope.mergePointLeft= -10000;
                 $scope.mergePointTop = -10000;
                 
+                $scope.sectors    = {};
+                
                 $scope.map           = null;
                 
                 $scope.dateformat = 'shortDate';
                 $scope.format = 'mediumTime';
                 $scope.tz = '';
                 $scope.time = 0;
+                
+                $scope.arrayEqual = function (array1,array2) {
+                    // if the other array is a falsy value, return
+                    if (!array1 || !array2)
+                        return false;
+
+                    // compare lengths - can save a lot of time 
+                    if (array1.length != array2.length)
+                        return false;
+
+                    for (var i = 0, l=array1.length; i < l; i++) {
+                        // Check if we have nested arrays
+                        if (array1[i] instanceof Array && array2[i] instanceof Array) {
+                            // recurse into the nested arrays
+                            if (!array1[i].equals(array2[i]))
+                                return false;       
+                        }           
+                        else if (array1[i] != array2[i]) { 
+                            // Warning - two different object instances will never be equal: {x:20} != {x:20}
+                            return false;   
+                        }           
+                    }       
+                    return true;
+                };
                 
                 $scope.createMap = function($element) {
                     var _lat        = $scope.data.Track.Latitude.Value;
@@ -249,10 +281,44 @@ function(SIMRacingApps,ol) {
                         }
                     }
                 };
+                
+                $scope.moveSectors = function(newCoordinates, oldCoordinates) {
+                    if ($scope.sraShowSectors) {
+                        if (arguments.length == 3) {
+                            if ($scope.arrayEqual(newCoordinates, oldCoordinates))
+                                return;
+                        }
+                        if( Object.prototype.toString.call( newCoordinates ) === '[object Array]' ) {
+                            //console.log((++$scope.sectorCounter)+" moveSectors("+(newCoordinates.length/4)+")");
+                            for (var sector=0; sector < self.maxsectors; sector++) {
+                                //first move them off screen in case they're not visible
+                                $scope.sectors[sector].left = -100000;
+                                $scope.sectors[sector].top  = -100000;
+                                
+                                //move sector if it's visible to it's location on the path
+                                if ((sector*4) < newCoordinates.length) {
+                                    var latitude         = newCoordinates[(sector*4)];
+                                    var longitude        = newCoordinates[(sector*4)+1];
+                                    var location         = $scope.getLocation(longitude,latitude,$scope);
+                                        
+                                    if (location) {
+                                        $scope.sectors[sector].left = location[0];
+                                        $scope.sectors[sector].top  = location[1];
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
 
-                $scope.getPath = function(path) {
+                $scope.getPath = function(path,oldPath) {
                     if ($scope.map) {
+                        if (arguments.length == 3) {
+                            if ($scope.arrayEqual(path,oldPath))
+                                return;
+                        }
                         if( Object.prototype.toString.call( path ) === '[object Array]' ) {
+                            //console.log((++$scope.pathCounter)+" getPath("+path.length+")");
                             var d = "";
                             for (var point=0; point < path.length; point++) {
                                 var longitude = path[point].Lon;
@@ -272,6 +338,7 @@ function(SIMRacingApps,ol) {
                                 }
                             }
                             
+                            $scope.moveSectors($scope.data.Track.Sectors.COORDINATES.DEG.Value);
                             return d;
                         }
                     }
@@ -293,6 +360,7 @@ function(SIMRacingApps,ol) {
                 $scope.sraShowInfo      = sraDispatcher.getBoolean($scope.sraArgsSHOWINFO, $attrs.sraArgsShowInfo, true);
                 $scope.sraShowMap       = sraDispatcher.getBoolean($scope.sraArgsSHOWMAP, $attrs.sraArgsShowMap, true);
                 $scope.sraShowPath      = sraDispatcher.getBoolean($scope.sraArgsSHOWPATH, $attrs.sraArgsShowPath, true);
+                $scope.sraShowSectors   = sraDispatcher.getBoolean($scope.sraArgsSHOWSECTORS, $attrs.sraArgsShowSectors, false);
                 $scope.sraMapLayer      = sraDispatcher.getTruthy($scope.sraArgsMAPLAYER, $attrs.sraArgsMapLayer, 'map').toUpperCase();
                 $scope.sraCars          = sraDispatcher.getTruthy($scope.sraArgsTRACKMAPCARS, $attrs.sraArgsTrackMapCars, '');
 
@@ -334,6 +402,18 @@ function(SIMRacingApps,ol) {
                     $scope.$watch("data.Car['"+carid+"'].Latitude.Value",  new Function('newValue','oldValue','$scope','$scope.moveCar("'+carid+'",$scope);'));
                     $scope.$watch("data.Car['"+carid+"'].Longitude.Value", new Function('newValue','oldValue','$scope','$scope.moveCar("'+carid+'",$scope);'));
                 }
+                
+                //setup for sector dots
+                $attrs.sraArgsData += ";Track/Sectors/COORDINATES/DEG";
+                
+                for (var sector=0; sector < self.maxsectors; sector++) {
+                    $scope.sectors[sector]        = {};
+                    $scope.sectors[sector].number = sector + 1;
+                    $scope.sectors[sector].left   = -10000;
+                    $scope.sectors[sector].top    = -10000;
+                }
+                
+                $scope.$watch("data.Track.Sectors.COORDINATES.DEG.Value", $scope.moveSectors);
 
                 //now watch for track changes and move the finish line                
                 $attrs.sraArgsData += ";Session/Time;Track/Latitude;Track/Longitude;Track/Resolution;Track/North;Track/Image/"+$scope.sraMapLayer;
@@ -385,9 +465,8 @@ function(SIMRacingApps,ol) {
                         $scope.trackpath   = $scope.getPath($scope.data.Track.Path.ONTRACK.Value);
                         $scope.pitroadpath = $scope.getPath($scope.data.Track.Path.ONPITROAD.Value);
                     }
+                    $scope.moveSectors($scope.data.Track.Sectors.COORDINATES.DEG.Value);
                 });
-                
-
             }
         };
     }]);
