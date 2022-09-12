@@ -1,0 +1,12 @@
+{
+"name":        "SIMState",
+"description": "SIM State, Replay, Live",
+"description-de": "SIM State, Replay, Live",
+"description-es": "SIM State, Replay, Live",
+"doc":         "JavaScriptDoc/sra-s-i-m-state.html",
+"url":         "apps/WidgetLoader?widget=SIMState&",
+"icon":        "widgets/SIMState/icon.png",
+"width":       800,
+"height":      200,
+"args":        ""
+}
