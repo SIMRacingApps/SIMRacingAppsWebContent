@@ -58,7 +58,7 @@ function(SIMRacingApps) {
                 $scope[self.name] = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
 
                 /** your code goes here **/
-                $attrs.sraArgsData += ";Session/IsReplay";
+                $attrs.sraArgsData += ";Session/IsReplayLive";
 
                 /**standard code that should be in every directive **/
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));
