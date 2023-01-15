@@ -17,7 +17,7 @@
  * @param {boolean} showFPS When any value is seen in the URL for this attribute, the Frames Per Second(FPS) will be shown. Defaults to not show.
  * @author Jeffrey Gilliam
  * @since 1.0
- * @copyright Copyright (C) 2015 - 2022 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2023 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 require(SIMRacingAppsRequireConfig,
