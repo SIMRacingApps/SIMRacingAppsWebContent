@@ -80,6 +80,7 @@ function(SIMRacingApps) {
                     if ($scope.data.Session.IsCrossedFlag.Value) {
                         $scope.messages.push($scope.translations.HALFWAY);
                     }
+
                     
                     var messages = value.split(";");
                     for (var i = 0; i < messages.length; i++) {
@@ -95,6 +96,12 @@ function(SIMRacingApps) {
                             }
                         }
                     }
+
+//for testing only. Comment out before release
+//$scope.messages = [];
+//$scope.messages.push($scope.translations.BLUE);
+//$scope.messages.push($scope.translations.GREEN);
+
                 };
 
             }]
