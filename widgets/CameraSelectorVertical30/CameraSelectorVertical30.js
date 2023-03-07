@@ -142,10 +142,12 @@ function(SIMRacingApps) {
                 };
                 
                 $scope.onButtonClick = function(scope,value,buttonIdx) {
-                    console.log('CameraSelector.onButtonClick('+buttonIdx+') = '+$scope.sraButtons[buttonIdx].camera);
+                    var camera = encodeURI($scope.sraButtons[buttonIdx].camera);
+                    
+                    console.log('CameraSelector.onButtonClick('+buttonIdx+') = '+camera);
                     scope.clickedStatus = 'Y';
                     
-                    $scope.sendCommand("Session/setCamera/" + $scope.sraButtons[buttonIdx].camera);
+                    $scope.sendCommand("Session/setCamera/" + camera);
 
                     $timeout(function(scope) {
                         scope.clickedStatus = 'N';

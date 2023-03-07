@@ -58,7 +58,7 @@ function(SIMRacingApps) {
                 
                 $scope.updateState = function(value) {
                     console.log('updateState() called = ('+$scope.data.Session.Replay.Value+')');
-                    $scope.currentState = $scope.data.Session.Replay.Value;
+                    $scope.currentState = ($scope.data.Session.Replay.Value == ">>>>>" ? $scope.translations.LIVE : $scope.data.Session.Replay.Value);
                 };
                 
                 $scope.onButtonClick = function(scope,value,button) {

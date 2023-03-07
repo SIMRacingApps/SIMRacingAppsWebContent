@@ -1,0 +1,18 @@
+{
+"doc": "JavaScriptDoc/sra-a-b-s-active.html",
+"name": "ABSActive",
+"description": [
+    "Lights Up When ABS is Active"
+],
+"description-de": [
+    "Lights Up When ABS is Active"
+],
+"description-es": [
+    "Lights Up When ABS is Active"
+],
+"url": "apps/WidgetLoader?widget=ABSActive&",
+"icon": "widgets/ABSActive/icon.png",
+"width": 480,
+"height": 480,
+"args": ""
+}

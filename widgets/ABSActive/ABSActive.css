@@ -1,0 +1,16 @@
+.SIMRacingApps-Widget-ABSActive {
+    width:         100%;
+    height:        100%;
+}
+
+.SIMRacingApps-Widget-ABSActive-off {
+    stroke-width: 10;
+    stroke: black;
+    fill:   gray;
+}
+
+.SIMRacingApps-Widget-ABSActive-on {
+    stroke-width: 10;
+    stroke: black;
+    fill:   purple;
+}

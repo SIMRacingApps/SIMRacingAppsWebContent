@@ -10,5 +10,6 @@
     "PREVSESSION":      "Previous Session",
     "NEXTSESSION":      "Next Session",
     "SKIPBACKWARDS":    "Skip Backwards",
-    "SKIPFORWARDS":     "Skip Forwards"
+    "SKIPFORWARDS":     "Skip Forwards",
+    "LIVE":             "Live"
 }
