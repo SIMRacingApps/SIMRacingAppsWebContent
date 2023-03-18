@@ -19,7 +19,7 @@
  * <img src="../widgets/InGarage/icon.png" />
  * @ngdoc directive
  * @name sra-in-garage
- * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 100.
+ * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 16.
  * @author Jeffrey Gilliam
  * @since 1.6
  * @copyright Copyright (C) 2015 - 2023 Jeffrey Gilliam
@@ -34,7 +34,7 @@ function(SIMRacingApps) {
         template:        'InGarage.html',
         defaultWidth:    1920,
         defaultHeight:   1080,
-        defaultInterval: 100   //initialize with the default interval
+        defaultInterval: 16   //initialize with the default interval
     };
 
     self.module = angular.module('SIMRacingApps'); //get the main module
@@ -64,7 +64,7 @@ function(SIMRacingApps) {
                 $scope[self.name] = sraDispatcher.getTruthy($scope.sraArgsVALUE, $attrs[self.name], $attrs.sraArgsValue, "DefaultValue");
 
                 /** your code goes here **/
-                $attrs.sraArgsData += ";Car/ME/Status";
+                $attrs.sraArgsData += ";Session/IsGarageVisible";
 
                 /**standard code that should be in every directive **/
                 $rootScope.$on('sraResize', sraDispatcher.resize($scope,$element,self.defaultWidth,self.defaultHeight));
