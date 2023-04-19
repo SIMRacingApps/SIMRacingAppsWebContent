@@ -134,6 +134,17 @@
                                     data-ng-bind           = "translations.ONETOGREEN"
                                     data-sra-args-on-click = "onetogreenClicked"
                                 ></td>
+                                <td
+                                    data-ng-class          = "'SIMRacingApps-App-RaceAdministrator-button 
+                                                               SIMRacingApps-App-RaceAdministrator-restart 
+                                                               SIMRacingApps-App-RaceAdministrator-clickedstate-' + getClickedState()
+                                                             "
+                                    data-sra-data          = ""
+                                    data-ng-bind           = "restartMethod == 'DOUBLEFILE' ? translations.RESTARTSINGLE 
+                                                           : (restartMethod == 'SINGLEFILE' ? translations.RESTARTDOUBLE 
+                                                           : '')"
+                                    data-sra-args-on-click = "restartClicked"
+                                ></td>
                             </tr>
                         </tbody>
                     </table>

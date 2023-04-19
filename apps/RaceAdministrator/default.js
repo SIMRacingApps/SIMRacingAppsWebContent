@@ -48,6 +48,7 @@ function( angular,  SIMRacingApps) {
             $scope.currentCarCommand      = "";
             $scope.sentCommands           = [0,1,2,3,4];
             $scope.sentCommandsText       = [' ',' ',' ',' ',' '];
+            $scope.restartMethod          = "";
             
             $scope.sendCommand = function(command) {
                 sraDispatcher.sendCommand(command);
@@ -103,6 +104,22 @@ function( angular,  SIMRacingApps) {
                 }, $scope.clickDelay);
             };
 
+            $scope.restartClicked = function($clickedScope) {
+                console.log("Restart clicked");
+                $clickedScope.setClickedState('clicked');
+                //do the opposite
+                if ($scope.restartMethod == 'DOUBLEFILE')
+                    $scope.sendCommand("Session/setRestart/SINGLEFILE");
+                else
+                if ($scope.restartMethod == 'SINGLEFILE')
+                    $scope.sendCommand("Session/setRestart/DOUBLEFILE");
+                
+                //delay a little, then clear the clicked state.
+                $timeout(function () {
+                    $clickedScope.setClickedState('none');
+                }, $scope.clickDelay);
+            };
+            
             $scope.chatOnClicked = function($clickedScope) {
                 console.log("Chat On Clicked");
                 $clickedScope.setClickedState('clicked');
@@ -268,8 +285,9 @@ function( angular,  SIMRacingApps) {
 
             if (isEnabled) {
                 sraDispatcher.subscribe($scope,{
-                    sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag;Car/"+car_pitclose+"/Lap/COMPLETED;Session/IsPitRoadOpen"
+                    sraArgsData: "Car/"+car+"/Lap/COMPLETED;Session/Type;Session/IsCautionFlag;Session/IsGreenFlag;Car/"+car_pitclose+"/Lap/COMPLETED;Session/IsPitRoadOpen;Session/Restart"
                 },interval);
+                
                 $scope.$watch('data.Car.'+car+'.Lap.COMPLETED.Value', function() {
                     if ($scope.data.Session.Type.Value == 'RACE' 
                     && !$scope.data.Session.IsCautionFlag.Value
@@ -298,6 +316,16 @@ function( angular,  SIMRacingApps) {
                     }
                 });
             }
+            else {
+                sraDispatcher.subscribe($scope,{
+                    sraArgsData: "Session/Restart"
+                },interval);
+            }
+            
+            $scope.$watch('data.Session.Restart.Value', function() {
+                $scope.restartMethod = $scope.data.Session.Restart.Value;
+            });
+            
         }]);
 
         //now start the process by passing in the element where the SIMRacingsApps class is defined.

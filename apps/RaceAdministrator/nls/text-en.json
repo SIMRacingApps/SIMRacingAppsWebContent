@@ -23,5 +23,7 @@
     "PITROADCLOSED":            "Close Pit Road",
     "ADDCAUTIONLAP":            "Add Caution Lap",
     "SUBTRACTCAUTIONLAP":       "Subtract Caution Lap",
-    "ONETOGREEN":               "One to Green"
+    "ONETOGREEN":               "One to Green",
+    "RESTARTDOUBLE":            "Restart Double File",
+    "RESTARTSINGLE":            "Restart Single File"
 }

@@ -23,5 +23,7 @@
     "PITROADCLOSED":            "Grubenstra\u00dfe schlie\u00dfen",
     "ADDCAUTIONLAP":            "Vorsichtsrunde hinzuf\u00fcgen",
     "SUBTRACTCAUTIONLAP":       "Vorsichtsrunde abziehen",
-    "ONETOGREEN":               "Eins zu Gr\u00fcn"
+    "ONETOGREEN":               "Eins zu Gr\u00fcn",
+    "RESTARTDOUBLE":            "Restart Double File",
+    "RESTARTSINGLE":            "Restart Single File"
 }
