@@ -11,7 +11,7 @@
  * @name sra-a-b-s-active
  * @author Jeffrey Gilliam
  * @since 1.20
- * @copyright Copyright (C) 2015 - 2023 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2024 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','css!widgets/ABSActive/ABSActive'],

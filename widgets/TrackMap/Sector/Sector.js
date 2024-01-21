@@ -12,7 +12,7 @@
  * @param {integer} data-sra-args-interval The interval, in milliseconds, that this widget will update from the server. Default is 300.
  * @author Jeffrey Gilliam
  * @since 19.0
- * @copyright Copyright (C) 2015 - 2023 Jeffrey Gilliam
+ * @copyright Copyright (C) 2015 - 2024 Jeffrey Gilliam
  * @license Apache License 2.0
  */
 define(['SIMRacingApps','css!widgets/TrackMap/Sector/Sector'],

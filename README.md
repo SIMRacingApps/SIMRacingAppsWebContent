@@ -115,6 +115,6 @@ You can also add the "output" parameter to the URL to just get the value you nee
 
 PUTPATHSHERE
 
-[Copyright (C) 2015 - 2023 Jeffrey Gilliam](../COPYRIGHT.TXT)
+[Copyright (C) 2015 - 2024 Jeffrey Gilliam](../COPYRIGHT.TXT)
 
 [Apache License 2.0](../LICENSE.TXT)
