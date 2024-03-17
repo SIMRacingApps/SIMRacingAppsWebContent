@@ -62,6 +62,9 @@
 .SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-tracktemp {
     color: orangered;
 }
+.SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-trackcondition {
+    color: orange;
+}
 .SIMRacingApps-App-CrewChief-CarTrack .SIMRacingApps-Widget-DataTable-row-pitinfo {
     font-size: 80%;
 }

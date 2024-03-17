@@ -118,6 +118,11 @@
     color:             chartreuse;
 }
 
+.SIMRacingApps-Widget-TrackMap-trackinfo .SIMRacingApps-Widget-DataTable-row-trackcondition .SIMRacingAppsData {
+    color:             orange;
+    font-size:         110%;
+}
+
 .SIMRacingApps-Widget-TrackMap-weatherinfo {
     position:          absolute;
     bottom:            0px;

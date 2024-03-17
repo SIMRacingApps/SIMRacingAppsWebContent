@@ -33,8 +33,8 @@
             <sra-data-table
                 class                               = "SIMRacingApps-App-CrewChiefLarge-CarTrack"
                 data-sra-args-interval              = "100"
-                data-sra-args-data                  = "time;Session/Time;Car/REFERENCE/DriverName;Car/REFERENCE/DriverRating;Session/Name;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Configuration;Track/City;Track/Country;Track/Length;Track/Category;Car/REFERENCE/PitSpeedLimit;Track/Temp"
-                data-sra-args-row-names             = "time;drivername;rating;session;cardesc;trackdesc;trackconf;trackloc;trackinfo;tracktemp;pitinfo"
+                data-sra-args-data                  = "time;Session/Time;Car/REFERENCE/DriverName;Car/REFERENCE/DriverRating;Session/Name;Car/REFERENCE/Status;Car/REFERENCE/Description;Track/Description;Track/Configuration;Track/City;Track/Country;Track/Length;Track/Category;Car/REFERENCE/PitSpeedLimit;Track/Temp;Track/Condition"
+                data-sra-args-row-names             = "time;drivername;rating;session;cardesc;trackdesc;trackconf;trackloc;trackinfo;tracktemp;trackcondition;pitinfo"
                 data-sra-args-row-xtime              = "data.time.ValueFormatted|sraEncodeEntities"
                 data-sra-args-row-time              = "((data.Session.Time.Value*1000)|sraDate:'mediumTime':data.Session.Time.State) + ' ' + data.Session.Time.State"
                 data-sra-args-row-drivername        = "data.Car.REFERENCE.DriverName.ValueFormatted|sraEncodeEntities"
@@ -47,6 +47,7 @@
                 data-sra-args-row-trackinfo         = "((data.Track.Length.Value|sraNumber:1)+' '+data.Track.Length.UOMDesc+' '+data.Track.Category.ValueFormatted)|sraEncodeEntities"
                 data-sra-args-row-pitinfo           = "(translations.PITROADSPEEDLIMIT+': '+(data.Car.REFERENCE.PitSpeedLimit|sraNumber:0))|sraEncodeEntities"
                 data-sra-args-row-tracktemp         = "(translations.TRACKTEMP+': '+(data.Track.Temp|sraNumber:0))|sraEncodeEntities"
+                data-sra-args-row-trackcondition    = "data.Track.Condition.ValueFormatted|sraEncodeEntities"
             >Loading...</sra-data-table>
 
             <sra-weather-info class="SIMRacingApps-App-CrewChiefLarge-Info-weather-info"></sra-weather-info>

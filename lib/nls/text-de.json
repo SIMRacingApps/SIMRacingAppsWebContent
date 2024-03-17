@@ -82,7 +82,12 @@
             "TOOFARFORWARD":  "Zu weit vorw\u00e4rts",
             "TOOFARLEFT":     "Zu weit links",
             "TOOFARRIGHT":    "Zu weit rechts",
-            "TOOMUCHDAMAGE":  "Zu viel Damaage"
+            "TOOMUCHDAMAGE":  "Zu viel Damaage",
+            "DRY":              "Dry",
+            "WET":              "Wet",
+            "HARD":             "Hard",
+            "MED":              "Med",
+            "SOFT":             "Soft"
         },
         "SESSION": {
             "RACE":             "Rennen",
@@ -122,7 +127,14 @@
             "SE":               "SO",
             "SW":               "SW",
             "E":                "O",
-            "W":                "W"
+            "W":                "W",
+            "DRY":              "Dry",
+            "MOSTLY DRY":       "Mostly Dry",
+            "VERY LIGHTLY WET": "Very Lightly Wet",
+            "LIGHTLY WET":      "Lightly Wet",
+            "MODERATELY WET":   "Moderately Wet",
+            "VERY WET":         "Very Wet",
+            "EXTREMELY WET":    "Extremely Wet"
         }
     },
     "UOMAbbr": {

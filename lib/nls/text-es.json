@@ -82,7 +82,12 @@
             "TOOFARFORWARD":    "Too Far Forward",
             "TOOFARLEFT":       "Too Far Left",
             "TOOFARRIGHT":      "Too Far Right",
-            "TOOMUCHDAMAGE":    "Too Much Damage"
+            "TOOMUCHDAMAGE":    "Too Much Damage",
+            "DRY":              "Dry",
+            "WET":              "Wet",
+            "HARD":             "Hard",
+            "MED":              "Med",
+            "SOFT":             "Soft"
         },
         "SESSION": {
             "RACE":             "Race",
@@ -122,7 +127,14 @@
             "SE":               "SE",
             "SW":               "SW",
             "E":                "E",
-            "W":                "W"
+            "W":                "W",
+            "DRY":              "Dry",
+            "MOSTLY DRY":       "Mostly Dry",
+            "VERY LIGHTLY WET": "Very Lightly Wet",
+            "LIGHTLY WET":      "Lightly Wet",
+            "MODERATELY WET":   "Moderately Wet",
+            "VERY WET":         "Very Wet",
+            "EXTREMELY WET":    "Extremely Wet"
         }
     },
     "UOMAbbr": {
