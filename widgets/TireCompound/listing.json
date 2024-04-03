@@ -1,0 +1,12 @@
+{
+"doc": "JavaScriptDoc/sra-tire-compound.html",
+"name": "TireCompound;TireCompound-PITCONTROLLER",
+"description": ["View Tire Compound. Hard, Med, Soft, Wet, Dry","Change Tire Compound. Hard, Med, Soft, Wet, Dry"], 
+"description-de": ["View Tire Compound. Hard, Med, Soft, Wet, Dry","Change Tire Compound. Hard, Med, Soft, Wet, Dry"],
+"description-es": ["View Tire Compound. Hard, Med, Soft, Wet, Dry","Change Tire Compound. Hard, Med, Soft, Wet, Dry"],
+"url": "apps/WidgetLoader?widget=TireCompound&",
+"icon": "widgets/TireCompound/icon.png",
+"width": 240,
+"height": 240,
+"args": "PitCommandsSIMController=false;PitCommandsSIMController=true"
+}

@@ -87,7 +87,9 @@
             "WET":              "Wet",
             "HARD":             "Hard",
             "MED":              "Med",
-            "SOFT":             "Soft"
+            "SOFT":             "Soft",
+            "PRI":              "Pri",
+            "ALT":              "Alt"
         },
         "SESSION": {
             "RACE":             "Race",

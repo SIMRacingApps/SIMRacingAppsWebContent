@@ -1,0 +1,41 @@
+<div class                             = "SIMRacingApps-Widget-TireCompound"
+     data-ng-style                     = "{ height: height+'px' }">
+    <table
+        class                          = "SIMRacingApps-Widget-TireCompound-table"
+        data-sra-data                  = "Car/REFERENCE/Gauge/TireCompound/ValueCurrent;Car/REFERENCE/Gauge/TireCompound/ValueNext">
+        <colgroup>
+            <col class = "SIMRacingApps-Widget-TireCompound-col1" />
+            <col class = "SIMRacingApps-Widget-TireCompound-col2" />
+        </colgroup>
+       <tbody>
+           <tr class                      = "SIMRacingApps-Widget-TireCompound-row1">
+               <td class                  = "SIMRacingApps-Widget-TireCompound-button SIMRacingApps-Widget-TireCompound-row1-col1"
+                   data-sra-data          = "Car/REFERENCE/Gauge/TireCompound/Value/0"
+                   data-sra-args-on-click = "row1col1Clicked"
+                   data-ng-class          = "'SIMRacingApps-Widget-TireCompound-GridRowBackground-' + backgroundRow1Col1" 
+                   data-ng-bind           = "data.Car.REFERENCE.Gauge.TireCompound.Value['0'].ValueFormatted"
+               ></td>
+               <td class                  = "SIMRacingApps-Widget-TireCompound-button SIMRacingApps-Widget-TireCompound-row1-col2"
+                   data-sra-data          = "Car/REFERENCE/Gauge/TireCompound/Value/1"
+                   data-sra-args-on-click = "row1col2Clicked"
+                   data-ng-class          = "'SIMRacingApps-Widget-TireCompound-GridRowBackground-' + backgroundRow1Col2" 
+                   data-ng-bind           = "data.Car.REFERENCE.Gauge.TireCompound.Value['1'].ValueFormatted"
+               ></td>
+           </tr>
+           <tr class                      = "SIMRacingApps-Widget-TireCompound-row2">
+               <td class                  = "SIMRacingApps-Widget-TireCompound-button SIMRacingApps-Widget-TireCompound-row2-col1"
+                   data-sra-data          = "Car/REFERENCE/Gauge/TireCompound/Value/2"
+                   data-sra-args-on-click = "row2col1Clicked"
+                   data-ng-class          = "'SIMRacingApps-Widget-TireCompound-GridRowBackground-' + backgroundRow2Col1" 
+                   data-ng-bind           = "data.Car.REFERENCE.Gauge.TireCompound.Value['2'].ValueFormatted"
+               ></td>
+               <td class                  = "SIMRacingApps-Widget-TireCompound-button SIMRacingApps-Widget-TireCompound-row2-col2"
+                   data-sra-data          = "Car/REFERENCE/Gauge/TireCompound/Value/3"
+                   data-sra-args-on-click = "row2col2Clicked"
+                   data-ng-class          = "'SIMRacingApps-Widget-TireCompound-GridRowBackground-' + backgroundRow2Col2" 
+                   data-ng-bind           = "data.Car.REFERENCE.Gauge.TireCompound.Value['3'].ValueFormatted"
+               ></td>
+           </tr>
+       </tbody>
+    </table>
+</div>

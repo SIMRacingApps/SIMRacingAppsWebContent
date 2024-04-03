@@ -42,6 +42,7 @@ define(['SIMRacingApps','css!widgets/PitCommander/PitCommander'
        ,'widgets/TireMeasurements/TireMeasurements'
        ,'widgets/Flags/Flags'
        ,'widgets/CarImage/CarImage'
+       ,'widgets/TireCompound/TireCompound'
 ],function(SIMRacingApps) {
 
     var self = {

@@ -31,6 +31,7 @@ require(SIMRacingAppsRequireConfig,
         ,'widgets/BarGauge/BrakePressure/BrakePressure'
         ,'widgets/FuelTank/FuelTank'
         ,'widgets/Tire/Tire'
+        ,'widgets/TireCompound/TireCompound'
         ,'widgets/Messages/Messages'
         ],
 function( angular,  SIMRacingApps) {

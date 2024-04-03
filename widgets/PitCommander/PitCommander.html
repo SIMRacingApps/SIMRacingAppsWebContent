@@ -41,6 +41,8 @@
             <sra-tire-measurements class = "SIMRacingApps-Widget-PitCommander-tiremeasurements SIMRacingApps-Widget-PitCommander-tiremeasurements-LF" data-sra-args-value="LF" data-sra-args-controller="{{controller}}"></sra-tire-measurements>
             <sra-tire-measurements class = "SIMRacingApps-Widget-PitCommander-tiremeasurements SIMRacingApps-Widget-PitCommander-tiremeasurements-LR" data-sra-args-value="LR" data-sra-args-controller="{{controller}}"></sra-tire-measurements>
             <sra-fuel-tank class         = "SIMRacingApps-Widget-PitCommander-fueltank"></sra-fuel-tank>
+            <sra-tire-compound class     = "SIMRacingApps-Widget-PitCommander-tirecompound" data-sra-args-controller="{{controller}}"></sra-tire-compound>
+            
             <div class                   = "SIMRacingApps-Widget-PitCommander-repairs"
                  data-ng-style           = "{ visibility: data.Car.REFERENCE.RepairTime.Value <= 0 && data.Car.REFERENCE.RepairTimeOptional.Value <= 0 ? 'hidden' : 'inherit' }"
                  data-ng-bind-html       = "'<span class=&quot;SIMRacingAppsLabel&quot;>'

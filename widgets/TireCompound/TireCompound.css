@@ -1,0 +1,38 @@
+.SIMRacingApps-Widget-TireCompound {
+    position:      relative;
+    width:         100%;
+    height:        100%;
+    font-size:     130%;
+    white-space:   nowrap;
+    z-index:       -1;
+}
+
+.SIMRacingApps-Widget-TireCompound-table {
+    background-color: transparent;
+	position:      absolute;
+    width:         100%;
+    height:        100%;    /*note: causes table to expand to the containers height */
+    font-size:     150%;
+    line-height:   148%;
+    z-index:       1;
+    border-collapse: collapse;
+    text-align:    center;
+}
+
+.SIMRacingApps-Widget-TireCompound-button {
+    border-color:  black;
+    border-width:  thin;
+    border-style:  outset;
+} 
+
+.SIMRacingApps-Widget-TireCompound-GridRowBackground-clicked {
+    background-color: rgba(255,0,0,.3) !important;
+}
+
+.SIMRacingApps-Widget-TireCompound-GridRowBackground-active {
+    background-color: orange !important;
+}
+
+.SIMRacingApps-Widget-TireCompound-GridRowBackground-none {
+}
+
